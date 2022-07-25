@@ -7,7 +7,7 @@ DELIMITER $$
 CREATE PROCEDURE delete_interaction
 (idToDelete INT)
 BEGIN
-  UPDATE interactions
+  UPDATE interaction
   SET active = 0
   WHERE id = idToDelete;
 END;

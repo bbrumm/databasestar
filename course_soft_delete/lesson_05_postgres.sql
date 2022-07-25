@@ -4,8 +4,8 @@ Postgres
 */
 
 CREATE OR REPLACE RULE delete_interactions AS
-  ON DELETE TO interactions
+  ON DELETE TO interaction
   DO INSTEAD
-    UPDATE interactions
+    UPDATE interaction
     SET active = 0
     WHERE interactions.id = old.id;

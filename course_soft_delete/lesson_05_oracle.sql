@@ -11,7 +11,7 @@ CREATE OR REPLACE TRIGGER soft_delete_interactions
 INSTEAD OF DELETE ON interactions_view
 FOR EACH ROW
 BEGIN
-	UPDATE interactions SET active = 0 WHERE id = :old.id;
+	UPDATE interaction SET active = 0 WHERE id = :old.id;
 END;
 /
 

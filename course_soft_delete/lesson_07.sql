@@ -14,7 +14,7 @@ WHERE i.person_id = 7
 AND active = 1;
 
 
-ALTER TABLE interactions
+ALTER TABLE interaction
 RENAME TO interactions_all;
 
 CREATE VIEW interactions AS
