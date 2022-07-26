@@ -1,5 +1,5 @@
 /*
-Lesson 12
+Lesson 09
 */
 
 UPDATE person
@@ -13,6 +13,7 @@ FROM person;
 SELECT first_name, last_name
 FROM person
 WHERE last_name = 'Smithton';
+
 
 SELECT first_name, last_name
 FROM person
