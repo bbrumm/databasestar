@@ -4,7 +4,6 @@ This should work on Oracle, SQL Server, MySQL, and PostgreSQL,
 but the data types for the tables may need to be adjusted
 */
 
-
 /*
 Set up data
 */
