@@ -1,12 +1,8 @@
 
 
---
--- Table structure for table `movie`
---
 
 DROP TABLE IF EXISTS `movie`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `movie` (
   `movie_id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) DEFAULT NULL,
@@ -23,14 +19,8 @@ CREATE TABLE `movie` (
   `vote_count` int(10) DEFAULT NULL,
   PRIMARY KEY (`movie_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=459489 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `movie`
---
 
-LOCK TABLES `movie` WRITE;
-/*!40000 ALTER TABLE `movie` DISABLE KEYS */;
 INSERT INTO `movie` VALUES (5,'Four Rooms',4000000,'','It\'s Ted the Bellhop\'s first night on the job...and the hotel\'s very unusual guests are about to place him in some outrageous predicaments. It seems that this evening\'s room service is serving up one unbelievable happening after another.',22.876230,'1995-12-09',4300000,98,'Released','Twelve outrageous guests. Four scandalous requests. And one lone bellhop, in his first day on the job, who\'s in for the wildest New year\'s Eve of his life.',6.50,530),
 (11,'Star Wars',11000000,'http://www.starwars.com/films/star-wars-episode-iv-a-new-hope','Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.',126.393695,'1977-05-25',775398007,121,'Released','A long time ago in a galaxy far, far away...',8.10,6624),
 (12,'Finding Nemo',94000000,'http://movies.disney.com/finding-nemo','Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist\'s office aquarium. It\'s up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish, hungry seagulls, and more along the way.',85.688789,'2003-05-30',940335536,100,'Released','There are 3.7 trillion fish in the ocean, they\'re looking for one.',7.60,6122),
@@ -4834,5 +4824,3 @@ INSERT INTO `movie` VALUES (302688,'My Big Fat Greek Wedding 2',18000000,'','The
 (433715,'8 Days',0,'','After sneaking to a party with her friends, 16-year-old Amber Stevens goes missing. Forced into the world of sex trafficking, her family and community fight to get her back. Inspired by actual events.',0.015295,'2014-06-15',0,90,'Released','She never knew it could happen to her...',0.00,0),
 (447027,'Running Forever',0,'','After being estranged since her mother\'s death in the 9/11 attacks, both daughter and father must work together to re-establish their relationship. When the difficulty nearly consumes them both, a bond with a beautiful horse that has also gone through its own tragic loss brings Taylor Sims, back to what is important - family, friendship and faith. With help from the community and from above, they repair the pieces of their lives and learn to stop running, forever.',0.028756,'2015-10-27',0,88,'Released','',0.00,0),
 (459488,'To Be Frank, Sinatra at 100',2,'','',0.050625,'2015-12-12',0,0,'Released','',0.00,0);
-/*!40000 ALTER TABLE `movie` ENABLE KEYS */;
-UNLOCK TABLES;

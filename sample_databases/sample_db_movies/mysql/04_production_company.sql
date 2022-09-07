@@ -1,24 +1,16 @@
 
---
--- Table structure for table `production_company`
---
+
 
 DROP TABLE IF EXISTS `production_company`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `production_company` (
   `company_id` int(10) NOT NULL,
   `company_name` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`company_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `production_company`
---
 
-LOCK TABLES `production_company` WRITE;
-/*!40000 ALTER TABLE `production_company` DISABLE KEYS */;
+
 INSERT INTO `production_company` VALUES (1,'Lucasfilm'),
 (2,'Walt Disney Pictures'),
 (3,'Pixar Animation Studios'),
@@ -5066,5 +5058,3 @@ INSERT INTO `production_company` VALUES (1,'Lucasfilm'),
 (94714,'Vista Organisation, The'),
 (95018,'MPH Entertainment Productions'),
 (95063,'Marcy Media');
-/*!40000 ALTER TABLE `production_company` ENABLE KEYS */;
-UNLOCK TABLES;

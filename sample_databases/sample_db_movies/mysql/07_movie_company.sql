@@ -1,11 +1,7 @@
 
---
--- Table structure for table `movie_company`
---
 
 DROP TABLE IF EXISTS `movie_company`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `movie_company` (
   `movie_id` int(10) DEFAULT NULL,
   `company_id` int(10) DEFAULT NULL,
@@ -14,14 +10,8 @@ CREATE TABLE `movie_company` (
   CONSTRAINT `fk_mc_comp` FOREIGN KEY (`company_id`) REFERENCES `production_company` (`company_id`),
   CONSTRAINT `fk_mc_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `movie_company`
---
 
-LOCK TABLES `movie_company` WRITE;
-/*!40000 ALTER TABLE `movie_company` DISABLE KEYS */;
 INSERT INTO `movie_company` VALUES (5,14),
 (5,59),
 (11,1),
@@ -13699,5 +13689,3 @@ INSERT INTO `movie_company` VALUES (5,14),
 (433715,85248),
 (447027,41671),
 (459488,60343);
-/*!40000 ALTER TABLE `movie_company` ENABLE KEYS */;
-UNLOCK TABLES;

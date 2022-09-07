@@ -1,11 +1,6 @@
 
---
--- Table structure for table `movie_cast`
---
-
 DROP TABLE IF EXISTS `movie_cast`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `movie_cast` (
   `movie_id` int(10) DEFAULT NULL,
   `person_id` int(10) DEFAULT NULL,
@@ -19,15 +14,11 @@ CREATE TABLE `movie_cast` (
   CONSTRAINT `fk_mca_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`),
   CONSTRAINT `fk_mca_per` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `movie_cast`
---
 
-LOCK TABLES `movie_cast` WRITE;
-/*!40000 ALTER TABLE `movie_cast` DISABLE KEYS */;
-INSERT INTO `movie_cast` VALUES (285,85,'Captain Jack Sparrow',2,0),
+
+INSERT INTO `movie_cast` VALUES
+(285,85,'Captain Jack Sparrow',2,0),
 (285,114,'Will Turner',2,1),
 (285,116,'Elizabeth Swann',1,2),
 (285,1640,'William Bootstrap Bill Turner',2,3),
@@ -106284,5 +106275,3 @@ INSERT INTO `movie_cast` VALUES (318846,1746014,'Casino Patron / Pool Party goer
 (126186,2053,'Donald',2,2),
 (126186,2394,'Marcus Groff',2,3),
 (126186,1395490,'',0,4);
-/*!40000 ALTER TABLE `movie_cast` ENABLE KEYS */;
-UNLOCK TABLES;

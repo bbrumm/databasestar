@@ -1,25 +1,18 @@
 
---
--- Table structure for table `person`
---
+
 
 DROP TABLE IF EXISTS `person`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `person` (
   `person_id` int(10) NOT NULL,
   `person_name` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`person_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `person`
---
 
-LOCK TABLES `person` WRITE;
-/*!40000 ALTER TABLE `person` DISABLE KEYS */;
-INSERT INTO `person` VALUES (1,'George Lucas'),
+
+INSERT INTO `person` VALUES
+(1,'George Lucas'),
 (2,'Mark Hamill'),
 (3,'Harrison Ford'),
 (4,'Carrie Fisher'),
@@ -104861,5 +104854,3 @@ INSERT INTO `person` VALUES (1484779,'Deana Deatherage'),
 (1893237,'John Ditomaso'),
 (1893238,'Kevin Farrell'),
 (1893239,'Cindy Fischer');
-/*!40000 ALTER TABLE `person` ENABLE KEYS */;
-UNLOCK TABLES;

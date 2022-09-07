@@ -1,12 +1,8 @@
 
 
---
--- Table structure for table `production_country`
---
 
 DROP TABLE IF EXISTS `production_country`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `production_country` (
   `movie_id` int(10) DEFAULT NULL,
   `country_id` int(10) DEFAULT NULL,
@@ -15,14 +11,8 @@ CREATE TABLE `production_country` (
   CONSTRAINT `fk_pc_country` FOREIGN KEY (`country_id`) REFERENCES `country` (`country_id`),
   CONSTRAINT `fk_pc_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `production_country`
---
 
-LOCK TABLES `production_country` WRITE;
-/*!40000 ALTER TABLE `production_country` DISABLE KEYS */;
 INSERT INTO `production_country` VALUES (5,214),
 (11,214),
 (12,214),
@@ -6459,5 +6449,3 @@ INSERT INTO `production_country` VALUES (5,214),
 (433715,214),
 (447027,214),
 (459488,162);
-/*!40000 ALTER TABLE `production_country` ENABLE KEYS */;
-UNLOCK TABLES;

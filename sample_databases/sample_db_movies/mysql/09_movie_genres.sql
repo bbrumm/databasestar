@@ -1,11 +1,7 @@
 
---
--- Table structure for table `movie_genres`
---
 
 DROP TABLE IF EXISTS `movie_genres`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `movie_genres` (
   `movie_id` int(10) DEFAULT NULL,
   `genre_id` int(10) DEFAULT NULL,
@@ -14,14 +10,9 @@ CREATE TABLE `movie_genres` (
   CONSTRAINT `fk_mg_genre` FOREIGN KEY (`genre_id`) REFERENCES `genre` (`genre_id`),
   CONSTRAINT `fk_mg_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `movie_genres`
---
 
-LOCK TABLES `movie_genres` WRITE;
-/*!40000 ALTER TABLE `movie_genres` DISABLE KEYS */;
+
 INSERT INTO `movie_genres` VALUES (5,35),
 (5,80),
 (11,12),
@@ -12182,5 +12173,3 @@ INSERT INTO `movie_genres` VALUES (5,35),
 (433715,53),
 (447027,10751),
 (459488,99);
-/*!40000 ALTER TABLE `movie_genres` ENABLE KEYS */;
-UNLOCK TABLES;

@@ -1,11 +1,8 @@
 
---
--- Table structure for table `movie_languages`
---
+
 
 DROP TABLE IF EXISTS `movie_languages`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `movie_languages` (
   `movie_id` int(10) DEFAULT NULL,
   `language_id` int(10) DEFAULT NULL,
@@ -17,14 +14,9 @@ CREATE TABLE `movie_languages` (
   CONSTRAINT `fk_ml_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`),
   CONSTRAINT `fk_ml_role` FOREIGN KEY (`language_role_id`) REFERENCES `language_role` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `movie_languages`
---
 
-LOCK TABLES `movie_languages` WRITE;
-/*!40000 ALTER TABLE `movie_languages` DISABLE KEYS */;
+
 INSERT INTO `movie_languages` VALUES (5,24574,2),
 (11,24574,2),
 (12,24574,2),
@@ -11765,5 +11757,3 @@ INSERT INTO `movie_languages` VALUES (5,24574,2),
 (295914,24658,1),
 (385636,24660,1),
 (46146,24701,1);
-/*!40000 ALTER TABLE `movie_languages` ENABLE KEYS */;
-UNLOCK TABLES;
