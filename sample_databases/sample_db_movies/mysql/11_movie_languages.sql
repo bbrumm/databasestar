@@ -1,23 +1,23 @@
 
 
 
-DROP TABLE IF EXISTS `movie_languages`;
+DROP TABLE IF EXISTS movie_languages;
 
-CREATE TABLE `movie_languages` (
-  `movie_id` int(10) DEFAULT NULL,
-  `language_id` int(10) DEFAULT NULL,
-  `language_role_id` int(10) DEFAULT NULL,
-  KEY `fk_ml_movie` (`movie_id`),
-  KEY `fk_ml_lang` (`language_id`),
-  KEY `fk_ml_role` (`language_role_id`),
-  CONSTRAINT `fk_ml_lang` FOREIGN KEY (`language_id`) REFERENCES `language` (`language_id`),
-  CONSTRAINT `fk_ml_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`),
-  CONSTRAINT `fk_ml_role` FOREIGN KEY (`language_role_id`) REFERENCES `language_role` (`role_id`)
+CREATE TABLE movie_languages (
+  movie_id int(10) DEFAULT NULL,
+  language_id int(10) DEFAULT NULL,
+  language_role_id int(10) DEFAULT NULL,
+  KEY fk_ml_movie (movie_id),
+  KEY fk_ml_lang (language_id),
+  KEY fk_ml_role (language_role_id),
+  CONSTRAINT fk_ml_lang FOREIGN KEY (language_id) REFERENCES language (language_id),
+  CONSTRAINT fk_ml_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id),
+  CONSTRAINT fk_ml_role FOREIGN KEY (language_role_id) REFERENCES language_role (role_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
-INSERT INTO `movie_languages` VALUES (5,24574,2),
+INSERT INTO movie_languages VALUES (5,24574,2),
 (11,24574,2),
 (12,24574,2),
 (13,24574,2),

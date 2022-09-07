@@ -1,17 +1,17 @@
 
 
 
-DROP TABLE IF EXISTS `production_company`;
+DROP TABLE IF EXISTS production_company;
 
-CREATE TABLE `production_company` (
-  `company_id` int(10) NOT NULL,
-  `company_name` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`company_id`)
+CREATE TABLE production_company (
+  company_id int(10) NOT NULL,
+  company_name varchar(200) DEFAULT NULL,
+  PRIMARY KEY (company_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
-INSERT INTO `production_company` VALUES (1,'Lucasfilm'),
+INSERT INTO production_company VALUES (1,'Lucasfilm'),
 (2,'Walt Disney Pictures'),
 (3,'Pixar Animation Studios'),
 (4,'Paramount Pictures'),

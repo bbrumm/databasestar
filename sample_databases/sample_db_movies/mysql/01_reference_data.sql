@@ -2,20 +2,20 @@ CREATE DATABASE movies;
 USE movies;
 
 
-DROP TABLE IF EXISTS `country`;
+DROP TABLE IF EXISTS country;
 
-CREATE TABLE `country` (
-  `country_id` int(10) NOT NULL AUTO_INCREMENT,
-  `country_iso_code` varchar(10) DEFAULT NULL,
-  `country_name` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`country_id`)
+CREATE TABLE country (
+  country_id int(10) NOT NULL AUTO_INCREMENT,
+  country_iso_code varchar(10) DEFAULT NULL,
+  country_name varchar(200) DEFAULT NULL,
+  PRIMARY KEY (country_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=255 DEFAULT CHARSET=utf8;
 
 
 
 
 
-INSERT INTO `country` VALUES
+INSERT INTO country VALUES
 (128,'AE','United Arab Emirates'),
 (129,'AF','Afghanistan'),
 (130,'AO','Angola'),
@@ -107,19 +107,19 @@ INSERT INTO `country` VALUES
 
 
 
-DROP TABLE IF EXISTS `gender`;
+DROP TABLE IF EXISTS gender;
 
-CREATE TABLE `gender` (
-  `gender_id` int(10) NOT NULL,
-  `gender` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`gender_id`)
+CREATE TABLE gender (
+  gender_id int(10) NOT NULL,
+  gender varchar(20) DEFAULT NULL,
+  PRIMARY KEY (gender_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
 
 
-INSERT INTO `gender` VALUES
+INSERT INTO gender VALUES
 (0,'Unspecified'),
 (1,'Female'),
 (2,'Male');
@@ -127,19 +127,19 @@ INSERT INTO `gender` VALUES
 
 
 
-DROP TABLE IF EXISTS `genre`;
+DROP TABLE IF EXISTS genre;
 
-CREATE TABLE `genre` (
-  `genre_id` int(10) NOT NULL,
-  `genre_name` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`genre_id`)
+CREATE TABLE genre (
+  genre_id int(10) NOT NULL,
+  genre_name varchar(100) DEFAULT NULL,
+  PRIMARY KEY (genre_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
 
 
-INSERT INTO `genre` VALUES
+INSERT INTO genre VALUES
 (12,'Adventure'),
 (14,'Fantasy'),
 (16,'Animation'),
@@ -162,18 +162,18 @@ INSERT INTO `genre` VALUES
 (10770,'TV Movie');
 
 
-DROP TABLE IF EXISTS `language`;
+DROP TABLE IF EXISTS language;
 
-CREATE TABLE `language` (
-  `language_id` int(10) NOT NULL AUTO_INCREMENT,
-  `language_code` varchar(10) DEFAULT NULL,
-  `language_name` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`language_id`)
+CREATE TABLE language (
+  language_id int(10) NOT NULL AUTO_INCREMENT,
+  language_code varchar(10) DEFAULT NULL,
+  language_name varchar(500) DEFAULT NULL,
+  PRIMARY KEY (language_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=24702 DEFAULT CHARSET=utf8;
 
 
 
-INSERT INTO `language` VALUES (24574,'en','English'),
+INSERT INTO language VALUES (24574,'en','English'),
 (24575,'sv','svenska'),
 (24576,'de','Deutsch'),
 (24577,'xx','No Language'),
@@ -267,33 +267,33 @@ INSERT INTO `language` VALUES (24574,'en','English'),
 
 
 
-DROP TABLE IF EXISTS `language_role`;
+DROP TABLE IF EXISTS language_role;
 
-CREATE TABLE `language_role` (
-  `role_id` int(10) NOT NULL,
-  `language_role` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`role_id`)
+CREATE TABLE language_role (
+  role_id int(10) NOT NULL,
+  language_role varchar(20) DEFAULT NULL,
+  PRIMARY KEY (role_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `language_role` VALUES
+INSERT INTO language_role VALUES
 (1,'Original'),
 (2,'Spoken');
 
 
 
-DROP TABLE IF EXISTS `department`;
+DROP TABLE IF EXISTS department;
 
-CREATE TABLE `department` (
-  `department_id` int(10) NOT NULL AUTO_INCREMENT,
-  `department_name` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`department_id`)
+CREATE TABLE department (
+  department_id int(10) NOT NULL AUTO_INCREMENT,
+  department_name varchar(200) DEFAULT NULL,
+  PRIMARY KEY (department_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 
 
 
-INSERT INTO `department` VALUES
+INSERT INTO department VALUES
 (1,'Camera'),
 (2,'Directing'),
 (3,'Production'),

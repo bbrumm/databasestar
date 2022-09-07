@@ -1,19 +1,19 @@
 
 
 
-DROP TABLE IF EXISTS `production_country`;
+DROP TABLE IF EXISTS production_country;
 
-CREATE TABLE `production_country` (
-  `movie_id` int(10) DEFAULT NULL,
-  `country_id` int(10) DEFAULT NULL,
-  KEY `fk_pc_movie` (`movie_id`),
-  KEY `fk_pc_country` (`country_id`),
-  CONSTRAINT `fk_pc_country` FOREIGN KEY (`country_id`) REFERENCES `country` (`country_id`),
-  CONSTRAINT `fk_pc_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
+CREATE TABLE production_country (
+  movie_id int(10) DEFAULT NULL,
+  country_id int(10) DEFAULT NULL,
+  KEY fk_pc_movie (movie_id),
+  KEY fk_pc_country (country_id),
+  CONSTRAINT fk_pc_country FOREIGN KEY (country_id) REFERENCES country (country_id),
+  CONSTRAINT fk_pc_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `production_country` VALUES (5,214),
+INSERT INTO production_country VALUES (5,214),
 (11,214),
 (12,214),
 (13,214),
