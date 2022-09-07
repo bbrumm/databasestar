@@ -12,762 +12,760 @@ CREATE TABLE event (
 );
 
 
-INSERT ALL
-INTO event (id, sport_id, event_name) VALUES (1,9,'Basketball Men''s Basketball')
-INTO event (id, sport_id, event_name) VALUES (2,33,'Judo Men''s Extra-Lightweight')
-INTO event (id, sport_id, event_name) VALUES (3,25,'Football Men''s Football')
-INTO event (id, sport_id, event_name) VALUES (4,62,'Tug-Of-War Men''s Tug-Of-War')
-INTO event (id, sport_id, event_name) VALUES (5,54,'Speed Skating Women''s 500 metres')
-INTO event (id, sport_id, event_name) VALUES (6,54,'Speed Skating Women''s 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (7,18,'Cross Country Skiing Men''s 10 kilometres')
-INTO event (id, sport_id, event_name) VALUES (8,18,'Cross Country Skiing Men''s 50 kilometres')
-INTO event (id, sport_id, event_name) VALUES (9,18,'Cross Country Skiing Men''s 10/15 kilometres Pursuit')
-INTO event (id, sport_id, event_name) VALUES (10,18,'Cross Country Skiing Men''s 4 x 10 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (11,18,'Cross Country Skiing Men''s 30 kilometres')
-INTO event (id, sport_id, event_name) VALUES (12,6,'Athletics Women''s 100 metres')
-INTO event (id, sport_id, event_name) VALUES (13,6,'Athletics Women''s 4 x 100 metres Relay')
-INTO event (id, sport_id, event_name) VALUES (14,31,'Ice Hockey Men''s Ice Hockey')
-INTO event (id, sport_id, event_name) VALUES (15,55,'Swimming Men''s 400 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (16,7,'Badminton Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (17,47,'Sailing Women''s Windsurfer')
-INTO event (id, sport_id, event_name) VALUES (18,12,'Biathlon Women''s 7.5 kilometres Sprint')
-INTO event (id, sport_id, event_name) VALUES (19,55,'Swimming Men''s 200 metres Breaststroke')
-INTO event (id, sport_id, event_name) VALUES (20,55,'Swimming Men''s 400 metres Breaststroke')
-INTO event (id, sport_id, event_name) VALUES (21,28,'Gymnastics Men''s Individual All-Around')
-INTO event (id, sport_id, event_name) VALUES (22,28,'Gymnastics Men''s Team All-Around')
-INTO event (id, sport_id, event_name) VALUES (23,28,'Gymnastics Men''s Floor Exercise')
-INTO event (id, sport_id, event_name) VALUES (24,28,'Gymnastics Men''s Horse Vault')
-INTO event (id, sport_id, event_name) VALUES (25,28,'Gymnastics Men''s Parallel Bars')
-INTO event (id, sport_id, event_name) VALUES (26,28,'Gymnastics Men''s Horizontal Bar')
-INTO event (id, sport_id, event_name) VALUES (27,28,'Gymnastics Men''s Rings')
-INTO event (id, sport_id, event_name) VALUES (28,28,'Gymnastics Men''s Pommelled Horse')
-INTO event (id, sport_id, event_name) VALUES (29,6,'Athletics Men''s Shot Put')
-INTO event (id, sport_id, event_name) VALUES (30,5,'Art Competitions Mixed Sculpturing, Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (31,2,'Alpine Skiing Men''s Downhill')
-INTO event (id, sport_id, event_name) VALUES (32,2,'Alpine Skiing Men''s Super G')
-INTO event (id, sport_id, event_name) VALUES (33,2,'Alpine Skiing Men''s Giant Slalom')
-INTO event (id, sport_id, event_name) VALUES (34,2,'Alpine Skiing Men''s Slalom')
-INTO event (id, sport_id, event_name) VALUES (35,2,'Alpine Skiing Men''s Combined')
-INTO event (id, sport_id, event_name) VALUES (36,29,'Handball Women''s Handball')
-INTO event (id, sport_id, event_name) VALUES (37,65,'Weightlifting Women''s Super-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (38,66,'Wrestling Men''s Light-Heavyweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (39,54,'Speed Skating Men''s 500 metres')
-INTO event (id, sport_id, event_name) VALUES (40,54,'Speed Skating Men''s 1,500 metres')
-INTO event (id, sport_id, event_name) VALUES (41,28,'Gymnastics Men''s Team All-Around, Free System')
-INTO event (id, sport_id, event_name) VALUES (42,35,'Luge Women''s Singles')
-INTO event (id, sport_id, event_name) VALUES (43,64,'Water Polo Men''s Water Polo')
-INTO event (id, sport_id, event_name) VALUES (44,47,'Sailing Mixed Three Person Keelboat')
-INTO event (id, sport_id, event_name) VALUES (45,30,'Hockey Women''s Hockey')
-INTO event (id, sport_id, event_name) VALUES (46,44,'Rowing Men''s Lightweight Double Sculls')
-INTO event (id, sport_id, event_name) VALUES (47,6,'Athletics Men''s Pole Vault')
-INTO event (id, sport_id, event_name) VALUES (48,6,'Athletics Men''s High Jump')
-INTO event (id, sport_id, event_name) VALUES (49,47,'Sailing Men''s Two Person Dinghy')
-INTO event (id, sport_id, event_name) VALUES (50,6,'Athletics Men''s 1,500 metres')
-INTO event (id, sport_id, event_name) VALUES (51,13,'Bobsleigh Men''s Four')
-INTO event (id, sport_id, event_name) VALUES (52,55,'Swimming Men''s 100 metres Butterfly')
-INTO event (id, sport_id, event_name) VALUES (53,55,'Swimming Men''s 200 metres Butterfly')
-INTO event (id, sport_id, event_name) VALUES (54,55,'Swimming Men''s 4 x 100 metres Medley Relay')
-INTO event (id, sport_id, event_name) VALUES (55,25,'Football Women''s Football')
-INTO event (id, sport_id, event_name) VALUES (56,23,'Fencing Men''s Foil, Individual')
-INTO event (id, sport_id, event_name) VALUES (57,23,'Fencing Men''s epee, Individual')
-INTO event (id, sport_id, event_name) VALUES (58,23,'Fencing Men''s epee, Team')
-INTO event (id, sport_id, event_name) VALUES (59,54,'Speed Skating Men''s 5,000 metres')
-INTO event (id, sport_id, event_name) VALUES (60,54,'Speed Skating Men''s 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (61,47,'Sailing Mixed 8 metres')
-INTO event (id, sport_id, event_name) VALUES (62,22,'Equestrianism Mixed Jumping, Individual')
-INTO event (id, sport_id, event_name) VALUES (63,18,'Cross Country Skiing Men''s 15 kilometres')
-INTO event (id, sport_id, event_name) VALUES (64,48,'Shooting Men''s Small-Bore Rifle, Prone, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (65,48,'Shooting Men''s Rapid-Fire Pistol, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (66,48,'Shooting Men''s Trap')
-INTO event (id, sport_id, event_name) VALUES (67,6,'Athletics Men''s 4 x 100 metres Relay')
-INTO event (id, sport_id, event_name) VALUES (68,6,'Athletics Men''s Long Jump')
-INTO event (id, sport_id, event_name) VALUES (69,14,'Boxing Men''s Light-Welterweight')
-INTO event (id, sport_id, event_name) VALUES (70,6,'Athletics Women''s Javelin Throw')
-INTO event (id, sport_id, event_name) VALUES (71,66,'Wrestling Men''s Heavyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (72,58,'Taekwondo Men''s Flyweight')
-INTO event (id, sport_id, event_name) VALUES (73,6,'Athletics Men''s 5,000 metres')
-INTO event (id, sport_id, event_name) VALUES (74,20,'Cycling Men''s Road Race, Individual')
-INTO event (id, sport_id, event_name) VALUES (75,20,'Cycling Men''s Road Race, Team')
-INTO event (id, sport_id, event_name) VALUES (76,65,'Weightlifting Men''s Lightweight')
-INTO event (id, sport_id, event_name) VALUES (77,65,'Weightlifting Men''s Middleweight')
-INTO event (id, sport_id, event_name) VALUES (78,44,'Rowing Men''s Coxless Pairs')
-INTO event (id, sport_id, event_name) VALUES (79,33,'Judo Men''s Half-Middleweight')
-INTO event (id, sport_id, event_name) VALUES (80,58,'Taekwondo Women''s Flyweight')
-INTO event (id, sport_id, event_name) VALUES (81,9,'Basketball Women''s Basketball')
-INTO event (id, sport_id, event_name) VALUES (82,21,'Diving Men''s Platform')
-INTO event (id, sport_id, event_name) VALUES (83,15,'Canoeing Men''s Canadian Doubles, 500 metres')
-INTO event (id, sport_id, event_name) VALUES (84,15,'Canoeing Men''s Canadian Doubles, 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (85,15,'Canoeing Men''s Kayak Fours, 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (86,29,'Handball Men''s Handball')
-INTO event (id, sport_id, event_name) VALUES (87,44,'Rowing Women''s Coxless Pairs')
-INTO event (id, sport_id, event_name) VALUES (88,14,'Boxing Men''s Middleweight')
-INTO event (id, sport_id, event_name) VALUES (89,33,'Judo Men''s Lightweight')
-INTO event (id, sport_id, event_name) VALUES (90,14,'Boxing Men''s Featherweight')
-INTO event (id, sport_id, event_name) VALUES (91,59,'Tennis Men''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (92,48,'Shooting Mixed Skeet')
-INTO event (id, sport_id, event_name) VALUES (93,66,'Wrestling Men''s Featherweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (94,47,'Sailing Mixed Two Person Heavyweight Dinghy')
-INTO event (id, sport_id, event_name) VALUES (95,6,'Athletics Women''s Shot Put')
-INTO event (id, sport_id, event_name) VALUES (96,44,'Rowing Men''s Coxed Eights')
-INTO event (id, sport_id, event_name) VALUES (97,20,'Cycling Women''s Sprint')
-INTO event (id, sport_id, event_name) VALUES (98,20,'Cycling Women''s 500 metres Time Trial')
-INTO event (id, sport_id, event_name) VALUES (99,6,'Athletics Men''s 110 metres Hurdles')
-INTO event (id, sport_id, event_name) VALUES (100,48,'Shooting Mixed Trap')
-INTO event (id, sport_id, event_name) VALUES (101,6,'Athletics Women''s Marathon')
-INTO event (id, sport_id, event_name) VALUES (102,6,'Athletics Men''s 100 metres')
-INTO event (id, sport_id, event_name) VALUES (103,23,'Fencing Men''s Foil, Team')
-INTO event (id, sport_id, event_name) VALUES (104,23,'Fencing Men''s Sabre, Team')
-INTO event (id, sport_id, event_name) VALUES (105,55,'Swimming Men''s 100 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (106,55,'Swimming Men''s 4 x 200 metres Freestyle Relay')
-INTO event (id, sport_id, event_name) VALUES (107,14,'Boxing Men''s Lightweight')
-INTO event (id, sport_id, event_name) VALUES (108,37,'Modern Pentathlon Men''s Individual')
-INTO event (id, sport_id, event_name) VALUES (109,14,'Boxing Men''s Welterweight')
-INTO event (id, sport_id, event_name) VALUES (110,44,'Rowing Men''s Quadruple Sculls')
-INTO event (id, sport_id, event_name) VALUES (111,44,'Rowing Men''s Double Sculls')
-INTO event (id, sport_id, event_name) VALUES (112,44,'Rowing Men''s Coxed Pairs')
-INTO event (id, sport_id, event_name) VALUES (113,6,'Athletics Men''s 400 metres Hurdles')
-INTO event (id, sport_id, event_name) VALUES (114,6,'Athletics Men''s 400 metres')
-INTO event (id, sport_id, event_name) VALUES (115,6,'Athletics Men''s Hammer Throw')
-INTO event (id, sport_id, event_name) VALUES (116,65,'Weightlifting Men''s Featherweight')
-INTO event (id, sport_id, event_name) VALUES (117,6,'Athletics Men''s 800 metres')
-INTO event (id, sport_id, event_name) VALUES (118,30,'Hockey Men''s Hockey')
-INTO event (id, sport_id, event_name) VALUES (119,2,'Alpine Skiing Women''s Slalom')
-INTO event (id, sport_id, event_name) VALUES (120,44,'Rowing Women''s Single Sculls')
-INTO event (id, sport_id, event_name) VALUES (121,55,'Swimming Men''s 50 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (122,65,'Weightlifting Women''s Featherweight')
-INTO event (id, sport_id, event_name) VALUES (123,64,'Water Polo Women''s Water Polo')
-INTO event (id, sport_id, event_name) VALUES (124,24,'Figure Skating Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (125,65,'Weightlifting Men''s Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (126,22,'Equestrianism Mixed Three-Day Event, Individual')
-INTO event (id, sport_id, event_name) VALUES (127,22,'Equestrianism Mixed Three-Day Event, Team')
-INTO event (id, sport_id, event_name) VALUES (128,24,'Figure Skating Mixed Team')
-INTO event (id, sport_id, event_name) VALUES (129,47,'Sailing Women''s Three Person Keelboat')
-INTO event (id, sport_id, event_name) VALUES (130,20,'Cycling Women''s Road Race, Individual')
-INTO event (id, sport_id, event_name) VALUES (131,27,'Golf Women''s Individual')
-INTO event (id, sport_id, event_name) VALUES (132,53,'Softball Women''s Softball')
-INTO event (id, sport_id, event_name) VALUES (133,4,'Archery Women''s Individual')
-INTO event (id, sport_id, event_name) VALUES (134,66,'Wrestling Men''s Heavyweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (135,63,'Volleyball Men''s Volleyball')
-INTO event (id, sport_id, event_name) VALUES (136,58,'Taekwondo Women''s Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (137,56,'Synchronized Swimming Women''s Duet')
-INTO event (id, sport_id, event_name) VALUES (138,56,'Synchronized Swimming Women''s Team')
-INTO event (id, sport_id, event_name) VALUES (139,58,'Taekwondo Women''s Featherweight')
-INTO event (id, sport_id, event_name) VALUES (140,6,'Athletics Men''s Marathon')
-INTO event (id, sport_id, event_name) VALUES (141,6,'Athletics Men''s 4 x 400 metres Relay')
-INTO event (id, sport_id, event_name) VALUES (142,6,'Athletics Women''s 3,000 metres')
-INTO event (id, sport_id, event_name) VALUES (143,21,'Diving Women''s Platform')
-INTO event (id, sport_id, event_name) VALUES (144,48,'Shooting Men''s Air Rifle, 10 metres')
-INTO event (id, sport_id, event_name) VALUES (145,65,'Weightlifting Men''s Flyweight')
-INTO event (id, sport_id, event_name) VALUES (146,55,'Swimming Men''s 100 metres Backstroke')
-INTO event (id, sport_id, event_name) VALUES (147,65,'Weightlifting Men''s Light-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (148,66,'Wrestling Men''s Lightweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (149,23,'Fencing Men''s Sabre, Individual')
-INTO event (id, sport_id, event_name) VALUES (150,66,'Wrestling Men''s Super-Heavyweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (151,48,'Shooting Men''s Free Pistol, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (152,48,'Shooting Men''s Air Pistol, 10 metres')
-INTO event (id, sport_id, event_name) VALUES (153,44,'Rowing Men''s Coxless Fours')
-INTO event (id, sport_id, event_name) VALUES (154,14,'Boxing Men''s Light-Flyweight')
-INTO event (id, sport_id, event_name) VALUES (155,14,'Boxing Men''s Super-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (156,48,'Shooting Women''s Air Rifle, 10 metres')
-INTO event (id, sport_id, event_name) VALUES (157,65,'Weightlifting Men''s Middle-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (158,6,'Athletics Men''s Javelin Throw')
-INTO event (id, sport_id, event_name) VALUES (159,63,'Volleyball Women''s Volleyball')
-INTO event (id, sport_id, event_name) VALUES (160,66,'Wrestling Men''s Welterweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (161,66,'Wrestling Men''s Middleweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (162,6,'Athletics Men''s 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (163,6,'Athletics Men''s 3,000 metres Steeplechase')
-INTO event (id, sport_id, event_name) VALUES (164,66,'Wrestling Men''s Middleweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (165,55,'Swimming Women''s 100 metres Backstroke')
-INTO event (id, sport_id, event_name) VALUES (166,55,'Swimming Women''s 200 metres Backstroke')
-INTO event (id, sport_id, event_name) VALUES (167,55,'Swimming Women''s 4 x 100 metres Medley Relay')
-INTO event (id, sport_id, event_name) VALUES (168,66,'Wrestling Men''s Light-Heavyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (169,37,'Modern Pentathlon Men''s Team')
-INTO event (id, sport_id, event_name) VALUES (170,6,'Athletics Men''s 200 metres')
-INTO event (id, sport_id, event_name) VALUES (171,14,'Boxing Men''s Bantamweight')
-INTO event (id, sport_id, event_name) VALUES (172,6,'Athletics Women''s 200 metres')
-INTO event (id, sport_id, event_name) VALUES (173,57,'Table Tennis Women''s Singles')
-INTO event (id, sport_id, event_name) VALUES (174,57,'Table Tennis Women''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (175,48,'Shooting Men''s Skeet')
-INTO event (id, sport_id, event_name) VALUES (176,55,'Swimming Women''s 50 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (177,48,'Shooting Men''s Small-Bore Rifle, Three Positions, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (178,65,'Weightlifting Women''s Lightweight')
-INTO event (id, sport_id, event_name) VALUES (179,6,'Athletics Women''s Long Jump')
-INTO event (id, sport_id, event_name) VALUES (180,23,'Fencing Women''s epee, Individual')
-INTO event (id, sport_id, event_name) VALUES (181,55,'Swimming Men''s 200 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (182,55,'Swimming Men''s 4 x 100 metres Freestyle Relay')
-INTO event (id, sport_id, event_name) VALUES (183,55,'Swimming Men''s 200 metres Individual Medley')
-INTO event (id, sport_id, event_name) VALUES (184,55,'Swimming Men''s 400 metres Individual Medley')
-INTO event (id, sport_id, event_name) VALUES (185,7,'Badminton Women''s Singles')
-INTO event (id, sport_id, event_name) VALUES (186,59,'Tennis Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (187,14,'Boxing Men''s Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (188,66,'Wrestling Men''s Bantamweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (189,66,'Wrestling Men''s Flyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (190,6,'Athletics Women''s 5,000 metres')
-INTO event (id, sport_id, event_name) VALUES (191,65,'Weightlifting Women''s Light-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (192,65,'Weightlifting Women''s Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (193,6,'Athletics Men''s Discus Throw')
-INTO event (id, sport_id, event_name) VALUES (194,58,'Taekwondo Men''s Featherweight')
-INTO event (id, sport_id, event_name) VALUES (195,58,'Taekwondo Men''s Welterweight')
-INTO event (id, sport_id, event_name) VALUES (196,33,'Judo Men''s Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (197,13,'Bobsleigh Men''s Two')
-INTO event (id, sport_id, event_name) VALUES (198,66,'Wrestling Men''s Lightweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (199,39,'Nordic Combined Men''s Team')
-INTO event (id, sport_id, event_name) VALUES (200,39,'Nordic Combined Men''s Individual')
-INTO event (id, sport_id, event_name) VALUES (201,8,'Baseball Men''s Baseball')
-INTO event (id, sport_id, event_name) VALUES (202,44,'Rowing Men''s Coxed Fours')
-INTO event (id, sport_id, event_name) VALUES (203,20,'Cycling Men''s 100 kilometres Team Time Trial')
-INTO event (id, sport_id, event_name) VALUES (204,14,'Boxing Men''s Flyweight')
-INTO event (id, sport_id, event_name) VALUES (205,42,'Rhythmic Gymnastics Women''s Group')
-INTO event (id, sport_id, event_name) VALUES (206,5,'Art Competitions Mixed Architecture, Designs For Town Planning')
-INTO event (id, sport_id, event_name) VALUES (207,5,'Art Competitions Mixed Architecture, Architectural Designs')
-INTO event (id, sport_id, event_name) VALUES (208,28,'Gymnastics Women''s Individual All-Around')
-INTO event (id, sport_id, event_name) VALUES (209,28,'Gymnastics Women''s Team All-Around')
-INTO event (id, sport_id, event_name) VALUES (210,28,'Gymnastics Women''s Floor Exercise')
-INTO event (id, sport_id, event_name) VALUES (211,28,'Gymnastics Women''s Horse Vault')
-INTO event (id, sport_id, event_name) VALUES (212,28,'Gymnastics Women''s Uneven Bars')
-INTO event (id, sport_id, event_name) VALUES (213,28,'Gymnastics Women''s Balance Beam')
-INTO event (id, sport_id, event_name) VALUES (214,21,'Diving Women''s Springboard')
-INTO event (id, sport_id, event_name) VALUES (215,21,'Diving Women''s Synchronized Springboard')
-INTO event (id, sport_id, event_name) VALUES (216,6,'Athletics Women''s 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (217,47,'Sailing Mixed 7 metres')
-INTO event (id, sport_id, event_name) VALUES (218,33,'Judo Women''s Half-Middleweight')
-INTO event (id, sport_id, event_name) VALUES (219,6,'Athletics Men''s Decathlon')
-INTO event (id, sport_id, event_name) VALUES (220,12,'Biathlon Men''s 10 kilometres Sprint')
-INTO event (id, sport_id, event_name) VALUES (221,12,'Biathlon Men''s 20 kilometres')
-INTO event (id, sport_id, event_name) VALUES (222,12,'Biathlon Men''s 4 x 7.5 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (223,26,'Freestyle Skiing Men''s Moguls')
-INTO event (id, sport_id, event_name) VALUES (224,6,'Athletics Men''s Triple Jump')
-INTO event (id, sport_id, event_name) VALUES (225,66,'Wrestling Men''s Middleweight A, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (226,6,'Athletics Women''s Discus Throw')
-INTO event (id, sport_id, event_name) VALUES (227,55,'Swimming Women''s 4 x 100 metres Freestyle Relay')
-INTO event (id, sport_id, event_name) VALUES (228,6,'Athletics Women''s 1,500 metres')
-INTO event (id, sport_id, event_name) VALUES (229,48,'Shooting Women''s Air Pistol, 10 metres')
-INTO event (id, sport_id, event_name) VALUES (230,48,'Shooting Women''s Sporting Pistol, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (231,15,'Canoeing Men''s Kayak Doubles, 500 metres')
-INTO event (id, sport_id, event_name) VALUES (232,15,'Canoeing Men''s Kayak Singles, 500 metres')
-INTO event (id, sport_id, event_name) VALUES (233,15,'Canoeing Men''s Kayak Singles, 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (234,48,'Shooting Men''s Running Target, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (235,33,'Judo Women''s Half-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (236,6,'Athletics Women''s Pole Vault')
-INTO event (id, sport_id, event_name) VALUES (237,46,'Rugby Sevens Women''s Rugby Sevens')
-INTO event (id, sport_id, event_name) VALUES (238,57,'Table Tennis Men''s Team')
-INTO event (id, sport_id, event_name) VALUES (239,24,'Figure Skating Mixed Pairs')
-INTO event (id, sport_id, event_name) VALUES (240,26,'Freestyle Skiing Men''s Aerials')
-INTO event (id, sport_id, event_name) VALUES (241,44,'Rowing Women''s Coxed Eights')
-INTO event (id, sport_id, event_name) VALUES (242,6,'Athletics Women''s 4 x 400 metres Relay')
-INTO event (id, sport_id, event_name) VALUES (243,2,'Alpine Skiing Women''s Giant Slalom')
-INTO event (id, sport_id, event_name) VALUES (244,2,'Alpine Skiing Women''s Super G')
-INTO event (id, sport_id, event_name) VALUES (245,18,'Cross Country Skiing Women''s 5 kilometres')
-INTO event (id, sport_id, event_name) VALUES (246,18,'Cross Country Skiing Women''s 10 kilometres')
-INTO event (id, sport_id, event_name) VALUES (247,18,'Cross Country Skiing Women''s 20 kilometres')
-INTO event (id, sport_id, event_name) VALUES (248,20,'Cycling Men''s Sprint')
-INTO event (id, sport_id, event_name) VALUES (249,20,'Cycling Men''s 1,000 metres Time Trial')
-INTO event (id, sport_id, event_name) VALUES (250,20,'Cycling Men''s Individual Pursuit, 4,000 metres')
-INTO event (id, sport_id, event_name) VALUES (251,66,'Wrestling Men''s Welterweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (252,66,'Wrestling Men''s Bantamweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (253,44,'Rowing Women''s Lightweight Double Sculls')
-INTO event (id, sport_id, event_name) VALUES (254,6,'Athletics Women''s 800 metres')
-INTO event (id, sport_id, event_name) VALUES (255,44,'Rowing Women''s Coxed Quadruple Sculls')
-INTO event (id, sport_id, event_name) VALUES (256,12,'Biathlon Men''s 12.5 kilometres Pursuit')
-INTO event (id, sport_id, event_name) VALUES (257,12,'Biathlon Mixed 2 x 6 kilometres and 2 x 7.5 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (258,42,'Rhythmic Gymnastics Women''s Individual')
-INTO event (id, sport_id, event_name) VALUES (259,15,'Canoeing Men''s Kayak Singles, Slalom')
-INTO event (id, sport_id, event_name) VALUES (260,4,'Archery Men''s Individual')
-INTO event (id, sport_id, event_name) VALUES (261,4,'Archery Men''s Team')
-INTO event (id, sport_id, event_name) VALUES (262,54,'Speed Skating Women''s 1,500 metres')
-INTO event (id, sport_id, event_name) VALUES (263,54,'Speed Skating Women''s Team Pursuit (6 laps)')
-INTO event (id, sport_id, event_name) VALUES (264,18,'Cross Country Skiing Men''s Sprint')
-INTO event (id, sport_id, event_name) VALUES (265,6,'Athletics Women''s 400 metres')
-INTO event (id, sport_id, event_name) VALUES (266,24,'Figure Skating Women''s Singles')
-INTO event (id, sport_id, event_name) VALUES (267,54,'Speed Skating Men''s 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (268,60,'Trampolining Men''s Individual')
-INTO event (id, sport_id, event_name) VALUES (269,11,'Beach Volleyball Men''s Beach Volleyball')
-INTO event (id, sport_id, event_name) VALUES (270,20,'Cycling Women''s Mountainbike, Cross-Country')
-INTO event (id, sport_id, event_name) VALUES (271,6,'Athletics Men''s Javelin Throw, Both Hands')
-INTO event (id, sport_id, event_name) VALUES (272,61,'Triathlon Women''s Olympic Distance')
-INTO event (id, sport_id, event_name) VALUES (273,28,'Gymnastics Women''s Team Portable Apparatus')
-INTO event (id, sport_id, event_name) VALUES (274,20,'Cycling Men''s Mountainbike, Cross-Country')
-INTO event (id, sport_id, event_name) VALUES (275,6,'Athletics Women''s 400 metres Hurdles')
-INTO event (id, sport_id, event_name) VALUES (276,21,'Diving Men''s Springboard')
-INTO event (id, sport_id, event_name) VALUES (277,66,'Wrestling Men''s Flyweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (278,66,'Wrestling Men''s Featherweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (279,57,'Table Tennis Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (280,5,'Art Competitions Mixed Painting')
-INTO event (id, sport_id, event_name) VALUES (281,18,'Cross Country Skiing Women''s 3 x 5 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (282,33,'Judo Men''s Open Class')
-INTO event (id, sport_id, event_name) VALUES (283,44,'Rowing Women''s Quadruple Sculls')
-INTO event (id, sport_id, event_name) VALUES (284,28,'Gymnastics Men''s Team All-Around, Swedish System')
-INTO event (id, sport_id, event_name) VALUES (285,39,'Nordic Combined Men''s Sprint')
-INTO event (id, sport_id, event_name) VALUES (286,6,'Athletics Women''s Pentathlon')
-INTO event (id, sport_id, event_name) VALUES (287,5,'Art Competitions Mixed Painting, Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (288,20,'Cycling Men''s Team Pursuit, 4,000 metres')
-INTO event (id, sport_id, event_name) VALUES (289,55,'Swimming Men''s 200 metres Backstroke')
-INTO event (id, sport_id, event_name) VALUES (290,65,'Weightlifting Women''s Middleweight')
-INTO event (id, sport_id, event_name) VALUES (291,55,'Swimming Men''s 1,500 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (292,66,'Wrestling Women''s Light-Heavyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (293,55,'Swimming Women''s 100 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (294,22,'Equestrianism Men''s Jumping, Individual')
-INTO event (id, sport_id, event_name) VALUES (295,22,'Equestrianism Men''s Jumping, Team')
-INTO event (id, sport_id, event_name) VALUES (296,22,'Equestrianism Men''s Three-Day Event, Individual')
-INTO event (id, sport_id, event_name) VALUES (297,22,'Equestrianism Men''s Three-Day Event, Team')
-INTO event (id, sport_id, event_name) VALUES (298,2,'Alpine Skiing Women''s Combined')
-INTO event (id, sport_id, event_name) VALUES (299,6,'Athletics Women''s High Jump')
-INTO event (id, sport_id, event_name) VALUES (300,51,'Ski Jumping Men''s Normal Hill, Individual')
-INTO event (id, sport_id, event_name) VALUES (301,15,'Canoeing Women''s Kayak Fours, 500 metres')
-INTO event (id, sport_id, event_name) VALUES (302,31,'Ice Hockey Women''s Ice Hockey')
-INTO event (id, sport_id, event_name) VALUES (303,47,'Sailing Men''s One Person Dinghy')
-INTO event (id, sport_id, event_name) VALUES (304,60,'Trampolining Women''s Individual')
-INTO event (id, sport_id, event_name) VALUES (305,19,'Curling Men''s Curling')
-INTO event (id, sport_id, event_name) VALUES (306,5,'Art Competitions Mixed Literature')
-INTO event (id, sport_id, event_name) VALUES (307,33,'Judo Men''s Middleweight')
-INTO event (id, sport_id, event_name) VALUES (308,12,'Biathlon Women''s 15 kilometres')
-INTO event (id, sport_id, event_name) VALUES (309,12,'Biathlon Women''s 3 x 7.5 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (310,12,'Biathlon Women''s 4 x 7.5 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (311,33,'Judo Men''s Half-Lightweight')
-INTO event (id, sport_id, event_name) VALUES (312,23,'Fencing Women''s Foil, Team')
-INTO event (id, sport_id, event_name) VALUES (313,55,'Swimming Women''s 200 metres Butterfly')
-INTO event (id, sport_id, event_name) VALUES (314,55,'Swimming Women''s 400 metres Individual Medley')
-INTO event (id, sport_id, event_name) VALUES (315,27,'Golf Men''s Individual')
-INTO event (id, sport_id, event_name) VALUES (316,6,'Athletics Men''s Standing High Jump')
-INTO event (id, sport_id, event_name) VALUES (317,6,'Athletics Men''s Standing Long Jump')
-INTO event (id, sport_id, event_name) VALUES (318,6,'Athletics Men''s 20 kilometres Walk')
-INTO event (id, sport_id, event_name) VALUES (319,55,'Swimming Men''s 220 yard Freestyle')
-INTO event (id, sport_id, event_name) VALUES (320,55,'Swimming Men''s 880 yard Freestyle')
-INTO event (id, sport_id, event_name) VALUES (321,55,'Swimming Men''s One Mile Freestyle')
-INTO event (id, sport_id, event_name) VALUES (322,55,'Swimming Men''s 4 x 50 Yard Freestyle Relay')
-INTO event (id, sport_id, event_name) VALUES (323,55,'Swimming Men''s Plunge For Distance')
-INTO event (id, sport_id, event_name) VALUES (324,48,'Shooting Men''s Free Rifle, Three Positions, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (325,48,'Shooting Men''s Military Rifle, Three Positions, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (326,48,'Shooting Men''s Military Rifle, Any Position, 600 metres')
-INTO event (id, sport_id, event_name) VALUES (327,48,'Shooting Men''s Military Rifle, 200, 400, 500 and 600 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (328,48,'Shooting Men''s Military Rifle, Prone, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (329,33,'Judo Men''s Half-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (330,4,'Archery Women''s Team')
-INTO event (id, sport_id, event_name) VALUES (331,6,'Athletics Men''s 50 kilometres Walk')
-INTO event (id, sport_id, event_name) VALUES (332,44,'Rowing Women''s Double Sculls')
-INTO event (id, sport_id, event_name) VALUES (333,47,'Sailing Mixed 6 metres')
-INTO event (id, sport_id, event_name) VALUES (334,14,'Boxing Men''s Light-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (335,14,'Boxing Women''s Flyweight')
-INTO event (id, sport_id, event_name) VALUES (336,6,'Athletics Women''s 100 metres Hurdles')
-INTO event (id, sport_id, event_name) VALUES (337,6,'Athletics Men''s Discus Throw, Greek Style')
-INTO event (id, sport_id, event_name) VALUES (338,19,'Curling Women''s Curling')
-INTO event (id, sport_id, event_name) VALUES (339,47,'Sailing Mixed One Person Dinghy')
-INTO event (id, sport_id, event_name) VALUES (340,66,'Wrestling Women''s Heavyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (341,7,'Badminton Mixed Doubles')
-INTO event (id, sport_id, event_name) VALUES (342,23,'Fencing Women''s Foil, Individual')
-INTO event (id, sport_id, event_name) VALUES (343,47,'Sailing Mixed Two Person Keelboat')
-INTO event (id, sport_id, event_name) VALUES (344,57,'Table Tennis Men''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (345,66,'Wrestling Men''s Light-Flyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (346,66,'Wrestling Women''s Featherweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (347,55,'Swimming Women''s 200 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (348,55,'Swimming Women''s 400 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (349,55,'Swimming Women''s 200 metres Individual Medley')
-INTO event (id, sport_id, event_name) VALUES (350,47,'Sailing Men''s Windsurfer')
-INTO event (id, sport_id, event_name) VALUES (351,26,'Freestyle Skiing Men''s Slopestyle')
-INTO event (id, sport_id, event_name) VALUES (352,48,'Shooting Men''s Running Target, Single Shot')
-INTO event (id, sport_id, event_name) VALUES (353,48,'Shooting Men''s Running Target, Double Shot')
-INTO event (id, sport_id, event_name) VALUES (354,46,'Rugby Sevens Men''s Rugby Sevens')
-INTO event (id, sport_id, event_name) VALUES (355,66,'Wrestling Women''s Lightweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (356,14,'Boxing Men''s Light-Middleweight')
-INTO event (id, sport_id, event_name) VALUES (357,37,'Modern Pentathlon Women''s Individual')
-INTO event (id, sport_id, event_name) VALUES (358,15,'Canoeing Men''s Canadian Doubles, Slalom')
-INTO event (id, sport_id, event_name) VALUES (359,33,'Judo Women''s Half-Lightweight')
-INTO event (id, sport_id, event_name) VALUES (360,21,'Diving Women''s Plain High')
-INTO event (id, sport_id, event_name) VALUES (361,22,'Equestrianism Men''s Dressage, Individual')
-INTO event (id, sport_id, event_name) VALUES (362,22,'Equestrianism Men''s Dressage, Team')
-INTO event (id, sport_id, event_name) VALUES (363,59,'Tennis Women''s Singles, Covered Courts')
-INTO event (id, sport_id, event_name) VALUES (364,21,'Diving Men''s Plain High')
-INTO event (id, sport_id, event_name) VALUES (365,48,'Shooting Mixed Small-Bore Rifle, Three Positions, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (366,48,'Shooting Mixed Small-Bore Rifle, Prone, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (367,55,'Swimming Women''s 800 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (368,47,'Sailing Women''s Two Person Dinghy')
-INTO event (id, sport_id, event_name) VALUES (369,2,'Alpine Skiing Women''s Downhill')
-INTO event (id, sport_id, event_name) VALUES (370,48,'Shooting Men''s Free Pistol, 50 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (371,48,'Shooting Men''s Free Rifle, Three Positions, 300 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (372,48,'Shooting Men''s Military Rifle, Prone, 300 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (373,48,'Shooting Men''s Military Rifle, Prone, 600 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (374,48,'Shooting Men''s Military Rifle, Standing, 300 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (375,48,'Shooting Men''s Military Rifle, 300 metres and 600 metres, Prone, Team')
-INTO event (id, sport_id, event_name) VALUES (376,48,'Shooting Men''s Free Rifle, Prone, 600 metres')
-INTO event (id, sport_id, event_name) VALUES (377,48,'Shooting Men''s Free Rifle, 400, 600 and 800 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (378,44,'Rowing Men''s Single Sculls')
-INTO event (id, sport_id, event_name) VALUES (379,26,'Freestyle Skiing Women''s Halfpipe')
-INTO event (id, sport_id, event_name) VALUES (380,6,'Athletics Women''s Heptathlon')
-INTO event (id, sport_id, event_name) VALUES (381,20,'Cycling Men''s Points Race')
-INTO event (id, sport_id, event_name) VALUES (382,56,'Synchronized Swimming Women''s Solo')
-INTO event (id, sport_id, event_name) VALUES (383,22,'Equestrianism Mixed Dressage, Individual')
-INTO event (id, sport_id, event_name) VALUES (384,22,'Equestrianism Mixed Dressage, Team')
-INTO event (id, sport_id, event_name) VALUES (385,18,'Cross Country Skiing Men''s 18 kilometres')
-INTO event (id, sport_id, event_name) VALUES (386,55,'Swimming Men''s 100 metres Breaststroke')
-INTO event (id, sport_id, event_name) VALUES (387,24,'Figure Skating Mixed Ice Dancing')
-INTO event (id, sport_id, event_name) VALUES (388,48,'Shooting Mixed Free Pistol, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (389,47,'Sailing Women''s Skiff')
-INTO event (id, sport_id, event_name) VALUES (390,15,'Canoeing Men''s Kayak Doubles, 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (391,61,'Triathlon Men''s Olympic Distance')
-INTO event (id, sport_id, event_name) VALUES (392,47,'Sailing Women''s One Person Dinghy')
-INTO event (id, sport_id, event_name) VALUES (393,18,'Cross Country Skiing Women''s 30 kilometres')
-INTO event (id, sport_id, event_name) VALUES (394,18,'Cross Country Skiing Women''s 15 km Skiathlon')
-INTO event (id, sport_id, event_name) VALUES (395,11,'Beach Volleyball Women''s Beach Volleyball')
-INTO event (id, sport_id, event_name) VALUES (396,65,'Weightlifting Men''s Super-Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (397,44,'Rowing Men''s Lightweight Coxless Fours')
-INTO event (id, sport_id, event_name) VALUES (398,66,'Wrestling Men''s Light-Flyweight, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (399,15,'Canoeing Men''s Canadian Singles, 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (400,47,'Sailing Mixed 5.5 metres')
-INTO event (id, sport_id, event_name) VALUES (401,22,'Equestrianism Mixed Jumping, Team')
-INTO event (id, sport_id, event_name) VALUES (402,21,'Diving Men''s Synchronized Platform')
-INTO event (id, sport_id, event_name) VALUES (403,52,'Snowboarding Men''s Halfpipe')
-INTO event (id, sport_id, event_name) VALUES (404,15,'Canoeing Women''s Kayak Singles, Slalom')
-INTO event (id, sport_id, event_name) VALUES (405,65,'Weightlifting Women''s Flyweight')
-INTO event (id, sport_id, event_name) VALUES (406,55,'Swimming Women''s 100 metres Breaststroke')
-INTO event (id, sport_id, event_name) VALUES (407,55,'Swimming Women''s 200 metres Breaststroke')
-INTO event (id, sport_id, event_name) VALUES (408,66,'Wrestling Men''s Middleweight B, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (409,6,'Athletics Men''s Stone Throw')
-INTO event (id, sport_id, event_name) VALUES (410,6,'Athletics Men''s Javelin Throw, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (411,6,'Athletics Men''s Pentathlon (Ancient)')
-INTO event (id, sport_id, event_name) VALUES (412,48,'Shooting Women''s Small-Bore Rifle, Three Positions, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (413,55,'Swimming Women''s 100 metres Butterfly')
-INTO event (id, sport_id, event_name) VALUES (414,65,'Weightlifting Men''s Heavyweight I')
-INTO event (id, sport_id, event_name) VALUES (415,6,'Athletics Women''s 3,000 metres Steeplechase')
-INTO event (id, sport_id, event_name) VALUES (416,6,'Athletics Men''s Shot Put, Both Hands')
-INTO event (id, sport_id, event_name) VALUES (417,51,'Ski Jumping Men''s Large Hill, Individual')
-INTO event (id, sport_id, event_name) VALUES (418,51,'Ski Jumping Men''s Large Hill, Team')
-INTO event (id, sport_id, event_name) VALUES (419,48,'Shooting Women''s Trap')
-INTO event (id, sport_id, event_name) VALUES (420,7,'Badminton Men''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (421,55,'Swimming Women''s 4 x 200 metres Freestyle Relay')
-INTO event (id, sport_id, event_name) VALUES (422,6,'Athletics Men''s 10 kilometres Walk')
-INTO event (id, sport_id, event_name) VALUES (423,6,'Athletics Women''s 20 kilometres Walk')
-INTO event (id, sport_id, event_name) VALUES (424,6,'Athletics Women''s 80 metres Hurdles')
-INTO event (id, sport_id, event_name) VALUES (425,47,'Sailing Men''s One Person Heavyweight Dinghy')
-INTO event (id, sport_id, event_name) VALUES (426,26,'Freestyle Skiing Women''s Aerials')
-INTO event (id, sport_id, event_name) VALUES (427,5,'Art Competitions Mixed Painting, Paintings')
-INTO event (id, sport_id, event_name) VALUES (428,59,'Tennis Mixed Doubles, Covered Courts')
-INTO event (id, sport_id, event_name) VALUES (429,20,'Cycling Men''s Madison')
-INTO event (id, sport_id, event_name) VALUES (430,5,'Art Competitions Mixed Sculpturing, Statues')
-INTO event (id, sport_id, event_name) VALUES (431,45,'Rugby Men''s Rugby')
-INTO event (id, sport_id, event_name) VALUES (432,65,'Weightlifting Men''s Heavyweight II')
-INTO event (id, sport_id, event_name) VALUES (433,15,'Canoeing Women''s Kayak Doubles, 500 metres')
-INTO event (id, sport_id, event_name) VALUES (434,49,'Short Track Speed Skating Men''s 5,000 metres Relay')
-INTO event (id, sport_id, event_name) VALUES (435,20,'Cycling Men''s Individual Time Trial')
-INTO event (id, sport_id, event_name) VALUES (436,33,'Judo Women''s Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (437,15,'Canoeing Men''s Kayak Doubles, 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (438,66,'Wrestling Men''s Super-Heavyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (439,12,'Biathlon Women''s 10 kilometres Pursuit')
-INTO event (id, sport_id, event_name) VALUES (440,12,'Biathlon Women''s 12.5 kilometres Mass Start')
-INTO event (id, sport_id, event_name) VALUES (441,12,'Biathlon Women''s 4 x 6 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (442,23,'Fencing Women''s Sabre, Team')
-INTO event (id, sport_id, event_name) VALUES (443,48,'Shooting Men''s Double Trap')
-INTO event (id, sport_id, event_name) VALUES (444,65,'Weightlifting Men''s Bantamweight')
-INTO event (id, sport_id, event_name) VALUES (445,58,'Taekwondo Men''s Heavyweight')
-INTO event (id, sport_id, event_name) VALUES (446,47,'Sailing Mixed Windsurfer')
-INTO event (id, sport_id, event_name) VALUES (447,58,'Taekwondo Women''s Welterweight')
-INTO event (id, sport_id, event_name) VALUES (448,48,'Shooting Mixed Free Rifle, Three Positions, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (449,50,'Skeleton Men''s Skeleton')
-INTO event (id, sport_id, event_name) VALUES (450,20,'Cycling Men''s 50 kilometres')
-INTO event (id, sport_id, event_name) VALUES (451,48,'Shooting Mixed Rapid-Fire Pistol, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (452,15,'Canoeing Men''s Kayak Singles, 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (453,15,'Canoeing Men''s Canadian Singles, Slalom')
-INTO event (id, sport_id, event_name) VALUES (454,35,'Luge Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (455,35,'Luge Mixed (Men)''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (456,47,'Sailing Mixed Multihull')
-INTO event (id, sport_id, event_name) VALUES (457,7,'Badminton Women''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (458,54,'Speed Skating Women''s 3,000 metres')
-INTO event (id, sport_id, event_name) VALUES (459,18,'Cross Country Skiing Women''s 5/10 kilometres Pursuit')
-INTO event (id, sport_id, event_name) VALUES (460,18,'Cross Country Skiing Women''s 4 x 5 kilometres Relay')
-INTO event (id, sport_id, event_name) VALUES (461,18,'Cross Country Skiing Women''s 15 kilometres')
-INTO event (id, sport_id, event_name) VALUES (462,18,'Cross Country Skiing Women''s 5/5 kilometres Pursuit')
-INTO event (id, sport_id, event_name) VALUES (463,21,'Diving Women''s Synchronized Platform')
-INTO event (id, sport_id, event_name) VALUES (464,6,'Athletics Women''s Triple Jump')
-INTO event (id, sport_id, event_name) VALUES (465,50,'Skeleton Women''s Skeleton')
-INTO event (id, sport_id, event_name) VALUES (466,13,'Bobsleigh Men''s Four/Five')
-INTO event (id, sport_id, event_name) VALUES (467,5,'Art Competitions Mixed Painting, Drawings And Water Colors')
-INTO event (id, sport_id, event_name) VALUES (468,48,'Shooting Men''s Dueling Pistol, 30 metres')
-INTO event (id, sport_id, event_name) VALUES (469,14,'Boxing Women''s Lightweight')
-INTO event (id, sport_id, event_name) VALUES (470,20,'Cycling Women''s BMX')
-INTO event (id, sport_id, event_name) VALUES (471,15,'Canoeing Men''s Kayak Doubles, 200 metres')
-INTO event (id, sport_id, event_name) VALUES (472,23,'Fencing Men''s Sabre, Masters, Individual')
-INTO event (id, sport_id, event_name) VALUES (473,34,'Lacrosse Men''s Lacrosse')
-INTO event (id, sport_id, event_name) VALUES (474,15,'Canoeing Women''s Kayak Singles, 500 metres')
-INTO event (id, sport_id, event_name) VALUES (475,6,'Athletics Women''s 10 kilometres Walk')
-INTO event (id, sport_id, event_name) VALUES (476,47,'Sailing Mixed 12 metres')
-INTO event (id, sport_id, event_name) VALUES (477,33,'Judo Women''s Extra-Lightweight')
-INTO event (id, sport_id, event_name) VALUES (478,21,'Diving Men''s Synchronized Springboard')
-INTO event (id, sport_id, event_name) VALUES (479,44,'Rowing Men''s Coxed Fours, Outriggers')
-INTO event (id, sport_id, event_name) VALUES (480,47,'Sailing Mixed Two Person Dinghy')
-INTO event (id, sport_id, event_name) VALUES (481,5,'Art Competitions Mixed Architecture, Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (482,4,'Archery Men''s Target Archery, 28 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (483,4,'Archery Men''s Target Archery, 33 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (484,4,'Archery Men''s Target Archery, 50 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (485,49,'Short Track Speed Skating Women''s 3,000 metres Relay')
-INTO event (id, sport_id, event_name) VALUES (486,26,'Freestyle Skiing Women''s Moguls')
-INTO event (id, sport_id, event_name) VALUES (487,49,'Short Track Speed Skating Men''s 500 metres')
-INTO event (id, sport_id, event_name) VALUES (488,48,'Shooting Men''s Running Target, 10 metres')
-INTO event (id, sport_id, event_name) VALUES (489,40,'Polo Men''s Polo')
-INTO event (id, sport_id, event_name) VALUES (490,44,'Rowing Men''s Coxed Fours, Inriggers')
-INTO event (id, sport_id, event_name) VALUES (491,20,'Cycling Men''s BMX')
-INTO event (id, sport_id, event_name) VALUES (492,5,'Art Competitions Mixed Sculpturing')
-INTO event (id, sport_id, event_name) VALUES (493,6,'Athletics Men''s Cross-Country, Individual')
-INTO event (id, sport_id, event_name) VALUES (494,6,'Athletics Men''s Cross-Country, Team')
-INTO event (id, sport_id, event_name) VALUES (495,47,'Sailing Mixed 40 metres')
-INTO event (id, sport_id, event_name) VALUES (496,18,'Cross Country Skiing Men''s 10/10 kilometres Pursuit')
-INTO event (id, sport_id, event_name) VALUES (497,51,'Ski Jumping Women''s Normal Hill, Individual')
-INTO event (id, sport_id, event_name) VALUES (498,49,'Short Track Speed Skating Men''s 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (499,49,'Short Track Speed Skating Men''s 1,500 metres')
-INTO event (id, sport_id, event_name) VALUES (500,59,'Tennis Women''s Singles')
-INTO event (id, sport_id, event_name) VALUES (501,59,'Tennis Mixed Doubles')
-INTO event (id, sport_id, event_name) VALUES (502,59,'Tennis Women''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (503,33,'Judo Women''s Middleweight')
-INTO event (id, sport_id, event_name) VALUES (504,33,'Judo Women''s Lightweight')
-INTO event (id, sport_id, event_name) VALUES (505,18,'Cross Country Skiing Men''s Team Sprint')
-INTO event (id, sport_id, event_name) VALUES (506,52,'Snowboarding Women''s Halfpipe')
-INTO event (id, sport_id, event_name) VALUES (507,15,'Canoeing Women''s Kayak Singles, 200 metres')
-INTO event (id, sport_id, event_name) VALUES (508,15,'Canoeing Men''s Kayak Relay 4 x 500 metres')
-INTO event (id, sport_id, event_name) VALUES (509,6,'Athletics Men''s 3,000 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (510,18,'Cross Country Skiing Women''s Sprint')
-INTO event (id, sport_id, event_name) VALUES (511,48,'Shooting Men''s Small-Bore Rifle, Prone, 50 and 100 yards')
-INTO event (id, sport_id, event_name) VALUES (512,48,'Shooting Men''s Small-Bore Rifle, 50 and 100 yards, Team')
-INTO event (id, sport_id, event_name) VALUES (513,48,'Shooting Men''s Small-Bore Rifle, Disappearing Target, 25 yards')
-INTO event (id, sport_id, event_name) VALUES (514,48,'Shooting Men''s Small-Bore Rifle, Moving Target, 25 yards')
-INTO event (id, sport_id, event_name) VALUES (515,48,'Shooting Men''s Military Pistol, Team')
-INTO event (id, sport_id, event_name) VALUES (516,44,'Rowing Women''s Coxed Fours')
-INTO event (id, sport_id, event_name) VALUES (517,15,'Canoeing Men''s Canadian Singles, 500 metres')
-INTO event (id, sport_id, event_name) VALUES (518,23,'Fencing Men''s Foil, Masters, Individual')
-INTO event (id, sport_id, event_name) VALUES (519,23,'Fencing Men''s epee, Masters, Individual')
-INTO event (id, sport_id, event_name) VALUES (520,28,'Gymnastics Men''s Individual All-Around, Field Sports')
-INTO event (id, sport_id, event_name) VALUES (521,28,'Gymnastics Men''s Individual All-Around, Apparatus Work')
-INTO event (id, sport_id, event_name) VALUES (522,23,'Fencing Women''s epee, Team')
-INTO event (id, sport_id, event_name) VALUES (523,55,'Swimming Men''s 4,000 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (524,55,'Swimming Men''s Underwater Swimming')
-INTO event (id, sport_id, event_name) VALUES (525,28,'Gymnastics Men''s Individual All-Around, 5 Events')
-INTO event (id, sport_id, event_name) VALUES (526,47,'Sailing Mixed Skiff')
-INTO event (id, sport_id, event_name) VALUES (527,20,'Cycling Men''s Tandem Sprint, 2,000 metres')
-INTO event (id, sport_id, event_name) VALUES (528,48,'Shooting Men''s Military Rifle, 200/500/600/800/900/1,000 Yards, Team')
-INTO event (id, sport_id, event_name) VALUES (529,48,'Shooting Men''s Small-Bore Rifle, Any Position, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (530,48,'Shooting Men''s Small-Bore Rifle, Disappearing Target, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (531,55,'Swimming Women''s 10 kilometres Open Water')
-INTO event (id, sport_id, event_name) VALUES (532,52,'Snowboarding Women''s Slopestyle')
-INTO event (id, sport_id, event_name) VALUES (533,52,'Snowboarding Men''s Giant Slalom')
-INTO event (id, sport_id, event_name) VALUES (534,52,'Snowboarding Men''s Parallel Giant Slalom')
-INTO event (id, sport_id, event_name) VALUES (535,52,'Snowboarding Men''s Boardercross')
-INTO event (id, sport_id, event_name) VALUES (536,52,'Snowboarding Men''s Parallel Slalom')
-INTO event (id, sport_id, event_name) VALUES (537,16,'Cricket Men''s Cricket')
-INTO event (id, sport_id, event_name) VALUES (538,15,'Canoeing Men''s Canadian Singles, 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (539,18,'Cross Country Skiing Women''s Team Sprint')
-INTO event (id, sport_id, event_name) VALUES (540,14,'Boxing Women''s Middleweight')
-INTO event (id, sport_id, event_name) VALUES (541,47,'Sailing Men''s Skiff')
-INTO event (id, sport_id, event_name) VALUES (542,6,'Athletics Men''s Pentathlon')
-INTO event (id, sport_id, event_name) VALUES (543,48,'Shooting Women''s Skeet')
-INTO event (id, sport_id, event_name) VALUES (544,12,'Biathlon Men''s 15 kilometres Mass Start')
-INTO event (id, sport_id, event_name) VALUES (545,18,'Cross Country Skiing Men''s 30 km Skiathlon')
-INTO event (id, sport_id, event_name) VALUES (546,20,'Cycling Men''s 1/4 mile')
-INTO event (id, sport_id, event_name) VALUES (547,20,'Cycling Men''s 1/2 mile')
-INTO event (id, sport_id, event_name) VALUES (548,20,'Cycling Men''s 5 mile')
-INTO event (id, sport_id, event_name) VALUES (549,20,'Cycling Men''s 25 mile')
-INTO event (id, sport_id, event_name) VALUES (550,20,'Cycling Men''s Team Pursuit, 1,980 yards')
-INTO event (id, sport_id, event_name) VALUES (551,20,'Cycling Men''s 5,000 metres')
-INTO event (id, sport_id, event_name) VALUES (552,20,'Cycling Men''s 20 kilometres')
-INTO event (id, sport_id, event_name) VALUES (553,20,'Cycling Men''s 100 kilometres')
-INTO event (id, sport_id, event_name) VALUES (554,54,'Speed Skating Men''s Team Pursuit (8 laps)')
-INTO event (id, sport_id, event_name) VALUES (555,20,'Cycling Women''s Team Pursuit')
-INTO event (id, sport_id, event_name) VALUES (556,54,'Speed Skating Women''s 5,000 metres')
-INTO event (id, sport_id, event_name) VALUES (557,52,'Snowboarding Women''s Boardercross')
-INTO event (id, sport_id, event_name) VALUES (558,48,'Shooting Mixed Running Target, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (559,35,'Luge Mixed Team Relay')
-INTO event (id, sport_id, event_name) VALUES (560,20,'Cycling Women''s Individual Time Trial')
-INTO event (id, sport_id, event_name) VALUES (561,23,'Fencing Women''s Sabre, Individual')
-INTO event (id, sport_id, event_name) VALUES (562,4,'Archery Women''s Double National Round')
-INTO event (id, sport_id, event_name) VALUES (563,20,'Cycling Men''s Omnium')
-INTO event (id, sport_id, event_name) VALUES (564,47,'Sailing Mixed 10 metres')
-INTO event (id, sport_id, event_name) VALUES (565,48,'Shooting Men''s Trap, Team')
-INTO event (id, sport_id, event_name) VALUES (566,20,'Cycling Women''s Individual Pursuit, 3,000 metres')
-INTO event (id, sport_id, event_name) VALUES (567,20,'Cycling Women''s Points Race')
-INTO event (id, sport_id, event_name) VALUES (568,47,'Sailing Men''s Two Person Keelboat')
-INTO event (id, sport_id, event_name) VALUES (569,20,'Cycling Men''s Keirin')
-INTO event (id, sport_id, event_name) VALUES (570,20,'Cycling Men''s Team Sprint')
-INTO event (id, sport_id, event_name) VALUES (571,48,'Shooting Men''s Running Target, Single Shot, Team')
-INTO event (id, sport_id, event_name) VALUES (572,13,'Bobsleigh Women''s Two')
-INTO event (id, sport_id, event_name) VALUES (573,41,'Racquets Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (574,41,'Racquets Men''s Doubles')
-INTO event (id, sport_id, event_name) VALUES (575,5,'Art Competitions Mixed Literature, Lyric Works')
-INTO event (id, sport_id, event_name) VALUES (576,36,'Military Ski Patrol Men''s Military Ski Patrol')
-INTO event (id, sport_id, event_name) VALUES (577,5,'Art Competitions Mixed Painting, Graphic Arts')
-INTO event (id, sport_id, event_name) VALUES (578,66,'Wrestling Women''s Flyweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (579,47,'Sailing Mixed Open')
-INTO event (id, sport_id, event_name) VALUES (580,47,'Sailing Mixed 0.5-1 Ton')
-INTO event (id, sport_id, event_name) VALUES (581,5,'Art Competitions Mixed Painting, Applied Arts')
-INTO event (id, sport_id, event_name) VALUES (582,17,'Croquet Mixed Singles, One Ball')
-INTO event (id, sport_id, event_name) VALUES (583,17,'Croquet Mixed Doubles')
-INTO event (id, sport_id, event_name) VALUES (584,48,'Shooting Men''s Running Target, Single And Double Shot')
-INTO event (id, sport_id, event_name) VALUES (585,48,'Shooting Men''s Running Target, Double Shot, Team')
-INTO event (id, sport_id, event_name) VALUES (586,48,'Shooting Men''s Free Pistol, 50 yards')
-INTO event (id, sport_id, event_name) VALUES (587,48,'Shooting Men''s Free Pistol, 50 yards, Team')
-INTO event (id, sport_id, event_name) VALUES (588,23,'Fencing Men''s epee, Masters and Amateurs, Individual')
-INTO event (id, sport_id, event_name) VALUES (589,55,'Swimming Men''s 10 kilometres Open Water')
-INTO event (id, sport_id, event_name) VALUES (590,5,'Art Competitions Mixed Music, Compositions For Orchestra')
-INTO event (id, sport_id, event_name) VALUES (591,4,'Archery Men''s Double York Round')
-INTO event (id, sport_id, event_name) VALUES (592,4,'Archery Men''s Continental Style')
-INTO event (id, sport_id, event_name) VALUES (593,66,'Wrestling Women''s Middleweight, Freestyle')
-INTO event (id, sport_id, event_name) VALUES (594,55,'Swimming Men''s 4 x 250 metres Freestyle Relay')
-INTO event (id, sport_id, event_name) VALUES (595,26,'Freestyle Skiing Women''s Slopestyle')
-INTO event (id, sport_id, event_name) VALUES (596,57,'Table Tennis Women''s Team')
-INTO event (id, sport_id, event_name) VALUES (597,6,'Athletics Women''s Hammer Throw')
-INTO event (id, sport_id, event_name) VALUES (598,15,'Canoeing Men''s Kayak Singles, 200 metres')
-INTO event (id, sport_id, event_name) VALUES (599,49,'Short Track Speed Skating Women''s 500 metres')
-INTO event (id, sport_id, event_name) VALUES (600,48,'Shooting Women''s Double Trap')
-INTO event (id, sport_id, event_name) VALUES (601,5,'Art Competitions Mixed Literature, Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (602,49,'Short Track Speed Skating Women''s 1,000 metres')
-INTO event (id, sport_id, event_name) VALUES (603,44,'Rowing Women''s Coxless Fours')
-INTO event (id, sport_id, event_name) VALUES (604,48,'Shooting Men''s Free Rifle, 1,000 Yards')
-INTO event (id, sport_id, event_name) VALUES (605,26,'Freestyle Skiing Women''s Ski Cross')
-INTO event (id, sport_id, event_name) VALUES (606,26,'Freestyle Skiing Men''s Ski Cross')
-INTO event (id, sport_id, event_name) VALUES (607,59,'Tennis Men''s Doubles, Covered Courts')
-INTO event (id, sport_id, event_name) VALUES (608,59,'Tennis Men''s Singles, Covered Courts')
-INTO event (id, sport_id, event_name) VALUES (609,28,'Gymnastics Men''s Rope Climbing')
-INTO event (id, sport_id, event_name) VALUES (610,20,'Cycling Men''s 25 kilometres')
-INTO event (id, sport_id, event_name) VALUES (611,47,'Sailing Mixed 1-2 Ton')
-INTO event (id, sport_id, event_name) VALUES (612,39,'Nordic Combined Men''s Normal Hill / 10 km, Individual')
-INTO event (id, sport_id, event_name) VALUES (613,39,'Nordic Combined Men''s Large Hill / 10 km, Individual')
-INTO event (id, sport_id, event_name) VALUES (614,49,'Short Track Speed Skating Women''s 1,500 metres')
-INTO event (id, sport_id, event_name) VALUES (615,6,'Athletics Men''s Standing Triple Jump')
-INTO event (id, sport_id, event_name) VALUES (616,44,'Rowing Men''s Coxed Pairs (1 kilometres)')
-INTO event (id, sport_id, event_name) VALUES (617,48,'Shooting Men''s Military Pistol, 30 metres')
-INTO event (id, sport_id, event_name) VALUES (618,20,'Cycling Women''s Keirin')
-INTO event (id, sport_id, event_name) VALUES (619,55,'Swimming Women''s 300 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (620,52,'Snowboarding Women''s Giant Slalom')
-INTO event (id, sport_id, event_name) VALUES (621,6,'Athletics Men''s 5 mile')
-INTO event (id, sport_id, event_name) VALUES (622,15,'Canoeing Men''s Canadian Singles, 200 metres')
-INTO event (id, sport_id, event_name) VALUES (623,47,'Sailing Mixed 30 metres')
-INTO event (id, sport_id, event_name) VALUES (624,6,'Athletics Men''s 4,000 metres Steeplechase')
-INTO event (id, sport_id, event_name) VALUES (625,6,'Athletics Men''s 5,000 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (626,48,'Shooting Men''s Small-Bore Rifle, Standing, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (627,48,'Shooting Men''s Small Bore-Rifle, Standing, 50 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (628,52,'Snowboarding Men''s Slopestyle')
-INTO event (id, sport_id, event_name) VALUES (629,44,'Rowing Men''s Coxed Pairs (1 mile)')
-INTO event (id, sport_id, event_name) VALUES (630,5,'Art Competitions Mixed Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (631,20,'Cycling Women''s Omnium')
-INTO event (id, sport_id, event_name) VALUES (632,26,'Freestyle Skiing Men''s Halfpipe')
-INTO event (id, sport_id, event_name) VALUES (633,47,'Sailing Mixed 12 foot')
-INTO event (id, sport_id, event_name) VALUES (634,5,'Art Competitions Mixed Music')
-INTO event (id, sport_id, event_name) VALUES (635,5,'Art Competitions Mixed Music, Instrumental And Chamber')
-INTO event (id, sport_id, event_name) VALUES (636,5,'Art Competitions Mixed Music, Vocals')
-INTO event (id, sport_id, event_name) VALUES (637,5,'Art Competitions Mixed Literature, Dramatic Works')
-INTO event (id, sport_id, event_name) VALUES (638,32,'Jeu De Paume Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (639,47,'Sailing Mixed 10-20 Ton')
-INTO event (id, sport_id, event_name) VALUES (640,20,'Cycling Men''s 1/3 mile')
-INTO event (id, sport_id, event_name) VALUES (641,20,'Cycling Men''s 1 mile')
-INTO event (id, sport_id, event_name) VALUES (642,20,'Cycling Men''s 2 mile')
-INTO event (id, sport_id, event_name) VALUES (643,5,'Art Competitions Mixed Sculpturing, Medals And Plaques')
-INTO event (id, sport_id, event_name) VALUES (644,6,'Athletics Men''s 1,600 metres Medley Relay')
-INTO event (id, sport_id, event_name) VALUES (645,15,'Canoeing Men''s Folding Kayak Doubles, 10 kilometres')
-INTO event (id, sport_id, event_name) VALUES (646,6,'Athletics Men''s 60 metres')
-INTO event (id, sport_id, event_name) VALUES (647,52,'Snowboarding Women''s Parallel Giant Slalom')
-INTO event (id, sport_id, event_name) VALUES (648,47,'Sailing Mixed 2-3 Ton')
-INTO event (id, sport_id, event_name) VALUES (649,54,'Speed Skating Men''s Allround')
-INTO event (id, sport_id, event_name) VALUES (650,48,'Shooting Men''s Military Rifle, Prone, 600 metres')
-INTO event (id, sport_id, event_name) VALUES (651,15,'Canoeing Men''s Canadian Doubles, 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (652,52,'Snowboarding Women''s Parallel Slalom')
-INTO event (id, sport_id, event_name) VALUES (653,48,'Shooting Men''s Dueling Pistol, 30 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (654,28,'Gymnastics Men''s Parallel Bars, Teams')
-INTO event (id, sport_id, event_name) VALUES (655,28,'Gymnastics Men''s Horizontal Bar, Teams')
-INTO event (id, sport_id, event_name) VALUES (656,48,'Shooting Men''s Free Rifle, Kneeling, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (657,48,'Shooting Men''s Free Rifle, Prone, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (658,48,'Shooting Men''s Free Rifle, Standing, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (659,48,'Shooting Men''s Small-Bore Rifle, Disappearing Target, 25 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (660,5,'Art Competitions Mixed Sculpturing, Medals And Reliefs')
-INTO event (id, sport_id, event_name) VALUES (661,6,'Athletics Men''s 1,500 metres Walk')
-INTO event (id, sport_id, event_name) VALUES (662,6,'Athletics Men''s 3,200 metres Steeplechase')
-INTO event (id, sport_id, event_name) VALUES (663,6,'Athletics Men''s 3 mile, Team')
-INTO event (id, sport_id, event_name) VALUES (664,5,'Art Competitions Mixed Sculpturing, Medals')
-INTO event (id, sport_id, event_name) VALUES (665,22,'Equestrianism Men''s Vaulting, Individual')
-INTO event (id, sport_id, event_name) VALUES (666,22,'Equestrianism Men''s Vaulting, Team')
-INTO event (id, sport_id, event_name) VALUES (667,20,'Cycling Men''s 333 metres Time Trial')
-INTO event (id, sport_id, event_name) VALUES (668,48,'Shooting Men''s Free Rifle, Any Position, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (669,48,'Shooting Men''s Military Rifle, 1873-1874 Gras Model, Kneeling Or Standing, 200 metres')
-INTO event (id, sport_id, event_name) VALUES (670,48,'Shooting Men''s Military Rifle, Kneeling Or Standing, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (671,55,'Swimming Men''s 100 Yard Backstroke')
-INTO event (id, sport_id, event_name) VALUES (672,55,'Swimming Men''s 440 Yard Breaststroke')
-INTO event (id, sport_id, event_name) VALUES (673,5,'Art Competitions Mixed Literature, Epic Works')
-INTO event (id, sport_id, event_name) VALUES (674,5,'Art Competitions Mixed Architecture')
-INTO event (id, sport_id, event_name) VALUES (675,43,'Roque Men''s Singles')
-INTO event (id, sport_id, event_name) VALUES (676,3,'Alpinism Mixed Alpinism')
-INTO event (id, sport_id, event_name) VALUES (677,4,'Archery Men''s Double American Round')
-INTO event (id, sport_id, event_name) VALUES (678,4,'Archery Men''s Team Round')
-INTO event (id, sport_id, event_name) VALUES (679,4,'Archery Men''s Target Archery, 33 metres, Individual')
-INTO event (id, sport_id, event_name) VALUES (680,4,'Archery Men''s Target Archery, 50 metres, Individual')
-INTO event (id, sport_id, event_name) VALUES (681,55,'Swimming Men''s 1,000 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (682,6,'Athletics Men''s Discus Throw, Both Hands')
-INTO event (id, sport_id, event_name) VALUES (683,55,'Swimming Men''s 200 metres Team Swimming')
-INTO event (id, sport_id, event_name) VALUES (684,27,'Golf Men''s Team')
-INTO event (id, sport_id, event_name) VALUES (685,47,'Sailing Mixed 20+ Ton')
-INTO event (id, sport_id, event_name) VALUES (686,20,'Cycling Women''s Team Sprint')
-INTO event (id, sport_id, event_name) VALUES (687,28,'Gymnastics Men''s Side Horse')
-INTO event (id, sport_id, event_name) VALUES (688,65,'Weightlifting Men''s Unlimited, One Hand')
-INTO event (id, sport_id, event_name) VALUES (689,65,'Weightlifting Men''s Unlimited, Two Hands')
-INTO event (id, sport_id, event_name) VALUES (690,48,'Shooting Men''s Free Pistol, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (691,48,'Shooting Men''s Military Revolver, 1873-1874 Gras Model, 20 metres')
-INTO event (id, sport_id, event_name) VALUES (692,48,'Shooting Men''s Military Revolver, 20 metres')
-INTO event (id, sport_id, event_name) VALUES (693,48,'Shooting Men''s Dueling Pistol Au Vise 20 metres')
-INTO event (id, sport_id, event_name) VALUES (694,48,'Shooting Men''s Dueling Pistol Au Commandement, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (695,48,'Shooting Men''s Small-Bore Rifle, Prone, 50 metres, Team')
-INTO event (id, sport_id, event_name) VALUES (696,47,'Sailing Mixed 6.5 metres')
-INTO event (id, sport_id, event_name) VALUES (697,23,'Fencing Men''s Sabre, Individual, Three Hits')
-INTO event (id, sport_id, event_name) VALUES (698,6,'Athletics Men''s 200 metres Hurdles')
-INTO event (id, sport_id, event_name) VALUES (699,6,'Athletics Men''s 56-pound Weight Throw')
-INTO event (id, sport_id, event_name) VALUES (700,47,'Sailing Mixed 0-0.5 Ton')
-INTO event (id, sport_id, event_name) VALUES (701,6,'Athletics Men''s 2,500 metres Steeplechase')
-INTO event (id, sport_id, event_name) VALUES (702,22,'Equestrianism Mixed Four-In-Hand Competition')
-INTO event (id, sport_id, event_name) VALUES (703,6,'Athletics Men''s All-Around Championship')
-INTO event (id, sport_id, event_name) VALUES (704,38,'Motorboating Mixed A-Class (Open)')
-INTO event (id, sport_id, event_name) VALUES (705,6,'Athletics Men''s 2,590 metres Steeplechase')
-INTO event (id, sport_id, event_name) VALUES (706,4,'Archery Women''s Double Columbia Round')
-INTO event (id, sport_id, event_name) VALUES (707,24,'Figure Skating Men''s Special Figures')
-INTO event (id, sport_id, event_name) VALUES (708,5,'Art Competitions Mixed Music, Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (709,48,'Shooting Men''s Military Rifle, Standing, 300 metres')
-INTO event (id, sport_id, event_name) VALUES (710,55,'Swimming Men''s 50 yard Freestyle')
-INTO event (id, sport_id, event_name) VALUES (711,55,'Swimming Men''s 100 yard Freestyle')
-INTO event (id, sport_id, event_name) VALUES (712,55,'Swimming Men''s 440 yard Freestyle')
-INTO event (id, sport_id, event_name) VALUES (713,10,'Basque Pelota Men''s Two-Man Teams With Cesta')
-INTO event (id, sport_id, event_name) VALUES (714,48,'Shooting Men''s Trap, Single Shot, 16 metres')
-INTO event (id, sport_id, event_name) VALUES (715,48,'Shooting Men''s Trap, Double Shot, 14 metres')
-INTO event (id, sport_id, event_name) VALUES (716,22,'Equestrianism Mixed Hacks And Hunter Combined')
-INTO event (id, sport_id, event_name) VALUES (717,15,'Canoeing Men''s Folding Kayak Singles, 10 kilometres')
-INTO event (id, sport_id, event_name) VALUES (718,6,'Athletics Men''s 3,000 metres Walk')
-INTO event (id, sport_id, event_name) VALUES (719,6,'Athletics Men''s 3,500 metres Walk')
-INTO event (id, sport_id, event_name) VALUES (720,28,'Gymnastics Men''s Individual All-Around, 4 Events')
-INTO event (id, sport_id, event_name) VALUES (721,66,'Wrestling Men''s Unlimited Class, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (722,28,'Gymnastics Men''s Club Swinging')
-INTO event (id, sport_id, event_name) VALUES (723,38,'Motorboating Mixed B-Class (Under 60 Feet)')
-INTO event (id, sport_id, event_name) VALUES (724,38,'Motorboating Mixed C-Class')
-INTO event (id, sport_id, event_name) VALUES (725,17,'Croquet Mixed Singles, Two Balls')
-INTO event (id, sport_id, event_name) VALUES (726,4,'Archery Men''s Au Cordon Dore, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (727,20,'Cycling Men''s 10,000 metres')
-INTO event (id, sport_id, event_name) VALUES (728,5,'Art Competitions Mixed Sculpturing, Reliefs')
-INTO event (id, sport_id, event_name) VALUES (729,4,'Archery Men''s Sur La Perche a La Herse')
-INTO event (id, sport_id, event_name) VALUES (730,22,'Equestrianism Mixed High Jump')
-INTO event (id, sport_id, event_name) VALUES (731,5,'Art Competitions Mixed Music, Compositions For Solo Or Chorus')
-INTO event (id, sport_id, event_name) VALUES (732,47,'Sailing Mixed 3-10 Ton')
-INTO event (id, sport_id, event_name) VALUES (733,4,'Archery Men''s Sur La Perche a La Pyramide')
-INTO event (id, sport_id, event_name) VALUES (734,6,'Athletics Men''s 10 mile Walk')
-INTO event (id, sport_id, event_name) VALUES (735,23,'Fencing Men''s Single Sticks, Individual')
-INTO event (id, sport_id, event_name) VALUES (736,28,'Gymnastics Men''s Tumbling')
-INTO event (id, sport_id, event_name) VALUES (737,55,'Swimming Men''s 1,200 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (738,6,'Athletics Men''s 4 mile, Team')
-INTO event (id, sport_id, event_name) VALUES (739,4,'Archery Men''s Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (740,4,'Archery Men''s Au Chapelet, 50 metres')
-INTO event (id, sport_id, event_name) VALUES (741,55,'Swimming Men''s 200 metres Obstacle Course')
-INTO event (id, sport_id, event_name) VALUES (742,4,'Archery Men''s Championnat Du Monde')
-INTO event (id, sport_id, event_name) VALUES (743,4,'Archery Women''s Team Round')
-INTO event (id, sport_id, event_name) VALUES (744,66,'Wrestling Men''s All-Around, Greco-Roman')
-INTO event (id, sport_id, event_name) VALUES (745,48,'Shooting Men''s Military Rifle, 200 metres')
-INTO event (id, sport_id, event_name) VALUES (746,20,'Cycling Men''s 12-Hours Race')
-INTO event (id, sport_id, event_name) VALUES (747,65,'Weightlifting Men''s All-Around Dumbbell Contest')
-INTO event (id, sport_id, event_name) VALUES (748,48,'Shooting Men''s Military Pistol, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (749,48,'Shooting Men''s Muzzle-Loading Pistol, 25 metres')
-INTO event (id, sport_id, event_name) VALUES (750,22,'Equestrianism Mixed Long Jump')
-INTO event (id, sport_id, event_name) VALUES (751,55,'Swimming Men''s 500 metres Freestyle')
-INTO event (id, sport_id, event_name) VALUES (752,48,'Shooting Men''s Free Pistol, 30 metres')
-INTO event (id, sport_id, event_name) VALUES (753,48,'Shooting Men''s Unknown Event')
-INTO event (id, sport_id, event_name) VALUES (754,4,'Archery Men''s Au Chapelet, 33 metres')
-INTO event (id, sport_id, event_name) VALUES (755,4,'Archery Men''s Au Cordon Dore, 33 metres')
-INTO event (id, sport_id, event_name) VALUES (756,4,'Archery Men''s Target Archery, 28 metres, Individual')
-INTO event (id, sport_id, event_name) VALUES (757,1,'Aeronautics Mixed Aeronautics')
-SELECT * FROM dual;
+INSERT INTO event (id, sport_id, event_name) VALUES (1,9,'Basketball Men''s Basketball');
+INSERT INTO event (id, sport_id, event_name) VALUES (2,33,'Judo Men''s Extra-Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (3,25,'Football Men''s Football');
+INSERT INTO event (id, sport_id, event_name) VALUES (4,62,'Tug-Of-War Men''s Tug-Of-War');
+INSERT INTO event (id, sport_id, event_name) VALUES (5,54,'Speed Skating Women''s 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (6,54,'Speed Skating Women''s 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (7,18,'Cross Country Skiing Men''s 10 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (8,18,'Cross Country Skiing Men''s 50 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (9,18,'Cross Country Skiing Men''s 10/15 kilometres Pursuit');
+INSERT INTO event (id, sport_id, event_name) VALUES (10,18,'Cross Country Skiing Men''s 4 x 10 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (11,18,'Cross Country Skiing Men''s 30 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (12,6,'Athletics Women''s 100 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (13,6,'Athletics Women''s 4 x 100 metres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (14,31,'Ice Hockey Men''s Ice Hockey');
+INSERT INTO event (id, sport_id, event_name) VALUES (15,55,'Swimming Men''s 400 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (16,7,'Badminton Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (17,47,'Sailing Women''s Windsurfer');
+INSERT INTO event (id, sport_id, event_name) VALUES (18,12,'Biathlon Women''s 7.5 kilometres Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (19,55,'Swimming Men''s 200 metres Breaststroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (20,55,'Swimming Men''s 400 metres Breaststroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (21,28,'Gymnastics Men''s Individual All-Around');
+INSERT INTO event (id, sport_id, event_name) VALUES (22,28,'Gymnastics Men''s Team All-Around');
+INSERT INTO event (id, sport_id, event_name) VALUES (23,28,'Gymnastics Men''s Floor Exercise');
+INSERT INTO event (id, sport_id, event_name) VALUES (24,28,'Gymnastics Men''s Horse Vault');
+INSERT INTO event (id, sport_id, event_name) VALUES (25,28,'Gymnastics Men''s Parallel Bars');
+INSERT INTO event (id, sport_id, event_name) VALUES (26,28,'Gymnastics Men''s Horizontal Bar');
+INSERT INTO event (id, sport_id, event_name) VALUES (27,28,'Gymnastics Men''s Rings');
+INSERT INTO event (id, sport_id, event_name) VALUES (28,28,'Gymnastics Men''s Pommelled Horse');
+INSERT INTO event (id, sport_id, event_name) VALUES (29,6,'Athletics Men''s Shot Put');
+INSERT INTO event (id, sport_id, event_name) VALUES (30,5,'Art Competitions Mixed Sculpturing, Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (31,2,'Alpine Skiing Men''s Downhill');
+INSERT INTO event (id, sport_id, event_name) VALUES (32,2,'Alpine Skiing Men''s Super G');
+INSERT INTO event (id, sport_id, event_name) VALUES (33,2,'Alpine Skiing Men''s Giant Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (34,2,'Alpine Skiing Men''s Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (35,2,'Alpine Skiing Men''s Combined');
+INSERT INTO event (id, sport_id, event_name) VALUES (36,29,'Handball Women''s Handball');
+INSERT INTO event (id, sport_id, event_name) VALUES (37,65,'Weightlifting Women''s Super-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (38,66,'Wrestling Men''s Light-Heavyweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (39,54,'Speed Skating Men''s 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (40,54,'Speed Skating Men''s 1,500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (41,28,'Gymnastics Men''s Team All-Around, Free System');
+INSERT INTO event (id, sport_id, event_name) VALUES (42,35,'Luge Women''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (43,64,'Water Polo Men''s Water Polo');
+INSERT INTO event (id, sport_id, event_name) VALUES (44,47,'Sailing Mixed Three Person Keelboat');
+INSERT INTO event (id, sport_id, event_name) VALUES (45,30,'Hockey Women''s Hockey');
+INSERT INTO event (id, sport_id, event_name) VALUES (46,44,'Rowing Men''s Lightweight Double Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (47,6,'Athletics Men''s Pole Vault');
+INSERT INTO event (id, sport_id, event_name) VALUES (48,6,'Athletics Men''s High Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (49,47,'Sailing Men''s Two Person Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (50,6,'Athletics Men''s 1,500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (51,13,'Bobsleigh Men''s Four');
+INSERT INTO event (id, sport_id, event_name) VALUES (52,55,'Swimming Men''s 100 metres Butterfly');
+INSERT INTO event (id, sport_id, event_name) VALUES (53,55,'Swimming Men''s 200 metres Butterfly');
+INSERT INTO event (id, sport_id, event_name) VALUES (54,55,'Swimming Men''s 4 x 100 metres Medley Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (55,25,'Football Women''s Football');
+INSERT INTO event (id, sport_id, event_name) VALUES (56,23,'Fencing Men''s Foil, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (57,23,'Fencing Men''s epee, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (58,23,'Fencing Men''s epee, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (59,54,'Speed Skating Men''s 5,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (60,54,'Speed Skating Men''s 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (61,47,'Sailing Mixed 8 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (62,22,'Equestrianism Mixed Jumping, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (63,18,'Cross Country Skiing Men''s 15 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (64,48,'Shooting Men''s Small-Bore Rifle, Prone, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (65,48,'Shooting Men''s Rapid-Fire Pistol, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (66,48,'Shooting Men''s Trap');
+INSERT INTO event (id, sport_id, event_name) VALUES (67,6,'Athletics Men''s 4 x 100 metres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (68,6,'Athletics Men''s Long Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (69,14,'Boxing Men''s Light-Welterweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (70,6,'Athletics Women''s Javelin Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (71,66,'Wrestling Men''s Heavyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (72,58,'Taekwondo Men''s Flyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (73,6,'Athletics Men''s 5,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (74,20,'Cycling Men''s Road Race, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (75,20,'Cycling Men''s Road Race, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (76,65,'Weightlifting Men''s Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (77,65,'Weightlifting Men''s Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (78,44,'Rowing Men''s Coxless Pairs');
+INSERT INTO event (id, sport_id, event_name) VALUES (79,33,'Judo Men''s Half-Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (80,58,'Taekwondo Women''s Flyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (81,9,'Basketball Women''s Basketball');
+INSERT INTO event (id, sport_id, event_name) VALUES (82,21,'Diving Men''s Platform');
+INSERT INTO event (id, sport_id, event_name) VALUES (83,15,'Canoeing Men''s Canadian Doubles, 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (84,15,'Canoeing Men''s Canadian Doubles, 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (85,15,'Canoeing Men''s Kayak Fours, 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (86,29,'Handball Men''s Handball');
+INSERT INTO event (id, sport_id, event_name) VALUES (87,44,'Rowing Women''s Coxless Pairs');
+INSERT INTO event (id, sport_id, event_name) VALUES (88,14,'Boxing Men''s Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (89,33,'Judo Men''s Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (90,14,'Boxing Men''s Featherweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (91,59,'Tennis Men''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (92,48,'Shooting Mixed Skeet');
+INSERT INTO event (id, sport_id, event_name) VALUES (93,66,'Wrestling Men''s Featherweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (94,47,'Sailing Mixed Two Person Heavyweight Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (95,6,'Athletics Women''s Shot Put');
+INSERT INTO event (id, sport_id, event_name) VALUES (96,44,'Rowing Men''s Coxed Eights');
+INSERT INTO event (id, sport_id, event_name) VALUES (97,20,'Cycling Women''s Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (98,20,'Cycling Women''s 500 metres Time Trial');
+INSERT INTO event (id, sport_id, event_name) VALUES (99,6,'Athletics Men''s 110 metres Hurdles');
+INSERT INTO event (id, sport_id, event_name) VALUES (100,48,'Shooting Mixed Trap');
+INSERT INTO event (id, sport_id, event_name) VALUES (101,6,'Athletics Women''s Marathon');
+INSERT INTO event (id, sport_id, event_name) VALUES (102,6,'Athletics Men''s 100 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (103,23,'Fencing Men''s Foil, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (104,23,'Fencing Men''s Sabre, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (105,55,'Swimming Men''s 100 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (106,55,'Swimming Men''s 4 x 200 metres Freestyle Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (107,14,'Boxing Men''s Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (108,37,'Modern Pentathlon Men''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (109,14,'Boxing Men''s Welterweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (110,44,'Rowing Men''s Quadruple Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (111,44,'Rowing Men''s Double Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (112,44,'Rowing Men''s Coxed Pairs');
+INSERT INTO event (id, sport_id, event_name) VALUES (113,6,'Athletics Men''s 400 metres Hurdles');
+INSERT INTO event (id, sport_id, event_name) VALUES (114,6,'Athletics Men''s 400 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (115,6,'Athletics Men''s Hammer Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (116,65,'Weightlifting Men''s Featherweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (117,6,'Athletics Men''s 800 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (118,30,'Hockey Men''s Hockey');
+INSERT INTO event (id, sport_id, event_name) VALUES (119,2,'Alpine Skiing Women''s Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (120,44,'Rowing Women''s Single Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (121,55,'Swimming Men''s 50 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (122,65,'Weightlifting Women''s Featherweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (123,64,'Water Polo Women''s Water Polo');
+INSERT INTO event (id, sport_id, event_name) VALUES (124,24,'Figure Skating Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (125,65,'Weightlifting Men''s Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (126,22,'Equestrianism Mixed Three-Day Event, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (127,22,'Equestrianism Mixed Three-Day Event, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (128,24,'Figure Skating Mixed Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (129,47,'Sailing Women''s Three Person Keelboat');
+INSERT INTO event (id, sport_id, event_name) VALUES (130,20,'Cycling Women''s Road Race, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (131,27,'Golf Women''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (132,53,'Softball Women''s Softball');
+INSERT INTO event (id, sport_id, event_name) VALUES (133,4,'Archery Women''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (134,66,'Wrestling Men''s Heavyweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (135,63,'Volleyball Men''s Volleyball');
+INSERT INTO event (id, sport_id, event_name) VALUES (136,58,'Taekwondo Women''s Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (137,56,'Synchronized Swimming Women''s Duet');
+INSERT INTO event (id, sport_id, event_name) VALUES (138,56,'Synchronized Swimming Women''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (139,58,'Taekwondo Women''s Featherweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (140,6,'Athletics Men''s Marathon');
+INSERT INTO event (id, sport_id, event_name) VALUES (141,6,'Athletics Men''s 4 x 400 metres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (142,6,'Athletics Women''s 3,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (143,21,'Diving Women''s Platform');
+INSERT INTO event (id, sport_id, event_name) VALUES (144,48,'Shooting Men''s Air Rifle, 10 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (145,65,'Weightlifting Men''s Flyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (146,55,'Swimming Men''s 100 metres Backstroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (147,65,'Weightlifting Men''s Light-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (148,66,'Wrestling Men''s Lightweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (149,23,'Fencing Men''s Sabre, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (150,66,'Wrestling Men''s Super-Heavyweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (151,48,'Shooting Men''s Free Pistol, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (152,48,'Shooting Men''s Air Pistol, 10 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (153,44,'Rowing Men''s Coxless Fours');
+INSERT INTO event (id, sport_id, event_name) VALUES (154,14,'Boxing Men''s Light-Flyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (155,14,'Boxing Men''s Super-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (156,48,'Shooting Women''s Air Rifle, 10 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (157,65,'Weightlifting Men''s Middle-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (158,6,'Athletics Men''s Javelin Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (159,63,'Volleyball Women''s Volleyball');
+INSERT INTO event (id, sport_id, event_name) VALUES (160,66,'Wrestling Men''s Welterweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (161,66,'Wrestling Men''s Middleweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (162,6,'Athletics Men''s 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (163,6,'Athletics Men''s 3,000 metres Steeplechase');
+INSERT INTO event (id, sport_id, event_name) VALUES (164,66,'Wrestling Men''s Middleweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (165,55,'Swimming Women''s 100 metres Backstroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (166,55,'Swimming Women''s 200 metres Backstroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (167,55,'Swimming Women''s 4 x 100 metres Medley Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (168,66,'Wrestling Men''s Light-Heavyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (169,37,'Modern Pentathlon Men''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (170,6,'Athletics Men''s 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (171,14,'Boxing Men''s Bantamweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (172,6,'Athletics Women''s 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (173,57,'Table Tennis Women''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (174,57,'Table Tennis Women''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (175,48,'Shooting Men''s Skeet');
+INSERT INTO event (id, sport_id, event_name) VALUES (176,55,'Swimming Women''s 50 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (177,48,'Shooting Men''s Small-Bore Rifle, Three Positions, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (178,65,'Weightlifting Women''s Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (179,6,'Athletics Women''s Long Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (180,23,'Fencing Women''s epee, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (181,55,'Swimming Men''s 200 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (182,55,'Swimming Men''s 4 x 100 metres Freestyle Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (183,55,'Swimming Men''s 200 metres Individual Medley');
+INSERT INTO event (id, sport_id, event_name) VALUES (184,55,'Swimming Men''s 400 metres Individual Medley');
+INSERT INTO event (id, sport_id, event_name) VALUES (185,7,'Badminton Women''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (186,59,'Tennis Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (187,14,'Boxing Men''s Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (188,66,'Wrestling Men''s Bantamweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (189,66,'Wrestling Men''s Flyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (190,6,'Athletics Women''s 5,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (191,65,'Weightlifting Women''s Light-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (192,65,'Weightlifting Women''s Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (193,6,'Athletics Men''s Discus Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (194,58,'Taekwondo Men''s Featherweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (195,58,'Taekwondo Men''s Welterweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (196,33,'Judo Men''s Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (197,13,'Bobsleigh Men''s Two');
+INSERT INTO event (id, sport_id, event_name) VALUES (198,66,'Wrestling Men''s Lightweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (199,39,'Nordic Combined Men''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (200,39,'Nordic Combined Men''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (201,8,'Baseball Men''s Baseball');
+INSERT INTO event (id, sport_id, event_name) VALUES (202,44,'Rowing Men''s Coxed Fours');
+INSERT INTO event (id, sport_id, event_name) VALUES (203,20,'Cycling Men''s 100 kilometres Team Time Trial');
+INSERT INTO event (id, sport_id, event_name) VALUES (204,14,'Boxing Men''s Flyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (205,42,'Rhythmic Gymnastics Women''s Group');
+INSERT INTO event (id, sport_id, event_name) VALUES (206,5,'Art Competitions Mixed Architecture, Designs For Town Planning');
+INSERT INTO event (id, sport_id, event_name) VALUES (207,5,'Art Competitions Mixed Architecture, Architectural Designs');
+INSERT INTO event (id, sport_id, event_name) VALUES (208,28,'Gymnastics Women''s Individual All-Around');
+INSERT INTO event (id, sport_id, event_name) VALUES (209,28,'Gymnastics Women''s Team All-Around');
+INSERT INTO event (id, sport_id, event_name) VALUES (210,28,'Gymnastics Women''s Floor Exercise');
+INSERT INTO event (id, sport_id, event_name) VALUES (211,28,'Gymnastics Women''s Horse Vault');
+INSERT INTO event (id, sport_id, event_name) VALUES (212,28,'Gymnastics Women''s Uneven Bars');
+INSERT INTO event (id, sport_id, event_name) VALUES (213,28,'Gymnastics Women''s Balance Beam');
+INSERT INTO event (id, sport_id, event_name) VALUES (214,21,'Diving Women''s Springboard');
+INSERT INTO event (id, sport_id, event_name) VALUES (215,21,'Diving Women''s Synchronized Springboard');
+INSERT INTO event (id, sport_id, event_name) VALUES (216,6,'Athletics Women''s 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (217,47,'Sailing Mixed 7 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (218,33,'Judo Women''s Half-Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (219,6,'Athletics Men''s Decathlon');
+INSERT INTO event (id, sport_id, event_name) VALUES (220,12,'Biathlon Men''s 10 kilometres Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (221,12,'Biathlon Men''s 20 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (222,12,'Biathlon Men''s 4 x 7.5 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (223,26,'Freestyle Skiing Men''s Moguls');
+INSERT INTO event (id, sport_id, event_name) VALUES (224,6,'Athletics Men''s Triple Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (225,66,'Wrestling Men''s Middleweight A, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (226,6,'Athletics Women''s Discus Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (227,55,'Swimming Women''s 4 x 100 metres Freestyle Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (228,6,'Athletics Women''s 1,500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (229,48,'Shooting Women''s Air Pistol, 10 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (230,48,'Shooting Women''s Sporting Pistol, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (231,15,'Canoeing Men''s Kayak Doubles, 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (232,15,'Canoeing Men''s Kayak Singles, 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (233,15,'Canoeing Men''s Kayak Singles, 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (234,48,'Shooting Men''s Running Target, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (235,33,'Judo Women''s Half-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (236,6,'Athletics Women''s Pole Vault');
+INSERT INTO event (id, sport_id, event_name) VALUES (237,46,'Rugby Sevens Women''s Rugby Sevens');
+INSERT INTO event (id, sport_id, event_name) VALUES (238,57,'Table Tennis Men''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (239,24,'Figure Skating Mixed Pairs');
+INSERT INTO event (id, sport_id, event_name) VALUES (240,26,'Freestyle Skiing Men''s Aerials');
+INSERT INTO event (id, sport_id, event_name) VALUES (241,44,'Rowing Women''s Coxed Eights');
+INSERT INTO event (id, sport_id, event_name) VALUES (242,6,'Athletics Women''s 4 x 400 metres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (243,2,'Alpine Skiing Women''s Giant Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (244,2,'Alpine Skiing Women''s Super G');
+INSERT INTO event (id, sport_id, event_name) VALUES (245,18,'Cross Country Skiing Women''s 5 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (246,18,'Cross Country Skiing Women''s 10 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (247,18,'Cross Country Skiing Women''s 20 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (248,20,'Cycling Men''s Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (249,20,'Cycling Men''s 1,000 metres Time Trial');
+INSERT INTO event (id, sport_id, event_name) VALUES (250,20,'Cycling Men''s Individual Pursuit, 4,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (251,66,'Wrestling Men''s Welterweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (252,66,'Wrestling Men''s Bantamweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (253,44,'Rowing Women''s Lightweight Double Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (254,6,'Athletics Women''s 800 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (255,44,'Rowing Women''s Coxed Quadruple Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (256,12,'Biathlon Men''s 12.5 kilometres Pursuit');
+INSERT INTO event (id, sport_id, event_name) VALUES (257,12,'Biathlon Mixed 2 x 6 kilometres and 2 x 7.5 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (258,42,'Rhythmic Gymnastics Women''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (259,15,'Canoeing Men''s Kayak Singles, Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (260,4,'Archery Men''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (261,4,'Archery Men''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (262,54,'Speed Skating Women''s 1,500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (263,54,'Speed Skating Women''s Team Pursuit (6 laps);');
+INSERT INTO event (id, sport_id, event_name) VALUES (264,18,'Cross Country Skiing Men''s Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (265,6,'Athletics Women''s 400 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (266,24,'Figure Skating Women''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (267,54,'Speed Skating Men''s 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (268,60,'Trampolining Men''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (269,11,'Beach Volleyball Men''s Beach Volleyball');
+INSERT INTO event (id, sport_id, event_name) VALUES (270,20,'Cycling Women''s Mountainbike, Cross-Country');
+INSERT INTO event (id, sport_id, event_name) VALUES (271,6,'Athletics Men''s Javelin Throw, Both Hands');
+INSERT INTO event (id, sport_id, event_name) VALUES (272,61,'Triathlon Women''s Olympic Distance');
+INSERT INTO event (id, sport_id, event_name) VALUES (273,28,'Gymnastics Women''s Team Portable Apparatus');
+INSERT INTO event (id, sport_id, event_name) VALUES (274,20,'Cycling Men''s Mountainbike, Cross-Country');
+INSERT INTO event (id, sport_id, event_name) VALUES (275,6,'Athletics Women''s 400 metres Hurdles');
+INSERT INTO event (id, sport_id, event_name) VALUES (276,21,'Diving Men''s Springboard');
+INSERT INTO event (id, sport_id, event_name) VALUES (277,66,'Wrestling Men''s Flyweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (278,66,'Wrestling Men''s Featherweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (279,57,'Table Tennis Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (280,5,'Art Competitions Mixed Painting');
+INSERT INTO event (id, sport_id, event_name) VALUES (281,18,'Cross Country Skiing Women''s 3 x 5 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (282,33,'Judo Men''s Open Class');
+INSERT INTO event (id, sport_id, event_name) VALUES (283,44,'Rowing Women''s Quadruple Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (284,28,'Gymnastics Men''s Team All-Around, Swedish System');
+INSERT INTO event (id, sport_id, event_name) VALUES (285,39,'Nordic Combined Men''s Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (286,6,'Athletics Women''s Pentathlon');
+INSERT INTO event (id, sport_id, event_name) VALUES (287,5,'Art Competitions Mixed Painting, Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (288,20,'Cycling Men''s Team Pursuit, 4,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (289,55,'Swimming Men''s 200 metres Backstroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (290,65,'Weightlifting Women''s Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (291,55,'Swimming Men''s 1,500 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (292,66,'Wrestling Women''s Light-Heavyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (293,55,'Swimming Women''s 100 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (294,22,'Equestrianism Men''s Jumping, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (295,22,'Equestrianism Men''s Jumping, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (296,22,'Equestrianism Men''s Three-Day Event, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (297,22,'Equestrianism Men''s Three-Day Event, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (298,2,'Alpine Skiing Women''s Combined');
+INSERT INTO event (id, sport_id, event_name) VALUES (299,6,'Athletics Women''s High Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (300,51,'Ski Jumping Men''s Normal Hill, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (301,15,'Canoeing Women''s Kayak Fours, 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (302,31,'Ice Hockey Women''s Ice Hockey');
+INSERT INTO event (id, sport_id, event_name) VALUES (303,47,'Sailing Men''s One Person Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (304,60,'Trampolining Women''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (305,19,'Curling Men''s Curling');
+INSERT INTO event (id, sport_id, event_name) VALUES (306,5,'Art Competitions Mixed Literature');
+INSERT INTO event (id, sport_id, event_name) VALUES (307,33,'Judo Men''s Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (308,12,'Biathlon Women''s 15 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (309,12,'Biathlon Women''s 3 x 7.5 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (310,12,'Biathlon Women''s 4 x 7.5 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (311,33,'Judo Men''s Half-Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (312,23,'Fencing Women''s Foil, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (313,55,'Swimming Women''s 200 metres Butterfly');
+INSERT INTO event (id, sport_id, event_name) VALUES (314,55,'Swimming Women''s 400 metres Individual Medley');
+INSERT INTO event (id, sport_id, event_name) VALUES (315,27,'Golf Men''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (316,6,'Athletics Men''s Standing High Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (317,6,'Athletics Men''s Standing Long Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (318,6,'Athletics Men''s 20 kilometres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (319,55,'Swimming Men''s 220 yard Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (320,55,'Swimming Men''s 880 yard Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (321,55,'Swimming Men''s One Mile Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (322,55,'Swimming Men''s 4 x 50 Yard Freestyle Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (323,55,'Swimming Men''s Plunge For Distance');
+INSERT INTO event (id, sport_id, event_name) VALUES (324,48,'Shooting Men''s Free Rifle, Three Positions, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (325,48,'Shooting Men''s Military Rifle, Three Positions, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (326,48,'Shooting Men''s Military Rifle, Any Position, 600 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (327,48,'Shooting Men''s Military Rifle, 200, 400, 500 and 600 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (328,48,'Shooting Men''s Military Rifle, Prone, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (329,33,'Judo Men''s Half-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (330,4,'Archery Women''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (331,6,'Athletics Men''s 50 kilometres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (332,44,'Rowing Women''s Double Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (333,47,'Sailing Mixed 6 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (334,14,'Boxing Men''s Light-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (335,14,'Boxing Women''s Flyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (336,6,'Athletics Women''s 100 metres Hurdles');
+INSERT INTO event (id, sport_id, event_name) VALUES (337,6,'Athletics Men''s Discus Throw, Greek Style');
+INSERT INTO event (id, sport_id, event_name) VALUES (338,19,'Curling Women''s Curling');
+INSERT INTO event (id, sport_id, event_name) VALUES (339,47,'Sailing Mixed One Person Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (340,66,'Wrestling Women''s Heavyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (341,7,'Badminton Mixed Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (342,23,'Fencing Women''s Foil, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (343,47,'Sailing Mixed Two Person Keelboat');
+INSERT INTO event (id, sport_id, event_name) VALUES (344,57,'Table Tennis Men''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (345,66,'Wrestling Men''s Light-Flyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (346,66,'Wrestling Women''s Featherweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (347,55,'Swimming Women''s 200 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (348,55,'Swimming Women''s 400 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (349,55,'Swimming Women''s 200 metres Individual Medley');
+INSERT INTO event (id, sport_id, event_name) VALUES (350,47,'Sailing Men''s Windsurfer');
+INSERT INTO event (id, sport_id, event_name) VALUES (351,26,'Freestyle Skiing Men''s Slopestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (352,48,'Shooting Men''s Running Target, Single Shot');
+INSERT INTO event (id, sport_id, event_name) VALUES (353,48,'Shooting Men''s Running Target, Double Shot');
+INSERT INTO event (id, sport_id, event_name) VALUES (354,46,'Rugby Sevens Men''s Rugby Sevens');
+INSERT INTO event (id, sport_id, event_name) VALUES (355,66,'Wrestling Women''s Lightweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (356,14,'Boxing Men''s Light-Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (357,37,'Modern Pentathlon Women''s Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (358,15,'Canoeing Men''s Canadian Doubles, Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (359,33,'Judo Women''s Half-Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (360,21,'Diving Women''s Plain High');
+INSERT INTO event (id, sport_id, event_name) VALUES (361,22,'Equestrianism Men''s Dressage, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (362,22,'Equestrianism Men''s Dressage, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (363,59,'Tennis Women''s Singles, Covered Courts');
+INSERT INTO event (id, sport_id, event_name) VALUES (364,21,'Diving Men''s Plain High');
+INSERT INTO event (id, sport_id, event_name) VALUES (365,48,'Shooting Mixed Small-Bore Rifle, Three Positions, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (366,48,'Shooting Mixed Small-Bore Rifle, Prone, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (367,55,'Swimming Women''s 800 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (368,47,'Sailing Women''s Two Person Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (369,2,'Alpine Skiing Women''s Downhill');
+INSERT INTO event (id, sport_id, event_name) VALUES (370,48,'Shooting Men''s Free Pistol, 50 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (371,48,'Shooting Men''s Free Rifle, Three Positions, 300 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (372,48,'Shooting Men''s Military Rifle, Prone, 300 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (373,48,'Shooting Men''s Military Rifle, Prone, 600 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (374,48,'Shooting Men''s Military Rifle, Standing, 300 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (375,48,'Shooting Men''s Military Rifle, 300 metres and 600 metres, Prone, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (376,48,'Shooting Men''s Free Rifle, Prone, 600 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (377,48,'Shooting Men''s Free Rifle, 400, 600 and 800 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (378,44,'Rowing Men''s Single Sculls');
+INSERT INTO event (id, sport_id, event_name) VALUES (379,26,'Freestyle Skiing Women''s Halfpipe');
+INSERT INTO event (id, sport_id, event_name) VALUES (380,6,'Athletics Women''s Heptathlon');
+INSERT INTO event (id, sport_id, event_name) VALUES (381,20,'Cycling Men''s Points Race');
+INSERT INTO event (id, sport_id, event_name) VALUES (382,56,'Synchronized Swimming Women''s Solo');
+INSERT INTO event (id, sport_id, event_name) VALUES (383,22,'Equestrianism Mixed Dressage, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (384,22,'Equestrianism Mixed Dressage, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (385,18,'Cross Country Skiing Men''s 18 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (386,55,'Swimming Men''s 100 metres Breaststroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (387,24,'Figure Skating Mixed Ice Dancing');
+INSERT INTO event (id, sport_id, event_name) VALUES (388,48,'Shooting Mixed Free Pistol, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (389,47,'Sailing Women''s Skiff');
+INSERT INTO event (id, sport_id, event_name) VALUES (390,15,'Canoeing Men''s Kayak Doubles, 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (391,61,'Triathlon Men''s Olympic Distance');
+INSERT INTO event (id, sport_id, event_name) VALUES (392,47,'Sailing Women''s One Person Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (393,18,'Cross Country Skiing Women''s 30 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (394,18,'Cross Country Skiing Women''s 15 km Skiathlon');
+INSERT INTO event (id, sport_id, event_name) VALUES (395,11,'Beach Volleyball Women''s Beach Volleyball');
+INSERT INTO event (id, sport_id, event_name) VALUES (396,65,'Weightlifting Men''s Super-Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (397,44,'Rowing Men''s Lightweight Coxless Fours');
+INSERT INTO event (id, sport_id, event_name) VALUES (398,66,'Wrestling Men''s Light-Flyweight, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (399,15,'Canoeing Men''s Canadian Singles, 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (400,47,'Sailing Mixed 5.5 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (401,22,'Equestrianism Mixed Jumping, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (402,21,'Diving Men''s Synchronized Platform');
+INSERT INTO event (id, sport_id, event_name) VALUES (403,52,'Snowboarding Men''s Halfpipe');
+INSERT INTO event (id, sport_id, event_name) VALUES (404,15,'Canoeing Women''s Kayak Singles, Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (405,65,'Weightlifting Women''s Flyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (406,55,'Swimming Women''s 100 metres Breaststroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (407,55,'Swimming Women''s 200 metres Breaststroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (408,66,'Wrestling Men''s Middleweight B, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (409,6,'Athletics Men''s Stone Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (410,6,'Athletics Men''s Javelin Throw, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (411,6,'Athletics Men''s Pentathlon (Ancient);');
+INSERT INTO event (id, sport_id, event_name) VALUES (412,48,'Shooting Women''s Small-Bore Rifle, Three Positions, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (413,55,'Swimming Women''s 100 metres Butterfly');
+INSERT INTO event (id, sport_id, event_name) VALUES (414,65,'Weightlifting Men''s Heavyweight I');
+INSERT INTO event (id, sport_id, event_name) VALUES (415,6,'Athletics Women''s 3,000 metres Steeplechase');
+INSERT INTO event (id, sport_id, event_name) VALUES (416,6,'Athletics Men''s Shot Put, Both Hands');
+INSERT INTO event (id, sport_id, event_name) VALUES (417,51,'Ski Jumping Men''s Large Hill, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (418,51,'Ski Jumping Men''s Large Hill, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (419,48,'Shooting Women''s Trap');
+INSERT INTO event (id, sport_id, event_name) VALUES (420,7,'Badminton Men''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (421,55,'Swimming Women''s 4 x 200 metres Freestyle Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (422,6,'Athletics Men''s 10 kilometres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (423,6,'Athletics Women''s 20 kilometres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (424,6,'Athletics Women''s 80 metres Hurdles');
+INSERT INTO event (id, sport_id, event_name) VALUES (425,47,'Sailing Men''s One Person Heavyweight Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (426,26,'Freestyle Skiing Women''s Aerials');
+INSERT INTO event (id, sport_id, event_name) VALUES (427,5,'Art Competitions Mixed Painting, Paintings');
+INSERT INTO event (id, sport_id, event_name) VALUES (428,59,'Tennis Mixed Doubles, Covered Courts');
+INSERT INTO event (id, sport_id, event_name) VALUES (429,20,'Cycling Men''s Madison');
+INSERT INTO event (id, sport_id, event_name) VALUES (430,5,'Art Competitions Mixed Sculpturing, Statues');
+INSERT INTO event (id, sport_id, event_name) VALUES (431,45,'Rugby Men''s Rugby');
+INSERT INTO event (id, sport_id, event_name) VALUES (432,65,'Weightlifting Men''s Heavyweight II');
+INSERT INTO event (id, sport_id, event_name) VALUES (433,15,'Canoeing Women''s Kayak Doubles, 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (434,49,'Short Track Speed Skating Men''s 5,000 metres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (435,20,'Cycling Men''s Individual Time Trial');
+INSERT INTO event (id, sport_id, event_name) VALUES (436,33,'Judo Women''s Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (437,15,'Canoeing Men''s Kayak Doubles, 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (438,66,'Wrestling Men''s Super-Heavyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (439,12,'Biathlon Women''s 10 kilometres Pursuit');
+INSERT INTO event (id, sport_id, event_name) VALUES (440,12,'Biathlon Women''s 12.5 kilometres Mass Start');
+INSERT INTO event (id, sport_id, event_name) VALUES (441,12,'Biathlon Women''s 4 x 6 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (442,23,'Fencing Women''s Sabre, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (443,48,'Shooting Men''s Double Trap');
+INSERT INTO event (id, sport_id, event_name) VALUES (444,65,'Weightlifting Men''s Bantamweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (445,58,'Taekwondo Men''s Heavyweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (446,47,'Sailing Mixed Windsurfer');
+INSERT INTO event (id, sport_id, event_name) VALUES (447,58,'Taekwondo Women''s Welterweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (448,48,'Shooting Mixed Free Rifle, Three Positions, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (449,50,'Skeleton Men''s Skeleton');
+INSERT INTO event (id, sport_id, event_name) VALUES (450,20,'Cycling Men''s 50 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (451,48,'Shooting Mixed Rapid-Fire Pistol, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (452,15,'Canoeing Men''s Kayak Singles, 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (453,15,'Canoeing Men''s Canadian Singles, Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (454,35,'Luge Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (455,35,'Luge Mixed (Men);''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (456,47,'Sailing Mixed Multihull');
+INSERT INTO event (id, sport_id, event_name) VALUES (457,7,'Badminton Women''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (458,54,'Speed Skating Women''s 3,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (459,18,'Cross Country Skiing Women''s 5/10 kilometres Pursuit');
+INSERT INTO event (id, sport_id, event_name) VALUES (460,18,'Cross Country Skiing Women''s 4 x 5 kilometres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (461,18,'Cross Country Skiing Women''s 15 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (462,18,'Cross Country Skiing Women''s 5/5 kilometres Pursuit');
+INSERT INTO event (id, sport_id, event_name) VALUES (463,21,'Diving Women''s Synchronized Platform');
+INSERT INTO event (id, sport_id, event_name) VALUES (464,6,'Athletics Women''s Triple Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (465,50,'Skeleton Women''s Skeleton');
+INSERT INTO event (id, sport_id, event_name) VALUES (466,13,'Bobsleigh Men''s Four/Five');
+INSERT INTO event (id, sport_id, event_name) VALUES (467,5,'Art Competitions Mixed Painting, Drawings And Water Colors');
+INSERT INTO event (id, sport_id, event_name) VALUES (468,48,'Shooting Men''s Dueling Pistol, 30 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (469,14,'Boxing Women''s Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (470,20,'Cycling Women''s BMX');
+INSERT INTO event (id, sport_id, event_name) VALUES (471,15,'Canoeing Men''s Kayak Doubles, 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (472,23,'Fencing Men''s Sabre, Masters, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (473,34,'Lacrosse Men''s Lacrosse');
+INSERT INTO event (id, sport_id, event_name) VALUES (474,15,'Canoeing Women''s Kayak Singles, 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (475,6,'Athletics Women''s 10 kilometres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (476,47,'Sailing Mixed 12 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (477,33,'Judo Women''s Extra-Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (478,21,'Diving Men''s Synchronized Springboard');
+INSERT INTO event (id, sport_id, event_name) VALUES (479,44,'Rowing Men''s Coxed Fours, Outriggers');
+INSERT INTO event (id, sport_id, event_name) VALUES (480,47,'Sailing Mixed Two Person Dinghy');
+INSERT INTO event (id, sport_id, event_name) VALUES (481,5,'Art Competitions Mixed Architecture, Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (482,4,'Archery Men''s Target Archery, 28 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (483,4,'Archery Men''s Target Archery, 33 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (484,4,'Archery Men''s Target Archery, 50 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (485,49,'Short Track Speed Skating Women''s 3,000 metres Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (486,26,'Freestyle Skiing Women''s Moguls');
+INSERT INTO event (id, sport_id, event_name) VALUES (487,49,'Short Track Speed Skating Men''s 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (488,48,'Shooting Men''s Running Target, 10 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (489,40,'Polo Men''s Polo');
+INSERT INTO event (id, sport_id, event_name) VALUES (490,44,'Rowing Men''s Coxed Fours, Inriggers');
+INSERT INTO event (id, sport_id, event_name) VALUES (491,20,'Cycling Men''s BMX');
+INSERT INTO event (id, sport_id, event_name) VALUES (492,5,'Art Competitions Mixed Sculpturing');
+INSERT INTO event (id, sport_id, event_name) VALUES (493,6,'Athletics Men''s Cross-Country, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (494,6,'Athletics Men''s Cross-Country, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (495,47,'Sailing Mixed 40 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (496,18,'Cross Country Skiing Men''s 10/10 kilometres Pursuit');
+INSERT INTO event (id, sport_id, event_name) VALUES (497,51,'Ski Jumping Women''s Normal Hill, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (498,49,'Short Track Speed Skating Men''s 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (499,49,'Short Track Speed Skating Men''s 1,500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (500,59,'Tennis Women''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (501,59,'Tennis Mixed Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (502,59,'Tennis Women''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (503,33,'Judo Women''s Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (504,33,'Judo Women''s Lightweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (505,18,'Cross Country Skiing Men''s Team Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (506,52,'Snowboarding Women''s Halfpipe');
+INSERT INTO event (id, sport_id, event_name) VALUES (507,15,'Canoeing Women''s Kayak Singles, 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (508,15,'Canoeing Men''s Kayak Relay 4 x 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (509,6,'Athletics Men''s 3,000 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (510,18,'Cross Country Skiing Women''s Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (511,48,'Shooting Men''s Small-Bore Rifle, Prone, 50 and 100 yards');
+INSERT INTO event (id, sport_id, event_name) VALUES (512,48,'Shooting Men''s Small-Bore Rifle, 50 and 100 yards, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (513,48,'Shooting Men''s Small-Bore Rifle, Disappearing Target, 25 yards');
+INSERT INTO event (id, sport_id, event_name) VALUES (514,48,'Shooting Men''s Small-Bore Rifle, Moving Target, 25 yards');
+INSERT INTO event (id, sport_id, event_name) VALUES (515,48,'Shooting Men''s Military Pistol, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (516,44,'Rowing Women''s Coxed Fours');
+INSERT INTO event (id, sport_id, event_name) VALUES (517,15,'Canoeing Men''s Canadian Singles, 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (518,23,'Fencing Men''s Foil, Masters, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (519,23,'Fencing Men''s epee, Masters, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (520,28,'Gymnastics Men''s Individual All-Around, Field Sports');
+INSERT INTO event (id, sport_id, event_name) VALUES (521,28,'Gymnastics Men''s Individual All-Around, Apparatus Work');
+INSERT INTO event (id, sport_id, event_name) VALUES (522,23,'Fencing Women''s epee, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (523,55,'Swimming Men''s 4,000 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (524,55,'Swimming Men''s Underwater Swimming');
+INSERT INTO event (id, sport_id, event_name) VALUES (525,28,'Gymnastics Men''s Individual All-Around, 5 Events');
+INSERT INTO event (id, sport_id, event_name) VALUES (526,47,'Sailing Mixed Skiff');
+INSERT INTO event (id, sport_id, event_name) VALUES (527,20,'Cycling Men''s Tandem Sprint, 2,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (528,48,'Shooting Men''s Military Rifle, 200/500/600/800/900/1,000 Yards, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (529,48,'Shooting Men''s Small-Bore Rifle, Any Position, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (530,48,'Shooting Men''s Small-Bore Rifle, Disappearing Target, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (531,55,'Swimming Women''s 10 kilometres Open Water');
+INSERT INTO event (id, sport_id, event_name) VALUES (532,52,'Snowboarding Women''s Slopestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (533,52,'Snowboarding Men''s Giant Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (534,52,'Snowboarding Men''s Parallel Giant Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (535,52,'Snowboarding Men''s Boardercross');
+INSERT INTO event (id, sport_id, event_name) VALUES (536,52,'Snowboarding Men''s Parallel Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (537,16,'Cricket Men''s Cricket');
+INSERT INTO event (id, sport_id, event_name) VALUES (538,15,'Canoeing Men''s Canadian Singles, 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (539,18,'Cross Country Skiing Women''s Team Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (540,14,'Boxing Women''s Middleweight');
+INSERT INTO event (id, sport_id, event_name) VALUES (541,47,'Sailing Men''s Skiff');
+INSERT INTO event (id, sport_id, event_name) VALUES (542,6,'Athletics Men''s Pentathlon');
+INSERT INTO event (id, sport_id, event_name) VALUES (543,48,'Shooting Women''s Skeet');
+INSERT INTO event (id, sport_id, event_name) VALUES (544,12,'Biathlon Men''s 15 kilometres Mass Start');
+INSERT INTO event (id, sport_id, event_name) VALUES (545,18,'Cross Country Skiing Men''s 30 km Skiathlon');
+INSERT INTO event (id, sport_id, event_name) VALUES (546,20,'Cycling Men''s 1/4 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (547,20,'Cycling Men''s 1/2 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (548,20,'Cycling Men''s 5 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (549,20,'Cycling Men''s 25 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (550,20,'Cycling Men''s Team Pursuit, 1,980 yards');
+INSERT INTO event (id, sport_id, event_name) VALUES (551,20,'Cycling Men''s 5,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (552,20,'Cycling Men''s 20 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (553,20,'Cycling Men''s 100 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (554,54,'Speed Skating Men''s Team Pursuit (8 laps);');
+INSERT INTO event (id, sport_id, event_name) VALUES (555,20,'Cycling Women''s Team Pursuit');
+INSERT INTO event (id, sport_id, event_name) VALUES (556,54,'Speed Skating Women''s 5,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (557,52,'Snowboarding Women''s Boardercross');
+INSERT INTO event (id, sport_id, event_name) VALUES (558,48,'Shooting Mixed Running Target, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (559,35,'Luge Mixed Team Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (560,20,'Cycling Women''s Individual Time Trial');
+INSERT INTO event (id, sport_id, event_name) VALUES (561,23,'Fencing Women''s Sabre, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (562,4,'Archery Women''s Double National Round');
+INSERT INTO event (id, sport_id, event_name) VALUES (563,20,'Cycling Men''s Omnium');
+INSERT INTO event (id, sport_id, event_name) VALUES (564,47,'Sailing Mixed 10 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (565,48,'Shooting Men''s Trap, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (566,20,'Cycling Women''s Individual Pursuit, 3,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (567,20,'Cycling Women''s Points Race');
+INSERT INTO event (id, sport_id, event_name) VALUES (568,47,'Sailing Men''s Two Person Keelboat');
+INSERT INTO event (id, sport_id, event_name) VALUES (569,20,'Cycling Men''s Keirin');
+INSERT INTO event (id, sport_id, event_name) VALUES (570,20,'Cycling Men''s Team Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (571,48,'Shooting Men''s Running Target, Single Shot, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (572,13,'Bobsleigh Women''s Two');
+INSERT INTO event (id, sport_id, event_name) VALUES (573,41,'Racquets Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (574,41,'Racquets Men''s Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (575,5,'Art Competitions Mixed Literature, Lyric Works');
+INSERT INTO event (id, sport_id, event_name) VALUES (576,36,'Military Ski Patrol Men''s Military Ski Patrol');
+INSERT INTO event (id, sport_id, event_name) VALUES (577,5,'Art Competitions Mixed Painting, Graphic Arts');
+INSERT INTO event (id, sport_id, event_name) VALUES (578,66,'Wrestling Women''s Flyweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (579,47,'Sailing Mixed Open');
+INSERT INTO event (id, sport_id, event_name) VALUES (580,47,'Sailing Mixed 0.5-1 Ton');
+INSERT INTO event (id, sport_id, event_name) VALUES (581,5,'Art Competitions Mixed Painting, Applied Arts');
+INSERT INTO event (id, sport_id, event_name) VALUES (582,17,'Croquet Mixed Singles, One Ball');
+INSERT INTO event (id, sport_id, event_name) VALUES (583,17,'Croquet Mixed Doubles');
+INSERT INTO event (id, sport_id, event_name) VALUES (584,48,'Shooting Men''s Running Target, Single And Double Shot');
+INSERT INTO event (id, sport_id, event_name) VALUES (585,48,'Shooting Men''s Running Target, Double Shot, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (586,48,'Shooting Men''s Free Pistol, 50 yards');
+INSERT INTO event (id, sport_id, event_name) VALUES (587,48,'Shooting Men''s Free Pistol, 50 yards, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (588,23,'Fencing Men''s epee, Masters and Amateurs, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (589,55,'Swimming Men''s 10 kilometres Open Water');
+INSERT INTO event (id, sport_id, event_name) VALUES (590,5,'Art Competitions Mixed Music, Compositions For Orchestra');
+INSERT INTO event (id, sport_id, event_name) VALUES (591,4,'Archery Men''s Double York Round');
+INSERT INTO event (id, sport_id, event_name) VALUES (592,4,'Archery Men''s Continental Style');
+INSERT INTO event (id, sport_id, event_name) VALUES (593,66,'Wrestling Women''s Middleweight, Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (594,55,'Swimming Men''s 4 x 250 metres Freestyle Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (595,26,'Freestyle Skiing Women''s Slopestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (596,57,'Table Tennis Women''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (597,6,'Athletics Women''s Hammer Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (598,15,'Canoeing Men''s Kayak Singles, 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (599,49,'Short Track Speed Skating Women''s 500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (600,48,'Shooting Women''s Double Trap');
+INSERT INTO event (id, sport_id, event_name) VALUES (601,5,'Art Competitions Mixed Literature, Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (602,49,'Short Track Speed Skating Women''s 1,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (603,44,'Rowing Women''s Coxless Fours');
+INSERT INTO event (id, sport_id, event_name) VALUES (604,48,'Shooting Men''s Free Rifle, 1,000 Yards');
+INSERT INTO event (id, sport_id, event_name) VALUES (605,26,'Freestyle Skiing Women''s Ski Cross');
+INSERT INTO event (id, sport_id, event_name) VALUES (606,26,'Freestyle Skiing Men''s Ski Cross');
+INSERT INTO event (id, sport_id, event_name) VALUES (607,59,'Tennis Men''s Doubles, Covered Courts');
+INSERT INTO event (id, sport_id, event_name) VALUES (608,59,'Tennis Men''s Singles, Covered Courts');
+INSERT INTO event (id, sport_id, event_name) VALUES (609,28,'Gymnastics Men''s Rope Climbing');
+INSERT INTO event (id, sport_id, event_name) VALUES (610,20,'Cycling Men''s 25 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (611,47,'Sailing Mixed 1-2 Ton');
+INSERT INTO event (id, sport_id, event_name) VALUES (612,39,'Nordic Combined Men''s Normal Hill / 10 km, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (613,39,'Nordic Combined Men''s Large Hill / 10 km, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (614,49,'Short Track Speed Skating Women''s 1,500 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (615,6,'Athletics Men''s Standing Triple Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (616,44,'Rowing Men''s Coxed Pairs (1 kilometres);');
+INSERT INTO event (id, sport_id, event_name) VALUES (617,48,'Shooting Men''s Military Pistol, 30 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (618,20,'Cycling Women''s Keirin');
+INSERT INTO event (id, sport_id, event_name) VALUES (619,55,'Swimming Women''s 300 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (620,52,'Snowboarding Women''s Giant Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (621,6,'Athletics Men''s 5 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (622,15,'Canoeing Men''s Canadian Singles, 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (623,47,'Sailing Mixed 30 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (624,6,'Athletics Men''s 4,000 metres Steeplechase');
+INSERT INTO event (id, sport_id, event_name) VALUES (625,6,'Athletics Men''s 5,000 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (626,48,'Shooting Men''s Small-Bore Rifle, Standing, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (627,48,'Shooting Men''s Small Bore-Rifle, Standing, 50 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (628,52,'Snowboarding Men''s Slopestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (629,44,'Rowing Men''s Coxed Pairs (1 mile);');
+INSERT INTO event (id, sport_id, event_name) VALUES (630,5,'Art Competitions Mixed Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (631,20,'Cycling Women''s Omnium');
+INSERT INTO event (id, sport_id, event_name) VALUES (632,26,'Freestyle Skiing Men''s Halfpipe');
+INSERT INTO event (id, sport_id, event_name) VALUES (633,47,'Sailing Mixed 12 foot');
+INSERT INTO event (id, sport_id, event_name) VALUES (634,5,'Art Competitions Mixed Music');
+INSERT INTO event (id, sport_id, event_name) VALUES (635,5,'Art Competitions Mixed Music, Instrumental And Chamber');
+INSERT INTO event (id, sport_id, event_name) VALUES (636,5,'Art Competitions Mixed Music, Vocals');
+INSERT INTO event (id, sport_id, event_name) VALUES (637,5,'Art Competitions Mixed Literature, Dramatic Works');
+INSERT INTO event (id, sport_id, event_name) VALUES (638,32,'Jeu De Paume Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (639,47,'Sailing Mixed 10-20 Ton');
+INSERT INTO event (id, sport_id, event_name) VALUES (640,20,'Cycling Men''s 1/3 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (641,20,'Cycling Men''s 1 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (642,20,'Cycling Men''s 2 mile');
+INSERT INTO event (id, sport_id, event_name) VALUES (643,5,'Art Competitions Mixed Sculpturing, Medals And Plaques');
+INSERT INTO event (id, sport_id, event_name) VALUES (644,6,'Athletics Men''s 1,600 metres Medley Relay');
+INSERT INTO event (id, sport_id, event_name) VALUES (645,15,'Canoeing Men''s Folding Kayak Doubles, 10 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (646,6,'Athletics Men''s 60 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (647,52,'Snowboarding Women''s Parallel Giant Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (648,47,'Sailing Mixed 2-3 Ton');
+INSERT INTO event (id, sport_id, event_name) VALUES (649,54,'Speed Skating Men''s Allround');
+INSERT INTO event (id, sport_id, event_name) VALUES (650,48,'Shooting Men''s Military Rifle, Prone, 600 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (651,15,'Canoeing Men''s Canadian Doubles, 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (652,52,'Snowboarding Women''s Parallel Slalom');
+INSERT INTO event (id, sport_id, event_name) VALUES (653,48,'Shooting Men''s Dueling Pistol, 30 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (654,28,'Gymnastics Men''s Parallel Bars, Teams');
+INSERT INTO event (id, sport_id, event_name) VALUES (655,28,'Gymnastics Men''s Horizontal Bar, Teams');
+INSERT INTO event (id, sport_id, event_name) VALUES (656,48,'Shooting Men''s Free Rifle, Kneeling, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (657,48,'Shooting Men''s Free Rifle, Prone, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (658,48,'Shooting Men''s Free Rifle, Standing, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (659,48,'Shooting Men''s Small-Bore Rifle, Disappearing Target, 25 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (660,5,'Art Competitions Mixed Sculpturing, Medals And Reliefs');
+INSERT INTO event (id, sport_id, event_name) VALUES (661,6,'Athletics Men''s 1,500 metres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (662,6,'Athletics Men''s 3,200 metres Steeplechase');
+INSERT INTO event (id, sport_id, event_name) VALUES (663,6,'Athletics Men''s 3 mile, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (664,5,'Art Competitions Mixed Sculpturing, Medals');
+INSERT INTO event (id, sport_id, event_name) VALUES (665,22,'Equestrianism Men''s Vaulting, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (666,22,'Equestrianism Men''s Vaulting, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (667,20,'Cycling Men''s 333 metres Time Trial');
+INSERT INTO event (id, sport_id, event_name) VALUES (668,48,'Shooting Men''s Free Rifle, Any Position, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (669,48,'Shooting Men''s Military Rifle, 1873-1874 Gras Model, Kneeling Or Standing, 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (670,48,'Shooting Men''s Military Rifle, Kneeling Or Standing, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (671,55,'Swimming Men''s 100 Yard Backstroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (672,55,'Swimming Men''s 440 Yard Breaststroke');
+INSERT INTO event (id, sport_id, event_name) VALUES (673,5,'Art Competitions Mixed Literature, Epic Works');
+INSERT INTO event (id, sport_id, event_name) VALUES (674,5,'Art Competitions Mixed Architecture');
+INSERT INTO event (id, sport_id, event_name) VALUES (675,43,'Roque Men''s Singles');
+INSERT INTO event (id, sport_id, event_name) VALUES (676,3,'Alpinism Mixed Alpinism');
+INSERT INTO event (id, sport_id, event_name) VALUES (677,4,'Archery Men''s Double American Round');
+INSERT INTO event (id, sport_id, event_name) VALUES (678,4,'Archery Men''s Team Round');
+INSERT INTO event (id, sport_id, event_name) VALUES (679,4,'Archery Men''s Target Archery, 33 metres, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (680,4,'Archery Men''s Target Archery, 50 metres, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (681,55,'Swimming Men''s 1,000 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (682,6,'Athletics Men''s Discus Throw, Both Hands');
+INSERT INTO event (id, sport_id, event_name) VALUES (683,55,'Swimming Men''s 200 metres Team Swimming');
+INSERT INTO event (id, sport_id, event_name) VALUES (684,27,'Golf Men''s Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (685,47,'Sailing Mixed 20+ Ton');
+INSERT INTO event (id, sport_id, event_name) VALUES (686,20,'Cycling Women''s Team Sprint');
+INSERT INTO event (id, sport_id, event_name) VALUES (687,28,'Gymnastics Men''s Side Horse');
+INSERT INTO event (id, sport_id, event_name) VALUES (688,65,'Weightlifting Men''s Unlimited, One Hand');
+INSERT INTO event (id, sport_id, event_name) VALUES (689,65,'Weightlifting Men''s Unlimited, Two Hands');
+INSERT INTO event (id, sport_id, event_name) VALUES (690,48,'Shooting Men''s Free Pistol, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (691,48,'Shooting Men''s Military Revolver, 1873-1874 Gras Model, 20 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (692,48,'Shooting Men''s Military Revolver, 20 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (693,48,'Shooting Men''s Dueling Pistol Au Vise 20 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (694,48,'Shooting Men''s Dueling Pistol Au Commandement, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (695,48,'Shooting Men''s Small-Bore Rifle, Prone, 50 metres, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (696,47,'Sailing Mixed 6.5 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (697,23,'Fencing Men''s Sabre, Individual, Three Hits');
+INSERT INTO event (id, sport_id, event_name) VALUES (698,6,'Athletics Men''s 200 metres Hurdles');
+INSERT INTO event (id, sport_id, event_name) VALUES (699,6,'Athletics Men''s 56-pound Weight Throw');
+INSERT INTO event (id, sport_id, event_name) VALUES (700,47,'Sailing Mixed 0-0.5 Ton');
+INSERT INTO event (id, sport_id, event_name) VALUES (701,6,'Athletics Men''s 2,500 metres Steeplechase');
+INSERT INTO event (id, sport_id, event_name) VALUES (702,22,'Equestrianism Mixed Four-In-Hand Competition');
+INSERT INTO event (id, sport_id, event_name) VALUES (703,6,'Athletics Men''s All-Around Championship');
+INSERT INTO event (id, sport_id, event_name) VALUES (704,38,'Motorboating Mixed A-Class (Open);');
+INSERT INTO event (id, sport_id, event_name) VALUES (705,6,'Athletics Men''s 2,590 metres Steeplechase');
+INSERT INTO event (id, sport_id, event_name) VALUES (706,4,'Archery Women''s Double Columbia Round');
+INSERT INTO event (id, sport_id, event_name) VALUES (707,24,'Figure Skating Men''s Special Figures');
+INSERT INTO event (id, sport_id, event_name) VALUES (708,5,'Art Competitions Mixed Music, Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (709,48,'Shooting Men''s Military Rifle, Standing, 300 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (710,55,'Swimming Men''s 50 yard Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (711,55,'Swimming Men''s 100 yard Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (712,55,'Swimming Men''s 440 yard Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (713,10,'Basque Pelota Men''s Two-Man Teams With Cesta');
+INSERT INTO event (id, sport_id, event_name) VALUES (714,48,'Shooting Men''s Trap, Single Shot, 16 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (715,48,'Shooting Men''s Trap, Double Shot, 14 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (716,22,'Equestrianism Mixed Hacks And Hunter Combined');
+INSERT INTO event (id, sport_id, event_name) VALUES (717,15,'Canoeing Men''s Folding Kayak Singles, 10 kilometres');
+INSERT INTO event (id, sport_id, event_name) VALUES (718,6,'Athletics Men''s 3,000 metres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (719,6,'Athletics Men''s 3,500 metres Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (720,28,'Gymnastics Men''s Individual All-Around, 4 Events');
+INSERT INTO event (id, sport_id, event_name) VALUES (721,66,'Wrestling Men''s Unlimited Class, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (722,28,'Gymnastics Men''s Club Swinging');
+INSERT INTO event (id, sport_id, event_name) VALUES (723,38,'Motorboating Mixed B-Class (Under 60 Feet);');
+INSERT INTO event (id, sport_id, event_name) VALUES (724,38,'Motorboating Mixed C-Class');
+INSERT INTO event (id, sport_id, event_name) VALUES (725,17,'Croquet Mixed Singles, Two Balls');
+INSERT INTO event (id, sport_id, event_name) VALUES (726,4,'Archery Men''s Au Cordon Dore, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (727,20,'Cycling Men''s 10,000 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (728,5,'Art Competitions Mixed Sculpturing, Reliefs');
+INSERT INTO event (id, sport_id, event_name) VALUES (729,4,'Archery Men''s Sur La Perche a La Herse');
+INSERT INTO event (id, sport_id, event_name) VALUES (730,22,'Equestrianism Mixed High Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (731,5,'Art Competitions Mixed Music, Compositions For Solo Or Chorus');
+INSERT INTO event (id, sport_id, event_name) VALUES (732,47,'Sailing Mixed 3-10 Ton');
+INSERT INTO event (id, sport_id, event_name) VALUES (733,4,'Archery Men''s Sur La Perche a La Pyramide');
+INSERT INTO event (id, sport_id, event_name) VALUES (734,6,'Athletics Men''s 10 mile Walk');
+INSERT INTO event (id, sport_id, event_name) VALUES (735,23,'Fencing Men''s Single Sticks, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (736,28,'Gymnastics Men''s Tumbling');
+INSERT INTO event (id, sport_id, event_name) VALUES (737,55,'Swimming Men''s 1,200 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (738,6,'Athletics Men''s 4 mile, Team');
+INSERT INTO event (id, sport_id, event_name) VALUES (739,4,'Archery Men''s Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (740,4,'Archery Men''s Au Chapelet, 50 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (741,55,'Swimming Men''s 200 metres Obstacle Course');
+INSERT INTO event (id, sport_id, event_name) VALUES (742,4,'Archery Men''s Championnat Du Monde');
+INSERT INTO event (id, sport_id, event_name) VALUES (743,4,'Archery Women''s Team Round');
+INSERT INTO event (id, sport_id, event_name) VALUES (744,66,'Wrestling Men''s All-Around, Greco-Roman');
+INSERT INTO event (id, sport_id, event_name) VALUES (745,48,'Shooting Men''s Military Rifle, 200 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (746,20,'Cycling Men''s 12-Hours Race');
+INSERT INTO event (id, sport_id, event_name) VALUES (747,65,'Weightlifting Men''s All-Around Dumbbell Contest');
+INSERT INTO event (id, sport_id, event_name) VALUES (748,48,'Shooting Men''s Military Pistol, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (749,48,'Shooting Men''s Muzzle-Loading Pistol, 25 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (750,22,'Equestrianism Mixed Long Jump');
+INSERT INTO event (id, sport_id, event_name) VALUES (751,55,'Swimming Men''s 500 metres Freestyle');
+INSERT INTO event (id, sport_id, event_name) VALUES (752,48,'Shooting Men''s Free Pistol, 30 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (753,48,'Shooting Men''s Unknown Event');
+INSERT INTO event (id, sport_id, event_name) VALUES (754,4,'Archery Men''s Au Chapelet, 33 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (755,4,'Archery Men''s Au Cordon Dore, 33 metres');
+INSERT INTO event (id, sport_id, event_name) VALUES (756,4,'Archery Men''s Target Archery, 28 metres, Individual');
+INSERT INTO event (id, sport_id, event_name) VALUES (757,1,'Aeronautics Mixed Aeronautics');
