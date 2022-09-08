@@ -1,4 +1,3 @@
-
 DROP TABLE IF EXISTS universities.university_year;
 
 CREATE TABLE universities.university_year (
