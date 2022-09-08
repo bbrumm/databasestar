@@ -1,17 +1,13 @@
+DROP TABLE IF EXISTS movies.keyword;
 
-
-DROP TABLE IF EXISTS keyword;
-
-CREATE TABLE keyword (
-  keyword_id int(10) NOT NULL,
+CREATE TABLE movies.keyword (
+  keyword_id INT NOT NULL,
   keyword_name varchar(100) DEFAULT NULL,
-  PRIMARY KEY (keyword_id)
+  CONSTRAINT pk_keyword PRIMARY KEY (keyword_id)
 );
 
 
-
-
-INSERT INTO keyword VALUES
+INSERT INTO movies.keyword VALUES
 (30,'individual'),
 (65,'holiday'),
 (74,'germany'),

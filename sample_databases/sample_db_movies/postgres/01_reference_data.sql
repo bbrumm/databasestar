@@ -1,21 +1,17 @@
+DROP SCHEMA movies CASCADE;
 CREATE SCHEMA movies;
-USE movies;
 
+DROP TABLE IF EXISTS movies.country;
 
-DROP TABLE IF EXISTS country;
-
-CREATE TABLE country (
-  country_id int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE movies.country (
+  country_id INT NOT NULL AUTO_INCREMENT,
   country_iso_code varchar(10) DEFAULT NULL,
   country_name varchar(200) DEFAULT NULL,
-  PRIMARY KEY (country_id)
+  CONSTRAINT pk_country PRIMARY KEY (country_id)
 );
 
 
-
-
-
-INSERT INTO country VALUES
+INSERT INTO movies.country VALUES
 (128,'AE','United Arab Emirates'),
 (129,'AF','Afghanistan'),
 (130,'AO','Angola'),
@@ -105,41 +101,30 @@ INSERT INTO country VALUES
 (214,'US','United States of America'),
 (215,'ZA','South Africa');
 
+DROP TABLE IF EXISTS movies.gender;
 
-
-DROP TABLE IF EXISTS gender;
-
-CREATE TABLE gender (
-  gender_id int(10) NOT NULL,
+CREATE TABLE movies.gender (
+  gender_id INT NOT NULL,
   gender varchar(20) DEFAULT NULL,
-  PRIMARY KEY (gender_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT pk_gender PRIMARY KEY (gender_id)
+);
 
 
-
-
-
-INSERT INTO gender VALUES
+INSERT INTO movies.gender VALUES
 (0,'Unspecified'),
 (1,'Female'),
 (2,'Male');
 
 
+DROP TABLE IF EXISTS movies.genre;
 
-
-DROP TABLE IF EXISTS genre;
-
-CREATE TABLE genre (
-  genre_id int(10) NOT NULL,
+CREATE TABLE movies.genre (
+  genre_id INT NOT NULL,
   genre_name varchar(100) DEFAULT NULL,
-  PRIMARY KEY (genre_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT pk_genre PRIMARY KEY (genre_id)
+);
 
-
-
-
-
-INSERT INTO genre VALUES
+INSERT INTO movies.genre VALUES
 (12,'Adventure'),
 (14,'Fantasy'),
 (16,'Animation'),
@@ -162,18 +147,19 @@ INSERT INTO genre VALUES
 (10770,'TV Movie');
 
 
-DROP TABLE IF EXISTS language;
+DROP TABLE IF EXISTS movies.language;
 
-CREATE TABLE language (
-  language_id int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE movies.language (
+  language_id INT NOT NULL AUTO_INCREMENT,
   language_code varchar(10) DEFAULT NULL,
   language_name varchar(500) DEFAULT NULL,
-  PRIMARY KEY (language_id)
-) ENGINE=InnoDB AUTO_INCREMENT=24702 DEFAULT CHARSET=utf8;
+  CONSTRAINT pk_language PRIMARY KEY (language_id)
+);
 
 
 
-INSERT INTO language VALUES (24574,'en','English'),
+INSERT INTO movies.language VALUES
+(24574,'en','English'),
 (24575,'sv','svenska'),
 (24576,'de','Deutsch'),
 (24577,'xx','No Language'),
@@ -265,35 +251,33 @@ INSERT INTO language VALUES (24574,'en','English'),
 
 
 
+DROP TABLE IF EXISTS movies.language_role;
 
-
-DROP TABLE IF EXISTS language_role;
-
-CREATE TABLE language_role (
-  role_id int(10) NOT NULL,
+CREATE TABLE movies.language_role (
+  role_id INT NOT NULL,
   language_role varchar(20) DEFAULT NULL,
-  PRIMARY KEY (role_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT pk_langrole PRIMARY KEY (role_id)
+);
 
 
-INSERT INTO language_role VALUES
+INSERT INTO movies.language_role VALUES
 (1,'Original'),
 (2,'Spoken');
 
 
 
-DROP TABLE IF EXISTS department;
+DROP TABLE IF EXISTS movies.department;
 
-CREATE TABLE department (
-  department_id int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE movies.department (
+  department_id INT NOT NULL AUTO_INCREMENT,
   department_name varchar(200) DEFAULT NULL,
-  PRIMARY KEY (department_id)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+  CONSTRAINT pk_department PRIMARY KEY (department_id)
+);
 
 
 
 
-INSERT INTO department VALUES
+INSERT INTO movies.department VALUES
 (1,'Camera'),
 (2,'Directing'),
 (3,'Production'),
@@ -307,3 +291,4 @@ INSERT INTO department VALUES
 (11,'Lighting'),
 (12,'Actors');
 
+COMMIT;
