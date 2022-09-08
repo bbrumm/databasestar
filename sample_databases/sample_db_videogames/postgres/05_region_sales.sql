@@ -1,22 +1,17 @@
+DROP TABLE IF EXISTS video_games.region_sales;
 
-
-
-DROP TABLE IF EXISTS region_sales;
-
-CREATE TABLE region_sales (
-  region_id int(11) DEFAULT NULL,
-  game_platform_id int(11) DEFAULT NULL,
-  num_sales decimal(5,2) DEFAULT NULL,
-  KEY fk_rs_gp (game_platform_id),
-  KEY fk_rs_reg (region_id),
-  CONSTRAINT fk_rs_gp FOREIGN KEY (game_platform_id) REFERENCES game_platform (id),
-  CONSTRAINT fk_rs_reg FOREIGN KEY (region_id) REFERENCES region (id)
+CREATE TABLE video_games.region_sales (
+  region_id INT DEFAULT NULL,
+  game_platform_id INT DEFAULT NULL,
+  num_sales DECIMAL(5,2) DEFAULT NULL,
+  CONSTRAINT fk_rs_gp FOREIGN KEY (game_platform_id) REFERENCES video_games.game_platform (id),
+  CONSTRAINT fk_rs_reg FOREIGN KEY (region_id) REFERENCES video_games.region (id)
 );
 
 
 
 
-INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
+INSERT INTO video_games.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,50,3.50),
 (1,51,1.43),
 (1,52,0.51),
@@ -65337,3 +65332,5 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,7989,0.00),
 (4,11597,0.00),
 (4,9539,0.00);
+
+COMMIT;
