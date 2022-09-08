@@ -1,20 +1,15 @@
+DROP TABLE IF EXISTS olympics.person_region;
 
-
-
-DROP TABLE IF EXISTS person_region;
-
-CREATE TABLE person_region (
-  person_id int(11) DEFAULT NULL,
-  region_id int(11) DEFAULT NULL,
-  KEY fk_per_per (person_id),
-  KEY fk_per_reg (region_id),
-  CONSTRAINT fk_per_per FOREIGN KEY (person_id) REFERENCES person (id),
-  CONSTRAINT fk_per_reg FOREIGN KEY (region_id) REFERENCES noc_region (id)
+CREATE TABLE olympics.person_region (
+  person_id INT DEFAULT NULL,
+  region_id INT DEFAULT NULL,
+  CONSTRAINT fk_per_per FOREIGN KEY (person_id) REFERENCES olympics.person (id),
+  CONSTRAINT fk_per_reg FOREIGN KEY (region_id) REFERENCES olympics.noc_region (id)
 );
 
 
 
-INSERT INTO person_region VALUES
+INSERT INTO olympics.person_region (person_id, region_id) VALUES
 (1,42),
 (2,42),
 (3,56),
@@ -84694,7 +84689,9 @@ INSERT INTO person_region VALUES
 (88092,75),
 (88093,14),
 (88094,99);
-INSERT INTO person_region VALUES (88095,213),
+
+
+INSERT INTO olympics.person_region VALUES (88095,213),
 (88096,81),
 (88097,77),
 (88098,14),
@@ -130536,3 +130533,5 @@ INSERT INTO person_region VALUES (88095,213),
 (135569,163),
 (135570,163),
 (135571,163);
+
+COMMIT;

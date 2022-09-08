@@ -1,23 +1,17 @@
+DROP TABLE IF EXISTS olympics.competitor_event;
 
-
-
-DROP TABLE IF EXISTS competitor_event;
-
-CREATE TABLE competitor_event (
-  event_id int(11) DEFAULT NULL,
-  competitor_id int(11) DEFAULT NULL,
-  medal_id int(11) DEFAULT NULL,
-  KEY fk_ce_ev (event_id),
-  KEY fk_ce_com (competitor_id),
-  KEY fk_ce_med (medal_id),
-  CONSTRAINT fk_ce_com FOREIGN KEY (competitor_id) REFERENCES games_competitor (id),
-  CONSTRAINT fk_ce_ev FOREIGN KEY (event_id) REFERENCES event (id),
-  CONSTRAINT fk_ce_med FOREIGN KEY (medal_id) REFERENCES medal (id)
+CREATE TABLE olympics.competitor_event (
+  event_id INT DEFAULT NULL,
+  competitor_id INT DEFAULT NULL,
+  medal_id INT DEFAULT NULL,
+  CONSTRAINT fk_ce_com FOREIGN KEY (competitor_id) REFERENCES olympics.games_competitor (id),
+  CONSTRAINT fk_ce_ev FOREIGN KEY (event_id) REFERENCES olympics.event (id),
+  CONSTRAINT fk_ce_med FOREIGN KEY (medal_id) REFERENCES olympics.medal (id)
 );
 
 
 
-INSERT INTO competitor_event VALUES
+INSERT INTO olympics.competitor_event (event_id, competitor_id, medal_id) VALUES
 (1,1,4),
 (2,2,4),
 (3,3,4),
@@ -72833,7 +72827,10 @@ INSERT INTO competitor_event VALUES
 (566,50847,4),
 (566,50848,4),
 (567,50848,4);
-INSERT INTO competitor_event VALUES (130,50849,4),
+
+
+INSERT INTO olympics.competitor_event (event_id, competitor_id, medal_id) VALUES
+(130,50849,4),
 (204,50850,4),
 (33,50851,4),
 (34,50851,4),
@@ -144600,7 +144597,11 @@ INSERT INTO competitor_event VALUES (130,50849,4),
 (87,99766,4),
 (241,99767,4),
 (241,99768,2);
-INSERT INTO competitor_event VALUES (90,99769,4),
+
+
+
+INSERT INTO olympics.competitor_event (event_id, competitor_id, medal_id) VALUES
+(90,99769,4),
 (66,99770,4),
 (100,99771,4),
 (100,99772,2),
@@ -211747,7 +211748,7 @@ INSERT INTO competitor_event VALUES (90,99769,4),
 (296,146611,4),
 (297,146611,4),
 (296,146612,4);
-INSERT INTO competitor_event VALUES (297,146612,4),
+INSERT INTO olympics.competitor_event (event_id, competitor_id, medal_id) VALUES (297,146612,4),
 (62,146613,4),
 (140,146614,4),
 (135,146615,4),
@@ -260989,3 +260990,5 @@ INSERT INTO competitor_event VALUES (297,146612,4),
 (418,180250,4),
 (51,180251,4),
 (51,180252,4);
+
+COMMIT;
