@@ -1,20 +1,14 @@
+DROP TABLE IF EXISTS superhero.hero_power;
 
-
-
-
-DROP TABLE IF EXISTS hero_power;
-
-CREATE TABLE hero_power (
-  hero_id int(11) DEFAULT NULL,
-  power_id int(11) DEFAULT NULL,
-  KEY fk_hpo_po (power_id),
-  KEY fk_hpo_hero (hero_id),
-  CONSTRAINT fk_hpo_hero FOREIGN KEY (hero_id) REFERENCES superhero (id),
-  CONSTRAINT fk_hpo_po FOREIGN KEY (power_id) REFERENCES superpower (id)
+CREATE TABLE superhero.hero_power (
+  hero_id INT DEFAULT NULL,
+  power_id INT DEFAULT NULL,
+  CONSTRAINT fk_hpo_hero FOREIGN KEY (hero_id) REFERENCES superhero.superhero (id),
+  CONSTRAINT fk_hpo_po FOREIGN KEY (power_id) REFERENCES superhero.superpower (id)
 );
 
 
-INSERT INTO hero_power VALUES
+INSERT INTO superhero.hero_power VALUES
 (1,1),
 (1,18),
 (1,26),

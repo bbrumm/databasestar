@@ -1,21 +1,15 @@
+DROP TABLE IF EXISTS superhero.hero_attribute;
 
-
-DROP TABLE IF EXISTS hero_attribute;
-
-CREATE TABLE hero_attribute (
-  hero_id int(11) DEFAULT NULL,
-  attribute_id int(11) DEFAULT NULL,
-  attribute_value int(11) DEFAULT NULL,
-  KEY fk_hat_at (attribute_id),
-  KEY fk_hat_hero (hero_id),
-  CONSTRAINT fk_hat_at FOREIGN KEY (attribute_id) REFERENCES attribute (id),
-  CONSTRAINT fk_hat_hero FOREIGN KEY (hero_id) REFERENCES superhero (id)
+CREATE TABLE superhero.hero_attribute (
+  hero_id INT DEFAULT NULL,
+  attribute_id INT DEFAULT NULL,
+  attribute_value INT DEFAULT NULL,
+  CONSTRAINT fk_hat_at FOREIGN KEY (attribute_id) REFERENCES superhero.attribute (id),
+  CONSTRAINT fk_hat_hero FOREIGN KEY (hero_id) REFERENCES superhero.superhero (id)
 );
 
 
-
-
-INSERT INTO hero_attribute VALUES
+INSERT INTO superhero.hero_attribute VALUES
 (1,1,80),
 (2,1,75),
 (3,1,95),
