@@ -1,23 +1,19 @@
+DROP TABLE IF EXISTS movies.movie_cast;
 
-DROP TABLE IF EXISTS movie_cast;
-
-CREATE TABLE movie_cast (
-  movie_id int(10) DEFAULT NULL,
-  person_id int(10) DEFAULT NULL,
+CREATE TABLE movies.movie_cast (
+  movie_id INT DEFAULT NULL,
+  person_id INT DEFAULT NULL,
   character_name varchar(400) DEFAULT NULL,
-  gender_id int(10) DEFAULT NULL,
+  gender_id INT DEFAULT NULL,
   cast_order int(5) DEFAULT NULL,
-  KEY fk_mca_movie (movie_id),
-  KEY fk_mca_per (person_id),
-  KEY fk_mca_gender (gender_id),
-  CONSTRAINT fk_mca_gender FOREIGN KEY (gender_id) REFERENCES gender (gender_id),
-  CONSTRAINT fk_mca_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id),
-  CONSTRAINT fk_mca_per FOREIGN KEY (person_id) REFERENCES person (person_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT fk_mca_gender FOREIGN KEY (gender_id) REFERENCES movies.gender (gender_id),
+  CONSTRAINT fk_mca_movie FOREIGN KEY (movie_id) REFERENCES movies.movie (movie_id),
+  CONSTRAINT fk_mca_per FOREIGN KEY (person_id) REFERENCES movies.person (person_id)
+);
 
 
 
-INSERT INTO movie_cast VALUES
+INSERT INTO movies.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
 (285,85,'Captain Jack Sparrow',2,0),
 (285,114,'Will Turner',2,1),
 (285,116,'Elizabeth Swann',1,2),
@@ -29795,7 +29791,10 @@ INSERT INTO movie_cast VALUES
 (613,50792,'Wachsoldat vor der Wolfsschanze (uncredited)',0,62),
 (613,1394311,'Mohnke\'s Adjutant im Bunker (uncredited)',2,63),
 (1913,3810,'Ramu00f3n Sampedro',2,0);
-INSERT INTO movie_cast VALUES (1913,19907,'Julia',1,1),
+
+
+INSERT INTO movies.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
+(1913,19907,'Julia',1,1),
 (1913,2759,'Rosa',1,2),
 (1913,19908,'Joaquu00edn',1,3),
 (1913,19909,'Padre Francisco',2,4),
@@ -59214,7 +59213,10 @@ INSERT INTO movie_cast VALUES (1913,19907,'Julia',1,1),
 (10133,538687,'Speaker Omaha',2,18),
 (10133,200625,'Desk Clerk Boise',0,19),
 (10133,1205722,'Hotel Janitor Boise',2,20);
-INSERT INTO movie_cast VALUES (10133,1165052,'Convention Waiter Boise',2,21),
+
+
+INSERT INTO movies.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
+(10133,1165052,'Convention Waiter Boise',2,21),
 (10133,12489,'Speaker #1 Boise',0,22),
 (10133,214063,'Speaker #3 Boise',0,23),
 (10133,185177,'Man In White Coat Boise',2,24),
@@ -87264,7 +87266,10 @@ INSERT INTO movie_cast VALUES (10133,1165052,'Convention Waiter Boise',2,21),
 (318846,1560335,'Swimmer',1,90),
 (318846,231855,'Woman at Party',1,91),
 (318846,19011,'Himself (archive footage)',2,92);
-INSERT INTO movie_cast VALUES (318846,1746014,'Casino Patron / Pool Party goer',0,93),
+
+
+INSERT INTO movies.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
+(318846,1746014,'Casino Patron / Pool Party goer',0,93),
 (318846,1697155,'Club Dancer',0,94),
 (318846,1737691,'Bank of America Executive',1,95),
 (318846,1737691,'Front Point Receptionist',1,96),
@@ -106275,3 +106280,5 @@ INSERT INTO movie_cast VALUES (318846,1746014,'Casino Patron / Pool Party goer',
 (126186,2053,'Donald',2,2),
 (126186,2394,'Marcus Groff',2,3),
 (126186,1395490,'',0,4);
+
+COMMIT;

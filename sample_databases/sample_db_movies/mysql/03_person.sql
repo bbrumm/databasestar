@@ -1,17 +1,14 @@
+DROP TABLE IF EXISTS movies.person;
 
-
-
-DROP TABLE IF EXISTS person;
-
-CREATE TABLE person (
-  person_id int(10) NOT NULL,
+CREATE TABLE movies.person (
+  person_id INT NOT NULL,
   person_name varchar(500) DEFAULT NULL,
-  PRIMARY KEY (person_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT pk_person PRIMARY KEY (person_id)
+);
 
 
 
-INSERT INTO person VALUES
+INSERT INTO movies.person (person_id, person_name) VALUES
 (1,'George Lucas'),
 (2,'Mark Hamill'),
 (3,'Harrison Ford'),
@@ -41083,7 +41080,10 @@ INSERT INTO person VALUES
 (185102,'Jackie Richardson'),
 (185111,'Jefferson Mappin'),
 (185116,'Marilyn Boyle');
-INSERT INTO person VALUES (185147,'Sam Moses'),
+
+
+INSERT INTO movies.person (person_id, person_name) VALUES
+(185147,'Sam Moses'),
 (185154,'Vincent Marino'),
 (185165,'Pedro Salvu00edn'),
 (185177,'Les Porter'),
@@ -79164,7 +79164,10 @@ INSERT INTO person VALUES (185147,'Sam Moses'),
 (1484712,'Stefani N. Deoul'),
 (1484713,'Arthur Rowsell'),
 (1484714,'Suzanne Benoit');
-INSERT INTO person VALUES (1484779,'Deana Deatherage'),
+
+
+INSERT INTO movies.person (person_id, person_name) VALUES
+(1484779,'Deana Deatherage'),
 (1484863,'Yves Michel-Beneche'),
 (1484864,'Elizabeth Greenberg'),
 (1484865,'Liam Noble'),
@@ -104854,3 +104857,5 @@ INSERT INTO person VALUES (1484779,'Deana Deatherage'),
 (1893237,'John Ditomaso'),
 (1893238,'Kevin Farrell'),
 (1893239,'Cindy Fischer');
+
+COMMIT;

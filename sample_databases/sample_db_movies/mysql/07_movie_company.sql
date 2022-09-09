@@ -1,18 +1,15 @@
+DROP TABLE IF EXISTS movies.movie_company;
+
+CREATE TABLE movies.movie_company (
+  movie_id INT DEFAULT NULL,
+  company_id INT DEFAULT NULL,
+  CONSTRAINT fk_mc_comp FOREIGN KEY (company_id) REFERENCES movies.production_company (company_id),
+  CONSTRAINT fk_mc_movie FOREIGN KEY (movie_id) REFERENCES movies.movie (movie_id)
+);
 
 
-DROP TABLE IF EXISTS movie_company;
-
-CREATE TABLE movie_company (
-  movie_id int(10) DEFAULT NULL,
-  company_id int(10) DEFAULT NULL,
-  KEY fk_mc_movie (movie_id),
-  KEY fk_mc_comp (company_id),
-  CONSTRAINT fk_mc_comp FOREIGN KEY (company_id) REFERENCES production_company (company_id),
-  CONSTRAINT fk_mc_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-INSERT INTO movie_company VALUES (5,14),
+INSERT INTO movies.movie_company (movie_id, company_id) VALUES
+(5,14),
 (5,59),
 (11,1),
 (11,306),
@@ -13689,3 +13686,5 @@ INSERT INTO movie_company VALUES (5,14),
 (433715,85248),
 (447027,41671),
 (459488,60343);
+
+COMMIT;

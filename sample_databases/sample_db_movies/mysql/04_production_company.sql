@@ -1,17 +1,14 @@
+DROP TABLE IF EXISTS movies.production_company;
 
-
-
-DROP TABLE IF EXISTS production_company;
-
-CREATE TABLE production_company (
-  company_id int(10) NOT NULL,
+CREATE TABLE movies.production_company (
+  company_id INT NOT NULL,
   company_name varchar(200) DEFAULT NULL,
-  PRIMARY KEY (company_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT pk_prodcomp PRIMARY KEY (company_id)
+);
 
 
-
-INSERT INTO production_company VALUES (1,'Lucasfilm'),
+INSERT INTO movies.production_company (company_id, company_name) VALUES
+(1,'Lucasfilm'),
 (2,'Walt Disney Pictures'),
 (3,'Pixar Animation Studios'),
 (4,'Paramount Pictures'),
@@ -5058,3 +5055,5 @@ INSERT INTO production_company VALUES (1,'Lucasfilm'),
 (94714,'Vista Organisation, The'),
 (95018,'MPH Entertainment Productions'),
 (95063,'Marcy Media');
+
+COMMIT;

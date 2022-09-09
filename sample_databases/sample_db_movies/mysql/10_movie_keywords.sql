@@ -1,19 +1,15 @@
+DROP TABLE IF EXISTS movies.movie_keywords;
+
+CREATE TABLE movies.movie_keywords (
+  movie_id INT DEFAULT NULL,
+  keyword_id INT DEFAULT NULL,
+  CONSTRAINT fk_mk_keyword FOREIGN KEY (keyword_id) REFERENCES movies.keyword (keyword_id),
+  CONSTRAINT fk_mk_movie FOREIGN KEY (movie_id) REFERENCES movies.movie (movie_id)
+);
 
 
-
-DROP TABLE IF EXISTS movie_keywords;
-
-CREATE TABLE movie_keywords (
-  movie_id int(10) DEFAULT NULL,
-  keyword_id int(10) DEFAULT NULL,
-  KEY fk_mk_movie (movie_id),
-  KEY fk_mk_keyword (keyword_id),
-  CONSTRAINT fk_mk_keyword FOREIGN KEY (keyword_id) REFERENCES keyword (keyword_id),
-  CONSTRAINT fk_mk_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-INSERT INTO movie_keywords VALUES (5,612),
+INSERT INTO movies.movie_keywords (movie_id, keyword_id) VALUES
+(5,612),
 (5,613),
 (5,616),
 (5,622),
@@ -36175,3 +36171,5 @@ INSERT INTO movie_keywords VALUES (5,612),
 (459488,235277),
 (459488,235690),
 (459488,235691);
+
+COMMIT
