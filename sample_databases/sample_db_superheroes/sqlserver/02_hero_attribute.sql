@@ -1,6 +1,6 @@
+DROP TABLE IF EXISTS superhero.dbo.attribute;
 
-
-CREATE TABLE hero_attribute (
+CREATE TABLE superhero.dbo.hero_attribute (
   hero_id INT DEFAULT NULL,
   attribute_id INT DEFAULT NULL,
   attribute_value INT DEFAULT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE hero_attribute (
   CONSTRAINT fk_hat_hero FOREIGN KEY (hero_id) REFERENCES superhero (id)
 );
 
-INSERT INTO hero_attribute VALUES (1,1,80),
+INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value) VALUES (1,1,80),
 (2,1,75),
 (3,1,95),
 (4,1,80),

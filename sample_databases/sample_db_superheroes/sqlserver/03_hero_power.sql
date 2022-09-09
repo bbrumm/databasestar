@@ -1,13 +1,13 @@
+DROP TABLE IF EXISTS superhero.dbo.hero_power;
 
-
-CREATE TABLE hero_power (
+CREATE TABLE superhero.dbo.hero_power (
   hero_id INT DEFAULT NULL,
   power_id INT DEFAULT NULL,
-  CONSTRAINT fk_hpo_hero FOREIGN KEY (hero_id) REFERENCES superhero (id),
-  CONSTRAINT fk_hpo_po FOREIGN KEY (power_id) REFERENCES superpower (id)
+  CONSTRAINT fk_hpo_hero FOREIGN KEY (hero_id) REFERENCES superhero.dbo.superhero (id),
+  CONSTRAINT fk_hpo_po FOREIGN KEY (power_id) REFERENCES superhero.dbo.superpower (id)
 );
 
-INSERT INTO hero_power VALUES (1,1),
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
 (1,18),
 (1,26),
 (1,31),

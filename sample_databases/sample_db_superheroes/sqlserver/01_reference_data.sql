@@ -1,46 +1,49 @@
-DROP TABLE attribute;
-DROP TABLE superpower;
-DROP TABLE superhero;
-DROP TABLE gender;
-DROP TABLE colour;
-DROP TABLE race;
-DROP TABLE publisher;
-DROP TABLE alignment;
-DROP TABLE superhero_temp;
-DROP TABLE hero_attribute;
-DROP TABLE hero_power;
+DROP DATABASE IF EXISTS superhero;
+CREATE DATABASE superhero;
 
-CREATE TABLE alignment (
+
+DROP TABLE IF EXISTS superhero.dbo.superpower;
+DROP TABLE IF EXISTS superhero.dbo.superhero;
+DROP TABLE IF EXISTS superhero.dbo.gender;
+DROP TABLE IF EXISTS superhero.dbo.colour;
+DROP TABLE IF EXISTS superhero.dbo.race;
+DROP TABLE IF EXISTS superhero.dbo.publisher;
+DROP TABLE IF EXISTS superhero.dbo.alignment;
+DROP TABLE IF EXISTS superhero.dbo.superhero_temp;
+DROP TABLE IF EXISTS superhero.dbo.hero_attribute;
+
+
+CREATE TABLE superhero.dbo.alignment (
   id INT NOT NULL,
   alignment VARCHAR(10) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO alignment VALUES (1,'Good'),
+INSERT INTO superhero.dbo.alignment VALUES (1,'Good'),
 (2,'Bad'),
 (3,'Neutral'),
 (4,'N/A');
 
-CREATE TABLE attribute (
+CREATE TABLE superhero.dbo.attribute (
   id INT NOT NULL,
   attribute_name VARCHAR(200) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO attribute VALUES (1,'Intelligence'),
+INSERT INTO superhero.dbo.attribute VALUES (1,'Intelligence'),
 (2,'Strength'),
 (3,'Speed'),
 (4,'Durability'),
 (5,'Power'),
 (6,'Combat');
 
-CREATE TABLE colour (
+CREATE TABLE superhero.dbo.colour (
   id INT NOT NULL,
   colour VARCHAR(20) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO colour VALUES (1,'No Colour'),
+INSERT INTO superhero.dbo.colour VALUES (1,'No Colour'),
 (2,'Amber'),
 (3,'Auburn'),
 (4,'Black'),
@@ -77,29 +80,24 @@ INSERT INTO colour VALUES (1,'No Colour'),
 (35,'Yellow/Red');
 
 
-CREATE TABLE gender (
+CREATE TABLE superhero.dbo.gender (
   id INT NOT NULL,
   gender VARCHAR(20) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO gender VALUES (1,'Male'),
+INSERT INTO superhero.dbo.gender VALUES (1,'Male'),
 (2,'Female'),
 (3,'N/A');
 
 
-
-
-
-
-
-CREATE TABLE publisher (
+CREATE TABLE superhero.dbo.publisher (
   id INT NOT NULL,
   publisher_name VARCHAR(50) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO publisher VALUES (1,''),
+INSERT INTO superhero.dbo.publisher VALUES (1,''),
 (2,'ABC Studios'),
 (3,'Dark Horse Comics'),
 (4,'DC Comics'),
@@ -125,13 +123,13 @@ INSERT INTO publisher VALUES (1,''),
 (24,'Universal Studios'),
 (25,'Wildstorm');
 
-CREATE TABLE race (
+CREATE TABLE superhero.dbo.race (
   id INT NOT NULL,
   race VARCHAR(100) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO race VALUES (1,'-'),
+INSERT INTO superhero.dbo.race VALUES (1,'-'),
 (2,'Alien'),
 (3,'Alpha'),
 (4,'Amazon'),
@@ -189,11 +187,11 @@ INSERT INTO race VALUES (1,'-'),
 (56,'Vampire'),
 (57,'Xenomorph XX121'),
 (58,'Yautja'),
-(59,'Yoda\'s species'),
+(59,'Yoda''s species'),
 (60,'Zen-Whoberian'),
 (61,'Zombie');
 
-CREATE TABLE superhero (
+CREATE TABLE superhero.dbo.superhero (
   id INT NOT NULL,
   superhero_name VARCHAR(200) DEFAULT NULL,
   full_name VARCHAR(200) DEFAULT NULL,
@@ -207,16 +205,17 @@ CREATE TABLE superhero (
   height_cm INT DEFAULT NULL,
   weight_kg INT DEFAULT NULL,
   PRIMARY KEY (id),
-  CONSTRAINT fk_sup_align FOREIGN KEY (alignment_id) REFERENCES alignment (id),
-  CONSTRAINT fk_sup_eyecol FOREIGN KEY (eye_colour_id) REFERENCES colour (id),
-  CONSTRAINT fk_sup_gen FOREIGN KEY (gender_id) REFERENCES gender (id),
-  CONSTRAINT fk_sup_haircol FOREIGN KEY (hair_colour_id) REFERENCES colour (id),
-  CONSTRAINT fk_sup_pub FOREIGN KEY (publisher_id) REFERENCES publisher (id),
-  CONSTRAINT fk_sup_race FOREIGN KEY (race_id) REFERENCES race (id),
-  CONSTRAINT fk_sup_skincol FOREIGN KEY (skin_colour_id) REFERENCES colour (id)
+  CONSTRAINT fk_sup_align FOREIGN KEY (alignment_id) REFERENCES superhero.dbo.alignment (id),
+  CONSTRAINT fk_sup_eyecol FOREIGN KEY (eye_colour_id) REFERENCES superhero.dbo.colour (id),
+  CONSTRAINT fk_sup_gen FOREIGN KEY (gender_id) REFERENCES superhero.dbo.gender (id),
+  CONSTRAINT fk_sup_haircol FOREIGN KEY (hair_colour_id) REFERENCES superhero.dbo.colour (id),
+  CONSTRAINT fk_sup_pub FOREIGN KEY (publisher_id) REFERENCES superhero.dbo.publisher (id),
+  CONSTRAINT fk_sup_race FOREIGN KEY (race_id) REFERENCES superhero.dbo.race (id),
+  CONSTRAINT fk_sup_skincol FOREIGN KEY (skin_colour_id) REFERENCES superhero.dbo.colour (id)
 );
 
-INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188,90),
+INSERT INTO superhero.dbo.superhero VALUES
+(1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188,90),
 (2,'A-Bomb','Richard Milhouse Jones',1,33,1,1,24,13,1,203,441),
 (3,'Abe Sapien','Abraham Sapien',1,7,1,7,33,3,1,191,65),
 (4,'Abin Sur','-',1,7,1,23,55,4,1,185,90),
@@ -326,7 +325,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (108,'Black Lightning','Jefferson Pierce',1,9,1,1,1,4,1,185,90),
 (109,'Black Mamba','Tanya Sealy',2,14,4,1,1,13,2,170,52),
 (110,'Black Manta','-',1,4,1,1,24,4,2,188,92),
-(111,'Black Panther','T\'Challa',1,9,4,1,24,13,1,183,90),
+(111,'Black Panther','T''Challa',1,9,4,1,24,13,1,183,90),
 (112,'Black Widow',NULL,2,14,3,1,24,13,1,170,59),
 (113,'Black Widow II','Yelena Belova',2,7,6,1,1,13,1,170,61),
 (114,'Blackout','-',1,23,31,31,17,13,2,191,104),
@@ -569,7 +568,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (352,'Indigo','-',2,1,22,1,2,4,3,0,0),
 (353,'Ink','Eric Gitter',1,7,1,1,42,13,1,180,81),
 (354,'Invisible Woman',NULL,2,7,6,1,28,13,1,168,54),
-(355,'Iron Fist','Daniel Thomas Rand-K\'ai',1,7,6,1,24,13,1,180,79),
+(355,'Iron Fist','Daniel Thomas Rand-K''ai',1,7,6,1,24,13,1,180,79),
 (356,'Iron Man','Anthony Edward Stark',1,7,4,1,24,13,1,198,191),
 (357,'Iron Monger','Obadiah Stane',1,7,1,1,1,13,2,0,2000),
 (358,'Isis','Adrianna Tomaz',2,1,1,1,1,4,1,0,0),
@@ -633,7 +632,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (416,'Leech','-',1,1,1,1,1,13,1,0,0),
 (417,'Legion',NULL,1,15,4,1,42,13,1,175,59),
 (418,'Leonardo','-',1,7,1,14,42,9,1,0,0),
-(419,'Lex Luthor','Alexander \'Lex\' Joseph Luthor',1,14,1,1,24,4,2,188,95),
+(419,'Lex Luthor','Alexander ''Lex'' Joseph Luthor',1,14,1,1,24,4,2,188,95),
 (420,'Light Lass','Ayla Ranzz',2,7,23,1,1,4,1,165,54),
 (421,'Lightning Lad','Garth Ranzz',1,7,23,1,1,4,1,155,65),
 (422,'Lightning Lord','Mekt Ranzz',1,7,23,1,1,4,2,191,95),
@@ -661,7 +660,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (444,'Man-Wolf','John Jameson',1,9,3,1,1,13,1,188,90),
 (445,'Mandarin','Khan',1,7,31,1,24,13,2,188,97),
 (446,'Mantis','-',2,14,4,14,29,13,1,168,52),
-(447,'Martian Manhunter','J\'onn J\'onzz',1,23,1,14,40,4,1,201,135),
+(447,'Martian Manhunter','J''onn J''onzz',1,23,1,14,40,4,1,201,135),
 (448,'Marvel Girl','Rachel Anne Summers',2,14,23,1,1,13,1,170,56),
 (449,'Master Brood',NULL,1,7,4,1,1,22,1,183,81),
 (450,'Master Chief','John-117',1,9,9,1,25,14,1,213,0),
@@ -684,7 +683,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (467,'Mimic','Calvin Montgomery Rankin',1,9,9,1,1,13,1,188,101),
 (468,'Minna Murray',NULL,2,1,1,1,1,25,1,NULL,NULL),
 (469,'Misfit','Charlotte Gage-Radcliffe',2,7,23,1,1,4,1,0,0),
-(470,'Miss Martian','M\'gann M\'orzz',2,23,23,1,1,4,1,178,61),
+(470,'Miss Martian','M''gann M''orzz',2,23,23,1,1,4,1,178,61),
 (471,'Mister Fantastic','Reed Richards',1,9,9,1,28,13,1,185,81),
 (472,'Mister Freeze','Victor Fries',1,1,1,1,24,4,2,183,86),
 (473,'Mister Knife','-',1,7,9,1,50,13,2,0,0),
@@ -727,7 +726,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (510,'Northstar','Jean-Paul Beaubier',1,7,4,1,1,13,1,180,83),
 (511,'Nova','Richard Rider',1,9,9,1,24,13,1,185,86),
 (513,'Odin','-',1,7,31,1,21,13,1,206,293),
-(514,'Offspring','Luke O\'Brian',1,1,1,1,1,4,1,0,0),
+(514,'Offspring','Luke O''Brian',1,1,1,1,1,4,1,0,0),
 (515,'Omega Red','Arkady Gregorivich',1,23,6,1,1,13,2,211,191),
 (516,'Omniscient',NULL,1,9,4,1,1,22,1,180,65),
 (517,'One Punch Man','-',1,1,1,1,24,17,1,175,69),
@@ -750,7 +749,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (534,'Phoenix','Jean Grey-Summers',2,14,23,1,42,13,1,168,52),
 (535,'Plantman','-',1,14,13,1,42,13,2,183,87),
 (536,'Plastic Lad',NULL,1,1,1,1,1,4,1,NULL,NULL),
-(537,'Plastic Man','Patrick O\'Brian',1,7,4,1,24,4,1,185,80),
+(537,'Plastic Man','Patrick O''Brian',1,7,4,1,24,4,1,185,80),
 (538,'Plastique','Bette Sans Souci',2,7,23,1,1,4,2,168,55),
 (539,'Poison Ivy','Pamela Lillian Isley',2,14,23,14,24,4,2,168,50),
 (540,'Polaris','Lorna Sally Dane',2,14,14,1,42,13,1,170,52),
@@ -770,7 +769,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (554,'Question','Charles Victor Szasz',1,7,6,1,24,4,1,188,83),
 (555,'Quicksilver','Pietro Django Maximoff',1,7,28,1,42,13,1,183,79),
 (556,'Quill','Maxwell Jordan',1,9,9,1,1,13,1,163,56),
-(557,'Ra\'s Al Ghul','Ra\'s Al Ghul',1,14,13,1,24,4,2,193,97),
+(557,'Ra''s Al Ghul','Ra''s Al Ghul',1,14,13,1,24,4,2,193,97),
 (558,'Rachel Pirzad','-',2,1,1,1,3,21,1,0,0),
 (559,'Rambo',NULL,1,9,4,1,24,1,1,178,83),
 (560,'Raphael','-',1,1,1,14,42,9,1,0,0),
@@ -853,7 +852,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (638,'Speedball',NULL,1,1,1,1,1,13,1,NULL,NULL),
 (640,'Speedy','Thea Dearden Queen',2,14,9,1,24,4,1,0,0),
 (641,'Spider-Carnage','Benjamin Reilly',1,1,1,1,52,13,2,0,0),
-(642,'Spider-Girl','May \'Mayday\' Parker',2,7,9,1,24,13,1,170,54),
+(642,'Spider-Girl','May ''Mayday'' Parker',2,7,9,1,24,13,1,170,54),
 (643,'Spider-Gwen','Gwendolyne Stacy',2,7,6,1,24,13,1,165,56),
 (644,'Spider-Man','Peter Benjamin Parker',1,16,9,1,24,13,1,178,74),
 (646,'Spider-Woman','Jessica Drew',2,14,4,1,24,13,1,178,59),
@@ -865,7 +864,7 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (652,'Stacy X',NULL,2,1,1,1,1,13,1,NULL,NULL),
 (653,'Star-Lord','Peter Jason Quill',1,7,6,1,30,13,1,188,79),
 (654,'Stardust','-',1,1,1,1,1,13,1,0,0),
-(655,'Starfire','Koriand\'r',2,14,3,19,54,4,1,193,71),
+(655,'Starfire','Koriand''r',2,14,3,19,54,4,1,193,71),
 (656,'Stargirl','Courtney Whitmore',2,7,6,1,24,4,1,165,62),
 (657,'Static','Virgil Ovid Hawkins',1,9,4,1,42,4,1,170,63),
 (658,'Steel','John Henry Irons',1,9,1,1,24,4,1,201,131),
@@ -968,13 +967,13 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (756,'Zoom','Hunter Zolomon',1,23,9,1,1,4,2,185,81);
 
 
-CREATE TABLE superpower (
+CREATE TABLE superhero.dbo.superpower (
   id INT NOT NULL,
   power_name VARCHAR(200) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO superpower VALUES (1,'Agility'),
+INSERT INTO superhero.dbo.superpower VALUES (1,'Agility'),
 (2,'Accelerated Healing'),
 (3,'Lantern Power Ring'),
 (4,'Dimensional Awareness'),
