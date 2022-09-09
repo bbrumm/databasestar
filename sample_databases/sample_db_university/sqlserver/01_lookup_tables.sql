@@ -1,15 +1,16 @@
+DROP DATABASE IF EXISTS universities;
+CREATE DATABASE universities;
 
+DROP TABLE IF EXISTS universities.dbo.country;
 
-DROP TABLE country;
-
-CREATE TABLE country (
+CREATE TABLE universities.dbo.country (
   id INT NOT NULL,
   country_name VARCHAR(100) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
 
-INSERT INTO country VALUES
+INSERT INTO universities.dbo.country (id, country_name) VALUES
 (1,'Argentina'),
 (2,'Australia'),
 (3,'Austria'),
@@ -88,34 +89,34 @@ INSERT INTO country VALUES
 
 
 
-DROP TABLE ranking_system;
+DROP TABLE IF EXISTS universities.dbo.ranking_system;
 
-CREATE TABLE ranking_system (
+CREATE TABLE universities.dbo.ranking_system (
   id INT NOT NULL,
   system_name VARCHAR(100) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
 
-INSERT INTO ranking_system VALUES
+INSERT INTO universities.dbo.ranking_system (id, system_name) VALUES
 (1,'Times Higher Education World University Ranking'),
 (2,'Shanghai Ranking'),
 (3,'Center for World University Rankings');
 
 
-DROP TABLE ranking_criteria;
+DROP TABLE IF EXISTS universities.dbo.ranking_criteria;
 
-CREATE TABLE ranking_criteria (
+CREATE TABLE universities.dbo.ranking_criteria (
   id INT NOT NULL,
   ranking_system_id INT DEFAULT NULL,
   criteria_name VARCHAR(200) DEFAULT NULL,
   PRIMARY KEY (id),
-  CONSTRAINT fk_rc_rs FOREIGN KEY (ranking_system_id) REFERENCES ranking_system (id)
+  CONSTRAINT fk_rc_rs FOREIGN KEY (ranking_system_id) REFERENCES universities.dbo.ranking_system (id)
 );
 
 
 
-INSERT INTO ranking_criteria VALUES
+INSERT INTO universities.dbo.ranking_criteria (id, ranking_system_id, criteria_name) VALUES
 (1,1,'Teaching'),
 (2,1,'International'),
 (3,1,'Research'),
@@ -137,5 +138,4 @@ INSERT INTO ranking_criteria VALUES
 (19,3,'Citations Rank'),
 (20,3,'Patents Rank'),
 (21,3,'Total CWUR');
-
 

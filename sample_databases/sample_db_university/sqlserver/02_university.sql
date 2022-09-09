@@ -1,18 +1,15 @@
+DROP TABLE IF EXISTS universities.dbo.university;
 
-
-DROP TABLE university;
-
-CREATE TABLE university (
+CREATE TABLE universities.dbo.university (
   id INT NOT NULL,
   country_id INT DEFAULT NULL,
   university_name VARCHAR(200) DEFAULT NULL,
   PRIMARY KEY (id),
-  CONSTRAINT fk_uni_cnt FOREIGN KEY (country_id) REFERENCES country (id)
+  CONSTRAINT fk_uni_cnt FOREIGN KEY (country_id) REFERENCES universities.dbo.country (id)
 );
 
 
-
-INSERT INTO university VALUES
+INSERT INTO universities.dbo.university (id, country_id, university_name) VALUES
 (1,73,'Harvard University'),
 (2,73,'Massachusetts Institute of Technology'),
 (3,73,'Stanford University'),
@@ -114,7 +111,7 @@ INSERT INTO university VALUES
 (99,44,'Utrecht University'),
 (100,20,'Mines ParisTech'),
 (101,33,'Keio University'),
-(102,72,'King\'s College London'),
+(102,72,'King''s College London'),
 (103,73,'Indiana University - Bloomington'),
 (104,58,'National University of Singapore'),
 (105,73,'Stony Brook University'),
@@ -236,7 +233,7 @@ INSERT INTO university VALUES
 (221,9,'University of Manitoba'),
 (222,20,'Joseph Fourier University'),
 (223,73,'University of California, Riverside'),
-(224,21,'Julius-Maximilian\'s University of Würzburg'),
+(224,21,'Julius-Maximilian''s University of Würzburg'),
 (225,20,'Aix-Marseille University'),
 (226,2,'University of Western Australia'),
 (227,9,'Laval University'),
@@ -290,7 +287,7 @@ INSERT INTO university VALUES
 (275,73,'University of Texas Health Science Center at Houston'),
 (276,44,'Delft University of Technology'),
 (277,72,'University of Aberdeen'),
-(278,9,'Queen\'s University'),
+(278,9,'Queen''s University'),
 (279,51,'University of Lisbon'),
 (280,33,'Hiroshima University'),
 (281,9,'University of Waterloo'),
@@ -355,10 +352,10 @@ INSERT INTO university VALUES
 (340,33,'Yokohama National University'),
 (341,2,'University of Adelaide'),
 (342,32,'University of Genoa'),
-(343,72,'Queen\'s University Belfast'),
+(343,72,'Queen''s University Belfast'),
 (344,21,'University of Marburg'),
 (345,32,'University of Pavia'),
-(346,72,'St George\'s, University of London'),
+(346,72,'St George''s, University of London'),
 (347,73,'University of Oregon'),
 (348,63,'University of Navarra'),
 (349,73,'San Diego State University'),
@@ -412,7 +409,7 @@ INSERT INTO university VALUES
 (397,68,'Middle East Technical University'),
 (398,72,'Cranfield University'),
 (399,9,'York University'),
-(400,11,'Xi\'an Jiaotong University'),
+(400,11,'Xi''an Jiaotong University'),
 (401,62,'Chonnam National University'),
 (402,73,'University of Central Florida'),
 (403,20,'University of Lorraine'),
@@ -555,7 +552,7 @@ INSERT INTO university VALUES
 (540,33,'Nihon University'),
 (541,73,'Montana State University - Bozeman'),
 (542,72,'Royal Holloway, University of London'),
-(543,33,'Tokyo Women\'s Medical University'),
+(543,33,'Tokyo Women''s Medical University'),
 (544,27,'Panjab University'),
 (545,19,'Tampere University of Technology'),
 (546,51,'University of Coimbra'),
@@ -631,7 +628,7 @@ INSERT INTO university VALUES
 (616,62,'Inha University'),
 (617,73,'University of New Orleans'),
 (618,20,'Paris-Est Créteil Val-de-Marne University'),
-(619,32,'University of L\'Aquila'),
+(619,32,'University of L''Aquila'),
 (620,62,'Chungnam National University'),
 (621,63,'University of Salamanca'),
 (622,73,'University of Alaska Fairbanks'),
@@ -741,7 +738,7 @@ INSERT INTO university VALUES
 (726,3,'Graz University of Technology'),
 (727,33,'Kitasato University'),
 (728,73,'University of North Carolina at Charlotte'),
-(729,32,'G. d\'Annunzio University, Chieti-Pescara'),
+(729,32,'G. d''Annunzio University, Chieti-Pescara'),
 (730,63,'University of Cantabria'),
 (731,63,'Miguel Hernández University of Elche'),
 (732,11,'Donghua University'),
@@ -752,7 +749,7 @@ INSERT INTO university VALUES
 (737,73,'Hunter College'),
 (738,2,'Swinburne University of Technology'),
 (739,72,'University of Ulster'),
-(740,20,'University of Évry Val d\'Essonne'),
+(740,20,'University of Évry Val d''Essonne'),
 (741,32,'University of Salerno'),
 (742,1,'National University of La Plata'),
 (743,15,'Masaryk University'),
@@ -862,7 +859,9 @@ INSERT INTO university VALUES
 (847,11,'Jinan University'),
 (848,73,'University of Massachusetts Boston'),
 (849,63,'University of Alcalá'),
-(850,29,'Tehran University of Medical Sciences'),
+(850,29,'Tehran University of Medical Sciences');
+
+INSERT INTO universities.dbo.university (id, country_id, university_name) VALUES
 (851,33,'University of the Ryukyus'),
 (852,20,'University of Angers'),
 (853,7,'Fluminense Federal University'),
@@ -992,7 +991,7 @@ INSERT INTO university VALUES
 (977,29,'Tarbiat Modares University'),
 (978,52,'University of Puerto Rico at Mayagüez'),
 (979,1,'National University of Rosario'),
-(980,20,'University of Pau and Pays de l\'Adour'),
+(980,20,'University of Pau and Pays de l''Adour'),
 (981,11,'Xidian University'),
 (982,11,'Zhejiang University of Technology'),
 (983,11,'China Medical University (PRC)'),

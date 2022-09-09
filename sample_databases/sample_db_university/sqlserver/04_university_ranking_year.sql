@@ -1,16 +1,16 @@
+DROP TABLE IF EXISTS universities.dbo.university_ranking_year;
 
-DROP TABLE university_ranking_year;
-
-CREATE TABLE university_ranking_year (
+CREATE TABLE universities.dbo.university_ranking_year (
   university_id INT DEFAULT NULL,
   ranking_criteria_id INT DEFAULT NULL,
   year INT DEFAULT NULL,
   score INT DEFAULT NULL,
-  CONSTRAINT fk_ury_rc FOREIGN KEY (ranking_criteria_id) REFERENCES ranking_criteria (id),
-  CONSTRAINT fk_ury_uni FOREIGN KEY (university_id) REFERENCES university (id)
+  CONSTRAINT fk_ury_rc FOREIGN KEY (ranking_criteria_id) REFERENCES universities.dbo.ranking_criteria (id),
+  CONSTRAINT fk_ury_uni FOREIGN KEY (university_id) REFERENCES universities.dbo.university (id)
 );
 
-INSERT INTO university_ranking_year VALUES (1,1,2011,100),
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
+(1,1,2011,100),
 (5,1,2011,98),
 (2,1,2011,98),
 (3,1,2011,98),
@@ -936,7 +936,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (1052,1,2015,46),
 (223,1,2015,29),
 (58,1,2015,38),
-(127,1,2015,31),
+(127,1,2015,31);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (358,1,2015,32),
 (113,1,2015,49),
 (239,1,2015,39),
@@ -1924,7 +1926,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (134,2,2015,35),
 (76,2,2015,82),
 (66,2,2015,37),
-(1048,2,2015,62),
+(1048,2,2015,62);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (45,2,2015,53),
 (62,2,2015,48),
 (1046,2,2015,37),
@@ -2885,7 +2889,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (268,3,2014,31),
 (55,3,2014,50),
 (239,3,2014,31),
-(1039,3,2014,25),
+(1039,3,2014,25);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (135,3,2014,46),
 (1052,3,2014,37),
 (195,3,2014,40),
@@ -3827,7 +3833,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (230,4,2013,72),
 (376,4,2013,64),
 (122,4,2013,49),
-(365,4,2013,94),
+(365,4,2013,94);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (219,4,2013,53),
 (1038,4,2013,87),
 (270,4,2013,75),
@@ -4814,7 +4822,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (125,5,2013,34),
 (130,5,2013,49),
 (139,5,2013,95),
-(152,5,2013,51),
+(152,5,2013,51);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (151,5,2013,100),
 (86,5,2013,39),
 (145,5,2013,98),
@@ -5773,7 +5783,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (277,6,2012,47),
 (113,6,2012,46),
 (173,6,2012,46),
-(358,6,2012,46),
+(358,6,2012,46);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (121,6,2012,46),
 (325,6,2012,46),
 (135,6,2012,46),
@@ -6685,7 +6697,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (37,7,2007,24),
 (33,7,2007,20),
 (23,7,2007,36),
-(21,7,2007,21),
+(21,7,2007,21);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (27,7,2007,20),
 (49,7,2007,34),
 (40,7,2007,0),
@@ -7609,7 +7623,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (13,8,2009,34),
 (1027,8,2009,32),
 (24,8,2009,37),
-(31,8,2009,32),
+(31,8,2009,32);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (17,8,2009,35),
 (1028,8,2009,37),
 (35,8,2009,19),
@@ -8539,7 +8555,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (1027,9,2011,55),
 (24,9,2011,54),
 (31,9,2011,40),
-(1028,9,2011,44),
+(1028,9,2011,44);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (35,9,2011,39),
 (17,9,2011,40),
 (49,9,2011,51),
@@ -9523,7 +9541,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (1,10,2014,100),
 (3,10,2014,71),
 (4,10,2014,56),
-(6,10,2014,46),
+(6,10,2014,46);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (5,10,2014,60),
 (9,10,2014,55),
 (11,10,2014,43),
@@ -10438,7 +10458,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (57,11,2015,29),
 (32,11,2015,52),
 (157,11,2015,39),
-(177,11,2015,35),
+(177,11,2015,35);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (1048,11,2015,57),
 (50,11,2015,48),
 (325,11,2015,39),
@@ -10969,7 +10991,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (24,12,2012,33),
 (31,12,2012,31),
 (1028,12,2012,28),
-(17,12,2012,23),
+(17,12,2012,23);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (23,12,2012,23),
 (35,12,2012,27),
 (49,12,2012,25),
@@ -11930,7 +11954,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (127,13,2014,27),
 (66,13,2014,27),
 (85,13,2014,27),
-(32,13,2014,27),
+(32,13,2014,27);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (188,13,2014,27),
 (55,13,2014,27),
 (57,13,2014,27),
@@ -12853,7 +12879,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (630,14,2014,355),
 (631,14,2014,355),
 (632,14,2014,355),
-(633,14,2014,355),
+(633,14,2014,355);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (634,14,2014,355),
 (635,14,2014,207),
 (636,14,2014,355),
@@ -13680,7 +13708,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (456,14,2015,367),
 (455,14,2015,367),
 (372,14,2015,89),
-(479,14,2015,367),
+(479,14,2015,367);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (465,14,2015,205),
 (517,14,2015,367),
 (420,14,2015,118),
@@ -14587,7 +14617,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (165,15,2014,478),
 (166,15,2014,478),
 (167,15,2014,478),
-(168,15,2014,89),
+(168,15,2014,89);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (100,15,2014,31),
 (169,15,2014,321),
 (170,15,2014,174),
@@ -15556,7 +15588,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (137,15,2015,71),
 (155,15,2015,41),
 (135,15,2015,274),
-(151,15,2015,567),
+(151,15,2015,567);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (51,15,2015,180),
 (143,15,2015,241),
 (105,15,2015,567),
@@ -16430,7 +16464,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (6,16,2012,2),
 (7,16,2012,9),
 (8,16,2012,12),
-(9,16,2012,10),
+(9,16,2012,10);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (10,16,2012,6),
 (11,16,2012,8),
 (12,16,2012,14),
@@ -17295,7 +17331,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (672,16,2014,210),
 (673,16,2014,210),
 (674,16,2014,210),
-(675,16,2014,210),
+(675,16,2014,210);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (676,16,2014,210),
 (677,16,2014,210),
 (678,16,2014,210),
@@ -18213,7 +18251,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (627,16,2015,218),
 (592,16,2015,218),
 (622,16,2015,218),
-(692,16,2015,218),
+(692,16,2015,218);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (628,16,2015,218),
 (398,16,2015,218),
 (613,16,2015,218),
@@ -19122,7 +19162,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (299,17,2014,262),
 (300,17,2014,287),
 (301,17,2014,379),
-(302,17,2014,210),
+(302,17,2014,210);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (303,17,2014,290),
 (304,17,2014,284),
 (305,17,2014,235),
@@ -19988,7 +20030,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (159,17,2015,187),
 (187,17,2015,285),
 (176,17,2015,184),
-(168,17,2015,145),
+(168,17,2015,145);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (188,17,2015,202),
 (185,17,2015,99),
 (158,17,2015,139),
@@ -20938,7 +20982,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (14,18,2013,23),
 (17,18,2013,46),
 (19,18,2013,15),
-(15,18,2013,5),
+(15,18,2013,5);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (16,18,2013,53),
 (23,18,2013,25),
 (20,18,2013,14),
@@ -21784,7 +21830,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (761,18,2014,727),
 (762,18,2014,308),
 (763,18,2014,719),
-(764,18,2014,726),
+(764,18,2014,726);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (765,18,2014,814),
 (766,18,2014,757),
 (767,18,2014,966),
@@ -22695,7 +22743,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (665,18,2015,443),
 (690,18,2015,744),
 (709,18,2015,843),
-(664,18,2015,533),
+(664,18,2015,533);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (623,18,2015,470),
 (677,18,2015,564),
 (752,18,2015,931),
@@ -23591,7 +23641,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (368,19,2014,283),
 (369,19,2014,220),
 (370,19,2014,187),
-(371,19,2014,609),
+(371,19,2014,609);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (372,19,2014,250),
 (373,19,2014,283),
 (374,19,2014,310),
@@ -24511,7 +24563,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (290,19,2015,212),
 (304,19,2015,321),
 (295,19,2015,511),
-(280,19,2015,428),
+(280,19,2015,428);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (257,19,2015,197),
 (296,19,2015,287),
 (325,19,2015,161),
@@ -25364,7 +25418,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (75,20,2013,4),
 (46,20,2013,101),
 (38,20,2013,27),
-(72,20,2013,96),
+(72,20,2013,96);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (49,20,2013,67),
 (60,20,2013,101),
 (29,20,2013,101),
@@ -26309,7 +26365,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (886,20,2014,637),
 (887,20,2014,737),
 (888,20,2014,552),
-(889,20,2014,637),
+(889,20,2014,637);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (890,20,2014,637),
 (891,20,2014,737),
 (892,20,2014,737),
@@ -27192,7 +27250,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (750,20,2015,871),
 (790,20,2015,619),
 (777,20,2015,231),
-(761,20,2015,473),
+(761,20,2015,473);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (780,20,2015,558),
 (766,20,2015,435),
 (816,20,2015,809),
@@ -28107,7 +28167,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (484,21,2014,45),
 (485,21,2014,45),
 (486,21,2014,45),
-(487,21,2014,45),
+(487,21,2014,45);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (488,21,2014,45),
 (489,21,2014,45),
 (490,21,2014,45),
@@ -29026,7 +29088,9 @@ INSERT INTO university_ranking_year VALUES (1,1,2011,100),
 (396,21,2015,45),
 (416,21,2015,45),
 (438,21,2015,45),
-(422,21,2015,45),
+(422,21,2015,45);
+
+INSERT INTO universities.dbo.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (286,21,2015,45),
 (419,21,2015,45),
 (446,21,2015,45),

@@ -1,17 +1,16 @@
+DROP TABLE IF EXISTS universities.dbo.university_year;
 
-DROP TABLE university_year;
-
-CREATE TABLE university_year (
+CREATE TABLE universities.dbo.university_year (
   university_id INT DEFAULT NULL,
   year INT DEFAULT NULL,
   num_students INT DEFAULT NULL,
   student_staff_ratio decimal(6,2) DEFAULT NULL,
   pct_international_students INT DEFAULT NULL,
   pct_female_students INT DEFAULT NULL,
-  CONSTRAINT fk_uy_uni FOREIGN KEY (university_id) REFERENCES university (id)
+  CONSTRAINT fk_uy_uni FOREIGN KEY (university_id) REFERENCES universities.dbo.university (id)
 );
 
-INSERT INTO university_year VALUES
+INSERT INTO universities.dbo.university_year (university_id, year, num_students, student_staff_ratio, pct_international_students, pct_female_students) VALUES
 (1,2011,20152,8.90,25,NULL),
 (5,2011,2243,6.90,27,33),
 (2,2011,11074,9.00,33,37),
@@ -867,7 +866,9 @@ INSERT INTO university_year VALUES
 (1030,2015,2400,7.90,20,46),
 (99,2015,30779,15.40,7,59),
 (160,2015,29987,52.50,16,NULL),
-(161,2015,33062,39.30,20,58),
+(161,2015,33062,39.30,20,58);
+
+INSERT INTO universities.dbo.university_year (university_id, year, num_students, student_staff_ratio, pct_international_students, pct_female_students) VALUES
 (123,2015,44750,15.70,15,51),
 (265,2015,15489,15.70,24,54),
 (171,2015,50882,40.50,36,56),
