@@ -1,84 +1,56 @@
+DROP DATABASE IF EXISTS superhero;
 CREATE DATABASE superhero;
-USE superhero;
 
+DROP TABLE IF EXISTS superhero.alignment;
 
---
--- Table structure for table alignment
---
-
-DROP TABLE IF EXISTS alignment;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE alignment (
-  id int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE superhero.alignment (
+  id INT NOT NULL AUTO_INCREMENT,
   alignment varchar(10) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT pk_alignment PRIMARY KEY (id)
+);
 
---
--- Dumping data for table alignment
---
 
-LOCK TABLES alignment WRITE;
-/*!40000 ALTER TABLE alignment DISABLE KEYS */;
-INSERT INTO alignment VALUES (1,'Good'),
+
+INSERT INTO superhero.alignment (id, alignment) VALUES
+(1,'Good'),
 (2,'Bad'),
 (3,'Neutral'),
 (4,'N/A');
-/*!40000 ALTER TABLE alignment ENABLE KEYS */;
-UNLOCK TABLES;
 
---
--- Table structure for table attribute
---
 
-DROP TABLE IF EXISTS attribute;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE attribute (
-  id int(11) NOT NULL AUTO_INCREMENT,
+
+DROP TABLE IF EXISTS superhero.attribute;
+
+CREATE TABLE superhero.attribute (
+  id INT NOT NULL AUTO_INCREMENT,
   attribute_name varchar(200) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT pk_attribute PRIMARY KEY (id)
+);
 
---
--- Dumping data for table attribute
---
 
-LOCK TABLES attribute WRITE;
-/*!40000 ALTER TABLE attribute DISABLE KEYS */;
-INSERT INTO attribute VALUES (1,'Intelligence'),
+
+INSERT INTO superhero.attribute (id, attribute_name) VALUES
+(1,'Intelligence'),
 (2,'Strength'),
 (3,'Speed'),
 (4,'Durability'),
 (5,'Power'),
 (6,'Combat');
-/*!40000 ALTER TABLE attribute ENABLE KEYS */;
-UNLOCK TABLES;
 
---
--- Table structure for table colour
---
 
-DROP TABLE IF EXISTS colour;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE colour (
-  id int(11) NOT NULL AUTO_INCREMENT,
+
+DROP TABLE IF EXISTS superhero.colour;
+
+CREATE TABLE superhero.colour (
+  id INT NOT NULL AUTO_INCREMENT,
   colour varchar(20) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT pk_colour PRIMARY KEY (id)
+);
 
---
--- Dumping data for table colour
---
 
-LOCK TABLES colour WRITE;
-/*!40000 ALTER TABLE colour DISABLE KEYS */;
-INSERT INTO colour VALUES (1,'No Colour'),
+
+INSERT INTO superhero.colour (id, colour) VALUES
+(1,'No Colour'),
 (2,'Amber'),
 (3,'Auburn'),
 (4,'Black'),
@@ -113,84 +85,48 @@ INSERT INTO colour VALUES (1,'No Colour'),
 (33,'Yellow'),
 (34,'Yellow/Blue'),
 (35,'Yellow/Red');
-/*!40000 ALTER TABLE colour ENABLE KEYS */;
-UNLOCK TABLES;
 
---
--- Table structure for table comic
---
 
-DROP TABLE IF EXISTS comic;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE comic (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  comic_name varchar(200) DEFAULT NULL,
-  issue int(11) DEFAULT NULL,
-  publish_month int(11) DEFAULT NULL,
-  publish_year int(11) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS superhero.comic;
 
---
--- Dumping data for table comic
---
+CREATE TABLE superhero.comic (
+  id INT NOT NULL AUTO_INCREMENT,
+  comic_name VARCHAR(200) DEFAULT NULL,
+  issue INT DEFAULT NULL,
+  publish_month INT DEFAULT NULL,
+  publish_year INT DEFAULT NULL,
+  CONSTRAINT pk_comic PRIMARY KEY (id)
+);
 
-LOCK TABLES comic WRITE;
-/*!40000 ALTER TABLE comic DISABLE KEYS */;
-/*!40000 ALTER TABLE comic ENABLE KEYS */;
-UNLOCK TABLES;
 
---
--- Table structure for table gender
---
+DROP TABLE IF EXISTS superhero.gender;
 
-DROP TABLE IF EXISTS gender;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE gender (
-  id int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE superhero.gender (
+  id INT NOT NULL AUTO_INCREMENT,
   gender varchar(20) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT pk_gender PRIMARY KEY (id)
+);
 
---
--- Dumping data for table gender
---
 
-LOCK TABLES gender WRITE;
-/*!40000 ALTER TABLE gender DISABLE KEYS */;
-INSERT INTO gender VALUES (1,'Male'),
+
+INSERT INTO superhero.gender (id, gender) VALUES
+(1,'Male'),
 (2,'Female'),
 (3,'N/A');
-/*!40000 ALTER TABLE gender ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 
---
--- Table structure for table publisher
---
+DROP TABLE IF EXISTS superhero.publisher;
 
-DROP TABLE IF EXISTS publisher;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE publisher (
-  id int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE superhero.publisher (
+  id INT NOT NULL AUTO_INCREMENT,
   publisher_name varchar(50) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT pk_publisher PRIMARY KEY (id)
+);
 
---
--- Dumping data for table publisher
---
 
-LOCK TABLES publisher WRITE;
-/*!40000 ALTER TABLE publisher DISABLE KEYS */;
-INSERT INTO publisher VALUES (1,''),
+INSERT INTO superhero.publisher (id, publisher_name) VALUES
+(1,''),
 (2,'ABC Studios'),
 (3,'Dark Horse Comics'),
 (4,'DC Comics'),
@@ -215,30 +151,19 @@ INSERT INTO publisher VALUES (1,''),
 (23,'Titan Books'),
 (24,'Universal Studios'),
 (25,'Wildstorm');
-/*!40000 ALTER TABLE publisher ENABLE KEYS */;
-UNLOCK TABLES;
 
---
--- Table structure for table race
---
 
-DROP TABLE IF EXISTS race;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE race (
-  id int(11) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS superhero.race;
+
+CREATE TABLE superhero.race (
+  id INT NOT NULL AUTO_INCREMENT,
   race varchar(100) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT pk_race PRIMARY KEY (id)
+);
 
---
--- Dumping data for table race
---
 
-LOCK TABLES race WRITE;
-/*!40000 ALTER TABLE race DISABLE KEYS */;
-INSERT INTO race VALUES (1,'-'),
+INSERT INTO superhero.race (id, race) VALUES
+(1,'-'),
 (2,'Alien'),
 (3,'Alpha'),
 (4,'Amazon'),
@@ -299,55 +224,37 @@ INSERT INTO race VALUES (1,'-'),
 (59,'Yoda\'s species'),
 (60,'Zen-Whoberian'),
 (61,'Zombie');
-/*!40000 ALTER TABLE race ENABLE KEYS */;
-UNLOCK TABLES;
 
 
---
--- Table structure for table superhero
---
 
-DROP TABLE IF EXISTS superhero;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE superhero (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  superhero_name varchar(200) DEFAULT NULL,
-  full_name varchar(200) DEFAULT NULL,
-  gender_id int(11) DEFAULT NULL,
-  eye_colour_id int(11) DEFAULT NULL,
-  hair_colour_id int(11) DEFAULT NULL,
-  skin_colour_id int(11) DEFAULT NULL,
-  race_id int(11) DEFAULT NULL,
-  publisher_id int(11) DEFAULT NULL,
-  alignment_id int(11) DEFAULT NULL,
-  height_cm int(11) DEFAULT NULL,
-  weight_kg int(11) DEFAULT NULL,
-  PRIMARY KEY (id),
-  KEY fk_sup_gen (gender_id),
-  KEY fk_sup_eyecol (eye_colour_id),
-  KEY fk_sup_haircol (hair_colour_id),
-  KEY fk_sup_skincol (skin_colour_id),
-  KEY fk_sup_race (race_id),
-  KEY fk_sup_pub (publisher_id),
-  KEY fk_sup_align (alignment_id),
-  CONSTRAINT fk_sup_align FOREIGN KEY (alignment_id) REFERENCES alignment (id),
-  CONSTRAINT fk_sup_eyecol FOREIGN KEY (eye_colour_id) REFERENCES colour (id),
-  CONSTRAINT fk_sup_gen FOREIGN KEY (gender_id) REFERENCES gender (id),
-  CONSTRAINT fk_sup_haircol FOREIGN KEY (hair_colour_id) REFERENCES colour (id),
-  CONSTRAINT fk_sup_pub FOREIGN KEY (publisher_id) REFERENCES publisher (id),
-  CONSTRAINT fk_sup_race FOREIGN KEY (race_id) REFERENCES race (id),
-  CONSTRAINT fk_sup_skincol FOREIGN KEY (skin_colour_id) REFERENCES colour (id)
-) ENGINE=InnoDB AUTO_INCREMENT=1024 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS superhero.superhero;
 
---
--- Dumping data for table superhero
---
+CREATE TABLE superhero.superhero (
+  id INT NOT NULL AUTO_INCREMENT,
+  superhero_name VARCHAR(200) DEFAULT NULL,
+  full_name VARCHAR(200) DEFAULT NULL,
+  gender_id INT DEFAULT NULL,
+  eye_colour_id INT DEFAULT NULL,
+  hair_colour_id INT DEFAULT NULL,
+  skin_colour_id INT DEFAULT NULL,
+  race_id INT DEFAULT NULL,
+  publisher_id INT DEFAULT NULL,
+  alignment_id INT DEFAULT NULL,
+  height_cm INT DEFAULT NULL,
+  weight_kg INT DEFAULT NULL,
+  CONSTRAINT pk_superhero PRIMARY KEY (id),
+  CONSTRAINT fk_sup_align FOREIGN KEY (alignment_id) REFERENCES superhero.alignment (id),
+  CONSTRAINT fk_sup_eyecol FOREIGN KEY (eye_colour_id) REFERENCES superhero.colour (id),
+  CONSTRAINT fk_sup_gen FOREIGN KEY (gender_id) REFERENCES superhero.gender (id),
+  CONSTRAINT fk_sup_haircol FOREIGN KEY (hair_colour_id) REFERENCES superhero.colour (id),
+  CONSTRAINT fk_sup_pub FOREIGN KEY (publisher_id) REFERENCES superhero.publisher (id),
+  CONSTRAINT fk_sup_race FOREIGN KEY (race_id) REFERENCES superhero.race (id),
+  CONSTRAINT fk_sup_skincol FOREIGN KEY (skin_colour_id) REFERENCES superhero.colour (id)
+);
 
-LOCK TABLES superhero WRITE;
-/*!40000 ALTER TABLE superhero DISABLE KEYS */;
-INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188,90),
+
+INSERT INTO superhero.superhero (id, superhero_name, full_name, gender_id, eye_colour_id, hair_colour_id, skin_colour_id, race_id, publisher_id, alignment_id, height_cm, weight_kg) VALUES
+(1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188,90),
 (2,'A-Bomb','Richard Milhouse Jones',1,33,1,1,24,13,1,203,441),
 (3,'Abe Sapien','Abraham Sapien',1,7,1,7,33,3,1,191,65),
 (4,'Abin Sur','-',1,7,1,23,55,4,1,185,90),
@@ -1097,29 +1004,19 @@ INSERT INTO superhero VALUES (1,'3-D Man','Charles Chandler',1,9,13,1,1,13,1,188
 (754,'Yoda','Yoda',1,9,31,14,59,5,1,66,17),
 (755,'Zatanna',NULL,2,7,4,1,24,4,1,170,57),
 (756,'Zoom','Hunter Zolomon',1,23,9,1,1,4,2,185,81);
-/*!40000 ALTER TABLE superhero ENABLE KEYS */;
-UNLOCK TABLES;
 
 
+DROP TABLE IF EXISTS superhero.superpower;
 
-
-DROP TABLE IF EXISTS superpower;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE superpower (
-  id int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE superhero.superpower (
+  id INT NOT NULL AUTO_INCREMENT,
   power_name varchar(200) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=256 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT pk_superpower PRIMARY KEY (id)
+);
 
---
--- Dumping data for table superpower
---
 
-LOCK TABLES superpower WRITE;
-/*!40000 ALTER TABLE superpower DISABLE KEYS */;
-INSERT INTO superpower VALUES (1,'Agility'),
+INSERT INTO superhero.superpower (id, power_name) VALUES 
+(1,'Agility'),
 (2,'Accelerated Healing'),
 (3,'Lantern Power Ring'),
 (4,'Dimensional Awareness'),
@@ -1286,7 +1183,5 @@ INSERT INTO superpower VALUES (1,'Agility'),
 (165,'Vision - Cryo'),
 (166,'Omnipresent'),
 (167,'Omniscient');
-/*!40000 ALTER TABLE superpower ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
+COMMIT;

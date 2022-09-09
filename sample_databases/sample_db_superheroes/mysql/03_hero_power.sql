@@ -1,29 +1,14 @@
+DROP TABLE IF EXISTS superhero.hero_power;
 
+CREATE TABLE superhero.hero_power (
+  hero_id INT DEFAULT NULL,
+  power_id INT DEFAULT NULL,
+  CONSTRAINT fk_hpo_hero FOREIGN KEY (hero_id) REFERENCES superhero.superhero (id),
+  CONSTRAINT fk_hpo_po FOREIGN KEY (power_id) REFERENCES superhero.superpower (id)
+);
 
---
--- Table structure for table hero_power
---
-
-DROP TABLE IF EXISTS hero_power;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE hero_power (
-  hero_id int(11) DEFAULT NULL,
-  power_id int(11) DEFAULT NULL,
-  KEY fk_hpo_po (power_id),
-  KEY fk_hpo_hero (hero_id),
-  CONSTRAINT fk_hpo_hero FOREIGN KEY (hero_id) REFERENCES superhero (id),
-  CONSTRAINT fk_hpo_po FOREIGN KEY (power_id) REFERENCES superpower (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table hero_power
---
-
-LOCK TABLES hero_power WRITE;
-/*!40000 ALTER TABLE hero_power DISABLE KEYS */;
-INSERT INTO hero_power VALUES (1,1),
+INSERT INTO superhero.hero_power VALUES
+(1,1),
 (1,18),
 (1,26),
 (1,31),
@@ -5848,5 +5833,5 @@ INSERT INTO hero_power VALUES (1,1),
 (754,148),
 (755,150),
 (755,155);
-/*!40000 ALTER TABLE hero_power ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;
