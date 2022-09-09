@@ -1,29 +1,16 @@
+DROP TABLE IF EXISTS video_games.region_sales;
 
---
--- Table structure for table `region_sales`
---
+CREATE TABLE video_games.region_sales (
+  region_id INT DEFAULT NULL,
+  game_platform_id INT DEFAULT NULL,
+  num_sales decimal(5,2) DEFAULT NULL,
+  CONSTRAINT fk_rs_gp FOREIGN KEY (game_platform_id) REFERENCES video_games.game_platform (id),
+  CONSTRAINT fk_rs_reg FOREIGN KEY (region_id) REFERENCES video_games.region (id)
+);
 
-DROP TABLE IF EXISTS `region_sales`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `region_sales` (
-  `region_id` int(11) DEFAULT NULL,
-  `game_platform_id` int(11) DEFAULT NULL,
-  `num_sales` decimal(5,2) DEFAULT NULL,
-  KEY `fk_rs_gp` (`game_platform_id`),
-  KEY `fk_rs_reg` (`region_id`),
-  CONSTRAINT `fk_rs_gp` FOREIGN KEY (`game_platform_id`) REFERENCES `game_platform` (`id`),
-  CONSTRAINT `fk_rs_reg` FOREIGN KEY (`region_id`) REFERENCES `region` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `region_sales`
---
-
-LOCK TABLES `region_sales` WRITE;
-/*!40000 ALTER TABLE `region_sales` DISABLE KEYS */;
-INSERT INTO `region_sales` VALUES (1,50,3.50),
+INSERT INTO video_games.region_sales (region_id, game_platform_id, num_sales) VALUES
+(1,50,3.50),
 (1,51,1.43),
 (1,52,0.51),
 (1,53,0.27),
@@ -65343,5 +65330,5 @@ INSERT INTO `region_sales` VALUES (1,50,3.50),
 (4,7989,0.00),
 (4,11597,0.00),
 (4,9539,0.00);
-/*!40000 ALTER TABLE `region_sales` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

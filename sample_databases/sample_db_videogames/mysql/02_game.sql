@@ -1,25 +1,19 @@
+DROP TABLE IF EXISTS video_games.game;
 
-DROP TABLE IF EXISTS `game`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `game` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `genre_id` int(11) DEFAULT NULL,
-  `game_name` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_gm_gen` (`genre_id`),
-  KEY `idx_g_name` (`game_name`),
-  CONSTRAINT `fk_gm_gen` FOREIGN KEY (`genre_id`) REFERENCES `genre` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16384 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE video_games.game (
+  id INT NOT NULL AUTO_INCREMENT,
+  genre_id INT DEFAULT NULL,
+  game_name VARCHAR(200) DEFAULT NULL,
+  CONSTRAINT pk_game PRIMARY KEY (id),
+  CONSTRAINT fk_gm_gen FOREIGN KEY (genre_id) REFERENCES video_games.genre (id)
+);
 
 --
--- Dumping data for table `game`
+-- Dumping data for table game
 --
 
-LOCK TABLES `game` WRITE;
-/*!40000 ALTER TABLE `game` DISABLE KEYS */;
-INSERT INTO `game` VALUES (1,11,'\'98 Koshien'),
+
+INSERT INTO video_games.game VALUES (1,11,'\'98 Koshien'),
 (2,8,'.hack//G.U. Vol.1//Rebirth'),
 (3,8,'.hack//G.U. Vol.2//Reminisce'),
 (4,8,'.hack//G.U. Vol.2//Reminisce (jp sales)'),
@@ -11379,5 +11373,5 @@ INSERT INTO `game` VALUES (1,11,'\'98 Koshien'),
 (11362,1,'[Prototype 2]'),
 (11363,1,'[Prototype]'),
 (11364,5,'¡Shin Chan Flipa en colores!');
-/*!40000 ALTER TABLE `game` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

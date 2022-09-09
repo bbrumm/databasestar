@@ -1,31 +1,17 @@
+DROP TABLE IF EXISTS video_games.game_platform;
 
---
--- Table structure for table `game_platform`
---
+CREATE TABLE video_games.game_platform (
+  id INT NOT NULL AUTO_INCREMENT,
+  game_publisher_id INT DEFAULT NULL,
+  platform_id INT DEFAULT NULL,
+  release_year INT DEFAULT NULL,
+  CONSTRAINT pk_gameplat PRIMARY KEY (id),
+  CONSTRAINT fk_gpl_gp FOREIGN KEY (game_publisher_id) REFERENCES video_games.game_publisher (id),
+  CONSTRAINT fk_gpl_pla FOREIGN KEY (platform_id) REFERENCES video_games.platform (id)
+);
 
-DROP TABLE IF EXISTS `game_platform`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `game_platform` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `game_publisher_id` int(11) DEFAULT NULL,
-  `platform_id` int(11) DEFAULT NULL,
-  `release_year` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `idx_gpl_gpid` (`game_publisher_id`),
-  KEY `idx_gpl_platformid` (`platform_id`),
-  CONSTRAINT `fk_gpl_gp` FOREIGN KEY (`game_publisher_id`) REFERENCES `game_publisher` (`id`),
-  CONSTRAINT `fk_gpl_pla` FOREIGN KEY (`platform_id`) REFERENCES `platform` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16384 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `game_platform`
---
-
-LOCK TABLES `game_platform` WRITE;
-/*!40000 ALTER TABLE `game_platform` DISABLE KEYS */;
-INSERT INTO `game_platform` VALUES (1,8564,4,2007),
+INSERT INTO video_games.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
+(1,8564,4,2007),
 (2,9852,4,2007),
 (3,11063,7,2006),
 (4,9065,15,2011),
@@ -16351,5 +16337,5 @@ INSERT INTO `game_platform` VALUES (1,8564,4,2007),
 (16324,5234,5,2009),
 (16325,10606,5,2009),
 (16326,6705,17,2008);
-/*!40000 ALTER TABLE `game_platform` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

@@ -1,28 +1,19 @@
-CREATE DATABASE  IF NOT EXISTS `video_games` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `video_games`;
+DROP DATABASE IF EXISTS video_games;
+CREATE DATABASE video_games;
+USE video_games;
 
 
---
--- Table structure for table `genre`
---
+DROP TABLE IF EXISTS video_games.genre;
 
-DROP TABLE IF EXISTS `genre`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `genre` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `genre_name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE video_games.genre (
+  id INT NOT NULL AUTO_INCREMENT,
+  genre_name VARCHAR(50) DEFAULT NULL,
+  CONSTRAINT pk_genre PRIMARY KEY (id)
+);
 
---
--- Dumping data for table `genre`
---
 
-LOCK TABLES `genre` WRITE;
-/*!40000 ALTER TABLE `genre` DISABLE KEYS */;
-INSERT INTO `genre` VALUES (1,'Action'),
+INSERT INTO video_games.genre (id, genre_name) VALUES
+(1,'Action'),
 (2,'Adventure'),
 (3,'Fighting'),
 (4,'Misc'),
@@ -34,31 +25,22 @@ INSERT INTO `genre` VALUES (1,'Action'),
 (10,'Simulation'),
 (11,'Sports'),
 (12,'Strategy');
-/*!40000 ALTER TABLE `genre` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
---
--- Table structure for table `publisher`
---
 
-DROP TABLE IF EXISTS `publisher`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `publisher` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `publisher_name` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1024 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `publisher`
---
+DROP TABLE IF EXISTS video_games.publisher;
 
-LOCK TABLES `publisher` WRITE;
-/*!40000 ALTER TABLE `publisher` DISABLE KEYS */;
-INSERT INTO `publisher` VALUES (1,'10TACLE Studios'),
+CREATE TABLE video_games.publisher (
+  id  INT NOT NULL AUTO_INCREMENT,
+  publisher_name VARCHAR(100) DEFAULT NULL,
+  CONSTRAINT pk_publisher PRIMARY KEY (id)
+);
+
+
+
+INSERT INTO video_games.publisher (id, publisher_name) VALUES
+(1,'10TACLE Studios'),
 (2,'1C Company'),
 (3,'20th Century Fox Video Games'),
 (4,'2D Boy'),
@@ -635,59 +617,35 @@ INSERT INTO `publisher` VALUES (1,'10TACLE Studios'),
 (575,'Zoo Digital Publishing'),
 (576,'Zoo Games'),
 (577,'Zushi Games');
-/*!40000 ALTER TABLE `publisher` ENABLE KEYS */;
-UNLOCK TABLES;
 
---
--- Table structure for table `region`
---
 
-DROP TABLE IF EXISTS `region`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `region` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `region_name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `region`
---
+DROP TABLE IF EXISTS video_games.region;
 
-LOCK TABLES `region` WRITE;
-/*!40000 ALTER TABLE `region` DISABLE KEYS */;
-INSERT INTO `region` VALUES (1,'North America'),
+CREATE TABLE video_games.region (
+  id INT NOT NULL AUTO_INCREMENT,
+  region_name VARCHAR(50) DEFAULT NULL,
+  CONSTRAINT pk_region PRIMARY KEY (id)
+);
+
+INSERT INTO video_games.region (id, region_name) VALUES
+(1,'North America'),
 (2,'Europe'),
 (3,'Japan'),
 (4,'Other');
-/*!40000 ALTER TABLE `region` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
+DROP TABLE IF EXISTS video_games.platform;
 
---
--- Table structure for table `platform`
---
+CREATE TABLE video_games.platform (
+  id INT NOT NULL AUTO_INCREMENT,
+  platform_name VARCHAR(50) DEFAULT NULL,
+  CONSTRAINT pk_platform PRIMARY KEY (id)
+);
 
-DROP TABLE IF EXISTS `platform`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `platform` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `platform_name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `platform`
---
-
-LOCK TABLES `platform` WRITE;
-/*!40000 ALTER TABLE `platform` DISABLE KEYS */;
-INSERT INTO `platform` VALUES (1,'Wii'),
+INSERT INTO video_games.platform (id, platform_name) VALUES
+(1,'Wii'),
 (2,'NES'),
 (3,'GB'),
 (4,'DS'),
@@ -718,5 +676,5 @@ INSERT INTO `platform` VALUES (1,'Wii'),
 (29,'3DO'),
 (30,'GG'),
 (31,'PCFX');
-/*!40000 ALTER TABLE `platform` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

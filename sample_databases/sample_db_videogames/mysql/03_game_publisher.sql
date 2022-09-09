@@ -1,30 +1,16 @@
+DROP TABLE IF EXISTS video_games.game_publisher;
 
---
--- Table structure for table `game_publisher`
---
+CREATE TABLE video_games.game_publisher (
+  id INT NOT NULL AUTO_INCREMENT,
+  game_id INT DEFAULT NULL,
+  publisher_id INT DEFAULT NULL,
+  CONSTRAINT pk_gamepub PRIMARY KEY (id),
+  CONSTRAINT fk_gpu_gam FOREIGN KEY (game_id) REFERENCES video_games.game (id),
+  CONSTRAINT fk_gpu_pub FOREIGN KEY (publisher_id) REFERENCES video_games.publisher (id)
+);
 
-DROP TABLE IF EXISTS `game_publisher`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `game_publisher` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `game_id` int(11) DEFAULT NULL,
-  `publisher_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `idx_gpu_gameid` (`game_id`),
-  KEY `idx_gpu_platformid` (`publisher_id`),
-  CONSTRAINT `fk_gpu_gam` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`),
-  CONSTRAINT `fk_gpu_pub` FOREIGN KEY (`publisher_id`) REFERENCES `publisher` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16384 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `game_publisher`
---
-
-LOCK TABLES `game_publisher` WRITE;
-/*!40000 ALTER TABLE `game_publisher` DISABLE KEYS */;
-INSERT INTO `game_publisher` VALUES (1,10866,369),
+INSERT INTO video_games.game_publisher (id, game_id, publisher_id) VALUES
+(1,10866,369),
 (2,9244,369),
 (3,5464,369),
 (4,10868,369),
@@ -11756,5 +11742,5 @@ INSERT INTO `game_publisher` VALUES (1,10866,369),
 (11730,7236,121),
 (11731,10957,275),
 (11732,4964,9);
-/*!40000 ALTER TABLE `game_publisher` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;
