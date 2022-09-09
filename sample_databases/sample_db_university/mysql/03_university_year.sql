@@ -1,30 +1,17 @@
+DROP TABLE IF EXISTS universities.university_year;
 
---
--- Table structure for table `university_year`
---
+CREATE TABLE universities.university_year (
+  university_id INT DEFAULT NULL,
+  year INT DEFAULT NULL,
+  num_students INT DEFAULT NULL,
+  student_staff_ratio DECIMAL(6,2) DEFAULT NULL,
+  pct_international_students INT DEFAULT NULL,
+  pct_female_students INT DEFAULT NULL,
+  CONSTRAINT fk_uy_uni FOREIGN KEY (university_id) REFERENCES universities.university (id)
+);
 
-DROP TABLE IF EXISTS `university_year`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `university_year` (
-  `university_id` int(11) DEFAULT NULL,
-  `year` int(11) DEFAULT NULL,
-  `num_students` int(11) DEFAULT NULL,
-  `student_staff_ratio` decimal(6,2) DEFAULT NULL,
-  `pct_international_students` int(11) DEFAULT NULL,
-  `pct_female_students` int(11) DEFAULT NULL,
-  KEY `fk_uy_uni` (`university_id`),
-  CONSTRAINT `fk_uy_uni` FOREIGN KEY (`university_id`) REFERENCES `university` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `university_year`
---
-
-LOCK TABLES `university_year` WRITE;
-/*!40000 ALTER TABLE `university_year` DISABLE KEYS */;
-INSERT INTO `university_year` VALUES
+INSERT INTO universities.university_year (university_id, year, num_students, student_staff_ratio, pct_international_students, pct_female_students) VALUES
 (1,2011,20152,8.90,25,NULL),
 (5,2011,2243,6.90,27,33),
 (2,2011,11074,9.00,33,37),
@@ -1110,5 +1097,5 @@ INSERT INTO `university_year` VALUES
 (598,2016,16841,43.20,8,51),
 (1058,2016,27756,14.80,17,63),
 (1071,2016,17940,17.90,30,54);
-/*!40000 ALTER TABLE `university_year` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

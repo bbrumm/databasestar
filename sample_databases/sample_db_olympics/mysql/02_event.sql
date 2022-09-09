@@ -1,28 +1,16 @@
+DROP TABLE IF EXISTS olympics.event;
 
---
--- Table structure for table `event`
---
+CREATE TABLE olympics.event (
+  id INT NOT NULL AUTO_INCREMENT,
+  sport_id INT DEFAULT NULL,
+  event_name VARCHAR(200) DEFAULT NULL,
+  CONSTRAINT pk_event PRIMARY KEY (id),
+  CONSTRAINT fk_ev_sp FOREIGN KEY (sport_id) REFERENCES olympics.sport (id)
+);
 
-DROP TABLE IF EXISTS `event`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `event` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `sport_id` int(11) DEFAULT NULL,
-  `event_name` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_ev_sp` (`sport_id`),
-  CONSTRAINT `fk_ev_sp` FOREIGN KEY (`sport_id`) REFERENCES `sport` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1024 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `event`
---
-
-LOCK TABLES `event` WRITE;
-/*!40000 ALTER TABLE `event` DISABLE KEYS */;
-INSERT INTO `event` VALUES (1,9,'Basketball Men\'s Basketball'),
+INSERT INTO olympics.event (id, sport_id, event_name) VALUES
+(1,9,'Basketball Men\'s Basketball'),
 (2,33,'Judo Men\'s Extra-Lightweight'),
 (3,25,'Football Men\'s Football'),
 (4,62,'Tug-Of-War Men\'s Tug-Of-War'),
@@ -779,5 +767,5 @@ INSERT INTO `event` VALUES (1,9,'Basketball Men\'s Basketball'),
 (755,4,'Archery Men\'s Au Cordon Dore, 33 metres'),
 (756,4,'Archery Men\'s Target Archery, 28 metres, Individual'),
 (757,1,'Aeronautics Mixed Aeronautics');
-/*!40000 ALTER TABLE `event` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

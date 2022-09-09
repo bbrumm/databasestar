@@ -1,28 +1,14 @@
+DROP TABLE IF EXISTS olympics.games_city;
 
---
--- Table structure for table `games_city`
---
+CREATE TABLE olympics.games_city (
+  games_id INT DEFAULT NULL,
+  city_id INT DEFAULT NULL,
+  CONSTRAINT fk_gci_city FOREIGN KEY (city_id) REFERENCES olympics.city (id),
+  CONSTRAINT fk_gci_gam FOREIGN KEY (games_id) REFERENCES olympics.games (id)
+);
 
-DROP TABLE IF EXISTS `games_city`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `games_city` (
-  `games_id` int(11) DEFAULT NULL,
-  `city_id` int(11) DEFAULT NULL,
-  KEY `fk_gci_city` (`city_id`),
-  KEY `fk_gci_gam` (`games_id`),
-  CONSTRAINT `fk_gci_city` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`),
-  CONSTRAINT `fk_gci_gam` FOREIGN KEY (`games_id`) REFERENCES `games` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `games_city`
---
-
-LOCK TABLES `games_city` WRITE;
-/*!40000 ALTER TABLE `games_city` DISABLE KEYS */;
-INSERT INTO `games_city` VALUES (1,1),
+INSERT INTO games_city (games_id, city_id) VALUES
+(1,1),
 (2,2),
 (3,3),
 (4,4),
@@ -74,5 +60,5 @@ INSERT INTO `games_city` VALUES (1,1),
 (50,42),
 (33,14),
 (51,20);
-/*!40000 ALTER TABLE `games_city` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

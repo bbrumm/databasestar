@@ -1,30 +1,16 @@
+DROP TABLE IF EXISTS universities.university_ranking_year;
 
---
--- Table structure for table `university_ranking_year`
---
+CREATE TABLE universities.university_ranking_year (
+  university_id INT DEFAULT NULL,
+  ranking_criteria_id INT DEFAULT NULL,
+  year INT DEFAULT NULL,
+  score INT DEFAULT NULL,
+  CONSTRAINT fk_ury_rc FOREIGN KEY (ranking_criteria_id) REFERENCES universities.ranking_criteria (id),
+  CONSTRAINT fk_ury_uni FOREIGN KEY (university_id) REFERENCES universities.university (id)
+);
 
-DROP TABLE IF EXISTS `university_ranking_year`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `university_ranking_year` (
-  `university_id` int(11) DEFAULT NULL,
-  `ranking_criteria_id` int(11) DEFAULT NULL,
-  `year` int(11) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
-  KEY `fk_ury_uni` (`university_id`),
-  KEY `fk_ury_rc` (`ranking_criteria_id`),
-  CONSTRAINT `fk_ury_rc` FOREIGN KEY (`ranking_criteria_id`) REFERENCES `ranking_criteria` (`id`),
-  CONSTRAINT `fk_ury_uni` FOREIGN KEY (`university_id`) REFERENCES `university` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `university_ranking_year`
---
-
-LOCK TABLES `university_ranking_year` WRITE;
-/*!40000 ALTER TABLE `university_ranking_year` DISABLE KEYS */;
-INSERT INTO `university_ranking_year` VALUES
+INSERT INTO universities.university_ranking_year (university_id, ranking_criteria_id, year, score) VALUES
 (1,1,2011,100),
 (5,1,2011,98),
 (2,1,2011,98),
@@ -29637,5 +29623,5 @@ INSERT INTO `university_ranking_year` VALUES
 (965,21,2015,44),
 (938,21,2015,44),
 (976,21,2015,44);
-/*!40000 ALTER TABLE `university_ranking_year` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

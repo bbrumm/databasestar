@@ -1,29 +1,16 @@
+DROP TABLE IF EXISTS universities.university;
 
---
--- Table structure for table `university`
---
+CREATE TABLE universities.university (
+  id INT NOT NULL AUTO_INCREMENT,
+  country_id INT DEFAULT NULL,
+  university_name VARCHAR(200) DEFAULT NULL,
+  CONSTRAINT pk_uni PRIMARY KEY (id),
+  CONSTRAINT fk_uni_cnt FOREIGN KEY (country_id) REFERENCES universities.country (id)
+);
 
-DROP TABLE IF EXISTS `university`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `university` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `country_id` int(11) DEFAULT NULL,
-  `university_name` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_uni_cnt` (`country_id`),
-  CONSTRAINT `fk_uni_cnt` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2048 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `university`
---
-
-LOCK TABLES `university` WRITE;
-/*!40000 ALTER TABLE `university` DISABLE KEYS */;
-INSERT INTO `university`
-VALUES (1,73,'Harvard University'),
+INSERT INTO universities.university (id, country_id, university_name) VALUES
+(1,73,'Harvard University'),
 (2,73,'Massachusetts Institute of Technology'),
 (3,73,'Stanford University'),
 (4,72,'University of Cambridge'),
@@ -1270,5 +1257,5 @@ VALUES (1,73,'Harvard University'),
 (1245,54,'West University of Timişoara'),
 (1246,72,'University of Westminster'),
 (1247,68,'Yıldız Technical University');
-/*!40000 ALTER TABLE `university` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

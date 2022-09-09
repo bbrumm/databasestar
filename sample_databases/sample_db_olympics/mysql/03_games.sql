@@ -1,27 +1,16 @@
+DROP TABLE IF EXISTS olympics.games;
 
---
--- Table structure for table `games`
---
+CREATE TABLE olympics.games (
+  id INT NOT NULL AUTO_INCREMENT,
+  games_year INT DEFAULT NULL,
+  games_name varchar(100) DEFAULT NULL,
+  season varchar(100) DEFAULT NULL,
+  CONSTRAINT pk_games PRIMARY KEY (id)
+);
 
-DROP TABLE IF EXISTS `games`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `games` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `games_year` int(11) DEFAULT NULL,
-  `games_name` varchar(100) DEFAULT NULL,
-  `season` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `games`
---
-
-LOCK TABLES `games` WRITE;
-/*!40000 ALTER TABLE `games` DISABLE KEYS */;
-INSERT INTO `games` VALUES (1,1992,'1992 Summer','Summer'),
+INSERT INTO olympics.games (id, games_year, games_name, season) VALUES
+(1,1992,'1992 Summer','Summer'),
 (2,2012,'2012 Summer','Summer'),
 (3,1920,'1920 Summer','Summer'),
 (4,1900,'1900 Summer','Summer'),
@@ -72,5 +61,5 @@ INSERT INTO `games` VALUES (1,1992,'1992 Summer','Summer'),
 (49,1932,'1932 Winter','Winter'),
 (50,1936,'1936 Winter','Winter'),
 (51,1896,'1896 Summer','Summer');
-/*!40000 ALTER TABLE `games` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;

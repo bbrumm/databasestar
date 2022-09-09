@@ -1,32 +1,18 @@
+DROP TABLE IF EXISTS olympics.games_competitor;
+
+CREATE TABLE olympics.games_competitor (
+  id INT NOT NULL AUTO_INCREMENT,
+  games_id INT DEFAULT NULL,
+  person_id INT DEFAULT NULL,
+  age INT DEFAULT NULL,
+  CONSTRAINT pk_gamescomp PRIMARY KEY (id),
+  CONSTRAINT fk_gc_gam FOREIGN KEY (games_id) REFERENCES olympics.games (id),
+  CONSTRAINT fk_gc_per FOREIGN KEY (person_id) REFERENCES olympics.person (id)
+);
 
 
---
--- Table structure for table `games_competitor`
---
-
-DROP TABLE IF EXISTS `games_competitor`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `games_competitor` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `games_id` int(11) DEFAULT NULL,
-  `person_id` int(11) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_gc_gam` (`games_id`),
-  KEY `fk_gc_per` (`person_id`),
-  CONSTRAINT `fk_gc_gam` FOREIGN KEY (`games_id`) REFERENCES `games` (`id`),
-  CONSTRAINT `fk_gc_per` FOREIGN KEY (`person_id`) REFERENCES `person` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=196606 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `games_competitor`
---
-
-LOCK TABLES `games_competitor` WRITE;
-/*!40000 ALTER TABLE `games_competitor` DISABLE KEYS */;
-INSERT INTO `games_competitor` VALUES (1,1,1,24),
+INSERT INTO olympics.games_competitor (id, games_id, person_id, age) VALUES
+(1,1,1,24),
 (2,2,2,23),
 (3,3,3,24),
 (4,4,4,34),
@@ -51505,7 +51491,10 @@ INSERT INTO `games_competitor` VALUES (1,1,1,24),
 (51477,11,39001,21),
 (51478,21,39002,21),
 (51479,28,39003,23);
-INSERT INTO `games_competitor` VALUES (51480,36,39003,27),
+
+
+INSERT INTO olympics.games_competitor (id, games_id, person_id, age) VALUES
+(51480,36,39003,27),
 (51481,21,39004,21),
 (51482,39,39005,19),
 (51483,16,39006,22),
@@ -101680,7 +101669,10 @@ INSERT INTO `games_competitor` VALUES (51480,36,39003,27),
 (101652,32,76731,24),
 (101653,2,76732,18),
 (101654,21,76732,22);
-INSERT INTO `games_competitor` VALUES (101655,16,76733,21),
+
+
+INSERT INTO olympics.games_competitor (id, games_id, person_id, age) VALUES
+(101655,16,76733,21),
 (101656,49,76734,24),
 (101657,20,76735,18),
 (101658,2,76735,22),
@@ -148880,7 +148872,10 @@ INSERT INTO `games_competitor` VALUES (101655,16,76733,21),
 (148852,19,112164,30),
 (148853,1,112165,22),
 (148854,13,112165,26);
-INSERT INTO `games_competitor` VALUES (148855,12,112165,30),
+
+
+INSERT INTO olympics.games_competitor (id, games_id, person_id, age) VALUES
+(148855,12,112165,30),
 (148856,20,112166,20),
 (148857,20,112167,32),
 (148858,13,112168,21),
@@ -180278,5 +180273,5 @@ INSERT INTO `games_competitor` VALUES (148855,12,112165,30),
 (180250,16,135570,27),
 (180251,18,135571,30),
 (180252,9,135571,34);
-/*!40000 ALTER TABLE `games_competitor` ENABLE KEYS */;
-UNLOCK TABLES;
+
+COMMIT;
