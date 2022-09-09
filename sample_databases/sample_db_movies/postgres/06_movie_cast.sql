@@ -6,7 +6,7 @@ CREATE TABLE movies.movie_cast (
   person_id INT DEFAULT NULL,
   character_name varchar(400) DEFAULT NULL,
   gender_id INT DEFAULT NULL,
-  cast_order int(5) DEFAULT NULL,
+  cast_order INT DEFAULT NULL,
   CONSTRAINT fk_mca_gender FOREIGN KEY (gender_id) REFERENCES movies.gender (gender_id),
   CONSTRAINT fk_mca_movie FOREIGN KEY (movie_id) REFERENCES movies.movie (movie_id),
   CONSTRAINT fk_mca_per FOREIGN KEY (person_id) REFERENCES movies.person (person_id)
