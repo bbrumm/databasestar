@@ -1,15 +1,17 @@
-CREATE TABLE game_platform (
+DROP TABLE IF EXISTS video_games.dbo.game_platform;
+
+CREATE TABLE video_games.dbo.game_platform (
 	id INT PRIMARY KEY,
 	game_publisher_id INT,
 	platform_id INT,
 	release_year INT,
-	CONSTRAINT fk_gpl_gp FOREIGN KEY (game_publisher_id) REFERENCES game_publisher(id),
-	CONSTRAINT fk_gpl_pla FOREIGN KEY (platform_id) REFERENCES platform(id)
+	CONSTRAINT fk_gpl_gp FOREIGN KEY (game_publisher_id) REFERENCES video_games.dbo.game_publisher(id),
+	CONSTRAINT fk_gpl_pla FOREIGN KEY (platform_id) REFERENCES video_games.dbo.platform(id)
 );
 
 
 
-INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VALUES
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (1,8564,4,2007),
 (2,9852,4,2007),
 (3,11063,7,2006),
@@ -872,7 +874,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (860,5755,5,2008),
 (861,5763,5,2011),
 (862,5975,5,2006),
-(863,6173,5,2008),
+(863,6173,5,2008);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (864,6189,5,2011),
 (865,6438,5,2006),
 (866,6567,5,2008),
@@ -1705,7 +1709,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (1693,1565,8,1996),
 (1694,1773,8,1996),
 (1695,1831,8,1994),
-(1696,4121,8,1996),
+(1696,4121,8,1996);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (1697,7222,8,1995),
 (1698,7881,8,1998),
 (1699,8058,8,1996),
@@ -2600,7 +2606,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (2588,5740,5,2011),
 (2589,6590,5,2012),
 (2590,6639,5,2010),
-(2591,8723,5,2013),
+(2591,8723,5,2013);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (2592,9726,5,2010),
 (2593,10172,5,2011),
 (2594,10304,5,2011),
@@ -3561,7 +3569,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (3549,6851,15,2014),
 (3550,6900,15,2010),
 (3551,7000,15,2011),
-(3552,7255,15,2009),
+(3552,7255,15,2009);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (3553,7280,15,2014),
 (3554,8292,15,2010),
 (3555,8618,15,2010),
@@ -4483,7 +4493,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (4471,191,6,2016),
 (4472,207,6,2006),
 (4473,218,6,2012),
-(4474,294,6,2013),
+(4474,294,6,2013);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (4475,305,6,2009),
 (4476,328,6,2010),
 (4477,362,6,2015),
@@ -5322,7 +5334,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (5310,2137,17,2007),
 (5311,2138,17,2006),
 (5312,2183,17,2008),
-(5313,2184,17,2008),
+(5313,2184,17,2008);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (5314,2309,17,2008),
 (5315,2337,17,2005),
 (5316,2357,17,2005),
@@ -6208,7 +6222,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (6196,10095,7,2008),
 (6197,10152,7,2010),
 (6198,10169,7,2008),
-(6199,10737,7,2011),
+(6199,10737,7,2011);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (6200,11012,7,2006),
 (6201,11111,7,2010),
 (6202,11272,7,2007),
@@ -7130,7 +7146,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (7118,5725,7,2008),
 (7119,5973,7,2006),
 (7120,5974,7,2002),
-(7121,6117,7,2005),
+(7121,6117,7,2005);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (7122,6123,7,2009),
 (7123,6130,7,2008),
 (7124,6183,7,2009),
@@ -8040,7 +8058,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (8028,706,5,2012),
 (8029,807,5,2012),
 (8030,835,5,2007),
-(8031,929,5,2010),
+(8031,929,5,2010);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (8032,931,5,2006),
 (8033,944,5,2013),
 (8034,1102,5,2010),
@@ -8880,7 +8900,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (8868,3620,6,2014),
 (8869,3774,6,2011),
 (8870,3909,6,2014),
-(8871,3944,6,2010),
+(8871,3944,6,2010);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (8872,3961,6,2014),
 (8873,4137,6,2012),
 (8874,4244,6,2010),
@@ -9816,7 +9838,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (9804,867,4,2006),
 (9805,871,4,2007),
 (9806,939,4,2006),
-(9807,974,4,2009),
+(9807,974,4,2009);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (9808,1120,4,2009),
 (9809,1180,4,2005),
 (9810,1194,4,2010),
@@ -10741,7 +10765,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (10729,8733,13,1995),
 (10730,8767,13,1999),
 (10731,9131,13,1996),
-(10732,9529,13,1995),
+(10732,9529,13,1995);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (10733,9685,13,1996),
 (10734,10310,13,1997),
 (10735,10357,13,1996),
@@ -11650,7 +11676,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (11638,9689,27,1996),
 (11639,9051,4,2007),
 (11640,10105,4,2008),
-(11641,10651,4,2009),
+(11641,10651,4,2009);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (11642,11298,4,2008),
 (11643,7020,7,2005),
 (11644,8411,7,2007),
@@ -12479,7 +12507,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (12467,1094,4,2010),
 (12468,1132,4,2007),
 (12469,1265,4,2007),
-(12470,1660,4,2010),
+(12470,1660,4,2010);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (12471,1858,4,2007),
 (12472,1980,4,2007),
 (12473,2262,4,2007),
@@ -13427,7 +13457,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (13415,3832,5,2009),
 (13416,4218,5,2012),
 (13417,4238,5,2009),
-(13418,4279,5,2007),
+(13418,4279,5,2007);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (13419,4323,5,2008),
 (13420,4650,5,2006),
 (13421,5197,5,2011),
@@ -14291,7 +14323,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (14279,3706,12,2000),
 (14280,4853,12,1999),
 (14281,5700,12,1999),
-(14282,5995,12,1999),
+(14282,5995,12,1999);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (14283,6379,12,1999),
 (14284,7090,12,1999),
 (14285,7369,12,2001),
@@ -15225,7 +15259,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (15213,6219,13,2000),
 (15214,6550,13,2000),
 (15215,6664,13,1999),
-(15216,7581,13,2000),
+(15216,7581,13,2000);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (15217,7828,13,1998),
 (15218,8871,13,2000),
 (15219,9046,13,2001),
@@ -16099,7 +16135,9 @@ INSERT INTO game_platform (id, game_publisher_id, platform_id, release_year) VAL
 (16087,887,20,2013),
 (16088,1121,20,2013),
 (16089,1198,20,2014),
-(16090,1693,20,2015),
+(16090,1693,20,2015);
+
+INSERT INTO video_games.dbo.game_platform (id, game_publisher_id, platform_id, release_year) VALUES
 (16091,1704,20,2014),
 (16092,2354,20,2016),
 (16093,2370,20,2015),

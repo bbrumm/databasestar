@@ -1,13 +1,15 @@
-CREATE TABLE region_sales (
+DROP TABLE IF EXISTS video_games.dbo.region_sales;
+
+CREATE TABLE video_games.dbo.region_sales (
 	region_id INT,
 	game_platform_id INT,
 	num_sales DECIMAL(5, 2),
-  CONSTRAINT fk_rs_gp FOREIGN KEY (game_platform_id) REFERENCES game_platform(id),
-	CONSTRAINT fk_rs_reg FOREIGN KEY (region_id) REFERENCES region(id)
+    CONSTRAINT fk_rs_gp FOREIGN KEY (game_platform_id) REFERENCES video_games.dbo.game_platform(id),
+	CONSTRAINT fk_rs_reg FOREIGN KEY (region_id) REFERENCES video_games.dbo.region(id)
 );
 
 
-INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,50,3.50),
 (1,51,1.43),
 (1,52,0.51),
@@ -895,7 +897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,10994,0.08),
 (1,10995,0.09),
 (1,10996,0.11),
-(1,10997,0.14),
+(1,10997,0.14);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,10998,0.00),
 (1,10999,0.07),
 (1,11000,0.07),
@@ -1793,7 +1797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,2455,0.02),
 (1,2456,0.02),
 (1,2474,0.06),
-(1,2475,0.17),
+(1,2475,0.17);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,2476,0.12),
 (1,2477,0.05),
 (1,2482,0.00),
@@ -2691,7 +2697,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,9782,0.87),
 (1,9783,2.26),
 (1,9784,0.00),
-(1,9785,0.59),
+(1,9785,0.59);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,9786,1.43),
 (1,9787,0.65),
 (1,9788,0.00),
@@ -3589,7 +3597,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,16193,0.18),
 (1,16194,0.13),
 (1,16195,0.12),
-(1,16196,0.07),
+(1,16196,0.07);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,16197,0.10),
 (1,16198,0.10),
 (1,16199,0.09),
@@ -4487,7 +4497,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,11093,0.11),
 (1,11094,0.16),
 (1,11095,0.23),
-(1,11096,0.36),
+(1,11096,0.36);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,11097,0.15),
 (1,11098,0.07),
 (1,11099,0.12),
@@ -5385,7 +5397,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,6978,0.30),
 (1,6979,0.34),
 (1,6980,0.18),
-(1,6981,0.45),
+(1,6981,0.45);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,6982,0.14),
 (1,6983,0.52),
 (1,6984,0.50),
@@ -6283,7 +6297,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,1031,0.57),
 (1,1032,0.37),
 (1,1033,0.12),
-(1,1034,0.11),
+(1,1034,0.11);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,1035,0.60),
 (1,1036,0.25),
 (1,1037,0.40),
@@ -7181,7 +7197,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,7151,0.03),
 (1,7152,0.03),
 (1,7153,0.00),
-(1,7154,0.03),
+(1,7154,0.03);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,7155,0.03),
 (1,7156,0.03),
 (1,7157,0.03),
@@ -8079,7 +8097,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,14102,0.27),
 (1,14103,0.19),
 (1,14104,0.26),
-(1,14105,0.25),
+(1,14105,0.25);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,14106,0.25),
 (1,14107,0.37),
 (1,14108,0.24),
@@ -8977,7 +8997,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,9960,1.48),
 (1,9961,0.71),
 (1,9962,0.93),
-(1,9963,1.18),
+(1,9963,1.18);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,9964,0.80),
 (1,9965,0.68),
 (1,9966,0.00),
@@ -9875,7 +9897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,1546,0.00),
 (1,1599,0.00),
 (1,1625,0.00),
-(1,1626,0.00),
+(1,1626,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,1657,0.10),
 (1,2137,0.00),
 (1,2194,0.00),
@@ -10773,7 +10797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,4904,0.22),
 (1,4905,0.29),
 (1,4906,1.68),
-(1,4907,1.66),
+(1,4907,1.66);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,4908,1.58),
 (1,4909,0.90),
 (1,4910,0.88),
@@ -11671,7 +11697,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,15703,0.05),
 (1,15704,0.04),
 (1,15705,0.04),
-(1,15706,0.04),
+(1,15706,0.04);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,15707,0.03),
 (1,15708,0.02),
 (1,15709,0.02),
@@ -12569,7 +12597,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,2000,0.00),
 (1,2001,0.00),
 (1,2002,0.32),
-(1,2003,0.01),
+(1,2003,0.01);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,2004,0.00),
 (1,2005,0.00),
 (1,2006,0.01),
@@ -13467,7 +13497,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,2024,4.00),
 (1,2025,2.56),
 (1,2026,1.84),
-(1,2027,1.54),
+(1,2027,1.54);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,2028,1.52),
 (1,2029,1.48),
 (1,2030,1.26),
@@ -14365,7 +14397,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,11371,0.44),
 (1,11372,0.00),
 (1,11373,0.53),
-(1,11374,0.73),
+(1,11374,0.73);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,11375,0.02),
 (1,11376,0.19),
 (1,11377,0.08),
@@ -15263,7 +15297,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,8411,0.09),
 (1,8412,0.01),
 (1,8413,0.02),
-(1,9414,0.48),
+(1,9414,0.48);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,9415,0.17),
 (1,9416,0.99),
 (1,9417,0.48),
@@ -16161,7 +16197,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,3448,0.00),
 (1,5466,0.00),
 (1,5469,0.00),
-(1,5470,0.00),
+(1,5470,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (1,5585,0.00),
 (1,5586,0.00),
 (1,5587,0.00),
@@ -17059,7 +17097,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,9604,0.45),
 (2,9605,0.00),
 (2,9606,0.74),
-(2,9607,0.21),
+(2,9607,0.21);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,9608,0.38),
 (2,9609,0.69),
 (2,9610,0.31),
@@ -17957,7 +17997,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,704,0.00),
 (2,705,0.00),
 (2,706,0.00),
-(2,707,0.01),
+(2,707,0.01);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,708,0.01),
 (2,709,0.01),
 (2,710,0.01),
@@ -18855,7 +18897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,8539,0.00),
 (2,8544,0.00),
 (2,8545,0.02),
-(2,8653,0.02),
+(2,8653,0.02);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,8654,0.00),
 (2,8655,0.00),
 (2,8656,0.00),
@@ -19753,7 +19797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,14768,0.02),
 (2,14769,0.00),
 (2,14770,0.02),
-(2,14771,0.00),
+(2,14771,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,14772,0.09),
 (2,14773,0.00),
 (2,14774,0.00),
@@ -20651,7 +20697,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,8027,0.42),
 (2,8028,0.98),
 (2,8029,0.57),
-(2,8030,0.54),
+(2,8030,0.54);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,8031,0.48),
 (2,8032,0.96),
 (2,8033,0.53),
@@ -21549,7 +21597,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,4471,0.29),
 (2,4472,0.00),
 (2,4473,1.51),
-(2,4474,1.51),
+(2,4474,1.51);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,4475,2.46),
 (2,4476,1.12),
 (2,4477,0.11),
@@ -22447,7 +22497,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,15018,0.00),
 (2,15019,0.00),
 (2,15474,0.16),
-(2,15475,0.03),
+(2,15475,0.03);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,15476,0.04),
 (2,15477,0.03),
 (2,15478,0.00),
@@ -23345,7 +23397,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,6406,0.05),
 (2,6407,0.01),
 (2,6408,0.01),
-(2,6409,0.23),
+(2,6409,0.23);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,6410,0.22),
 (2,6411,0.19),
 (2,6412,0.19),
@@ -24243,7 +24297,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,13135,0.02),
 (2,13136,0.09),
 (2,13137,0.19),
-(2,13138,0.02),
+(2,13138,0.02);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,13139,0.16),
 (2,13140,0.15),
 (2,13141,0.14),
@@ -25141,7 +25197,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,6423,0.04),
 (2,6484,0.08),
 (2,6485,0.07),
-(2,6531,0.10),
+(2,6531,0.10);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,6539,0.00),
 (2,6559,0.00),
 (2,6560,0.00),
@@ -26039,7 +26097,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,10120,0.00),
 (2,10274,0.00),
 (2,10275,0.00),
-(2,10276,0.00),
+(2,10276,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,10277,0.00),
 (2,10278,0.00),
 (2,10279,0.00),
@@ -26937,7 +26997,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,1228,0.12),
 (2,1229,0.11),
 (2,1230,0.10),
-(2,1231,0.10),
+(2,1231,0.10);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,1232,0.06),
 (2,1233,0.06),
 (2,1234,0.06),
@@ -27835,7 +27897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,12794,0.00),
 (2,12806,0.10),
 (2,12807,0.05),
-(2,12808,0.05),
+(2,12808,0.05);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,12809,0.03),
 (2,12818,0.02),
 (2,12820,0.00),
@@ -28733,7 +28797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,15226,0.17),
 (2,15227,0.46),
 (2,15228,0.28),
-(2,15229,0.57),
+(2,15229,0.57);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,15230,0.11),
 (2,15231,0.59),
 (2,15232,0.45),
@@ -29631,7 +29697,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,15281,0.08),
 (2,15282,0.09),
 (2,15283,0.08),
-(2,15284,0.15),
+(2,15284,0.15);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,15285,0.45),
 (2,15286,0.10),
 (2,15287,1.13),
@@ -30529,7 +30597,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,9314,0.00),
 (2,9315,0.00),
 (2,9316,0.00),
-(2,9317,0.00),
+(2,9317,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,9318,0.00),
 (2,9319,0.00),
 (2,9320,0.00),
@@ -31427,7 +31497,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,5374,0.14),
 (2,5375,0.13),
 (2,5376,0.11),
-(2,5377,0.09),
+(2,5377,0.09);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,5378,0.04),
 (2,5379,0.02),
 (2,5380,0.03),
@@ -32325,7 +32397,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,10702,0.00),
 (2,10703,0.00),
 (2,10704,0.00),
-(2,10705,0.00),
+(2,10705,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (2,10762,0.01),
 (2,10873,0.00),
 (2,10962,0.00),
@@ -33223,7 +33297,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,7649,0.00),
 (3,7650,0.00),
 (3,7739,0.00),
-(3,7740,0.00),
+(3,7740,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,7741,0.00),
 (3,7742,0.00),
 (3,7743,0.00),
@@ -34121,7 +34197,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,9733,0.41),
 (3,9734,0.56),
 (3,9735,0.73),
-(3,9736,0.82),
+(3,9736,0.82);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,9737,0.39),
 (3,9738,0.31),
 (3,9739,1.28),
@@ -35019,7 +35097,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,6881,0.05),
 (3,6882,0.00),
 (3,6883,0.06),
-(3,6884,0.00),
+(3,6884,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,6885,0.00),
 (3,6886,0.00),
 (3,6887,0.00),
@@ -35917,7 +35997,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,13892,0.00),
 (3,13893,0.00),
 (3,13894,0.00),
-(3,13895,0.00),
+(3,13895,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,13896,0.00),
 (3,13897,0.00),
 (3,13898,0.00),
@@ -36815,7 +36897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,4420,0.00),
 (3,4421,0.00),
 (3,4422,0.00),
-(3,4423,0.00),
+(3,4423,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,4424,0.01),
 (3,4425,0.00),
 (3,4426,0.00),
@@ -37713,7 +37797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,2437,0.00),
 (3,2438,0.00),
 (3,2439,0.00),
-(3,2440,0.00),
+(3,2440,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,2441,0.00),
 (3,2442,0.00),
 (3,2443,0.00),
@@ -38611,7 +38697,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,13445,0.13),
 (3,13446,0.23),
 (3,13447,0.23),
-(3,13448,0.10),
+(3,13448,0.10);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,13449,0.08),
 (3,13450,0.06),
 (3,13451,0.08),
@@ -39509,7 +39597,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,4754,0.00),
 (3,4755,0.00),
 (3,4756,0.00),
-(3,4757,0.00),
+(3,4757,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,4758,0.00),
 (3,4759,0.00),
 (3,4760,0.00),
@@ -40407,7 +40497,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,11926,0.00),
 (3,11927,0.00),
 (3,11928,0.00),
-(3,11929,0.00),
+(3,11929,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,11930,0.00),
 (3,11931,0.00),
 (3,11932,0.00),
@@ -41305,7 +41397,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,2126,0.00),
 (3,2218,0.00),
 (3,2219,0.00),
-(3,2220,0.00),
+(3,2220,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,2221,0.00),
 (3,2222,0.00),
 (3,2223,0.00),
@@ -42203,7 +42297,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,9098,0.12),
 (3,9099,0.15),
 (3,9100,0.28),
-(3,9101,0.35),
+(3,9101,0.35);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,9102,0.16),
 (3,9103,0.08),
 (3,9104,0.31),
@@ -43101,7 +43197,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,10470,0.00),
 (3,10471,0.00),
 (3,10472,0.00),
-(3,10511,0.11),
+(3,10511,0.11);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,10770,0.00),
 (3,11598,0.06),
 (3,12805,0.00),
@@ -43999,7 +44097,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,12070,0.00),
 (3,12071,0.00),
 (3,12072,0.00),
-(3,12073,0.41),
+(3,12073,0.41);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,12074,0.00),
 (3,12075,0.00),
 (3,12076,0.31),
@@ -44897,7 +44997,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,9268,0.00),
 (3,9269,0.00),
 (3,9270,0.00),
-(3,9271,0.00),
+(3,9271,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,9272,0.00),
 (3,9273,0.00),
 (3,9274,0.00),
@@ -45795,7 +45897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,10624,0.00),
 (3,10663,0.00),
 (3,10768,0.00),
-(3,10769,0.00),
+(3,10769,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,10783,0.00),
 (3,10861,0.00),
 (3,10899,0.00),
@@ -46693,7 +46797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,6635,0.08),
 (3,6636,0.06),
 (3,6637,0.05),
-(3,6638,0.05),
+(3,6638,0.05);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,6639,0.04),
 (3,6640,0.04),
 (3,6641,0.04),
@@ -47591,7 +47697,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,15391,0.00),
 (3,15392,0.00),
 (3,15393,0.00),
-(3,15394,0.00),
+(3,15394,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,15395,0.00),
 (3,15396,0.00),
 (3,15397,0.00),
@@ -48489,7 +48597,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,6282,0.05),
 (3,6283,0.03),
 (3,6284,0.02),
-(3,6285,0.03),
+(3,6285,0.03);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (3,6286,0.03),
 (3,6287,0.03),
 (3,6288,0.01),
@@ -49387,7 +49497,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,4162,0.10),
 (4,4163,0.04),
 (4,4164,0.09),
-(4,4165,0.11),
+(4,4165,0.11);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,4166,0.10),
 (4,4167,0.08),
 (4,4168,0.07),
@@ -50285,7 +50397,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,16311,0.02),
 (4,16312,0.01),
 (4,16313,0.01),
-(4,16314,0.00),
+(4,16314,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,16315,0.00),
 (4,16316,0.00),
 (4,2470,0.00),
@@ -51183,7 +51297,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,5804,0.01),
 (4,5807,0.00),
 (4,5811,0.01),
-(4,5814,0.02),
+(4,5814,0.02);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,5815,0.01),
 (4,5816,0.01),
 (4,5817,0.00),
@@ -52081,7 +52197,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,12768,0.00),
 (4,12769,0.00),
 (4,12770,0.00),
-(4,12771,0.00),
+(4,12771,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,12772,0.00),
 (4,12773,0.00),
 (4,12774,0.00),
@@ -52979,7 +53097,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,3733,0.25),
 (4,3734,0.07),
 (4,3735,0.11),
-(4,3736,0.10),
+(4,3736,0.10);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,3737,0.05),
 (4,3738,0.01),
 (4,3739,0.03),
@@ -53877,7 +53997,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,263,0.00),
 (4,264,0.00),
 (4,265,0.00),
-(4,266,0.00),
+(4,266,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,322,0.01),
 (4,513,0.00),
 (4,514,0.00),
@@ -54775,7 +54897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,11739,0.10),
 (4,11740,0.03),
 (4,11741,0.02),
-(4,11742,0.06),
+(4,11742,0.06);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,11743,0.08),
 (4,11744,0.03),
 (4,11745,0.03),
@@ -55673,7 +55797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,4017,0.02),
 (4,4018,0.02),
 (4,4019,0.02),
-(4,4020,0.00),
+(4,4020,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,4021,0.02),
 (4,4022,0.02),
 (4,4023,0.01),
@@ -56571,7 +56697,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,11238,0.01),
 (4,11239,0.00),
 (4,11240,0.01),
-(4,11241,0.01),
+(4,11241,0.01);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,11242,0.00),
 (4,11243,0.00),
 (4,11244,0.01),
@@ -57469,7 +57597,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,9940,0.00),
 (4,9941,0.00),
 (4,9942,0.00),
-(4,9943,0.00),
+(4,9943,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,9944,0.00),
 (4,9945,0.00),
 (4,9946,0.00),
@@ -58367,7 +58497,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,1171,0.00),
 (4,1172,0.00),
 (4,1533,0.01),
-(4,1534,0.00),
+(4,1534,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,1545,0.01),
 (4,1576,0.00),
 (4,1577,0.00),
@@ -59265,7 +59397,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,5947,0.02),
 (4,5948,0.01),
 (4,5949,0.01),
-(4,5950,0.01),
+(4,5950,0.01);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,5951,0.00),
 (4,5952,0.01),
 (4,5953,0.00),
@@ -60163,7 +60297,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,9229,0.03),
 (4,9230,0.03),
 (4,9231,0.03),
-(4,9232,0.03),
+(4,9232,0.03);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,9233,0.02),
 (4,9234,0.02),
 (4,9235,0.02),
@@ -61061,7 +61197,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,6573,0.00),
 (4,6705,0.00),
 (4,6706,0.00),
-(4,6707,0.00),
+(4,6707,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,6708,0.00),
 (4,7396,0.03),
 (4,7397,0.00),
@@ -61959,7 +62097,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,6669,0.01),
 (4,6670,0.04),
 (4,6671,0.01),
-(4,6672,0.01),
+(4,6672,0.01);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,6673,0.01),
 (4,6674,0.00),
 (4,6675,0.01),
@@ -62857,7 +62997,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,5317,0.01),
 (4,5318,0.01),
 (4,5319,0.02),
-(4,5320,0.02),
+(4,5320,0.02);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,5321,0.02),
 (4,5322,0.06),
 (4,5323,0.06),
@@ -63755,7 +63897,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,1423,0.02),
 (4,1424,0.02),
 (4,1425,0.01),
-(4,1426,0.01),
+(4,1426,0.01);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,1427,0.01),
 (4,1428,0.01),
 (4,1429,0.01),
@@ -64653,7 +64797,9 @@ INSERT INTO region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,11459,0.00),
 (4,11460,0.00),
 (4,11461,0.00),
-(4,11462,0.00),
+(4,11462,0.00);
+
+INSERT INTO video_games.dbo.region_sales (region_id, game_platform_id, num_sales) VALUES
 (4,11463,0.00),
 (4,11464,0.00),
 (4,11465,0.00),

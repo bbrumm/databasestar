@@ -1,38 +1,36 @@
+DROP DATABASE IF EXISTS video_games;
 CREATE DATABASE video_games;
-USE video_games;
 
-DROP TABLE region_sales;
-DROP TABLE region;
-DROP TABLE game_platform;
-DROP TABLE game_publisher;
-DROP TABLE game;
-DROP TABLE publisher;
-DROP TABLE genre;
-DROP TABLE platform;
+DROP TABLE IF EXISTS video_games.dbo.region_sales;
+DROP TABLE IF EXISTS video_games.dbo.region;
+DROP TABLE IF EXISTS video_games.dbo.publisher;
+DROP TABLE IF EXISTS video_games.dbo.genre;
+DROP TABLE IF EXISTS video_games.dbo.platform;
 
 
 --Create tables
-CREATE TABLE platform (
+CREATE TABLE video_games.dbo.platform (
 	id INT PRIMARY KEY,
 	platform_name VARCHAR(50)
 );
 
-CREATE TABLE genre (
+CREATE TABLE video_games.dbo.genre (
 	id INT PRIMARY KEY,
 	genre_name VARCHAR(50)
 );
 
-CREATE TABLE publisher (
+CREATE TABLE video_games.dbo.publisher (
 	id INT PRIMARY KEY,
 	publisher_name VARCHAR(100)
 );
 
-CREATE TABLE region (
+CREATE TABLE video_games.dbo.region (
 	id INT PRIMARY KEY,
 	region_name VARCHAR(50)
 );
 
-INSERT INTO genre VALUES (1,'Action'),
+INSERT INTO video_games.dbo.genre VALUES
+(1,'Action'),
 (2,'Adventure'),
 (3,'Fighting'),
 (4,'Misc'),
@@ -45,7 +43,8 @@ INSERT INTO genre VALUES (1,'Action'),
 (11,'Sports'),
 (12,'Strategy');
 
-INSERT INTO platform VALUES (1,'Wii'),
+INSERT INTO video_games.dbo.platform VALUES
+(1,'Wii'),
 (2,'NES'),
 (3,'GB'),
 (4,'DS'),
@@ -78,7 +77,8 @@ INSERT INTO platform VALUES (1,'Wii'),
 (31,'PCFX');
 
 
-INSERT INTO publisher VALUES (1,'10TACLE Studios'),
+INSERT INTO video_games.dbo.publisher VALUES
+(1,'10TACLE Studios'),
 (2,'1C Company'),
 (3,'20th Century Fox Video Games'),
 (4,'2D Boy'),
@@ -656,7 +656,7 @@ INSERT INTO publisher VALUES (1,'10TACLE Studios'),
 (576,'Zoo Games'),
 (577,'Zushi Games');
 
-INSERT INTO region VALUES (1,'North America'),
+INSERT INTO video_games.dbo.region VALUES (1,'North America'),
 (2,'Europe'),
 (3,'Japan'),
 (4,'Other');

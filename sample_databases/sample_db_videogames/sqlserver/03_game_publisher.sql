@@ -1,12 +1,14 @@
-CREATE TABLE game_publisher (
+DROP TABLE IF EXISTS video_games.dbo.game_publisher;
+
+CREATE TABLE video_games.dbo.game_publisher (
 	id INT PRIMARY KEY,
 	game_id INT,
 	publisher_id INT,
-	CONSTRAINT fk_gpu_gam FOREIGN KEY (game_id) REFERENCES game(id),
-	CONSTRAINT fk_gpu_pub FOREIGN KEY (publisher_id) REFERENCES publisher(id)
+	CONSTRAINT fk_gpu_gam FOREIGN KEY (game_id) REFERENCES video_games.dbo.game(id),
+	CONSTRAINT fk_gpu_pub FOREIGN KEY (publisher_id) REFERENCES video_games.dbo.publisher(id)
 );
 
-INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (1,10866,369),
 (2,9244,369),
 (3,5464,369),
@@ -956,7 +958,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (947,1138,464),
 (948,8904,514),
 (949,1812,282),
-(950,6042,17),
+(950,6042,17);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (951,2273,498),
 (952,2973,532),
 (953,2858,548),
@@ -1774,7 +1778,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (1765,10183,191),
 (1766,1512,91),
 (1767,3545,217),
-(1768,6151,514),
+(1768,6151,514);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (1769,5822,341),
 (1770,5516,17),
 (1771,9263,228),
@@ -2628,7 +2634,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (2619,7636,328),
 (2620,7804,82),
 (2621,925,514),
-(2622,11157,532),
+(2622,11157,532);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (2623,6624,139),
 (2624,1029,82),
 (2625,6808,474),
@@ -3515,7 +3523,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (3506,1090,309),
 (3507,5917,352),
 (3508,2191,514),
-(3509,6318,521),
+(3509,6318,521);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (3510,9753,452),
 (3511,8046,440),
 (3512,3165,369),
@@ -4430,7 +4440,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (4421,6462,139),
 (4422,6833,352),
 (4423,5506,514),
-(4424,7362,282),
+(4424,7362,282);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (4425,6217,532),
 (4426,1292,282),
 (4427,5900,352),
@@ -5333,7 +5345,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (5324,3943,532),
 (5325,1231,452),
 (5326,6627,139),
-(5327,5901,352),
+(5327,5901,352);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (5328,1214,7),
 (5329,5022,452),
 (5330,83,452),
@@ -6222,7 +6236,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (6213,637,498),
 (6214,3941,440),
 (6215,7132,452),
-(6216,5018,70),
+(6216,5018,70);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (6217,1865,82),
 (6218,10338,17),
 (6219,2196,532),
@@ -7119,7 +7135,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (7110,2925,369),
 (7111,10290,282),
 (7112,6920,456),
-(7113,6663,328),
+(7113,6663,328);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (7114,10477,490),
 (7115,3030,45),
 (7116,9591,450),
@@ -8035,7 +8053,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (8026,6011,300),
 (8027,2896,506),
 (8028,6921,198),
-(8029,9731,539),
+(8029,9731,539);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (8030,5850,138),
 (8031,169,512),
 (8032,5575,442),
@@ -8914,7 +8934,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (8905,206,271),
 (8906,11057,532),
 (8907,5578,353),
-(8908,6659,139),
+(8908,6659,139);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (8909,3157,82),
 (8910,2531,265),
 (8911,7740,54),
@@ -9796,7 +9818,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (9787,5378,506),
 (9788,2754,83),
 (9789,4133,61),
-(9790,4907,506),
+(9790,4907,506);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (9791,1955,506),
 (9792,3627,265),
 (9793,10512,300),
@@ -10757,7 +10781,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (10748,9405,481),
 (10749,10740,86),
 (10750,2588,82),
-(10751,9805,460),
+(10751,9805,460);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (10752,9276,567),
 (10753,371,464),
 (10754,6527,305),
@@ -11622,7 +11648,9 @@ INSERT INTO game_publisher (id, game_id, publisher_id) VALUES
 (11613,11050,327),
 (11614,9663,282),
 (11615,1047,233),
-(11616,8440,506),
+(11616,8440,506);
+
+INSERT INTO video_games.dbo.game_publisher (id, game_id, publisher_id) VALUES
 (11617,1085,8),
 (11618,3368,506),
 (11619,1514,91),
