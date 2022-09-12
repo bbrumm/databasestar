@@ -995,7 +995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (69215,'Colin Lewis','M',180,70),
 (69216,'Craig Edward Lewis','M',195,100),
 (69217,'Dale Folsom Lewis','M',185,113),
-(69218,'Daniel Jason Lewis','M',178,75),
+(69218,'Daniel Jason Lewis','M',178,75);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (69219,'Walter David Lewis','M',177,75),
 (69221,'Denise Lewis','F',176,68),
 (69222,'Douglas Grey \"Doug\"\" Lewis\"','M',175,73),
@@ -1993,7 +1995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (70242,'Johan Hjalmar \"John\"\" Lindroth\"','M',0,0),
 (70243,'Alexander Thomas Lindsay','M',188,79),
 (70244,'Allan Shanks Lindsay','M',0,0),
-(70245,'Andrew James Ronald Lindsay','M',185,93),
+(70245,'Andrew James Ronald Lindsay','M',185,93);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (70246,'Andrew Matthew Lindsay','M',0,0),
 (70247,'David Powell Lindsay','M',0,0),
 (70248,'Gillian Anne Lindsay','F',183,73),
@@ -2991,7 +2995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (71274,'Lorne Kenneth Loomer','M',187,84),
 (71275,'Frank Farmer Loomis, Jr.','M',188,0),
 (71276,'Alfred Lee Loomis, Jr.','M',0,0),
-(71277,'Shelley Looney','F',165,64),
+(71277,'Shelley Looney','F',165,64);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (71278,'Loong Whey Pyu','M',168,62),
 (71279,'Braden LaVern Looper','M',195,100),
 (71280,'Viljar Loor','M',196,96),
@@ -3989,7 +3995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (72320,'Julie Wendel Lundholdt','F',179,80),
 (72321,'Bengt Johan Lundholm','M',184,73),
 (72322,'Ulla Kaija Lundholm (-Hovinen)','F',174,70),
-(72324,'Jan Ored Lundin','M',180,70),
+(72324,'Jan Ored Lundin','M',180,70);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (72325,'Tage Leif Lundin','M',0,0),
 (72326,'Therse Sofie Lundin (-Lidberg)','F',178,62),
 (72327,'Hans Matthiesen Lunding','M',0,0),
@@ -4987,7 +4995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (73365,'Lisandro Magllan','M',182,79),
 (73366,'Adelfo Magallanes Campos','M',0,0),
 (73367,'Jos Rafael Magallanes','M',184,73),
-(73368,'Brenda Vianey Magaa Almaral (-Moya)','F',156,48),
+(73368,'Brenda Vianey Magaa Almaral (-Moya)','F',156,48);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (73369,'Eduardo Avelino Magaa Poot','M',169,68),
 (73370,'Nicholas Daryl Magaa Defago','M',198,90),
 (73371,'Gustavo Magarios Morales de los Ros','M',0,0),
@@ -5985,7 +5995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (74421,'Giuseppe Mangiarotti','M',0,0),
 (74422,'Fabio Mangilli','M',0,0),
 (74423,'Roger Mangin','M',183,75),
-(74424,'Sergio Alejandro Mangn','M',179,84),
+(74424,'Sergio Alejandro Mangn','M',179,84);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (74426,'Constanzo Mangini','M',0,0),
 (74427,'Vuyisanani \"Sanani\"\" Mangisa\"','F',162,58),
 (74428,'Rudolf \"Ruedi\"\" Mangisch\"','M',184,84),
@@ -6983,7 +6995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (75478,'Stphan Baziel Martens','M',0,0),
 (75479,'Ulla Agneta Linna Mrtensson (-Baron)','F',173,61),
 (75480,'Anders Mrtensson','M',0,0),
-(75481,'Folke Frithiof Martens Mrtensson','M',0,70),
+(75481,'Folke Frithiof Martens Mrtensson','M',0,70);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (75482,'Pia Carina Mrtensson (-Kruners)','F',177,64),
 (75483,'Stig Bertil Mrtensson','M',0,0),
 (75484,'Torbjrn Mrtensson (-Bryde)','M',185,75),
@@ -7981,7 +7995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (76540,'Yoshika Matsubara','M',179,74),
 (76541,'Akihiko Matsuda','M',180,72),
 (76542,'Haruko Matsuda','F',159,52),
-(76543,'Kazuo Matsuda','M',160,65),
+(76543,'Kazuo Matsuda','M',160,65);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (76544,'Kenjiro Matsuda','M',170,66),
 (76545,'Mikio Matsuda','M',168,67),
 (76546,'Naoki Matsuda','M',183,76),
@@ -8979,7 +8995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (77590,'Sam McGregor','M',192,95),
 (77591,'William McGregor','M',173,70),
 (77592,'Yvonne McGregor','F',165,56),
-(77594,'Brenda McGrory','F',171,61),
+(77594,'Brenda McGrory','F',171,61);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (77595,'Scott Anthony McGrory','M',185,73),
 (77596,'Walter McGuffie','M',0,0),
 (77597,'Finbar Patrick \"Barry\"\" McGuigan\"','M',167,57),
@@ -9977,7 +9995,9 @@ INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (78638,'Antonio Mendoza','M',168,62),
 (78639,'Armando Mendoza','M',173,60),
 (78640,'Beibis Antonio Mendoza Polo','M',165,48),
-(78641,'Carolina Mendoza','F',168,60),
+(78641,'Carolina Mendoza','F',168,60);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (78642,'Carolina Mendoza Hernndez','F',160,49),
 (78643,'Csar Leonidas Mendoza Durn','M',0,0),
 (78644,'Edward Eugene \"Ed\"\" Mendoza\"','M',167,60),
@@ -10975,7 +10995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (79707,'Ivan Arturovich Mikolutsky','M',178,68),
 (79709,'Bartosz Mikos','M',183,77),
 (79710,'Jaroslav Mikoka','M',0,0),
-(79711,'Janusz Stanisaw \"Jan\"\" Mikoajczak (Krenz-)\"','M',172,68),
+(79711,'Janusz Stanisaw \"Jan\"\" Mikoajczak (Krenz-)\"','M',172,68);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (79712,'Martyna Mikoajczak','F',176,57),
 (79713,'Artur Mikoajczewski','M',180,73),
 (79714,'Beata Mikoajczyk','F',170,68),
@@ -11973,7 +11995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (80758,'Sergio Mocellini','M',184,84),
 (80759,'Robert Gaston \"Bob\"\" Moch\"','M',0,0),
 (80760,'Aleksey Yuryevich Mochalov','M',186,90),
-(80762,'Hermann Mchel','M',0,0),
+(80762,'Hermann Mchel','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (80763,'Lineo Mochesane','F',150,49),
 (80764,'Clara Maria Mochi','F',173,59),
 (80765,'Kyoko Mochida','F',166,66),
@@ -12971,7 +12995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (81832,'Aurora Morata Salvador','F',156,47),
 (81833,'Adelheid Morath','F',164,52),
 (81834,'Rosa Mara Morat Rodrguez','F',170,56),
-(81835,'Paulo Rogerio Moratore','M',191,96),
+(81835,'Paulo Rogerio Moratore','M',191,96);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (81836,'Carlos Alberto Moratorio Telechea','M',170,65),
 (81837,'Jean-Claude Moraux','M',173,62),
 (81838,'Gregory Eugene \"Greg\"\" Morava\"','M',193,95),
@@ -13969,7 +13995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (82887,'Naomi Wanjiku Mugo','F',163,50),
 (82888,'Ljiljana Mugoa (-Vuevi)','F',181,75),
 (82889,'Velia Mugoa','M',175,64),
-(82890,'Svetlana Mugoa-Anti','F',187,78),
+(82890,'Svetlana Mugoa-Anti','F',187,78);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (82891,'Ani Jane Mugrditchian','F',169,62),
 (82892,'Yvonne Daphne Mugridge (-Arnold)','F',157,49),
 (82893,'Juan Muguerza Sasieta','M',0,0),
@@ -14967,7 +14995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (83943,'Jason Myslicki','M',178,71),
 (83945,'Andrzej Myliwiec','M',176,72),
 (83946,'Elisavet \"Elli\"\" Mystakidou\"','F',177,67),
-(83947,'Sofia Mystrioti','F',0,0),
+(83947,'Sofia Mystrioti','F',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (83948,'Piotr Myszka','M',186,74),
 (83949,'Grzegorz Marek Myszkowski','M',177,67),
 (83950,'Tadeusz Mytnik','M',177,75),
@@ -15965,7 +15995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (84988,'Silvio Necchi','M',168,70),
 (84989,'Souad Al-Nechab','F',178,60),
 (84990,'Yevgeny Nechayev','M',176,76),
-(84991,'Yelena Aleksandrovna Nechayeva','F',168,58),
+(84991,'Yelena Aleksandrovna Nechayeva','F',168,58);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (84992,'Andrei Nechita','M',183,70),
 (84993,'Lenka Nechvtalov (-Grymov)','F',177,71),
 (84994,'Larysa Nechyporuk (Teteriuk-)','F',171,59),
@@ -16963,7 +16995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (86023,'Nstor Nielsen van Hoff','M',181,83),
 (86024,'Niels Marius Nielsen','M',0,0),
 (86025,'Niels Johannes Nielsen','M',182,80),
-(86026,'Niels Erik Nielsen','M',0,0),
+(86026,'Niels Erik Nielsen','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (86027,'Niels Kristian Nielsen','M',0,0),
 (86028,'Odd August Bonde Nielsen','M',0,0),
 (86029,'Ole Gammelgaard Nielsen','M',181,72),
@@ -17961,7 +17995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (87064,'Martin Wayne \"Marty\"\" Nothstein\"','M',187,96),
 (87065,'Alan Graham Notley','M',170,70),
 (87066,'Charles Barrimore \"Barry\"\" Notley\"','M',0,0),
-(87067,'Tokushige Noto','M',0,0),
+(87067,'Tokushige Noto','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (87068,'Tsuneo Noto','M',166,63),
 (87069,'Toshiyuki Notomi','M',158,57),
 (87070,'Andrea Michelle Nott','F',175,59),
@@ -18959,7 +18995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (88115,'Stine Bredal Oftedal','F',168,65),
 (88116,'Augustine Ofuokwu','M',177,68),
 (88117,'Lenford Leon O''Garro','M',175,66),
-(88118,'Denis \"Sonny\"\" O''Gorman\"','M',160,54),
+(88118,'Denis \"Sonny\"\" O''Gorman\"','M',160,54);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (88119,'Cathal O''Grady','M',183,91),
 (88120,'Daniel \"Dan\"\" O''Grady\"','M',0,0),
 (88121,'Diane Carolyn O''Grady','F',180,75),
@@ -19957,7 +19995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (89147,'Ong Ching-Ming','M',173,63),
 (89148,'Hui Min \"Deborah\"\" Ong\"','F',176,66),
 (89149,'Ong Ewe Hock','M',163,55),
-(89150,'Ong Hock Eng','M',164,54),
+(89150,'Ong Hock Eng','M',164,54);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (89151,'Kuan Seng \"Jeffrey\"\" Ong\"','M',183,70),
 (89153,'Leonard Ong','M',170,68),
 (89154,'Ong Mei Lin','F',156,53),
@@ -20955,7 +20995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (90193,'Heiner Oviedo Moreira','M',170,57),
 (90194,'Luis Oviedo Bonilla','M',190,81),
 (90195,'Roberto Oscar Oviedo','M',186,84),
-(90196,'Raymond Ovinou','M',169,68),
+(90196,'Raymond Ovinou','M',169,68);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (90197,'Rgis Ovion','M',177,64),
 (90199,'Didier Janvier Ovono Ebang','M',185,79),
 (90200,'Aleksandr Andreyevich Ovsyankin','M',0,0),
@@ -21953,7 +21995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (91270,'Juan Natalio Papic Vilca','M',177,95),
 (91271,'Jaroslav Papiernik','M',179,81),
 (91272,'Alberth Papilaya','M',175,75),
-(91273,'Amiran Papinashvili','M',162,64),
+(91273,'Amiran Papinashvili','M',162,64);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (91274,'Eduard Papirov','M',172,73),
 (91275,'Ulrich Papke','M',193,95),
 (91277,'Andrs Papp','M',184,72),
@@ -22951,7 +22995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (92331,'Uro Pavlovi','M',178,83),
 (92332,'Aleksandar Pavlovi','M',201,90),
 (92333,'Rajan Pavlovic','M',195,100),
-(92334,'Slobodan Pavlovi','M',163,60),
+(92334,'Slobodan Pavlovi','M',163,60);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (92335,'Stevan Pavlovi','M',177,65),
 (92336,'Pavel Pavlovich','M',0,0),
 (92337,'Veronika Vladimirovna Pavlovich','F',176,68),
@@ -23949,7 +23995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (93372,'Mariano Prez Martnez','M',170,63),
 (93373,'Mario Prez Zuiga','M',180,72),
 (93374,'Mario Prez Saldivar','M',166,59),
-(93375,'Mario Prez Guadarrama','M',175,65),
+(93375,'Mario Prez Guadarrama','M',175,65);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (93376,'Marlon Alirio Prez Arango','M',175,68),
 (93377,'Mercedes Isabel Prez Tigreros','F',165,63),
 (93378,'Mercedes Prez Hernndez','F',176,76),
@@ -24947,7 +24995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (94417,'Guram Pherselidze','M',190,118),
 (94418,'Ph Hu Tnh','M',162,62),
 (94419,'Robert James \"Bob\"\" Phibbs\"','M',0,0),
-(94420,'James \"Jim\"\" Philbin\"','M',180,76),
+(94420,'James \"Jim\"\" Philbin\"','M',180,76);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (94421,'Patrick \"Paddy\"\" Philbin\"','M',0,98),
 (94422,'George Warren Philbrook','M',187,86),
 (94423,'Daniel \"Dan\"\" Philibert\"','M',183,77),
@@ -25945,7 +25995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (95485,'Davila Plocon','M',186,89),
 (95487,'Johannes Theodor Louis Plger','M',0,0),
 (95488,'Klaus-Dieter Ploghaus','M',186,110),
-(95489,'Henri Alexandre Plommet','M',0,0),
+(95489,'Henri Alexandre Plommet','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (95490,'Alexander Ploner','M',182,82),
 (95491,'Sebastian Ploner','M',0,0),
 (95492,'Richard Francis \"Dick\"\" Ploog\"','M',0,0),
@@ -26943,7 +26995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (96531,'Christian Pouget','M',180,82),
 (96533,'ric Claude Jacques Poujade','M',174,61),
 (96535,'Grard Poulain','M',178,69),
-(96536,'Stphane Poulat','M',181,69),
+(96536,'Stphane Poulat','M',181,69);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (96537,'Alexandre Casimir Charles Poulenard','M',0,0),
 (96538,'Louisa Pouli','F',162,57),
 (96539,'Marie-Philip Poulin','F',169,72),
@@ -27941,7 +27995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (97603,'Nadja Purtschert','F',164,52),
 (97604,'Allan Ruggles \"Al\"\" Purvis\"','M',0,0),
 (97605,'Daniel Scott Purvis','M',168,63),
-(97606,'Marie Purvis (-Morgan)','F',165,52),
+(97606,'Marie Purvis (-Morgan)','F',165,52);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (97607,'Nancy Carol Purvis','F',165,64),
 (97608,'Samantha Paula Purvis','F',170,59),
 (97609,'Thomas Charles \"Tom\"\" Purvis\"','M',0,0),
@@ -28939,7 +28995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (98634,'Angel Carlos Ramrez Snchez','M',188,92),
 (98635,'Arturo Jos Ramrez lvarez','M',170,65),
 (98636,'Brayan Fabricio Ramrez Euceda','M',177,66),
-(98637,'Carlos Alberto Ramrez Yepes','M',178,65),
+(98637,'Carlos Alberto Ramrez Yepes','M',178,65);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (98638,'Carlos Rodolfo Ramrez','M',0,0),
 (98639,'Daim D. Ramrez Echevarra','F',176,67),
 (98640,'Dubn Alberto Ramrez Rodrguez','M',177,64),
@@ -29937,7 +29995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (99675,'Rosa \"Ossi\"\" Reichert\"','F',0,0),
 (99676,'Wilhelm Reichert','M',0,0),
 (99677,'Karin Reichert-Frisch','F',172,55),
-(99678,'Rudolf Reichling','M',0,0),
+(99678,'Rudolf Reichling','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (99679,'Tobias Reichmann','M',188,87),
 (99680,'Alena Reichov (-Zmostn)','F',0,0),
 (99681,'Florian Reichstdter','M',180,71),
@@ -30935,7 +30995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (100734,'Morten Louis Rieker','M',185,75),
 (100735,'Jonathan Riekmann','M',192,74),
 (100736,'Alberts Rieksti','M',0,0),
-(100738,'Karolina Riemen','F',176,71),
+(100738,'Karolina Riemen','F',176,71);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (100739,'Hans-Jrgen Riemenschneider','M',184,84),
 (100740,'Yvon Riemer','M',173,76),
 (100741,'Mariya Vitalivna Riemien','F',171,61),
@@ -31933,7 +31995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (101792,'Jos Mara Rodrguez Roches','M',0,0),
 (101793,'Jos Rodrguez','M',167,51),
 (101794,'Jos Rafael Rodrguez Carbonell','M',161,60),
-(101795,'Jos Rodrguez Garca','M',175,65),
+(101795,'Jos Rodrguez Garca','M',175,65);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (101796,'Jos Antonio Rodrguez Martnez','M',0,0),
 (101797,'Jos Antonio Rodrguez Prez','M',186,88),
 (101798,'Jos Luis Rodrguez Aguilar','M',180,75),
@@ -32931,7 +32995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (102845,'Hella Roth (-Gromann)','F',166,60),
 (102846,'Jean Roth','M',0,0),
 (102847,'Lon Roth','M',0,0),
-(102848,'Michael Roth','M',194,88),
+(102848,'Michael Roth','M',194,88);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (102849,'Peter Roth','M',180,78),
 (102850,'Robert Roth','M',0,0),
 (102851,'Ulrich Roth','M',196,89),
@@ -33929,7 +33995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (103904,'Sauli Rytky','M',172,68),
 (103905,'Galina Mikhaylovna Rytova','F',175,71),
 (103906,'Jan Christian Rytter','M',0,0),
-(103907,'Ryu Bun-Hwa','M',176,65),
+(103907,'Ryu Bun-Hwa','M',176,65);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (103908,'Ryu Gwang-Ho','F',0,0),
 (103909,'Ryu Han-Su','M',168,70),
 (103910,'Ryu Hyeon-Jin','M',187,98),
@@ -34927,7 +34995,9 @@ INSERT INTO person VALUES (78956,'Janice Melbourne \"Jan\"\" Merrill\"','F',165,
 (104965,'Andrew Sambu','M',179,60),
 (104966,'Ezra Kenyoke Sambu','M',175,70),
 (104968,'Sandro Sambugaro','M',181,68),
-(104969,'Sambuugiin Dashdulam','F',178,78),
+(104969,'Sambuugiin Dashdulam','F',178,78);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (104970,'Sambuugiin Oyuuntsetseg','F',168,70),
 (104971,'Leonides Sam Snchez','M',188,90),
 (104972,'Alois Samec','M',0,0),
@@ -35925,7 +35995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (106009,'Liane Lissa Sato','F',162,55),
 (106010,'Maiko Sato','F',155,65),
 (106011,'Masahiro Sato','M',0,0),
-(106012,'Masako Sato','F',158,56),
+(106012,'Masako Sato','F',158,56);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (106013,'Masako Sato','F',160,56),
 (106014,'Megumi Sato','F',178,54),
 (106015,'Michihiro Sato','M',168,68),
@@ -36923,7 +36995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (107060,'Werner Schmid','M',168,69),
 (107061,'Werner Schmid','M',0,0),
 (107062,'Wilhelm Schmid','M',0,0),
-(107063,'Jennifer Lynn \"Jenny\"\" Schmidgall-Potter\"','F',163,66),
+(107063,'Jennifer Lynn \"Jenny\"\" Schmidgall-Potter\"','F',163,66);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (107064,'Corinne Schmidhauser','F',173,66),
 (107065,'Ren Schmidheiny','M',187,98),
 (107066,'Nicole Schmidhofer','F',157,59),
@@ -37921,7 +37995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (108103,'Agustn Sebasti lvarez','M',182,71),
 (108104,'Jude Felix Sebastian','M',162,62),
 (108105,'Julia Sebastin','F',178,70),
-(108106,'Mario Candido Sebastin','M',0,0),
+(108106,'Mario Candido Sebastin','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (108108,'Josef ebek','M',0,0),
 (108109,'Robert ebenik','M',181,74),
 (108110,'Moumi Sbergu','M',180,0),
@@ -38919,7 +38995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (109160,'Askhat Berleshevich Shakharov','M',181,73),
 (109161,'Borys Anfiyanovych Shakhlin','M',171,71),
 (109162,'Yury Avanesovich Shakhmuradov','M',175,78),
-(109163,'Mykhailo Opanasovych Shakhov','M',159,57),
+(109163,'Mykhailo Opanasovych Shakhov','M',159,57);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (109164,'Yuliya Shakhova','F',158,54),
 (109165,'Vadym Valeriyovych Shakhraichuk','M',189,92),
 (109166,'Sergey Semyonovich Shakhray','M',178,0),
@@ -39917,7 +39995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (110212,'Maksim Viktorovich Sidorov','M',188,120),
 (110213,'Nikolay Aleksandrovich Sidorov','M',190,84),
 (110214,'Oleg Sidorov','M',178,83),
-(110215,'Pavel Sidorov','M',195,90),
+(110215,'Pavel Sidorov','M',195,90);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (110216,'Vitaly Sidorov','M',195,135),
 (110217,'Anna Vladimirovna Sidorova','F',179,55),
 (110218,'Galina Vladimirovna Sidorova (-Beker)','F',155,55),
@@ -40915,7 +40995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (111259,'Amar Singh Sokhi','M',0,0),
 (111261,'Malkit Singh Sondh','M',170,74),
 (111262,'Kalbir Singh Takher','M',178,74),
-(111263,'Birender Singh Thapa','M',159,48),
+(111263,'Birender Singh Thapa','M',159,48);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (111264,'Khazan Singh Tokas','M',183,0),
 (111265,'Ravinder Singh Tut','M',168,62),
 (111266,'Kuldip Singh Uijeer','M',170,58),
@@ -41913,7 +41995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (112310,'John Alan Smith','M',174,64),
 (112311,'John Walton Smith','M',188,83),
 (112312,'John William Smith','M',170,62),
-(112313,'Jonathan Scott \"Jon\"\" Smith\"','M',190,91),
+(112313,'Jonathan Scott \"Jon\"\" Smith\"','M',190,91);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (112314,'Jonathan Alan Smith','M',195,93),
 (112315,'Joyce Esther Smith (Byatt-)','F',169,52),
 (112316,'Julie M. Smith','F',162,0),
@@ -42911,7 +42995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (113354,'Yuliya Vladimirovna Sotnikova','F',170,60),
 (113355,'Ivan Mykhailovych Sotnykov','M',0,0),
 (113356,'Yevhen Sotnykov','M',195,138),
-(113357,'Alexis Soto','M',172,66),
+(113357,'Alexis Soto','M',172,66);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (113359,'Catriel Andrs Soto','M',175,68),
 (113360,'Diana Patricia Soto','F',179,80),
 (113361,'Manuel Esteban Soto Ruz','M',170,62),
@@ -43909,7 +43995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (114402,'Potito Starace','M',190,85),
 (114403,'Alfred Dodd Starbird','M',195,0),
 (114404,'David Collin Starbrook','M',185,89),
-(114406,'Brandon Starc','M',188,71),
+(114406,'Brandon Starc','M',188,71);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (114407,'Boo Starevi','M',172,78),
 (114408,'Petra Starevi','F',168,61),
 (114409,'Karl Constantin Starck','M',0,0),
@@ -44907,7 +44995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (115445,'Vladimir Nikolayevich Stolypin','M',177,87),
 (115446,'Barbara Stolz (Dix-)','F',153,51),
 (115447,'Karsten Stolz','M',208,142),
-(115448,'Evelyn Stolze (-Rund)','F',164,58),
+(115448,'Evelyn Stolze (-Rund)','F',164,58);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (115449,'Fritz Stolze','M',0,0),
 (115450,'Karl-August Stolze','M',179,84),
 (115451,'Alena Stolzov (-Hltscherov)','F',169,55),
@@ -45905,7 +45995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (116476,'Sun Linlin','F',161,56),
 (116477,'Sun Longjiang','M',194,85),
 (116478,'Sun Man','F',176,64),
-(116479,'Sun Man','M',188,70),
+(116479,'Sun Man','M',188,70);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (116480,'Sun Meichen','F',175,63),
 (116481,'Sun Mengran','F',195,83),
 (116482,'Sun Mengxin','F',190,84),
@@ -46903,7 +46995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (117505,'Ervin Szerelemhegyi','M',0,0),
 (117506,'Jnos Szernyi','M',174,58),
 (117507,'Daniel Gregory \"Danny\"\" Szetela\"','M',180,73),
-(117508,'Tanja Szewczenko','F',153,46),
+(117508,'Tanja Szewczenko','F',153,46);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (117509,'Irena Szewiska-Kirszenstein','F',176,60),
 (117510,'Andreas Szigat','M',187,80),
 (117511,'Florencia Szigeti','F',170,56),
@@ -47901,7 +47995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (118547,'Russell Tapp','M',0,0),
 (118548,'Kaarle Tapper','M',190,84),
 (118549,'Melissa Tapper','F',166,65),
-(118550,'Richard Findlay Tapper','M',0,0),
+(118550,'Richard Findlay Tapper','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (118551,'Ashley Tara Tappin (-Doussan)','F',178,66),
 (118552,'Lionel Eric Tapscott','M',0,0),
 (118553,'Carlyle Carrol Tapsell','M',182,0),
@@ -48899,7 +48995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (119609,'Aleksander Johannes \"Jean\"\" Theslf\"','M',188,95),
 (119610,'Thet Ei Ei','F',0,0),
 (119611,'Thet U Lai','M',160,48),
-(119612,'Thet Zaw Win','M',162,55),
+(119612,'Thet Zaw Win','M',162,55);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (119613,'Madeleine Thtu','F',170,64),
 (119614,'Gudrun \"Gundi\"\" Theuerkauff (Vorbrich-)\"','F',159,53),
 (119615,'Jrgen Wolfgang Theuerkauff','M',180,72),
@@ -49897,7 +49995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (120651,'Klavdiya Aleksandrovna Tochonova (-Khlybova)','F',178,71),
 (120652,'Alec Frederick Tod','M',0,0),
 (120653,'Noriko Toda','F',163,59),
-(120654,'Sosuke Toda','M',166,55),
+(120654,'Sosuke Toda','M',166,55);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (120655,'Tefilo Toda Nishimura','M',165,60),
 (120656,'Vladimir Todac','M',175,71),
 (120657,'Brendan Todd','M',186,71),
@@ -50895,7 +50995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (121696,'Juan Jess Trapero Hidalgo','M',182,76),
 (121697,'Ral Trapero Gonzlez','M',160,57),
 (121698,'Tatyana Aleksandrovna Trapeznikova','F',170,66),
-(121699,'Stephen Patrick \"Steve\"\" Trapmore\"','M',192,90),
+(121699,'Stephen Patrick \"Steve\"\" Trapmore\"','M',192,90);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (121700,'Louise Trappitt','F',174,68),
 (121701,'Mrioara Trac (-Curelea)','F',172,68),
 (121702,'Gerti Trasha','M',165,69),
@@ -51893,7 +51995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (122741,'Vladas Turla','M',174,71),
 (122743,'Michel Turler','M',175,78),
 (122744,'Georges Turlier','M',173,72),
-(122745,'Daulet Bolatovich Turlykhanov','M',177,74),
+(122745,'Daulet Bolatovich Turlykhanov','M',177,74);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (122746,'Irak''li Turmanidze','M',182,130),
 (122747,'Zaza Turmanidze','M',186,130),
 (122748,'Bertrand Turnbull','M',0,0),
@@ -52891,7 +52995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (123780,'ivil Vaiciukeviit','F',164,54),
 (123781,'Modestas Vaiiulis','M',183,79),
 (123782,'Cornelia Vaida-Molnar','F',168,68),
-(123783,'Arnold Vaide','M',171,70),
+(123783,'Arnold Vaide','M',171,70);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (123784,'Petra Videanu (Mihalache-)','F',170,66),
 (123785,'Nicole Vaidiov','F',183,69),
 (123786,'Nirupama Vaidyanathan (-Sanjeev)','F',170,62),
@@ -53889,7 +53995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (124848,'Anne-Sophie Van Regemortel','F',173,63),
 (124849,'Marinus Cornelis \"Rinus\"\" van Rekum\"','M',0,0),
 (124850,'Willem \"Wim\"\" van Rekum\"','M',0,0),
-(124852,'Christo van Rensburg','M',185,73),
+(124852,'Christo van Rensburg','M',185,73);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (124853,'James Kingsley Johnson van Rensburg','M',0,60),
 (124855,'Jan Christiaan Johannes \"Johnny\"\" van Rensburg\"','M',0,0),
 (124856,'Reinhardt van Rensburg','M',185,73),
@@ -54887,7 +54995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (125906,'Mario Vera','M',170,76),
 (125907,'Norge Luis Vera Peralta','M',191,90),
 (125908,'Ricardo Cirilo Vera Rebollo','M',186,71),
-(125909,'Rolando Patricio Vera Rodas','M',155,47),
+(125909,'Rolando Patricio Vera Rodas','M',155,47);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (125910,'Sixto Vera Espnola','M',157,51),
 (125911,'Vicente Vera','M',170,72),
 (125912,'Walter Eustaquio Vera Barale','M',177,100),
@@ -55885,7 +55995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (126984,'Viktor Alekseyevich Vlasov','M',187,88),
 (126985,'Viktor Petrovich Vlasov','M',0,0),
 (126986,'Vladimir Vlasov','M',0,0),
-(126987,'Yuriy Volodymyrovych Vlasov','M',0,0),
+(126987,'Yuriy Volodymyrovych Vlasov','M',0,0);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (126988,'Yury Petrovich Vlasov','M',185,131),
 (126989,'Irina Nikolayevna Vlasova','F',172,57),
 (126990,'Sofiya Serhivna Vlasova','F',170,57),
@@ -56883,7 +56995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (128030,'Josef \"Sepp\"\" Walcher\"','M',178,77),
 (128031,'Michael Walchhofer','M',192,100),
 (128032,'Donald J. \"Don\"\" Walchuk\"','M',180,79),
-(128033,'Keshorn Walcott','M',183,90),
+(128033,'Keshorn Walcott','M',183,90);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (128034,'Omar Alejandro Walcott Roberts','M',203,111),
 (128035,'Petra Walczewski','F',166,52),
 (128036,'Marta Walczykiewicz','F',165,63),
@@ -57881,7 +57995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (129080,'Alan Webb','M',175,63),
 (129081,'Alison Webb','F',165,71),
 (129082,'Ameer Kenneth Webb','M',180,82),
-(129083,'Cheryl Leigh Webb','F',165,53),
+(129083,'Cheryl Leigh Webb','F',165,53);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (129084,'Clifton Sean Webb','M',188,95),
 (129085,'David A. Webb','M',163,50),
 (129086,'Ernest James \"Ernie\"\" Webb\"','M',174,68),
@@ -58879,7 +58995,9 @@ INSERT INTO person VALUES (105117,'Raatbek Kanylbekovich Sanatbayev','M',185,85)
 (130130,'Suzanna \"Anna\"\" Wibowo (Anggarkusuma-)\"','F',0,0),
 (130131,'Santi Wibowo (-Suter)','F',172,62),
 (130132,'Suryo Agung Wibowo','M',170,64),
-(130133,'Marcin Jzef Wichary','M',193,93),
+(130133,'Marcin Jzef Wichary','M',193,93);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (130134,'Ewald Wichert','M',177,75),
 (130135,'Lars Wichert','M',186,73),
 (130136,'Amara Wichikong','F',0,0),
@@ -59877,7 +59995,9 @@ INSERT INTO person VALUES (130517,'Georges Willems','M',0,0),
 (131170,'Werner \"Dutch\"\" Wittig\"','M',0,0),
 (131171,'Carl Gran Witting','M',177,85),
 (131172,'Franoise Wittington','F',168,60),
-(131173,'Eva Wittke (-Herbst)','F',172,63),
+(131173,'Eva Wittke (-Herbst)','F',172,63);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (131174,'Arthur Karl Johann Wittmaack','M',0,0),
 (131175,'Henry Curtis \"Harry\"\" (Erich Kurt-) Wittmann\"','M',185,0),
 (131177,'Bonnie Wittmeier (-Withington)','F',153,46),
@@ -60875,7 +60995,9 @@ INSERT INTO person VALUES (130517,'Georges Willems','M',0,0),
 (132204,'Aleksandr Yevgenyevich Yakovlev','M',0,0),
 (132205,'Boris Aleksandrovich Yakovlev','M',173,63),
 (132206,'Mikhail Vasilyevich Yakovlev','M',173,72),
-(132207,'Pavel Kuzmich Yakovlev','M',183,76),
+(132207,'Pavel Kuzmich Yakovlev','M',183,76);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (132208,'Roman Nikolayevich Yakovlev','M',201,92),
 (132209,'Sergey Anatolyevich Yakovlev','M',175,70),
 (132210,'Vasyl Leninitovych Yakovlev','M',179,66),
@@ -61873,7 +61995,9 @@ INSERT INTO person VALUES (130517,'Georges Willems','M',0,0),
 (133232,'Roger Jay Young','M',173,60),
 (133233,'Sarah Young (Taylor-)','F',174,62),
 (133234,'Scott Allen Young','M',185,91),
-(133235,'Sheila Grace Young (-Ochowicz)','F',163,59),
+(133235,'Sheila Grace Young (-Ochowicz)','F',163,59);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (133236,'Timothy \"Tim\"\" Young\"','M',197,89),
 (133237,'Timothy R. \"Tim\"\" Young\"','M',172,77),
 (133238,'Timothy Paul \"Tim\"\" Young\"','M',193,94),
@@ -62871,7 +62995,9 @@ INSERT INTO person VALUES (130517,'Georges Willems','M',0,0),
 (134276,'Valery Mikhaylovich Zelepukin','M',183,91),
 (134277,'Svitlana Zelepukina','F',147,40),
 (134278,'Jan elezn','M',185,86),
-(134279,'Mourad Zelfani','M',169,58),
+(134279,'Mourad Zelfani','M',169,58);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (134280,'Nedjelko \"Ned\"\" Zelic\"','M',186,0),
 (134281,'Dariusz Zelig','M',192,90),
 (134282,'Yury Zelikovich','M',187,87),
@@ -63869,7 +63995,9 @@ INSERT INTO person VALUES (130517,'Georges Willems','M',0,0),
 (135308,'Bla Zsitnik, Sr.','M',187,87),
 (135309,'Viktor Zsitva','M',174,72),
 (135310,'Zoltn Zsitva (Zawrzel-)','M',0,0),
-(135311,'Attila Zsivczky','M',193,82),
+(135311,'Attila Zsivczky','M',193,82);
+
+INSERT INTO olympics.dbo.person (id, full_name, gender, height, weight) VALUES
 (135312,'Gyrgyi Zsivczky-Farkas','F',170,60),
 (135313,'Gyula Zsivtzky','M',190,102),
 (135314,'Zsolt Zsoldos','M',176,78),
