@@ -1,14 +1,15 @@
-DROP TABLE IF EXISTS superhero.dbo.attribute;
+DROP TABLE IF EXISTS superhero.dbo.hero_attribute;
 
 CREATE TABLE superhero.dbo.hero_attribute (
   hero_id INT DEFAULT NULL,
   attribute_id INT DEFAULT NULL,
   attribute_value INT DEFAULT NULL,
-  CONSTRAINT fk_hat_at FOREIGN KEY (attribute_id) REFERENCES attribute (id),
-  CONSTRAINT fk_hat_hero FOREIGN KEY (hero_id) REFERENCES superhero (id)
+  CONSTRAINT fk_hat_at FOREIGN KEY (attribute_id) REFERENCES superhero.dbo.attribute (id),
+  CONSTRAINT fk_hat_hero FOREIGN KEY (hero_id) REFERENCES superhero.dbo.superhero (id)
 );
 
-INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value) VALUES (1,1,80),
+INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value) VALUES
+(1,1,80),
 (2,1,75),
 (3,1,95),
 (4,1,80),
@@ -978,7 +979,9 @@ INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value
 (422,2,10),
 (423,2,55),
 (424,2,100),
-(425,2,35),
+(425,2,35);
+
+INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value) VALUES
 (426,2,55),
 (427,2,100),
 (428,2,65),
@@ -1827,7 +1830,9 @@ INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value
 (685,3,85),
 (686,3,70),
 (687,3,30),
-(690,3,70),
+(690,3,70);
+
+INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value) VALUES
 (691,3,35),
 (692,3,50),
 (693,3,55),
@@ -2732,7 +2737,9 @@ INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value
 (277,5,35),
 (278,5,50),
 (280,5,25),
-(281,5,45),
+(281,5,45);
+
+INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value) VALUES
 (282,5,65),
 (283,5,10),
 (284,5,100),
@@ -3547,7 +3554,9 @@ INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value
 (506,6,35),
 (507,6,35),
 (508,6,10),
-(509,6,40),
+(509,6,40);
+
+INSERT INTO superhero.dbo.hero_attribute (hero_id, attribute_id, attribute_value) VALUES
 (510,6,85),
 (511,6,75),
 (513,6,70),

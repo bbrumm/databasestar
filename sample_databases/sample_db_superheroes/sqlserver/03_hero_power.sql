@@ -7,7 +7,8 @@ CREATE TABLE superhero.dbo.hero_power (
   CONSTRAINT fk_hpo_po FOREIGN KEY (power_id) REFERENCES superhero.dbo.superpower (id)
 );
 
-INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES
+(1,1),
 (1,18),
 (1,26),
 (1,31),
@@ -984,7 +985,9 @@ INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
 (143,101),
 (143,143),
 (144,1),
-(144,2),
+(144,2);
+
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES
 (144,6),
 (144,7),
 (144,10),
@@ -1880,7 +1883,9 @@ INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
 (255,108),
 (256,14),
 (257,9),
-(257,20),
+(257,20);
+
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES
 (257,33),
 (257,92),
 (258,2),
@@ -2771,7 +2776,9 @@ INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
 (384,22),
 (384,103),
 (385,1),
-(385,12),
+(385,12);
+
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES
 (385,13),
 (385,26),
 (385,34),
@@ -3599,7 +3606,9 @@ INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
 (492,6),
 (492,18),
 (492,26),
-(492,31),
+(492,31);
+
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES
 (492,39),
 (492,44),
 (492,61),
@@ -4472,7 +4481,9 @@ INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
 (622,126),
 (623,1),
 (623,9),
-(623,18),
+(623,18);
+
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES
 (623,31),
 (623,33),
 (623,39),
@@ -5449,7 +5460,9 @@ INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES (1,1),
 (730,1),
 (730,6),
 (730,9),
-(730,18),
+(730,18);
+
+INSERT INTO superhero.dbo.hero_power (hero_id, power_id) VALUES
 (730,22),
 (730,26),
 (730,31),

@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS superhero.dbo.superpower;
 DROP TABLE IF EXISTS superhero.dbo.superhero;
 DROP TABLE IF EXISTS superhero.dbo.gender;
 DROP TABLE IF EXISTS superhero.dbo.colour;
+DROP TABLE IF EXISTS superhero.dbo.attribute;
 DROP TABLE IF EXISTS superhero.dbo.race;
 DROP TABLE IF EXISTS superhero.dbo.publisher;
 DROP TABLE IF EXISTS superhero.dbo.alignment;
@@ -30,7 +31,8 @@ CREATE TABLE superhero.dbo.attribute (
   PRIMARY KEY (id)
 );
 
-INSERT INTO superhero.dbo.attribute VALUES (1,'Intelligence'),
+INSERT INTO superhero.dbo.attribute VALUES
+(1,'Intelligence'),
 (2,'Strength'),
 (3,'Speed'),
 (4,'Durability'),
