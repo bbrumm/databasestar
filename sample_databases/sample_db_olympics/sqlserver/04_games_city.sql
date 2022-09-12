@@ -1,19 +1,14 @@
+DROP TABLE IF EXISTS olympics.dbo.games_city;
 
-
-
-DROP TABLE IF EXISTS games_city;
-
-
-CREATE TABLE games_city (
+CREATE TABLE olympics.dbo.games_city (
   games_id INT DEFAULT NULL,
   city_id INT DEFAULT NULL,
-  CONSTRAINT fk_gci_city FOREIGN KEY (city_id) REFERENCES city (id),
-  CONSTRAINT fk_gci_gam FOREIGN KEY (games_id) REFERENCES games (id)
+  CONSTRAINT fk_gci_city FOREIGN KEY (city_id) REFERENCES olympics.dbo.city (id),
+  CONSTRAINT fk_gci_gam FOREIGN KEY (games_id) REFERENCES olympics.dbo.games (id)
 );
 
 
-
-INSERT INTO games_city VALUES
+INSERT INTO olympics.dbo.games_city VALUES
 (1,1),
 (2,2),
 (3,3),

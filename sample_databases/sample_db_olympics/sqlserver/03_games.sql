@@ -1,9 +1,6 @@
+DROP TABLE IF EXISTS olympics.dbo.games;
 
-
-DROP TABLE IF EXISTS games;
-
-
-CREATE TABLE games (
+CREATE TABLE olympics.dbo.games (
   id INT NOT NULL,
   games_year INT DEFAULT NULL,
   games_name varchar(100) DEFAULT NULL,
@@ -12,8 +9,7 @@ CREATE TABLE games (
 );
 
 
-
-INSERT INTO games VALUES
+INSERT INTO olympics.dbo.games VALUES
 (1,1992,'1992 Summer','Summer'),
 (2,2012,'2012 Summer','Summer'),
 (3,1920,'1920 Summer','Summer'),

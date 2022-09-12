@@ -1,17 +1,15 @@
+DROP DATABASE IF EXISTS olympics;
+CREATE DATABASE olympics;
 
+DROP TABLE IF EXISTS olympics.dbo.medal;
 
-DROP TABLE IF EXISTS medal;
-
-CREATE TABLE medal (
+CREATE TABLE olympics.dbo.medal (
   id INT NOT NULL,
   medal_name varchar(50) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-
-
-
-INSERT INTO medal VALUES
+INSERT INTO olympics.dbo.medal VALUES
 (1,'Gold'),
 (2,'Silver'),
 (3,'Bronze'),
@@ -19,16 +17,17 @@ INSERT INTO medal VALUES
 
 
 
-DROP TABLE IF EXISTS noc_region;
+DROP TABLE IF EXISTS olympics.dbo.noc_region;
 
-CREATE TABLE noc_region (
+CREATE TABLE olympics.dbo.noc_region (
   id INT NOT NULL,
   noc varchar(5) DEFAULT NULL,
   region_name varchar(200) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO noc_region VALUES (1,'AFG','Afghanistan'),
+INSERT INTO olympics.dbo.noc_region VALUES
+(1,'AFG','Afghanistan'),
 (2,'AHO','Netherlands Antilles'),
 (3,'ALB','Albania'),
 (4,'ALG','Algeria'),
@@ -262,18 +261,16 @@ INSERT INTO noc_region VALUES (1,'AFG','Afghanistan'),
 
 
 
-DROP TABLE IF EXISTS sport;
+DROP TABLE IF EXISTS olympics.dbo.sport;
 
-CREATE TABLE sport (
+CREATE TABLE olympics.dbo.sport (
   id INT NOT NULL,
   sport_name varchar(200) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
 
-
-
-INSERT INTO sport VALUES (1,'Aeronautics'),
+INSERT INTO olympics.dbo.sport VALUES (1,'Aeronautics'),
 (2,'Alpine Skiing'),
 (3,'Alpinism'),
 (4,'Archery'),
@@ -343,16 +340,17 @@ INSERT INTO sport VALUES (1,'Aeronautics'),
 
 
 
-DROP TABLE IF EXISTS city;
+DROP TABLE IF EXISTS olympics.dbo.city;
 
-CREATE TABLE city (
+CREATE TABLE olympics.dbo.city (
   id INT NOT NULL,
   city_name varchar(200) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
 
-INSERT INTO city VALUES (1,'Barcelona'),
+INSERT INTO olympics.dbo.city VALUES
+(1,'Barcelona'),
 (2,'London'),
 (3,'Antwerpen'),
 (4,'Paris'),
@@ -380,7 +378,7 @@ INSERT INTO city VALUES (1,'Barcelona'),
 (26,'Seoul'),
 (27,'Berlin'),
 (28,'Oslo'),
-(29,'Cortina d\'Ampezzo'),
+(29,'Cortina d''Ampezzo'),
 (30,'Melbourne'),
 (31,'Roma'),
 (32,'Amsterdam'),
