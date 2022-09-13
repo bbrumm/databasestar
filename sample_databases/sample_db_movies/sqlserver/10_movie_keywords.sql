@@ -1,17 +1,15 @@
+DROP TABLE IF EXISTS movies.dbo.movie_keywords;
 
-
-
-DROP TABLE IF EXISTS movie_keywords;
-
-CREATE TABLE movie_keywords (
+CREATE TABLE movies.dbo.movie_keywords (
   movie_id INT DEFAULT NULL,
   keyword_id INT DEFAULT NULL,
-  CONSTRAINT fk_mk_keyword FOREIGN KEY (keyword_id) REFERENCES keyword (keyword_id),
-  CONSTRAINT fk_mk_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
+  CONSTRAINT fk_mk_keyword FOREIGN KEY (keyword_id) REFERENCES movies.dbo.keyword (keyword_id),
+  CONSTRAINT fk_mk_movie FOREIGN KEY (movie_id) REFERENCES movies.dbo.movie (movie_id)
 );
 
 
-INSERT INTO movie_keywords VALUES (5,612),
+INSERT INTO movies.dbo.movie_keywords (movie_id, keyword_id) VALUES
+(5,612),
 (5,613),
 (5,616),
 (5,622),

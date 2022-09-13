@@ -1,19 +1,14 @@
+DROP TABLE IF EXISTS movies.dbo.production_company;
 
-
-
-DROP TABLE IF EXISTS production_company;
-
-CREATE TABLE production_company (
+CREATE TABLE movies.dbo.production_company (
   company_id INT NOT NULL,
   company_name varchar(200) DEFAULT NULL,
   PRIMARY KEY (company_id)
 );
 
 
-
-
-
-INSERT INTO production_company VALUES (1,'Lucasfilm'),
+INSERT INTO movies.dbo.production_company (company_id, company_name) VALUES
+(1,'Lucasfilm'),
 (2,'Walt Disney Pictures'),
 (3,'Pixar Animation Studios'),
 (4,'Paramount Pictures'),

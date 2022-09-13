@@ -1,9 +1,9 @@
+DROP DATABASE IF EXISTS movies;
 CREATE DATABASE movies;
-USE movies;
 
-DROP TABLE IF EXISTS country;
+DROP TABLE IF EXISTS movies.dbo.country;
 
-CREATE TABLE country (
+CREATE TABLE movies.dbo.country (
   country_id INT NOT NULL,
   country_iso_code varchar(10) DEFAULT NULL,
   country_name varchar(200) DEFAULT NULL,
@@ -11,9 +11,7 @@ CREATE TABLE country (
 );
 
 
-
-
-INSERT INTO country VALUES
+INSERT INTO movies.dbo.country (country_id, country_iso_code, country_name) VALUES
 (128,'AE','United Arab Emirates'),
 (129,'AF','Afghanistan'),
 (130,'AO','Angola'),
@@ -104,37 +102,31 @@ INSERT INTO country VALUES
 (215,'ZA','South Africa');
 
 
+DROP TABLE IF EXISTS movies.dbo.gender;
 
-DROP TABLE IF EXISTS gender;
-
-CREATE TABLE gender (
+CREATE TABLE movies.dbo.gender (
   gender_id INT NOT NULL,
   gender VARCHAR(20) DEFAULT NULL,
   PRIMARY KEY (gender_id)
 );
 
 
-
-
-INSERT INTO gender VALUES
+INSERT INTO movies.dbo.gender (gender_id, gender) VALUES
 (0,'Unspecified'),
 (1,'Female'),
 (2,'Male');
 
 
+DROP TABLE IF EXISTS movies.dbo.genre;
 
-
-DROP TABLE IF EXISTS genre;
-
-CREATE TABLE genre (
+CREATE TABLE movies.dbo.genre (
   genre_id INT NOT NULL,
   genre_name varchar(100) DEFAULT NULL,
   PRIMARY KEY (genre_id)
 );
 
 
-
-INSERT INTO genre VALUES
+INSERT INTO movies.dbo.genre (genre_id, genre_name) VALUES
 (12,'Adventure'),
 (14,'Fantasy'),
 (16,'Animation'),
@@ -157,9 +149,9 @@ INSERT INTO genre VALUES
 (10770,'TV Movie');
 
 
-DROP TABLE IF EXISTS language;
+DROP TABLE IF EXISTS movies.dbo.language;
 
-CREATE TABLE language (
+CREATE TABLE movies.dbo.language (
   language_id INT NOT NULL,
   language_code varchar(10) DEFAULT NULL,
   language_name varchar(500) DEFAULT NULL,
@@ -168,7 +160,8 @@ CREATE TABLE language (
 
 
 
-INSERT INTO language VALUES (24574,'en','English'),
+INSERT INTO movies.dbo.language (language_id, language_code, language_name) VALUES
+(24574,'en','English'),
 (24575,'sv','svenska'),
 (24576,'de','Deutsch'),
 (24577,'xx','No Language'),
@@ -258,35 +251,29 @@ INSERT INTO language VALUES (24574,'en','English'),
 (24701,'nb','Unknown');
 
 
+DROP TABLE IF EXISTS movies.dbo.language_role;
 
-
-
-
-DROP TABLE IF EXISTS language_role;
-
-
-CREATE TABLE language_role (
+CREATE TABLE movies.dbo.language_role (
   role_id INT NOT NULL,
   language_role varchar(20) DEFAULT NULL,
   PRIMARY KEY (role_id)
 );
 
-INSERT INTO language_role VALUES
+INSERT INTO movies.dbo.language_role (role_id, language_role) VALUES
 (1,'Original'),
 (2,'Spoken');
 
 
+DROP TABLE IF EXISTS movies.dbo.department;
 
-DROP TABLE IF EXISTS department;
-
-CREATE TABLE department (
+CREATE TABLE movies.dbo.department (
   department_id INT NOT NULL,
   department_name varchar(200) DEFAULT NULL,
   PRIMARY KEY (department_id)
 );
 
 
-INSERT INTO department VALUES
+INSERT INTO movies.dbo.department (department_id, department_name) VALUES
 (1,'Camera'),
 (2,'Directing'),
 (3,'Production'),
@@ -299,4 +286,3 @@ INSERT INTO department VALUES
 (10,'Visual Effects'),
 (11,'Lighting'),
 (12,'Actors');
-

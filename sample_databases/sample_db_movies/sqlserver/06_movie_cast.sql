@@ -1,8 +1,6 @@
+DROP TABLE IF EXISTS movies.dbo.movie_cast;
 
-DROP TABLE IF EXISTS movie_cast;
-
-
-CREATE TABLE movie_cast (
+CREATE TABLE movies.dbo.movie_cast (
   movie_id INT DEFAULT NULL,
   person_id INT DEFAULT NULL,
   character_name varchar(400) DEFAULT NULL,
@@ -14,9 +12,7 @@ CREATE TABLE movie_cast (
 );
 
 
-
-
-INSERT INTO movie_cast VALUES
+INSERT INTO movies.dbo.movie_cast VALUES
 (285,85,'Captain Jack Sparrow',2,0),
 (285,114,'Will Turner',2,1),
 (285,116,'Elizabeth Swann',1,2),

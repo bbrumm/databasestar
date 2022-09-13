@@ -1,17 +1,15 @@
+DROP TABLE IF EXISTS movies.dbo.production_country;
 
-
-
-DROP TABLE IF EXISTS production_country;
-
-CREATE TABLE production_country (
+CREATE TABLE movies.dbo.production_country (
   movie_id INT DEFAULT NULL,
   country_id INT DEFAULT NULL,
-  CONSTRAINT fk_pc_country FOREIGN KEY (country_id) REFERENCES country (country_id),
-  CONSTRAINT fk_pc_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
+  CONSTRAINT fk_pc_country FOREIGN KEY (country_id) REFERENCES movies.dbo.country (country_id),
+  CONSTRAINT fk_pc_movie FOREIGN KEY (movie_id) REFERENCES movies.dbo.movie (movie_id)
 );
 
 
-INSERT INTO production_country VALUES (5,214),
+INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
+(5,214),
 (11,214),
 (12,214),
 (13,214),

@@ -1,16 +1,15 @@
+DROP TABLE IF EXISTS movies.dbo.movie_genres;
 
-
-DROP TABLE IF EXISTS movie_genres;
-
-CREATE TABLE movie_genres (
+CREATE TABLE movies.dbo.movie_genres (
   movie_id INT DEFAULT NULL,
   genre_id INT DEFAULT NULL,
-  CONSTRAINT fk_mg_genre FOREIGN KEY (genre_id) REFERENCES genre (genre_id),
-  CONSTRAINT fk_mg_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
+  CONSTRAINT fk_mg_genre FOREIGN KEY (genre_id) REFERENCES movies.dbo.genre (genre_id),
+  CONSTRAINT fk_mg_movie FOREIGN KEY (movie_id) REFERENCES movies.dbo.movie (movie_id)
 );
 
 
-INSERT INTO movie_genres VALUES (5,35),
+INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
+(5,35),
 (5,80),
 (11,12),
 (11,28),

@@ -1,17 +1,13 @@
+DROP TABLE IF EXISTS movies.dbo.movie_company;
 
-
-DROP TABLE IF EXISTS movie_company;
-
-CREATE TABLE movie_company (
+CREATE TABLE movies.dbo.movie_company (
   movie_id INT DEFAULT NULL,
   company_id INT DEFAULT NULL,
-  CONSTRAINT fk_mc_comp FOREIGN KEY (company_id) REFERENCES production_company (company_id),
-  CONSTRAINT fk_mc_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
+  CONSTRAINT fk_mc_comp FOREIGN KEY (company_id) REFERENCES movies.dbo.production_company (company_id),
+  CONSTRAINT fk_mc_movie FOREIGN KEY (movie_id) REFERENCES movies.dbo.movie (movie_id)
 );
 
-
-
-INSERT INTO movie_company VALUES (5,14),
+INSERT INTO movies.dbo.movie_company VALUES (5,14),
 (5,59),
 (11,1),
 (11,306),
