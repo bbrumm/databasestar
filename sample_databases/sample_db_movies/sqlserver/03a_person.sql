@@ -41080,7 +41080,9 @@ INSERT INTO movies.dbo.person (person_id, person_name) VALUES
 (185102,'Jackie Richardson'),
 (185111,'Jefferson Mappin'),
 (185116,'Marilyn Boyle');
-INSERT INTO person VALUES (185147,'Sam Moses'),
+
+
+INSERT INTO movies.dbo.person VALUES (185147,'Sam Moses'),
 (185154,'Vincent Marino'),
 (185165,'Pedro Salvu00edn'),
 (185177,'Les Porter'),

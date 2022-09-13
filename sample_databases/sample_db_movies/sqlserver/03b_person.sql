@@ -29162,7 +29162,9 @@ INSERT INTO movies.dbo.person (person_id, person_name) VALUES
 (1484712,'Stefani N. Deoul'),
 (1484713,'Arthur Rowsell'),
 (1484714,'Suzanne Benoit');
-INSERT INTO person VALUES (1484779,'Deana Deatherage'),
+
+INSERT INTO movies.dbo.person (person_id, person_name) VALUES
+(1484779,'Deana Deatherage'),
 (1484863,'Yves Michel-Beneche'),
 (1484864,'Elizabeth Greenberg'),
 (1484865,'Liam Noble'),

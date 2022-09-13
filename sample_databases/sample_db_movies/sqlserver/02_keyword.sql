@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS movies.dbo.keyword;
 
 CREATE TABLE movies.dbo.keyword (
   keyword_id INT NOT NULL,
-  keyword_name INT DEFAULT NULL,
+  keyword_name VARCHAR(200) DEFAULT NULL,
   PRIMARY KEY (keyword_id)
 );
 

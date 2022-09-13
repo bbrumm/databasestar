@@ -9210,7 +9210,10 @@ INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_i
 (10133,538687,'Speaker Omaha',2,18),
 (10133,200625,'Desk Clerk Boise',0,19),
 (10133,1205722,'Hotel Janitor Boise',2,20);
-INSERT INTO movie_cast VALUES (10133,1165052,'Convention Waiter Boise',2,21),
+
+
+INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
+(10133,1165052,'Convention Waiter Boise',2,21),
 (10133,12489,'Speaker #1 Boise',0,22),
 (10133,214063,'Speaker #3 Boise',0,23),
 (10133,185177,'Man In White Coat Boise',2,24),
@@ -37260,7 +37263,9 @@ INSERT INTO movie_cast VALUES (10133,1165052,'Convention Waiter Boise',2,21),
 (318846,1560335,'Swimmer',1,90),
 (318846,231855,'Woman at Party',1,91),
 (318846,19011,'Himself (archive footage)',2,92);
-INSERT INTO movie_cast VALUES (318846,1746014,'Casino Patron / Pool Party goer',0,93),
+
+INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
+(318846,1746014,'Casino Patron / Pool Party goer',0,93),
 (318846,1697155,'Club Dancer',0,94),
 (318846,1737691,'Bank of America Executive',1,95),
 (318846,1737691,'Front Point Receptionist',1,96),

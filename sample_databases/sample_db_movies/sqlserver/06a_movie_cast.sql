@@ -6,9 +6,9 @@ CREATE TABLE movies.dbo.movie_cast (
   character_name varchar(400) DEFAULT NULL,
   gender_id INT DEFAULT NULL,
   cast_order INT DEFAULT NULL,
-  CONSTRAINT fk_mca_gender FOREIGN KEY (gender_id) REFERENCES gender (gender_id),
-  CONSTRAINT fk_mca_movie FOREIGN KEY (movie_id) REFERENCES movie (movie_id),
-  CONSTRAINT fk_mca_per FOREIGN KEY (person_id) REFERENCES person (person_id)
+  CONSTRAINT fk_mca_gender FOREIGN KEY (gender_id) REFERENCES movies.dbo.gender (gender_id),
+  CONSTRAINT fk_mca_movie FOREIGN KEY (movie_id) REFERENCES movies.dbo.movie (movie_id),
+  CONSTRAINT fk_mca_per FOREIGN KEY (person_id) REFERENCES movies.dbo.person (person_id)
 );
 
 
@@ -29710,7 +29710,9 @@ INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_i
 (142,1772,'LaShawn',1,9),
 (142,35029,'Randall',2,10),
 (142,19489,'John Twist',2,11),
-(142,51072,'Alma Jr. (Age 19)',1,12);INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
+(142,51072,'Alma Jr. (Age 19)',1,12);
+
+INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
 (142,1081513,'Basque',0,13),
 (142,10362,'Mrs. Twist',1,14),
 (9603,5588,'Cher Horowitz',0,0),
@@ -29790,7 +29792,10 @@ INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_i
 (613,50792,'Wachsoldat vor der Wolfsschanze (uncredited)',0,62),
 (613,1394311,'Mohnke''s Adjutant im Bunker (uncredited)',2,63),
 (1913,3810,'Ramu00f3n Sampedro',2,0);
-INSERT INTO movie_cast VALUES (1913,19907,'Julia',1,1),
+
+
+INSERT INTO movies.dbo.movie_cast (movie_id, person_id, character_name, gender_id, cast_order) VALUES
+(1913,19907,'Julia',1,1),
 (1913,2759,'Rosa',1,2),
 (1913,19908,'Joaquu00edn',1,3),
 (1913,19909,'Padre Francisco',2,4),

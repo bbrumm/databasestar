@@ -1562,7 +1562,10 @@ INSERT INTO movies.dbo.movie_crew (movie_id, person_id, department_id, job) VALU
 (12610,1447563,10,'Animation'),
 (12610,1447566,10,'Animation'),
 (12610,1447590,2,'Layout');
-INSERT INTO movie_crew VALUES (12610,1451265,10,'Visual Development'),
+
+
+INSERT INTO movies.dbo.movie_crew (movie_id, person_id, department_id, job) VALUES
+(12610,1451265,10,'Visual Development'),
 (12610,1451635,4,'Storyboard'),
 (12610,1451661,9,'Special Effects'),
 (12610,1451676,10,'Visual Effects'),
@@ -31796,7 +31799,10 @@ INSERT INTO movie_crew VALUES (12610,1451265,10,'Visual Development'),
 (241259,1401118,9,'Choreographer'),
 (241259,1402921,8,'Hairstylist'),
 (241259,1403467,9,'Visual Effects Editor');
-INSERT INTO movie_crew VALUES (241259,1404244,1,'Helicopter Camera'),
+
+
+INSERT INTO movies.dbo.movie_crew (movie_id, person_id, department_id, job) VALUES
+(241259,1404244,1,'Helicopter Camera'),
 (241259,1404845,10,'Visual Effects Producer'),
 (241259,1408354,1,'Steadicam Operator'),
 (241259,1408394,11,'Gaffer'),
@@ -32851,7 +32857,7 @@ INSERT INTO movie_crew VALUES (241259,1404244,1,'Helicopter Camera'),
 (147441,1459941,9,'Transportation Coordinator'),
 (147441,1459942,9,'Transportation Coordinator'),
 (147441,1459944,3,'Location Manager'),
-(147441,1459946,9,'Actor\'s Assistant'),
+(147441,1459946,9,'Actor''s Assistant'),
 (147441,1459947,3,'Casting'),
 (82702,11098,6,'Original Music Composer'),
 (82702,12090,3,'Casting'),
@@ -58583,7 +58589,7 @@ INSERT INTO movie_crew VALUES (241259,1404244,1,'Helicopter Camera'),
 (45317,5390,7,'Art Direction'),
 (45317,5957,7,'Set Decoration'),
 (45317,6431,3,'Executive Producer'),
-(45317,6942,9,'Actor\'s Assistant'),
+(45317,6942,9,'Actor''s Assistant'),
 (45317,7494,3,'Casting'),
 (45317,17147,5,'Editor'),
 (45317,11649,9,'Thanks'),
@@ -60649,7 +60655,10 @@ INSERT INTO movie_crew VALUES (241259,1404244,1,'Helicopter Camera'),
 (152747,1020052,3,'Executive Producer'),
 (152747,1059009,6,'Original Music Composer'),
 (152747,1062336,3,'Producer');
-INSERT INTO movie_crew VALUES (152747,1080589,3,'Producer'),
+
+
+INSERT INTO movies.dbo.movie_crew (movie_id, person_id, department_id, job) VALUES
+(152747,1080589,3,'Producer'),
 (152747,1221442,10,'Visual Effects Supervisor'),
 (152747,1233109,10,'Visual Effects Supervisor'),
 (152747,1276817,7,'Production Design'),

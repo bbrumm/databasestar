@@ -10023,7 +10023,7 @@ INSERT INTO movies.dbo.movie_crew (movie_id, person_id, department_id, job) VALU
 (1422,3769,1,'Director of Photography'),
 (1422,5333,8,'Makeup Artist'),
 (1422,6191,7,'Set Decoration'),
-(1422,6942,9,'Actor\'s Assistant'),
+(1422,6942,9,'Actor''s Assistant'),
 (1422,7531,2,'Assistant Director'),
 (1422,9027,8,'Costume Design'),
 (1422,9178,7,'Production Design'),
@@ -30287,7 +30287,10 @@ INSERT INTO movies.dbo.movie_crew (movie_id, person_id, department_id, job) VALU
 (4970,137198,3,'Casting Associate'),
 (4970,189655,2,'First Assistant Director'),
 (4970,405004,6,'Sound Mixer');
-INSERT INTO movie_crew VALUES (4970,946610,3,'Line Producer'),
+
+
+INSERT INTO movies.dbo.movie_crew (movie_id, person_id, department_id, job) VALUES
+(4970,946610,3,'Line Producer'),
 (4970,985774,3,'Unit Production Manager'),
 (4970,1081053,6,'Sound Designer'),
 (4970,1119658,5,'First Assistant Editor'),
