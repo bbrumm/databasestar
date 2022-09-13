@@ -906,7 +906,7 @@ INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (1874,215),
 (1878,214),
 (1880,214),
-(1883,214),
+(1883,214);INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (1885,214),
 (1887,161),
 (1887,214),
@@ -1806,7 +1806,7 @@ INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (8999,214),
 (9003,162),
 (9007,214),
-(9008,214),
+(9008,214);INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (9009,214),
 (9012,214),
 (9013,214),
@@ -2706,7 +2706,7 @@ INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (11013,214),
 (11015,151),
 (11015,177),
-(11015,195),
+(11015,195);INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (11015,162),
 (11015,214),
 (11022,142),
@@ -3606,7 +3606,7 @@ INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (16617,159),
 (16617,193),
 (16617,162),
-(16617,214),
+(16617,214);INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (16619,214),
 (16620,214),
 (16633,214),
@@ -4506,7 +4506,7 @@ INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (39437,214),
 (39451,214),
 (39486,214),
-(39513,214),
+(39513,214);INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (39513,162),
 (39514,214),
 (39538,214),
@@ -5406,7 +5406,7 @@ INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (96534,214),
 (96721,151),
 (96721,162),
-(96724,161),
+(96724,161);INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (96724,162),
 (97020,142),
 (97020,214),
@@ -6306,7 +6306,7 @@ INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (316727,214),
 (318040,214),
 (318040,161),
-(318846,214),
+(318846,214);INSERT INTO movies.dbo.production_country (movie_id, country_id) VALUES
 (318850,214),
 (319069,151),
 (319069,170),

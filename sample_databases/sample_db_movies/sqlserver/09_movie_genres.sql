@@ -906,7 +906,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (747,27),
 (747,35),
 (752,14),
-(752,28),
+(752,28);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (752,53),
 (754,28),
 (754,53),
@@ -1806,7 +1806,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (2057,53),
 (2057,9648),
 (2057,10749),
-(2059,12),
+(2059,12);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (2059,28),
 (2059,53),
 (2059,9648),
@@ -2706,7 +2706,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (6968,53),
 (6968,80),
 (6972,18),
-(6973,18),
+(6973,18);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (6973,36),
 (6973,53),
 (6973,80),
@@ -3606,7 +3606,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (9457,12),
 (9457,27),
 (9457,28),
-(9457,878),
+(9457,878);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (9459,36),
 (9459,99),
 (9459,10402),
@@ -4506,7 +4506,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (10283,27),
 (10283,53),
 (10285,14),
-(10285,27),
+(10285,27);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (10285,53),
 (10288,18),
 (10288,27),
@@ -5406,7 +5406,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (11551,14),
 (11551,28),
 (11551,35),
-(11551,878),
+(11551,878);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (11560,18),
 (11560,53),
 (11560,80),
@@ -6306,7 +6306,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (14160,35),
 (14160,10751),
 (14161,12),
-(14161,28),
+(14161,28);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (14161,878),
 (14164,12),
 (14164,14),
@@ -7206,7 +7206,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (19898,28),
 (19898,53),
 (19898,878),
-(19898,9648),
+(19898,9648);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (19899,35),
 (19899,10749),
 (19901,14),
@@ -8106,7 +8106,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (31064,18),
 (31064,53),
 (31117,35),
-(31117,10751),
+(31117,10751);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (31163,35),
 (31163,10749),
 (31163,10769),
@@ -9006,7 +9006,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (46503,53),
 (46503,80),
 (46503,9648),
-(46503,10749),
+(46503,10749);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (46528,12),
 (46528,14),
 (46528,28),
@@ -9906,7 +9906,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (74510,99),
 (74534,18),
 (74534,35),
-(74536,18),
+(74536,18);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (74536,53),
 (74536,80),
 (74643,18),
@@ -10806,7 +10806,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (153518,10751),
 (153795,18),
 (153795,35),
-(156022,28),
+(156022,28);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (156022,53),
 (156022,80),
 (157058,35),
@@ -11706,7 +11706,7 @@ INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (290391,53),
 (290555,27),
 (290555,28),
-(290595,12),
+(290595,12);INSERT INTO movies.dbo.movie_genres (movie_id, genre_id) VALUES
 (290595,18),
 (290595,28),
 (290751,18),

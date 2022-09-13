@@ -908,7 +908,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (5966,24574,2),
 (5971,24574,2),
 (5994,24574,2),
-(6016,24574,2),
+(6016,24574,2);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (6020,24574,2),
 (6023,24574,2),
 (6038,24574,2),
@@ -1808,7 +1808,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (11062,24574,2),
 (11065,24574,2),
 (11066,24574,2),
-(11072,24574,2),
+(11072,24574,2);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (11086,24574,2),
 (11090,24574,2),
 (11091,24574,2),
@@ -2708,7 +2708,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (23048,24574,2),
 (23049,24574,2),
 (23069,24574,2),
-(23082,24574,2),
+(23082,24574,2);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (23168,24574,2),
 (23169,24574,2),
 (23172,24574,2),
@@ -3608,7 +3608,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (76338,24574,2),
 (76341,24574,2),
 (76349,24574,2),
-(76487,24574,2),
+(76487,24574,2);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (76489,24574,2),
 (76492,24574,2),
 (76493,24574,2),
@@ -4508,7 +4508,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (9557,24575,2),
 (10238,24575,2),
 (12093,24575,2),
-(13491,24575,2),
+(13491,24575,2);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (14729,24575,2),
 (19913,24575,2),
 (29920,24575,2),
@@ -5408,7 +5408,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (2370,24580,2),
 (2503,24580,2),
 (2539,24580,2),
-(2575,24580,2),
+(2575,24580,2);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (2604,24580,2),
 (3089,24580,2),
 (3472,24580,2),
@@ -6308,7 +6308,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (1656,24595,2),
 (1722,24595,2),
 (1813,24595,2),
-(1901,24595,2),
+(1901,24595,2);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (1985,24595,2),
 (2148,24595,2),
 (2501,24595,2),
@@ -7208,7 +7208,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (1639,24574,1),
 (80274,24574,1),
 (1571,24574,1),
-(120,24574,1),
+(120,24574,1);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (10204,24574,1),
 (8489,24574,1),
 (10588,24574,1),
@@ -8108,7 +8108,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (257211,24574,1),
 (323675,24574,1),
 (9361,24574,1),
-(1677,24574,1),
+(1677,24574,1);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (187,24574,1),
 (7461,24574,1),
 (16538,24574,1),
@@ -9008,7 +9008,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (103370,24574,1),
 (1051,24574,1),
 (376659,24574,1),
-(10073,24574,1),
+(10073,24574,1);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (16690,24574,1),
 (273895,24574,1),
 (14873,24574,1),
@@ -9908,7 +9908,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (2088,24574,1),
 (10388,24574,1),
 (1640,24574,1),
-(25520,24574,1),
+(25520,24574,1);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (27342,24574,1),
 (13689,24574,1),
 (67911,24574,1),
@@ -10808,7 +10808,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (92182,24574,1),
 (72213,24574,1),
 (990,24574,1),
-(55604,24574,1),
+(55604,24574,1);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (20862,24574,1),
 (2771,24574,1),
 (80,24574,1),
@@ -11708,7 +11708,7 @@ INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id)
 (209274,24606,1),
 (217708,24607,1),
 (7504,24610,1),
-(14395,24610,1),
+(14395,24610,1);INSERT INTO movies.dbo.movie_languages (movie_id, language_id, language_role_id) VALUES
 (58051,24610,1),
 (32740,24610,1),
 (132316,24610,1),
