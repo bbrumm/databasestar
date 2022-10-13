@@ -100,6 +100,7 @@ FETCH FIRST 5 ROWS ONLY;
 /*
 Row Limiting - SQL Server
 */
+
 SELECT TOP 5 cust_id, SUM(order_value)
 FROM cust_order
 GROUP BY cust_id
@@ -250,6 +251,7 @@ WHERE assigned_to_id = ?;
 /*
 Pivot - Oracle
 */
+
 SELECT *
 FROM cust_sales
 PIVOT (
@@ -300,7 +302,7 @@ Pivot - Postgres
 
 SELECT *
 FROM   crosstab(
-   'SELECT product_name, store_location, num_sales
-    FROM   product_sales
-    ORDER  BY 1,2'  -- could also just be "ORDER BY 1" here
-   ) AS num_sales ("Product_Name" text, "North" text, "Central" text, "South" text, "West" text);
+  'SELECT product_name, store_location, num_sales
+  FROM   product_sales
+  ORDER  BY 1,2'
+) AS num_sales ("Product_Name" text, "North" text, "Central" text, "South" text, "West" text);
