@@ -1,0 +1,15 @@
+/*
+Temp Table - Oracle
+*/
+
+CREATE GLOBAL TEMPORARY TABLE temp_customers (
+id NUMBER(10),
+cust_name VARCHAR2(100)
+)
+ON COMMIT DELETE ROWS;
+
+CREATE PRIVATE TEMPORARY TABLE ora$ptt_temp_customers (
+id NUMBER(10),
+cust_name VARCHAR2(100)
+)
+ON COMMIT DROP DEFINITION;
