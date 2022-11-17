@@ -8,5 +8,9 @@ FROM   crosstab(
   FROM   product_sales
   ORDER  BY 1,2'
 ) AS num_sales (
-    "Product_Name" text, "North" text, "Central" text, "South" text, "West" text
+    "Product_Name" text, 
+    "North" text, 
+    "Central" text,
+    "South" text, 
+    "West" text
 );

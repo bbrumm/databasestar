@@ -7,6 +7,7 @@ CREATE TABLE orders (
   order_date DATE,
   order_total INT
 );
+
 INSERT INTO orders (order_id, order_date, order_total) VALUES
 (1, '2022-04-03', 100),
 (2, '2022-04-03', 250),
