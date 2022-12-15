@@ -26,6 +26,22 @@ CREATE TABLE sales_order (
   CONSTRAINT fk_salesorder_per FOREIGN KEY (person_id) REFERENCES person(person_id)
 );
 
+
+
+--Insert Company
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (1, 'ABC Company', 'Chicago', 20);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (2, 'Carpet Central', NULL, 150);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (3, 'PM and Co', 'Portland', NULL);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (4, 'DE Consulting', 'New York City', 3200);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (5, 'Big Store Electricians', 'Miami', 15);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (6, 'Wands R Us', 'Miami', 80);
+
 --Insert Person
 INSERT INTO person (person_id, first_name, last_name, company_id, active_status)
 VALUES (1, 'John', 'Smith', 1, 'Active');
@@ -48,20 +64,6 @@ VALUES (9, 'Mary', 'Watson', 'Active');
 INSERT INTO person (person_id, first_name, last_name, company_id, active_status)
 VALUES (10, 'Anna', 'Storm', 5, 'Active');
 
-
---Insert Company
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (1, 'ABC Company', 'Chicago', 20);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (2, 'Carpet Central', NULL, 150);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (3, 'PM and Co', 'Portland', NULL);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (4, 'DE Consulting', 'New York City', 3200);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (5, 'Big Store Electricians', 'Miami', 15);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (6, 'Wands R Us', 'Miami', 80);
 
 --Sales Order
 INSERT INTO sales_order (id, person_id, order_date, order_value) VALUES (1, 2, '2020-12-5', 120);

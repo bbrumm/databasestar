@@ -23,6 +23,19 @@ CREATE TABLE person (
 );
 
 
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (1, 'ABC Company', 'Chicago', 20);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (2, 'Carpet Central', NULL, 150);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (3, 'PM and Co', 'Portland', NULL);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (4, 'DE Consulting', 'New York City', 3200);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (5, 'Big Store Electricians', 'Miami', 15);
+INSERT INTO company (company_id, company_name, city, num_employees)
+VALUES (6, 'Wands R Us', 'Miami', 80);
+
 
 INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (1, 'John', 'Smith', 1);
 INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (2, 'Sarah', 'Jones', 4);
@@ -36,18 +49,6 @@ INSERT INTO person (person_id, first_name, last_name) VALUES (9, 'Mary', 'Watson
 INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (10, 'Anna', 'Storm', 5);
 
 
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (1, 'ABC Company', 'Chicago', 20);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (2, 'Carpet Central', NULL, 150);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (3, 'PM and Co', 'Portland', NULL);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (4, 'DE Consulting', 'New York City', 3200);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (5, 'Big Store Electricians', 'Miami', 15);
-INSERT INTO company (company_id, company_name, city, num_employees)
-VALUES (6, 'Wands R Us', 'Miami', 80);
 
 
 SELECT

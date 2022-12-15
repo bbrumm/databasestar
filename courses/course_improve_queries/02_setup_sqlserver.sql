@@ -22,18 +22,6 @@ CREATE TABLE person (
 );
 
 
-INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (1, 'John', 'Smith', 1);
-INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (2, 'Sarah', 'Jones', 4);
-INSERT INTO person (person_id, first_name, last_name) VALUES (3, 'Steven', 'Brown');
-INSERT INTO person (person_id, first_name, last_name) VALUES (4, 'Rupert', NULL);
-INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (5, 'Claire', 'Johnson', 1);
-INSERT INTO person (person_id, first_name, last_name) VALUES (6, 'Jack', 'Anderson');
-INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (7, 'Peter', 'Smith', 3);
-INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (8, 'Naomi', 'Broad', 2);
-INSERT INTO person (person_id, first_name, last_name) VALUES (9, 'Mary', 'Watson');
-INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (10, 'Anna', 'Storm', 5);
-
-
 INSERT INTO company (company_id, company_name, city, num_employees)
 VALUES (1, 'ABC Company', 'Chicago', 20);
 INSERT INTO company (company_id, company_name, city, num_employees)
@@ -46,6 +34,19 @@ INSERT INTO company (company_id, company_name, city, num_employees)
 VALUES (5, 'Big Store Electricians', 'Miami', 15);
 INSERT INTO company (company_id, company_name, city, num_employees)
 VALUES (6, 'Wands R Us', 'Miami', 80);
+
+
+
+INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (1, 'John', 'Smith', 1);
+INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (2, 'Sarah', 'Jones', 4);
+INSERT INTO person (person_id, first_name, last_name) VALUES (3, 'Steven', 'Brown');
+INSERT INTO person (person_id, first_name, last_name) VALUES (4, 'Rupert', NULL);
+INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (5, 'Claire', 'Johnson', 1);
+INSERT INTO person (person_id, first_name, last_name) VALUES (6, 'Jack', 'Anderson');
+INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (7, 'Peter', 'Smith', 3);
+INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (8, 'Naomi', 'Broad', 2);
+INSERT INTO person (person_id, first_name, last_name) VALUES (9, 'Mary', 'Watson');
+INSERT INTO person (person_id, first_name, last_name, company_id) VALUES (10, 'Anna', 'Storm', 5);
 
 
 SELECT
