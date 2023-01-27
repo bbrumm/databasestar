@@ -53,5 +53,4 @@ SELECT
 book_id,
 title,
 comments
-FROM book
-ORDER BY publication_date DESC;
+FROM book;
