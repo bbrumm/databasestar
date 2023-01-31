@@ -4,7 +4,8 @@ MySQL
 */
 
 SELECT
-DATE_FORMAT(order_date, 'MON'),
+DATE_FORMAT(order_date, '%M'),
 COUNT(*)
 FROM sales_order
-GROUP BY DATE_FORMAT(order_date, 'MON');
+GROUP BY DATE_FORMAT(order_date, '%M')
+ORDER BY DATE_FORMAT(order_date, '%M');
