@@ -12,7 +12,21 @@ first_name,
 last_name,
 email
 FROM customer
-WHERE customer_id = 88;
+WHERE customer_id = 26;
+
+/*
+Find customers by city and country
+*/
+SELECT
+ca.customer_id,
+a.city,
+co.country_name
+FROM address a
+INNER JOIN customer_address ca ON a.address_id = ca.address_id
+INNER JOIN country co ON a.country_id = co.country_id
+ORDER BY ca.customer_id;
+
+
 
 /*
 Find addresses for customer
@@ -27,7 +41,7 @@ co.country_name
 FROM address a
 INNER JOIN customer_address ca ON a.address_id = ca.address_id
 INNER JOIN country co ON a.country_id = co.country_id
-WHERE ca.customer_id = 88;
+WHERE ca.customer_id = 26;
 
 /*
 Find all orders with addresses
@@ -69,7 +83,7 @@ WHERE (a.city, c.country_name) IN (
 	FROM address a
 	INNER JOIN customer_address ca ON a.address_id = ca.address_id
 	INNER JOIN country co ON a.country_id = co.country_id
-	WHERE ca.customer_id = 88
+	WHERE ca.customer_id = 26
 );
 
 
