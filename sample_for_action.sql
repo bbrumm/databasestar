@@ -1,1 +1,1 @@
-SELECT 'The action is working';
+SELECT NOW();
