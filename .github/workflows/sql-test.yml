@@ -17,4 +17,4 @@ jobs:
     - name: Show databases
       run: mysql -h 127.0.0.1 --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "SHOW DATABASES";
     - name: Run a sample SQL
-      run: mysql -h 127.0.0.1 --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "source sample_for_action.sql";
+      run: mysql -h 127.0.0.1 --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "source sample_for_action.sql"
