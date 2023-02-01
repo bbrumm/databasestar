@@ -9,6 +9,7 @@ jobs:
       DB_USER: root
       DB_PASSWORD: root
     steps:
+    - uses: actions/checkout@v3
     - name: Set up MySQL
       run: |
         sudo /etc/init.d/mysql start
