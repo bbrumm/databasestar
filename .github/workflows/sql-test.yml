@@ -15,4 +15,4 @@ jobs:
         sudo /etc/init.d/mysql start
         mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
     - name: Show databases
-      run: mysql -e "SHOW DATABASES";
+      run: mysql -h 127.0.0.1 --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "SHOW DATABASES";
