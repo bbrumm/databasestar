@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is testing SQL
 on: [push]
 jobs:
   test-output:
+  runs-on: ubuntu-latest
     steps:
     - name: Test Output
       run: echo "here is a test"
