@@ -5,7 +5,7 @@ jobs:
   test-output:
     steps:
     - name: Test Output
-    - run: echo "here is a test"
+      run: echo "here is a test"
   create-db:
     runs-on: ubuntu-latest
     env:
