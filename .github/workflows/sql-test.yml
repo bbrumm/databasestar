@@ -2,6 +2,10 @@ name: sql-test
 run-name: ${{ github.actor }} is testing SQL
 on: [push]
 jobs:
+  test-output:
+    steps:
+    - name: Test Output
+    - run: echo "here is a test"
   create-db:
     runs-on: ubuntu-latest
     env:
