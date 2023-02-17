@@ -13,3 +13,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Show databases
       run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u${{ secrets.DB_USER }} -p${{ secrets.DB_PASSWORD }} -e "SHOW DATABASES";
+    - name: Run a sample SQL on remote
+      run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u${{ secrets.DB_USER }} -p${{ secrets.DB_PASSWORD }} -e "source hawthorn/hawthorn_script.sql";
