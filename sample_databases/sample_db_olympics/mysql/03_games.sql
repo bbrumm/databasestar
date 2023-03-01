@@ -1,3 +1,5 @@
+USE olympics;
+
 DROP TABLE IF EXISTS olympics.games;
 
 CREATE TABLE olympics.games (

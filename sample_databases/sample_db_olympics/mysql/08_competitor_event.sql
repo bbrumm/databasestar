@@ -1,3 +1,5 @@
+USE olympics;
+
 DROP TABLE IF EXISTS olympics.competitor_event;
 
 CREATE TABLE olympics.competitor_event (

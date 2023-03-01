@@ -1,3 +1,5 @@
+USE olympics;
+
 DROP TABLE IF EXISTS olympics.person_region;
 
 CREATE TABLE olympics.person_region (
