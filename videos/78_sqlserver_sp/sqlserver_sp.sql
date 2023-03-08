@@ -15,6 +15,8 @@ EXEC selectCustomer;
 Stored procedure for insert
 */
 
+
+
 CREATE PROCEDURE insertCustomer(@customerName VARCHAR(100))
 AS
 BEGIN
@@ -25,7 +27,7 @@ END;
 
 EXEC insertCustomer;
 
-EXEC insertCustomer('DLP Shipping');
+EXEC insertCustomer 'DLP Shipping';
 
 SELECT id, name, is_active
 FROM customer;
@@ -45,7 +47,7 @@ BEGIN
   WHERE id = @customerID;
 END;
 
-EXEC updateCustomer('ABC Exports', 2);
+EXEC updateCustomer 'ABC Exports', 2;
 
 
 SELECT id, name, is_active
@@ -62,9 +64,10 @@ BEGIN
   WHERE id = @customerID;
 END;
 
-EXEC deleteCustomer(8);
 
-EXEC deleteCustomer(2);
+EXEC deleteCustomer 8;
+
+EXEC deleteCustomer 2;
 
 SELECT id, name, is_active
 FROM customer;
