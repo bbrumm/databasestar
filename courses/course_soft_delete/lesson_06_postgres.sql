@@ -9,6 +9,6 @@ RETURNS void AS $$
 BEGIN
   UPDATE interaction
   SET active = 0
-  WHERE id = idToDelete
+  WHERE id = idToDelete;
 END
 $$ LANGUAGE plpgsql;
