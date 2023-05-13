@@ -10,7 +10,6 @@ select away_team_id as ids
 from matches)  u
 on t.team_id = u.ids),
 
-
 cte2 as (select
 team_name,
 case when ids = home_team_id then home_team_goals else away_team_goals
@@ -26,7 +25,6 @@ or c.ids = m.away_team_id
 ) tbl 
 group by 1,2,3,4,5,6) tbl1
 )
-
 
 select team_name,count(team_name) as matches_played,
 sum(points) as points,
