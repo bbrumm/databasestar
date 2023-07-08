@@ -1,3 +1,7 @@
+/*
+Lesson 13 - create all tables
+*/
+
 CREATE TABLE book (
 	id INT,
 	list_id INT,

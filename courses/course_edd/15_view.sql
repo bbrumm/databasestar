@@ -1,3 +1,7 @@
+/*
+Lesson 15 - view data
+*/
+
 SELECT * FROM book;
 
 SELECT * FROM review;

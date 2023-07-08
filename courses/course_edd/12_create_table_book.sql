@@ -1,3 +1,7 @@
+/*
+Lesson 12 - create a table
+*/
+
 CREATE TABLE book (
 	id INT,
 	list_id INT,
