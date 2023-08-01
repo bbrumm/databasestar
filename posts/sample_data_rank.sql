@@ -43,7 +43,7 @@ VALUES (5, 'Steven', 'Webber', 0, 'M');
 INSERT INTO student (student_id, first_name, last_name, fees_paid, gender)
 VALUES (6, 'Julie', 'Armstrong', 150, 'F');
 INSERT INTO student (student_id, first_name, last_name, fees_paid, gender)
-VALUES (7), 'Michelle', 'Randall', 150, 'F');
+VALUES (7, 'Michelle', 'Randall', 150, 'F');
 INSERT INTO student (student_id, first_name, last_name, fees_paid, gender)
 VALUES (8, 'Andrew', 'Cooper', 800, 'M');
 INSERT INTO student (student_id, first_name, last_name, fees_paid, gender)

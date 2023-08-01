@@ -39,7 +39,7 @@ CREATE TABLE post_history (
   revision_guid VARCHAR(100),
   creation_date DATETIME,
   user_id INT,
-  post_text VARCHAR(4000),
+  post_text VARCHAR(10000),
   content_license VARCHAR(100)
 );
 

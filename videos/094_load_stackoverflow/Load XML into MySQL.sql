@@ -10,7 +10,7 @@ TRUNCATE users;
 TRUNCATE votes;
 
 LOAD XML
-INFILE '/Users/BB/se_xml/Badges_small.xml'
+INFILE '/Users/BB/se_xml/Badges.xml'
 INTO TABLE badges (
 	@Id, @UserID, @Name, @Date, @Class, @TagBased
 )
@@ -23,7 +23,7 @@ tag_based=@TagBased;
 
 
 LOAD XML
-INFILE '/Users/BB/se_xml/Comments_small.xml'
+INFILE '/Users/BB/se_xml/Comments.xml'
 INTO TABLE comments (
 	@Id, @PostId, @Score, @Text, 
     @CreationDate, @UserId, @ContentLicense
@@ -38,7 +38,7 @@ content_license=@ContentLicense;
 
 
 LOAD XML
-INFILE '/Users/BB/se_xml/PostHistory_small.xml'
+INFILE '/Users/BB/se_xml/PostHistory.xml'
 INTO TABLE post_history (
 	@Id, @PostHistoryTypeId, @PostId, @RevisionGUID,
     @CreationDate, @UserId, @Text, @ContentLicense
@@ -49,12 +49,12 @@ post_id = @PostId,
 revision_guid = @RevisionGUID,
 creation_date = @CreationDate, 
 user_id = @UserId, 
-post_text = @Text,
+post_text = SUBSTRING(@Text, 1, 10000),
 content_license=@ContentLicense;
 
 
 LOAD XML
-INFILE '/Users/BB/se_xml/PostLinks_small.xml'
+INFILE '/Users/BB/se_xml/PostLinks.xml'
 INTO TABLE post_links (
 	@Id, @CreationDate, @PostId, @RelatedPostId, @LinkTypeId
 )
@@ -67,7 +67,7 @@ link_type_id = @LinkTypeId;
 TRUNCATE posts;
 
 LOAD XML
-INFILE '/Users/BB/se_xml/Posts_small.xml'
+INFILE '/Users/BB/se_xml/Posts.xml'
 INTO TABLE posts (
 	@Id, @PostTypeId, @CreationDate, @ParentID, @AcceptedAnswerId, 
 	@Score, @ViewCount, @Body, @OwnerUserId, @LastEditorUserId,
@@ -81,7 +81,7 @@ parent_id = @ParentID,
 accepted_answer_id = @AcceptedAnswerId,
 score = @Score,
 view_count = @ViewCount,
-post_body = @Body,
+post_body = SUBSTRING(@Body, 1, 10000),
 owner_user_id = @OwnerUserId,
 last_editor_user_id = @LastEditorUserId,
 last_edit_date = @LastEditDate,
@@ -94,7 +94,7 @@ content_license = @ContentLicense;
 
 
 LOAD XML
-INFILE '/Users/BB/se_xml/Tags_small.xml'
+INFILE '/Users/BB/se_xml/Tags.xml'
 INTO TABLE tags (
 	@Id, @TagName, @Count, @ExcerptPostId, @WikiPostId
 )
@@ -106,7 +106,7 @@ wiki_post_id = @WikiPostId;
 
 
 LOAD XML
-INFILE '/Users/BB/se_xml/Users_small.xml'
+INFILE '/Users/BB/se_xml/Users.xml'
 INTO TABLE users (
 	@Id, @Reputation, @CreationDate, @DisplayName, 
     @LastAccessDate, @WebsiteUrl, @Location, @AboutMe, 
@@ -128,7 +128,7 @@ account_id = @AccountId;
 
 
 LOAD XML
-INFILE '/Users/BB/se_xml/Votes_small.xml'
+INFILE '/Users/BB/se_xml/Votes.xml'
 INTO TABLE votes (
 	@Id, @PostId, @VoteTypeId, @CreationDate
 )
@@ -138,3 +138,12 @@ vote_type_id = @VoteTypeId,
 creation_date = @CreationDate;
 
 
+
+SELECT * FROM badges;
+SELECT * FROM comments;
+SELECT * FROM post_history;
+SELECT * FROM post_links;
+SELECT * FROM posts;
+SELECT * FROM tags;
+SELECT * FROM users;
+SELECT * FROM votes;
