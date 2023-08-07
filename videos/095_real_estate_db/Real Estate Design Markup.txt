@@ -1,0 +1,165 @@
+Table property {
+  id INT PK
+  address_line1 VARCHAR
+  address_line2 VARCHAR
+  city VARCHAR
+  region VARCHAR
+  property_type_id INT
+  property_size INT
+  block_size INT
+  num_bedrooms INT
+  num_bathrooms INT
+  num_carspaces INT
+  description VARCHAR
+}
+
+Table property_type {
+  id INT PK
+  description VARCHAR
+  Note: 'Examples: house, unit, townhouse'
+}
+
+Table listing_type {
+  id INT PK
+  description VARCHAR
+  Note: 'Stores either For Rent or For Sale'
+}
+
+Table listing_status {
+  id INT PK
+  description VARCHAR
+  Note: 'Stores the lifecycle of the property'
+}
+
+Table feature {
+  id INT PK
+  feature_name VARCHAR
+  Note: 'Examples are washing machine, alarm, garage'
+}
+
+Table property_feature {
+  property_id INT
+  feature_id INT
+}
+
+Table listing {
+  id INT PK
+  property_id INT
+  listing_status_id INT
+  listing_type_id INT
+  price INT [Note: 'Stores either a sale price or a rental price']
+  created_date DATE
+}
+
+Table employee {
+  id INT PK
+  first_name VARCHAR
+  last_name VARCHAR
+  start_date DATE
+  end_date DATE
+  job_title VARCHAR
+}
+
+Table property_employee {
+  property_id INT
+  employee_id INT
+  role_type_id INT
+  start_date DATE
+  end_date DATE
+}
+
+Table role_type {
+  id INT
+  description VARCHAR
+  Note: 'Examples are Property Manager or Selling Agent'
+}
+
+Table inspection {
+  id INT PK
+  property_id INT
+  inspection_datetime DATETIME
+  responsible_employee_id INT
+}
+
+Table client {
+  id INT PK
+  first_name VARCHAR
+  last_name VARCHAR
+  email_address VARCHAR
+  phone_number VARCHAR
+}
+
+Table client_property_interest {
+  client_id INT
+  property_id INT
+}
+
+Table client_inspection {
+  client_id INT
+  inspection_id INT
+}
+
+Table offer {
+  id INT PK
+  client_id INT
+  property_id INT
+  offer_status_id INT
+  offer_amount INT
+}
+
+Table offer_status {
+  id INT PK
+  description VARCHAR
+  Note: 'Stores values such as Accepted, Rejected, In Review'
+}
+
+Table contract {
+  id INT PK
+  property_id INT
+  listing_type_id INT
+  contract_document VARCHAR
+  responsible_employee_id INT
+  client_id INT
+  contract_status_id INT
+  signed_date DATE
+  start_date DATE
+  end_date DATE
+}
+
+Table contract_status {
+  id INT PK
+  description VARCHAR
+  Note: 'Examples such as Signed or In Progress'
+}
+
+
+Ref: property.property_type_id > property_type.id
+Ref: listing.listing_type_id > listing_type.id
+Ref: listing.listing_status_id > listing_status.id
+Ref: listing.property_id > property.id
+
+Ref: property_feature.property_id > property.id
+Ref: property_feature.feature_id > feature.id
+
+Ref: property_employee.property_id > property.id
+Ref: property_employee.employee_id > employee.id
+Ref: property_employee.role_type_id > role_type.id
+
+Ref: inspection.property_id > property.id
+Ref: inspection.responsible_employee_id > employee.id
+
+Ref: client_property_interest.client_id > client.id
+Ref: client_property_interest.property_id > property.id
+
+Ref: client_inspection.client_id > client.id
+Ref: client_inspection.inspection_id > inspection.id
+
+Ref: offer.client_id > client.id
+Ref: offer.property_id > property.id
+Ref: offer.offer_status_id > offer_status.id
+
+Ref: contract.property_id > property.id
+Ref: contract.listing_type_id > listing_type.id
+Ref: contract.contract_status_id > contract_status.id
+Ref: contract.client_id > client.id
+Ref: contract.responsible_employee_id > employee.id
