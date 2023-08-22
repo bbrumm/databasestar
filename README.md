@@ -1,5 +1,5 @@
 # Database Star - SQL Code Repository
-This repository contains all of the SQL scripts used on the Database Star website (https://www.databasestar.com/)
+This repository contains all of the SQL scripts used on the Database Star website (https://www.databasestar.com/) and the YouTube channel.
 It's small at the moment but will expand over time.
 
 It currently contains:
