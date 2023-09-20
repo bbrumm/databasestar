@@ -46,24 +46,24 @@ UPDATE interaction
 SET active = 1;
 
 --Trigger
-CREATE VIEW interactions_view AS
+CREATE VIEW interaction_view AS
 SELECT id, interaction_datetime, interaction_type, person_id, notes, active
 FROM interaction;
 
-CREATE OR REPLACE TRIGGER soft_delete_interactions
-INSTEAD OF DELETE ON interactions_view
+CREATE OR REPLACE TRIGGER soft_delete_interaction
+INSTEAD OF DELETE ON interaction_view
 FOR EACH ROW
 BEGIN
-	UPDATE interactions SET active = 0 WHERE id = :old.id;
+	UPDATE interaction SET active = 0 WHERE id = :old.id;
 END;
 /
 
 
 --Procedure
-CREATE PROCEDURE delete_interactions
+CREATE PROCEDURE delete_interaction
 (idToDelete NUMBER) IS
 BEGIN
-  UPDATE interactions
+  UPDATE interaction
   SET active = 0
   WHERE id = idToDelete;
 END;

@@ -24,5 +24,5 @@ INSERT INTO supplier (supplier_name, city, num_employees)
 VALUES ('Harrods', 'Miami', 80);
 
 
-SELECT company_name, city, num_employees
-FROM company;
+SELECT supplier_name, city, num_employees
+FROM supplier;
