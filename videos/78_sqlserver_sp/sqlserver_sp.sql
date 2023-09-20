@@ -64,9 +64,14 @@ BEGIN
   WHERE id = @customerID;
 END;
 
+<<<<<<< HEAD
 
 EXEC deleteCustomer 8;
 
+=======
+EXEC deleteCustomer 8;
+
+>>>>>>> 84908c07e8b36d1bb48e54221ff2cccdf3459c7e
 EXEC deleteCustomer 2;
 
 SELECT id, name, is_active

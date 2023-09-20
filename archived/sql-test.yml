@@ -1,0 +1,37 @@
+name: sql-test
+run-name: ${{ github.actor }} is testing SQL
+on: [push]
+jobs:
+  test-output:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test Output
+      run: echo "here is a test"
+  create-db:
+    runs-on: ubuntu-latest
+    env:
+      DB_DATABASE: test_db
+      DB_USER: root
+      DB_PASSWORD: root
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up MySQL
+      run: |
+        sudo /etc/init.d/mysql start
+        mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
+    - name: Show databases
+      run: mysql -h 127.0.0.1 --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "SHOW DATABASES";
+    - name: Run a sample SQL
+      run: mysql -h 127.0.0.1 --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "source sample_for_action.sql"
+  connect-remote:
+    runs-on: ubuntu-latest
+    env:
+      DB_DATABASE: mydb
+      DB_USER: admin
+      DB_PASSWORD: mypasswordmysql
+    steps:
+    - uses: actions/checkout@v3
+    - name: Show remote databases
+      run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "SHOW DATABASES";
+    - name: Run a sample SQL on remote
+      run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e "source sample_for_action.sql"
