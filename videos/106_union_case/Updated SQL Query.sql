@@ -102,9 +102,9 @@ for each of the groups to be counted
 
 SELECT
 order_month,
-CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END count_a,
-CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END count_b,
-CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END count_c
+CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END order_id_a,
+CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END order_id_b,
+CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END order_id_c
 FROM (
     SELECT FORMAT(order_date, 'yyyy-MM') AS order_month,
     p.product_category_id,
@@ -135,15 +135,15 @@ Step 3 - Select the COUNT by month for each group
 
 SELECT
 order_month,
-COUNT(DISTINCT count_a) AS count_a,
-COUNT(DISTINCT count_b) AS count_b,
-COUNT(DISTINCT count_c) AS count_c
+COUNT(DISTINCT order_id_a) AS count_a,
+COUNT(DISTINCT order_id_b) AS count_b,
+COUNT(DISTINCT order_id_c) AS count_c
 FROM (
     SELECT
     order_month,
-    CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END count_a,
-    CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END count_b,
-    CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END count_c
+    CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END order_id_a,
+    CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END order_id_b,
+    CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END order_id_c
     FROM (
         SELECT FORMAT(order_date, 'yyyy-MM') AS order_month,
         p.product_category_id,
@@ -182,15 +182,15 @@ ROUND(AVG(count_c), 2) AS avg_c
 FROM (
     SELECT
     order_month,
-    COUNT(DISTINCT count_a) AS count_a,
-    COUNT(DISTINCT count_b) AS count_b,
-    COUNT(DISTINCT count_c) AS count_c
+    COUNT(DISTINCT order_id_a) AS count_a,
+    COUNT(DISTINCT order_id_b) AS count_b,
+    COUNT(DISTINCT order_id_c) AS count_c
     FROM (
         SELECT
         order_month,
-        CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END count_a,
-        CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END count_b,
-        CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END count_c
+        CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END order_id_a,
+        CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END order_id_b,
+        CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END order_id_c
         FROM (
             SELECT FORMAT(order_date, 'yyyy-MM') AS order_month,
             p.product_category_id,
@@ -229,7 +229,6 @@ CASE data_group
 	WHEN 'avg_b' THEN 'Group B'
 	WHEN 'avg_c' THEN 'Group C'
 END AS data_group,
-
 avg_val
 FROM (
     SELECT 
@@ -239,15 +238,15 @@ FROM (
     FROM (
         SELECT
         order_month,
-        COUNT(DISTINCT count_a) AS count_a,
-        COUNT(DISTINCT count_b) AS count_b,
-        COUNT(DISTINCT count_c) AS count_c
+        COUNT(DISTINCT order_id_a) AS count_a,
+        COUNT(DISTINCT order_id_b) AS count_b,
+        COUNT(DISTINCT order_id_c) AS count_c
         FROM (
             SELECT
             order_month,
-            CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END count_a,
-            CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END count_b,
-            CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END count_c
+            CASE WHEN sub.product_category_id = 5 AND sub.status = 'A' THEN sub.order_id ELSE NULL END order_id_a,
+            CASE WHEN sub.product_category_id = 1 AND sub.retail_price > 15 THEN sub.order_id ELSE NULL END order_id_b,
+            CASE WHEN sub.product_category_id = 3 AND sub.product_name LIKE '%Pasta%' THEN sub.order_id ELSE NULL END order_id_c
             FROM (
                 SELECT FORMAT(order_date, 'yyyy-MM') AS order_month,
                 p.product_category_id,
