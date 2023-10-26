@@ -26,7 +26,8 @@ FROM (
     disk_reads,
     executions,
     first_load_time,
-    last_load_time
+    last_load_time,
+    elapsed_time
     FROM v$sql
     ORDER BY elapsed_time DESC
 )
@@ -38,7 +39,7 @@ from v$sqltext_with_newlines t
 INNER JOIN V$SESSION s 
 ON t.address =s.sql_address
 AND t.hash_value = s.sql_hash_value
-WHERE and s.status = 'ACTIVE'
+WHERE s.status = 'ACTIVE'
 and s.username <> 'SYSTEM'
 order by s.sid,t.piece;
 
