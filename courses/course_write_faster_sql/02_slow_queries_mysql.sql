@@ -25,7 +25,9 @@ no_index_used,
 no_good_index_used
 FROM performance_schema.events_statements_history;
 
---Find all queries that don't use a good index
+/*
+Find all queries that don't use a good index
+*/
 SELECT
 thread_id,
 sql_text,
@@ -38,7 +40,9 @@ FROM performance_schema.events_statements_history_long
 WHERE no_index_used > 0
 OR no_good_index_used > 0;
 
---More views that show queries with specific criteria
+/*
+More views that show queries with specific criteria
+*/
 SELECT *
 FROM sys.statement_analysis;
 
