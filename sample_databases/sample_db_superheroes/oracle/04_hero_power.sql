@@ -1,5 +1,6 @@
-DROP TABLE hero_power;
-
+-- Warning: Don't delete the recently created tables
+-- query to drop the table:
+--DROP TABLE hero_power;
 
 CREATE TABLE hero_power (
   hero_id NUMBER(11) DEFAULT NULL,
