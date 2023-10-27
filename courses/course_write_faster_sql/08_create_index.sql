@@ -11,3 +11,6 @@ WHERE b.publisher_id = 1149;
 
 CREATE INDEX idx_book_pubid
 ON book (publisher_id);
+
+
+
