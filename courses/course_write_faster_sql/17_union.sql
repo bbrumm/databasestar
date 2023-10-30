@@ -1,11 +1,10 @@
+/*
+Authors and customer names
+*/
+SELECT first_name || ' ' || last_name AS fullname
+FROM customer
+UNION
 SELECT author_name
-FROM author
-UNION ALL
-SELECT first_name + ' ' + last_name
-FROM customer;
+FROM author;
 
-SELECT DATE(order_date)
-FROM cust_order
-UNION 
-SELECT DATE(status_date)
-FROM order_history;
+
