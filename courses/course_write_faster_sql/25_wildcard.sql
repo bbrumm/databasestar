@@ -8,6 +8,8 @@ WHERE title LIKE '%dragon%';
 CREATE INDEX idx_book_title
 ON book (title);
 
+DROP INDEX book.idx_book_title;
+
 SELECT book_id, title, isbn13, num_pages, publication_date
 FROM book
 WHERE title IN (
@@ -15,6 +17,8 @@ WHERE title IN (
 'Dragon''s Fire (Pern  #19)',
 'Summer of the Dragon'
 );
+
+DROP TABLE title_lookup;
 
 CREATE TABLE title_lookup (
   title_to_find VARCHAR(1000)
