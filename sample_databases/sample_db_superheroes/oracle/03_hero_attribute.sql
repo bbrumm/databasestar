@@ -1,11 +1,12 @@
-DROP TABLE hero_attribute;
-
+-- Warning: Don't delete the recently created tables
+-- query to drop the table:
+--DROP TABLE hero_attribute;
 
 CREATE TABLE hero_attribute (
   hero_id number(11) DEFAULT NULL,
   attribute_id number(11) DEFAULT NULL,
   attribute_value number(11) DEFAULT NULL,
-  CONSTRAINT fk_hat_at FOREIGN KEY (attribute_id) REFERENCES attribute (id),
+  CONSTRAINT fk_hat_at FOREIGN KEY (attribute_id) REFERENCES attrs (id),
   CONSTRAINT fk_hat_hero FOREIGN KEY (hero_id) REFERENCES superhero (id)
 );
 
