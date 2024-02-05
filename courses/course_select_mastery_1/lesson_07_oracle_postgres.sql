@@ -1,6 +1,6 @@
 /*
 Lesson 07
-Oracle and Postgres
+Oracle
 */
 
 SELECT
@@ -12,3 +12,4 @@ WHERE order_date < '20210101'
 AND order_date >= '20200101'
 GROUP BY TO_CHAR(order_date, 'MON')
 ORDER BY TO_CHAR(order_date, 'M') ASC;
+
