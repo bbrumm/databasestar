@@ -53,20 +53,48 @@ VALUES ('Skirt, blue', 65);
 INSERT INTO product (product_name, price)
 VALUES ('Running shoes red', 145);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('T-shirt black', 20);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('T-shirt white', 20);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('Long dress', 90);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('Jacket', 150);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('Trenchcoat', 180);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('Leather jacket', 280);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('Boots', 260);
 INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
-INSERT INTO product (product_name, price)
-VALUES ('Running', 120);
+VALUES ('Brown boots', 160);
+
+
+SELECT product_name, price
+FROM product
+WHERE price = 80
+OR product_name = 'Shirt'
+OR price = 100;
+
+SELECT product_name, price
+FROM product
+WHERE (price = 80
+AND product_name = 'Shirt')
+OR price = 100;
+
+SELECT product_name, price
+FROM product
+WHERE price = 80
+AND (product_name = 'Shirt'
+OR price = 100);
+
+SELECT product_name, price
+FROM product
+WHERE price = 80
+OR price = 90
+OR price = 100;
+
+
+SELECT product_name, price
+FROM product
+WHERE price IN (80, 90, 100);
