@@ -31,8 +31,8 @@ FROM supplier;
 
 --SQL 07 - SQL Server, MySQL, Postgres
 CREATE TABLE supplier (
-supplier_name VARCHAR(200),
-start_date DATE
+  supplier_name VARCHAR(200),
+  start_date DATE
 );
 
 --SQL 08 - SQL Server
