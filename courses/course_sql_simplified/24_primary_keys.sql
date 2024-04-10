@@ -25,8 +25,13 @@ FOREIGN KEY (supplier_id)
 REFERENCES supplier (supplier_id);
 
 --SQL 06
-UPDATE product SET supplier_id = 1 WHERE product_id IN (1, 2, 4, 8, 12, 14, 18, 22, 25);
-UPDATE product SET supplier_id = 2 WHERE product_id IN (3, 5, 6, 9, 13, 15, 17, 19, 20, 24);
+UPDATE product
+SET supplier_id = 1
+WHERE product_id IN (1, 2, 4, 8, 12, 14, 18, 22);
+
+UPDATE product
+SET supplier_id = 2
+WHERE product_id IN (3, 5, 6, 9, 13, 15, 17, 19, 20, 24);
 
 --SQL 07
 SELECT product_id, supplier_id, product_name, price
