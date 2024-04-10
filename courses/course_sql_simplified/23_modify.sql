@@ -38,11 +38,11 @@ UPDATE product SET product_id = 16 WHERE product_name = 'Skirt, blue';
 UPDATE product SET product_id = 17 WHERE product_name = 'Running shoes red';
 UPDATE product SET product_id = 18 WHERE product_name = 'T-shirt black';
 UPDATE product SET product_id = 19 WHERE product_name = 'T-shirt white';
-UPDATE product SET product_id = 21 WHERE product_name = 'Jacket';
-UPDATE product SET product_id = 22 WHERE product_name = 'Trenchcoat';
-UPDATE product SET product_id = 23 WHERE product_name = 'Leather jacket';
-UPDATE product SET product_id = 24 WHERE product_name = 'Boots';
-UPDATE product SET product_id = 25 WHERE product_name = 'Brown boots';
+UPDATE product SET product_id = 20 WHERE product_name = 'Jacket';
+UPDATE product SET product_id = 21 WHERE product_name = 'Trenchcoat';
+UPDATE product SET product_id = 22 WHERE product_name = 'Leather jacket';
+UPDATE product SET product_id = 23 WHERE product_name = 'Boots';
+UPDATE product SET product_id = 24 WHERE product_name = 'Brown boots';
 
 --SQL 06
 UPDATE product
