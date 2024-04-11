@@ -48,3 +48,7 @@ UPDATE product SET product_id = 24 WHERE product_name = 'Brown boots';
 UPDATE product
 SET product_id = 3
 WHERE product_name = 'Jacket';
+
+--SQL 07 - Oracle
+ALTER TABLE product
+ADD product_id NUMBER;
