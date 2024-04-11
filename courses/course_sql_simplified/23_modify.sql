@@ -52,3 +52,7 @@ WHERE product_name = 'Jacket';
 --SQL 07 - Oracle
 ALTER TABLE product
 ADD product_id NUMBER;
+
+--SQL 08 - SQL Server
+ALTER TABLE product
+ALTER COLUMN product_id INT NOT NULL;
