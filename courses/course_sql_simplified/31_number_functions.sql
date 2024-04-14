@@ -29,11 +29,11 @@ FROM product;
 SELECT price, ROUND(price, -1) AS price_rounded
 FROM product;
 
---SQL 08
-SELECT ROUND(4.6);
+--SQL 08 - SQL Server
+SELECT ROUND(4.6, 0);
 
---SQL 09
-SELECT ROUND(4.3);
+--SQL 09 - SQL Server
+SELECT ROUND(4.3, 0);
 
 --SQL 10
 SELECT price, ROUND(price, -1)
