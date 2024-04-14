@@ -16,5 +16,5 @@ SELECT product_id, product_name, price
 FROM product
 WHERE price > (
     SELECT AVG(price)
-    FROM product;
+    FROM product
 );
