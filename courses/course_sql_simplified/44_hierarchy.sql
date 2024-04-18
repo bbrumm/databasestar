@@ -56,6 +56,28 @@ FROM product_category p
 INNER JOIN product_category c ON c.parent_category_id = p.category_id;
 
 
+--SQL 07 - Insert without ID
+
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Outerwear', 2);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Jackets', 5);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Dress Shoes', 1);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Jewellery', 4);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Hats', 4);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Necklaces', 8);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Watches', 8);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Pants', 3);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('Skirts', 3);
+INSERT INTO product_category (category_name, parent_category_id)
+VALUES ('All Clothing', NULL);
 
 
 
