@@ -24,7 +24,7 @@ FROM product_category c
 LEFT JOIN product p ON c.category_id = p.category_id;
 
 --SQL 03
-SELECT * FROM products_and_categories
+SELECT * FROM products_and_categories;
 
 --SQL 04
 SELECT
