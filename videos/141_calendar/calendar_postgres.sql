@@ -21,3 +21,24 @@ CREATE TABLE calendar_days (
   is_workday SMALLINT,
   CONSTRAINT pk_calendar PRIMARY KEY (day_id)
 );
+
+/*
+Populate the table
+*/
+
+DO
+$do$
+BEGIN
+	FOR i IN 1..25 LOOP
+		INSERT INTO calendar_days (day_id)
+		VALUES (i);
+	END LOOP;
+END
+$do$;
+
+
+
+
+
+SELECT *
+FROM calendar_days;
