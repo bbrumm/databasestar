@@ -36,7 +36,7 @@ Populate the table just with the IDs
 
 INSERT INTO calendar_days (day_id)
 SELECT *
-FROM generate_series(1, 365);
+FROM generate_series(1, '2030-12-31'::date - '2000-01-01'::date);
 
 
 
@@ -46,7 +46,7 @@ Note: the specified calendar date is the day BEFORE the first record to be added
 */
 
 UPDATE calendar_days
-SET calendar_date = '2020-12-31'::date + (INTERVAL '1' DAY * day_id);
+SET calendar_date = '1999-12-31'::date + (INTERVAL '1' DAY * day_id);
 
 /*
 Calculate and update other fields
@@ -133,8 +133,8 @@ AND is_weekend = 0;
 UPDATE calendar_days
 SET is_holiday = 1,
 holiday_description = 'New Year''s Day holiday'
-WHERE (calendar_month = 1 AND calendar_day_of_month = 2 AND calendar_day_of_week = 0) -- Sun, so it is Mon the 2nd
-OR (calendar_month = 1 AND calendar_day_of_month = 3 AND calendar_day_of_week = 6); -- Sat, so it is Mon the 3rd
+WHERE (calendar_month = 1 AND calendar_day_of_month = 2 AND calendar_day_of_week = 1) -- falls on a Sun, so it is Mon the 2nd
+OR (calendar_month = 1 AND calendar_day_of_month = 3 AND calendar_day_of_week = 1); -- Sat, so it is Mon the 3rd
 
 
 /*
@@ -162,6 +162,15 @@ WHERE 1=1;
  */
 SELECT *
 FROM calendar_days
+ORDER BY calendar_date ASC;
+
+/*
+ *  Find all holidays
+ */
+
+SELECT *
+FROM calendar_days 
+WHERE is_holiday = 1
 ORDER BY calendar_date ASC;
 
 
