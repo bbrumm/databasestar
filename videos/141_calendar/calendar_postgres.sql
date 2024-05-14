@@ -26,16 +26,6 @@ CREATE TABLE calendar_days (
 Populate the table
 */
 
-DO
-$do$
-BEGIN
-	FOR i IN 1..25 LOOP
-		INSERT INTO calendar_days (day_id)
-		VALUES (i);
-	END LOOP;
-END
-$do$;
-
 
 
 
