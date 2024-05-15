@@ -1,1 +1,1 @@
-SELECT 'test';
+SELECT 'test new value';
