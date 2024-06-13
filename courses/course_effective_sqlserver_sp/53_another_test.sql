@@ -32,7 +32,7 @@ BEGIN
 	SET @bottomNumber = 0;
 
 	EXECUTE dbo.DivideTwoNumbers @topNumber, @bottomNumber, @actualResult OUTPUT
-	SET @expectedResult = ;
+	SET @expectedResult = 0;
 
 	EXEC tSQLt.AssertEquals @expectedResult, @actualResult
 
