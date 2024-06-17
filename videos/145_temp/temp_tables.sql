@@ -27,14 +27,14 @@ GROUP BY a.author_name
 HAVING COUNT(ol.line_id) > 5;
 
 --SQL 03
-CREATE GLOBAL TEMPORARY TABLE author_books_sold (
-    author_name VARCHAR2(400),
-    book_count NUMBER
+CREATE TEMPORARY TABLE author_books_sold (
+    author_name VARCHAR(400),
+    book_count INT
 );
 
 
 --SQL 04
-INSERT INTO author_sales (author_name, book_count)
+INSERT INTO author_books_sold (author_name, book_count)
 SELECT
 a.author_name,
 COUNT(ol.line_id) AS book_count
