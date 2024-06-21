@@ -4,15 +4,16 @@ SQL Server commands to import the file
 
 CREATE TABLE measurements (
   city_name VARCHAR(500),
-  measurement DECIMAL(10,4)
+  measurement VARCHAR(500)
 );
 
 
 BULK INSERT dbo.measurements
-FROM 'C:/Users/bbrum/OneDrive/Documents/import/smallfile.txt'
+FROM 'C:/Users/bbrum/databasestar/1brc/measurements.txt'
 WITH
 (
-  FIELDTERMINATOR =';'
+  FIELDTERMINATOR =';',
+  ROWTERMINATOR = '0x0a'
 );
 
 SELECT

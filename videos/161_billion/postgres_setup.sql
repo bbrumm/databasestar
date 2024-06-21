@@ -9,7 +9,7 @@ CREATE TABLE measurements (
 
 
 COPY measurements(city_name, measurement)
-FROM 'C:/Users/bbrum/OneDrive/Documents/import/smallfile.txt'
+FROM 'C:/Users/bbrum/databasestar/1brc/measurements.txt'
 DELIMITER ';';
 
 select *
