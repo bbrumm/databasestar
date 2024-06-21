@@ -1,5 +1,5 @@
 /*
-Postgres commands to import the file
+SQL Server commands to import the file
 */
 
 CREATE TABLE measurements (
@@ -8,12 +8,12 @@ CREATE TABLE measurements (
 );
 
 
-COPY measurements(city_name, measurement)
+BULK INSERT dbo.measurements
 FROM 'C:/Users/bbrum/OneDrive/Documents/import/smallfile.txt'
-DELIMITER ';';
-
-select *
-from measurements;
+WITH
+(
+  FIELDTERMINATOR =';'
+);
 
 SELECT
 city_name,
