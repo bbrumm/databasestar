@@ -1,19 +1,20 @@
 /*
-Postgres commands to import the file
+SQL Server commands to import the file
 */
 
 CREATE TABLE measurements (
   city_name VARCHAR(500),
-  measurement DECIMAL(10,4)
+  measurement VARCHAR(500)
 );
 
 
-COPY measurements(city_name, measurement)
+BULK INSERT dbo.measurements
 FROM 'C:/Users/bbrum/databasestar/1brc/measurements.txt'
-DELIMITER ';';
-
-select *
-from measurements;
+WITH
+(
+  FIELDTERMINATOR =';',
+  ROWTERMINATOR = '0x0a'
+);
 
 SELECT
 city_name,

@@ -12,18 +12,9 @@ DROP TABLE measurements;
 
 CREATE TABLE measurements (
   city_name VARCHAR(500),
-  measurement DECIMAL(10,4)
+  measurement VARCHAR(500)
 );
 
-/*
-Test with a small file
-*/
-LOAD DATA LOCAL INFILE  
-'C:/Users/bbrum/OneDrive/Documents/smallfile.txt'
-INTO TABLE measurements  
-FIELDS TERMINATED BY ';' 
-LINES TERMINATED BY '\n'
-(city_name,measurement);
 
 /*
 Import the 1B row file
@@ -35,8 +26,15 @@ FIELDS TERMINATED BY ';'
 LINES TERMINATED BY '\n'
 (city_name,measurement);
 
+TRUNCATE TABLE measurements;
+
+
 SELECT COUNT(*)
 FROM measurements;
+
+SELECT *
+FROM measurements
+LIMIT 10;
 
 SELECT
 city_name,
