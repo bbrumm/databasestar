@@ -23,10 +23,10 @@ FROM EXTERNAL
     TYPE oracle_loader
     DEFAULT DIRECTORY ext_data
     ACCESS PARAMETERS (
-      RECORDS DELIMITED BY NEWLINE
+      RECORDS DELIMITED BY '\n'
       FIELDS CSV WITHOUT EMBEDDED TERMINATED BY ';'
     )
-    LOCATION ('smallfile.txt')
+    LOCATION ('measurements.txt')
     REJECT LIMIT UNLIMITED
  ) measurements;
 
@@ -54,3 +54,23 @@ FROM EXTERNAL
 GROUP BY city_name;
  
 
+/*
+Create table
+*/
+CREATE TABLE measurements AS
+SELECT *
+FROM EXTERNAL
+(
+    (
+        city_name VARCHAR2(500),
+        measurement DECIMAL(10,4)
+    )
+    TYPE oracle_loader
+    DEFAULT DIRECTORY ext_data
+    ACCESS PARAMETERS (
+      RECORDS DELIMITED BY '\n'
+      FIELDS CSV WITHOUT EMBEDDED TERMINATED BY ';'
+    )
+    LOCATION ('measurements.txt')
+    REJECT LIMIT UNLIMITED
+ ) measurements;
