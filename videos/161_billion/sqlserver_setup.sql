@@ -1,5 +1,5 @@
 /*
-SQL Server commands to import the file
+SQL Server commands to import the file 
 */
 
 CREATE TABLE measurements (
