@@ -37,3 +37,18 @@ BEGIN
   VALUES
   (:old.product_id, :old.product_name, :old.price, :old.created_on, :old.updated_on);
 END;
+
+
+UPDATE products
+SET price = 280,
+updated_on = SYSDATE
+WHERE product_id = 1;
+
+SELECT *
+FROM products;
+
+SELECT *
+FROM products_audit;
+
+DELETE FROM products
+WHERE product_id = 3;
