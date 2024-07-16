@@ -1,0 +1,14 @@
+CREATE PROCEDURE HelloWorld
+AS
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hello everyone');
+END;
+
+
+CREATE OR REPLACE PROCEDURE HelloWorld
+AS
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hello everyone');
+END;
+
+CALL HelloWorld();

@@ -8,10 +8,12 @@ Run this as either SYS or SYSTEM.
 /*
 Set the pluggable database if you're running this on Oracle v12 or later.
 */
-ALTER SESSION SET CONTAINER = PDB1;
-/*
-The old PDB name is this one. It should no longer work, but if you have issues, try this name.
 ALTER SESSION SET CONTAINER = ORCLPDB1;
+
+/*
+If the above PDB name does not work, some options for PDB names are:
+ALTER SESSION SET CONTAINER = ORCLPDB1;
+ALTER SESSION SET CONTAINER = PDB1;
 */
 
 /*
