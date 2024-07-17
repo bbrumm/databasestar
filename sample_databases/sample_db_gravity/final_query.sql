@@ -1,6 +1,6 @@
 /*
 Best Seller list
-A list of books and the quantity they have sold, all time
+A list of books and the quantity they have sold, all time 
 Final query
 */
 SELECT
