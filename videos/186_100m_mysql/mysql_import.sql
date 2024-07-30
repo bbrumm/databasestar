@@ -36,10 +36,10 @@ TRUNCATE TABLE steam_reviews;
 Import the CSV file
 1m rows - takes 12 sec
 10m rows - takes 128 seconds
-100m+ rows - takes X seconds
+100m+ rows - takes 1,606 seconds
 */
 LOAD DATA LOCAL INFILE  
-'/Users/BB/Downloads/reviews_10m.csv'
+'/Users/BB/Downloads/all_reviews.csv'
 INTO TABLE steam_reviews  
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -54,7 +54,6 @@ IGNORE 1 LINES
     received_for_free, written_during_early_access, hidden_in_steam_china, 
     steam_china_location
 );
-
 
 
 SELECT *
