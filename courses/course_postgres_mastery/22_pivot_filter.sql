@@ -1,5 +1,5 @@
 /*
-Dynamic Pivot
+Pivot and Filter
 */
 
 --SQL 01
@@ -15,32 +15,16 @@ INNER JOIN country c ON a.country_id = c.country_id
 GROUP BY c.country_name
 ORDER BY c.country_name ASC;
 
+
 --SQL 02
-SELECT *
-FROM crosstab(
-	'SELECT
-	c.country_name,
-	EXTRACT(''year'' FROM co.order_date)::numeric AS order_year,
-	COUNT(*) AS rowcount
-	FROM cust_order co
-	INNER JOIN address a ON co.dest_address_id = a.address_id 
-	INNER JOIN country c ON a.country_id = c.country_id
-	GROUP BY c.country_name, order_year
-	ORDER BY c.country_name',
-	$$VALUES(2021::numeric, 2022::numeric)$$
-)
-AS ct(country_name text, "2021" numeric, "2022" numeric);
-
-
-
 SELECT
 c.country_name,
-EXTRACT('year' FROM co.order_date)::numeric AS order_year,
-COUNT(*) AS rowcount
+COUNT(*) FILTER(WHERE EXTRACT('year' FROM co.order_date) = 2021) AS orders_2021,
+COUNT(*) FILTER(WHERE EXTRACT('year' FROM co.order_date) = 2022) AS orders_2022,
+COUNT(*) FILTER(WHERE EXTRACT('year' FROM co.order_date) = 2023) AS orders_2023,
+COUNT(*) FILTER(WHERE EXTRACT('year' FROM co.order_date) = 2024) AS orders_2024
 FROM cust_order co
 INNER JOIN address a ON co.dest_address_id = a.address_id 
 INNER JOIN country c ON a.country_id = c.country_id
-GROUP BY c.country_name, order_year
-
---SQL 03
-CREATE extension tablefunc;
+GROUP BY c.country_name
+ORDER BY c.country_name ASC;
