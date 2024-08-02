@@ -1,5 +1,5 @@
 SELECT *
-FROM steam_reviews;
+FROM steam_reviews LIMIT 100;
 
 
 
@@ -367,6 +367,10 @@ created_date
 FROM steam_reviews_top_authors
 ORDER BY r.votes_up DESC, recommendationid ASC
 LIMIT 100 OFFSET 0;
+
+/* SQL 24 */
+
+CREATE INDEX idx_staging_order ON steam_reviews_top_authors (votes_up DESC, recommendationid ASC);
 
 
 
