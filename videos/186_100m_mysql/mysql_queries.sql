@@ -10,7 +10,7 @@ The starting point of the video
 This shows a cost of 13,251 with the medium_reviews file (approx 100k rows)
 For 1m rows, cost is 142,267, time taken is 13 seconds
 For 10m rows, cost is 1,533,828, time taken is 167 seconds
-For 100m+ rows, cost is X, time taken is X
+For 100m+ rows, cost is X, time taken is X (duration 2832 seconds, fetching 212 seconds, total 3044 seconds = 51 minutes
 */
 
 SELECT
