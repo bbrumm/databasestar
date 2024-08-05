@@ -118,6 +118,8 @@ Use a temp table
 Create the temp table
 */
 
+SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
 CREATE TEMPORARY TABLE top_authors AS
 SELECT
 author_steamid
@@ -129,6 +131,11 @@ FROM (
     PERCENT_RANK () OVER (ORDER BY author_num_reviews DESC) AS rank_num_reviews
 	FROM steam_reviews
 ) s;
+
+/*
+This has table lock errors
+Perhaps filter it by the top 10
+*/
 
 /*
 SQL 06
