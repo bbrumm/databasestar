@@ -116,6 +116,7 @@ ORDER BY votes_up DESC;
 SQL 05
 Use a temp table
 Create the temp table
+For 10m rows: 176 seconds
 */
 
 SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
@@ -132,10 +133,6 @@ FROM (
 	FROM steam_reviews
 ) s;
 
-/*
-This has table lock errors
-Perhaps filter it by the top 10
-*/
 
 /*
 SQL 06
@@ -302,7 +299,7 @@ review,
 votes_up,
 created_date
 FROM steam_reviews_top_authors
-ORDER BY r.votes_up DESC;
+ORDER BY votes_up DESC;
 
 /* SQL 19 */
 
@@ -337,8 +334,7 @@ FROM_UNIXTIME(r.timestamp_created) AS created_date
 FROM steam_reviews r
 INNER JOIN top_authors a ON r.author_steamid = a.author_steamid
 WHERE r.votes_up > 0
-AND r.language = 'english'
-ORDER BY r.votes_up DESC;
+AND r.language = 'english';
 
 /* SQL 21 */
 
@@ -349,7 +345,7 @@ review,
 votes_up,
 created_date
 FROM steam_reviews_top_authors
-ORDER BY r.votes_up DESC;
+ORDER BY votes_up DESC;
 
 /* SQL 22 */
 
