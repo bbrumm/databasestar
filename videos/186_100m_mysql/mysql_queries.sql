@@ -116,6 +116,7 @@ ORDER BY votes_up DESC;
 SQL 05
 Use a temp table
 Create the temp table
+For 10m rows: 176 seconds
 */
 
 SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
@@ -135,63 +136,7 @@ FROM (
 /*
 This has table lock errors
 Perhaps filter it by the top 10
-SQL 05 A
 */
-
-
-CREATE TEMPORARY TABLE top_authors AS
-SELECT
-author_steamid
-FROM (
-SELECT
-	author_steamid,
-	PERCENT_RANK () OVER (ORDER BY author_num_games_owned DESC) AS rank_games_owned,
-	PERCENT_RANK () OVER (ORDER BY author_playtime_forever DESC) AS rank_playtime,
-	PERCENT_RANK () OVER (ORDER BY author_num_reviews DESC) AS rank_num_reviews
-	FROM steam_reviews
-) s
-WHERE s.rank_games_owned <= 0.10
-OR s.rank_playtime <= 0.10
-OR s.rank_num_reviews <= 0.10;
-
-/*
-Also gets a lock error
-Maybe try update the main table with a new column:
-is_top_10_games_owned - calculate the 10pc rank value, then update this new column to 1 if it is greater than this and leave it as NULL if not
-repeat for the other two values
-*/
-
-
-
-/* Alt SQL 01 */
-
-ALTER TABLE steam_reviews
-ADD COLUMN is_top_10_games_owned INT;
-
-UPDATE steam_reviews
-SET is_top_10_games_owned = 1
-WHERE NTILE(10) OVER(ORDER BY owned_games DESC) = 1;
-
-/*
-Get an error about using window functions in an update statement
-Could I create a smaller table with just the IDs of the top 10, then join to it or update it later?
-*/
-
-/*
-Create a table with the top 10 IDs
-*/
-SELECT
-author_steamid
-FROM (
-	SELECT
-	author_steamid,
-	NTILE(10) OVER(ORDER BY author_num_games_owned DESC) AS percentile_ten
-	FROM steam_reviews
-) s
-WHERE s.percentile_ten = 1;
-
-
-
 
 /*
 SQL 06
@@ -358,7 +303,7 @@ review,
 votes_up,
 created_date
 FROM steam_reviews_top_authors
-ORDER BY r.votes_up DESC;
+ORDER BY votes_up DESC;
 
 /* SQL 19 */
 
@@ -393,8 +338,7 @@ FROM_UNIXTIME(r.timestamp_created) AS created_date
 FROM steam_reviews r
 INNER JOIN top_authors a ON r.author_steamid = a.author_steamid
 WHERE r.votes_up > 0
-AND r.language = 'english'
-ORDER BY r.votes_up DESC;
+AND r.language = 'english';
 
 /* SQL 21 */
 
@@ -405,7 +349,7 @@ review,
 votes_up,
 created_date
 FROM steam_reviews_top_authors
-ORDER BY r.votes_up DESC;
+ORDER BY votes_up DESC;
 
 /* SQL 22 */
 
