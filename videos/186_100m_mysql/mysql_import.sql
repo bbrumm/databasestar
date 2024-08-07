@@ -39,7 +39,7 @@ Import the CSV file
 100m+ rows - takes 1,606 seconds
 */
 LOAD DATA LOCAL INFILE  
-'/Users/BB/Downloads/all_reviews.csv'
+'/Users/BB/Downloads/reviews_10m.csv'
 INTO TABLE steam_reviews  
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
