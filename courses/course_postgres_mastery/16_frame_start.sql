@@ -33,7 +33,9 @@ co.order_id,
 co.order_date,
 b.title,
 ol.price,
-MAX(ol.price) OVER (ORDER BY co.order_date RANGE UNBOUNDED PRECEDING) AS max_book_price
+MAX(ol.price) OVER (
+    ORDER BY co.order_date RANGE UNBOUNDED PRECEDING
+) AS max_book_price
 FROM cust_order co 
 INNER JOIN order_line ol ON co.order_id = ol.order_id
 INNER JOIN book b ON ol.book_id = b.book_id 
@@ -45,12 +47,13 @@ co.order_id,
 co.order_date,
 b.title,
 ol.price,
-MAX(ol.price) OVER (ORDER BY co.order_date ROWS UNBOUNDED PRECEDING) AS max_book_price
+MAX(ol.price) OVER (
+    ORDER BY co.order_date ROWS UNBOUNDED PRECEDING
+) AS max_book_price
 FROM cust_order co 
 INNER JOIN order_line ol ON co.order_id = ol.order_id
 INNER JOIN book b ON ol.book_id = b.book_id 
 ORDER BY co.order_date ASC, co.order_id, ol.price ASC;
-
 
 --SQL 05
 SELECT
@@ -58,7 +61,9 @@ co.order_id,
 co.order_date,
 b.title,
 ol.price,
-MAX(ol.price) OVER (ORDER BY co.order_date ROWS 5 PRECEDING) AS max_book_price
+MAX(ol.price) OVER (
+    ORDER BY co.order_date, co.order_id, ol.price ROWS UNBOUNDED PRECEDING
+) AS max_book_price
 FROM cust_order co 
 INNER JOIN order_line ol ON co.order_id = ol.order_id
 INNER JOIN book b ON ol.book_id = b.book_id 
@@ -66,6 +71,21 @@ ORDER BY co.order_date ASC, co.order_id, ol.price ASC;
 
 
 --SQL 06
+SELECT
+co.order_id,
+co.order_date,
+b.title,
+ol.price,
+MAX(ol.price) OVER (
+    ORDER BY co.order_date, co.order_id, ol.price ROWS 5 PRECEDING
+) AS max_book_price
+FROM cust_order co 
+INNER JOIN order_line ol ON co.order_id = ol.order_id
+INNER JOIN book b ON ol.book_id = b.book_id 
+ORDER BY co.order_date ASC, co.order_id ASC, ol.price ASC;
+
+
+--SQL 07
 SELECT
 order_date::date,
 COUNT(*) AS order_line_count,
@@ -75,7 +95,7 @@ INNER JOIN order_line ol ON co.order_id = ol.order_id
 GROUP BY order_date::date
 ORDER BY order_date::date ASC;
 
---SQL 07
+--SQL 08
 SELECT
 order_date::date,
 COUNT(*) AS order_line_count,
@@ -85,7 +105,7 @@ INNER JOIN order_line ol ON co.order_id = ol.order_id
 GROUP BY order_date::date
 ORDER BY order_date::date ASC;
 
---SQL 08
+--SQL 09
 SELECT
 order_date::date,
 COUNT(*) AS order_line_count,
