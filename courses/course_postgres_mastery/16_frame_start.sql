@@ -24,7 +24,7 @@ MAX(ol.price) OVER (ORDER BY co.order_date) AS max_book_price
 FROM cust_order co 
 INNER JOIN order_line ol ON co.order_id = ol.order_id
 INNER JOIN book b ON ol.book_id = b.book_id 
-ORDER BY co.order_date ASC, co.order_id, ol.price ASC;
+ORDER BY co.order_date ASC, co.order_id ASC;
 
 
 --SQL 03
