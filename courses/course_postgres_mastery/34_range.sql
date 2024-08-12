@@ -26,7 +26,7 @@ VALUES (2, '[2024-07-10, 2024-07-13)');
 
 --SQL 05
 INSERT INTO test_range (id, valid_range)
-VALUES (2, '(2024-07-10, 2024-07-13)');
+VALUES (3, '(2024-07-10, 2024-07-13)');
 
 --SQL 06
 SELECT
