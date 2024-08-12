@@ -92,8 +92,8 @@ WITH categories AS (
 	WHERE parent_category_id IS NULL
 	UNION
 	SELECT this.category_id, this.category_name, this.parent_category_id
-	FROM categories prior
-	INNER JOIN book_category this ON this.parent_category_id = prior.category_id
+	FROM book_category this
+	INNER JOIN categories prior ON this.parent_category_id = prior.category_id
 )
 SELECT category_id, category_name, parent_category_id
 FROM categories;
@@ -105,8 +105,8 @@ WITH RECURSIVE categories AS (
 	WHERE parent_category_id IS NULL
 	UNION
 	SELECT this.category_id, this.category_name, this.parent_category_id
-	FROM categories prior
-	INNER JOIN book_category this ON this.parent_category_id = prior.category_id
+	FROM book_category this
+	INNER JOIN categories prior ON this.parent_category_id = prior.category_id
 )
 SELECT category_id, category_name, parent_category_id
 FROM categories;
@@ -119,8 +119,8 @@ WITH RECURSIVE categories AS (
 	WHERE parent_category_id IS NULL
 	UNION
 	SELECT this.category_id, this.category_name, this.parent_category_id, prior.level + 1
-	FROM categories prior
-	INNER JOIN book_category this ON this.parent_category_id = prior.category_id
+	FROM book_category this
+	INNER JOIN categories prior ON this.parent_category_id = prior.category_id
 )
 SELECT category_id, category_name, parent_category_id, level
 FROM categories;
