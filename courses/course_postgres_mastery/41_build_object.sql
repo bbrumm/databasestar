@@ -2,6 +2,10 @@
 Build Object
 */
 
+--SQL 00
+INSERT INTO test_jsonb (id, some_data)
+VALUES (3, '{"color":"blue", "size":"large"}');
+
 --SQL 01
 SELECT JSONB_BUILD_OBJECT('id', 4, 'name', 'Jacket');
 
@@ -21,6 +25,6 @@ SELECT
 method_id,
 method_name,
 cost,
-JSON_BUILD_OBJECT('method_id', method_id, 'method_name', method_name, 'cost', cost) AS row_as_json
+JSONB_BUILD_OBJECT('method_id', method_id, 'method_name', method_name, 'cost', cost) AS row_as_json
 FROM shipping_method;
 

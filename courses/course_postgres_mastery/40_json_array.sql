@@ -21,7 +21,7 @@ INSERT INTO test_jsonb (id, some_data)
 VALUES (6, '
 {
   "id":"2",
-  "name":"Running Shoes",
+  "name":"Casual Shoes",
   "sizes":[5, 6, 7, 7.5, 8, 8.5, 9, 10]
 }
 ');
