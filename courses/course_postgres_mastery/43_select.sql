@@ -63,24 +63,29 @@ VALUES (15, '
 
 
 --SQL 03
-SELECT publisher_id, publisher_details
+SELECT
+publisher_id,
+publisher_details
 FROM publisher_contacts;
 
 --SQL 04
 SELECT
 publisher_id,
+publisher_details,
 publisher_details -> 'first_name' AS first_name
 FROM publisher_contacts;
 
 --SQL 05
 SELECT
 publisher_id,
+publisher_details,
 publisher_details -> 'contacts' AS contacts
 FROM publisher_contacts;
 
 --SQL 06
 SELECT
 publisher_id,
+publisher_details,
 publisher_details -> 'contacts' -> 0 AS contact_person
 FROM publisher_contacts;
 
@@ -88,18 +93,21 @@ FROM publisher_contacts;
 --SQL 07
 SELECT
 publisher_id,
+publisher_details,
 publisher_details -> 'contacts' -> 0 -> 'first_name' AS first_name
 FROM publisher_contacts;
 
 --SQL 08
 SELECT
 publisher_id,
+publisher_details,
 publisher_details -> 'contacts' -> 0 ->> 'first_name' AS first_name
 FROM publisher_contacts;
 
 --SQL 09
 SELECT
 publisher_id,
+publisher_details,
 publisher_details -> 'contacts' -> 0 ->> 'first_name' AS first_name,
 publisher_details -> 'contacts' -> 0 ->> 'email' AS email,
 publisher_details -> 'contacts' -> 0 ->> 'status' AS status

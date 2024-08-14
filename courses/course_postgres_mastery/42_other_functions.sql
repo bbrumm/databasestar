@@ -29,5 +29,8 @@ SELECT
 JSON_BUILD_ARRAY(1, 3, 78, 12);
 
 --SQL 05
-SELECT id, some_data, JSONB_PRETTY(some_data) AS formatted_json
+SELECT
+id,
+some_data,
+JSONB_PRETTY(some_data) AS formatted_json
 FROM test_jsonb;
