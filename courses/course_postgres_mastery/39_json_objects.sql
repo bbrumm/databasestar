@@ -4,7 +4,7 @@ JSON Objects
 
 --SQL 01
 INSERT INTO test_jsonb (id, some_data)
-VALUES (3, '{"color":"blue", "size":"large"}');
+VALUES (2, '{"color":"blue", "size":"large"}');
 
 --SQL 02
 SELECT id, some_data
