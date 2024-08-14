@@ -27,3 +27,9 @@ key,
 value
 FROM publisher_contacts,
 JSONB_EACH_TEXT(publisher_details -> 'contacts' -> 0);
+
+--SQL 05
+SELECT
+publisher_id,
+JSONB_ARRAY_ELEMENTS(publisher_details -> 'contacts')
+FROM publisher_contacts;
