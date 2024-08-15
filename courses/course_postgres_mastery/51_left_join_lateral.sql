@@ -16,8 +16,18 @@ JOIN LATERAL (
 ) s ON TRUE
 ORDER BY title ASC, order_date ASC;
 
-
 --SQL 02
+SELECT b.book_id, b.title
+FROM book b
+WHERE b.book_id NOT IN (
+	SELECT book_id
+	FROM order_line
+)
+ORDER BY b.title;
+
+
+
+--SQL 03
 -- 17,175 rows
 SELECT b.title, s.order_date
 FROM book b
