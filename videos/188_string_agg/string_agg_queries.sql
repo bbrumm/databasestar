@@ -46,7 +46,52 @@ GROUP BY c.country_name;
 
 SELECT
 c.country_name,
+STRING_AGG(a.city, ',') AS city_list
+FROM address a
+INNER JOIN country c ON a.country_id = c.country_id
+GROUP BY c.country_name;
+
+/* SQL 07 - MySQL */
+
+SELECT
+c.country_name,
+GROUP_CONCAT(a.city) AS city_list
+FROM address a
+INNER JOIN country c ON a.country_id = c.country_id
+GROUP BY c.country_name;
+
+/* SQL 08 - MySQL */
+
+SELECT
+c.country_name,
+GROUP_CONCAT(a.city SEPARATOR ', ') AS city_list
+FROM address a
+INNER JOIN country c ON a.country_id = c.country_id
+GROUP BY c.country_name;
+
+/* SQL 09 - Postgres */
+
+SELECT
+c.country_name,
 STRING_AGG(a.city) AS city_list
+FROM address a
+INNER JOIN country c ON a.country_id = c.country_id
+GROUP BY c.country_name;
+
+/* SQL 10 - Postgres */
+
+SELECT
+c.country_name,
+STRING_AGG(a.city, ',') AS city_list
+FROM address a
+INNER JOIN country c ON a.country_id = c.country_id
+GROUP BY c.country_name;
+
+/* SQL 11 - Postgres */
+
+SELECT
+c.country_name,
+STRING_AGG(a.city, ', ') AS city_list
 FROM address a
 INNER JOIN country c ON a.country_id = c.country_id
 GROUP BY c.country_name;
