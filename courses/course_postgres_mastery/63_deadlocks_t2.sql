@@ -13,7 +13,7 @@ WHERE id = 5;
 
 --SQL 03
 UPDATE courier
-SET courier_name = 'Australia Post'
+SET courier_name = 'AU Post'
 WHERE id = 4;
 
 --SQL 03
