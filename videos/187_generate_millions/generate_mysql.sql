@@ -1,5 +1,5 @@
 CREATE TABLE test_data (
-  test_num INT(10),
+  test_num INT,
   test_text VARCHAR(100),
   test_datetime TIMESTAMP
 );
@@ -72,3 +72,30 @@ FROM_UNIXTIME(UNIX_TIMESTAMP('2000-01-01 01:00:00') + FLOOR(RAND() * 60 * 60 * 2
 FROM dummy_rows;
 
 SET SESSION cte_max_recursion_depth=10000000;
+
+/*
+CTE with Cross Join
+*/
+SELECT COUNT(*)
+FROM information_schema.columns;
+
+SELECT * FROM information_schema.tables;
+
+INSERT INTO test_data (test_num, test_text, test_datetime)
+WITH dummy_rows_a  AS (
+  SELECT 1
+  FROM information_schema.columns
+  LIMIT 1000
+),
+dummy_rows_b AS (
+ SELECT 1
+  FROM information_schema.columns
+  LIMIT 1000
+)
+SELECT
+FLOOR(RAND() * 1000000),
+substring(MD5(RAND()),1,20),
+FROM_UNIXTIME(UNIX_TIMESTAMP('2000-01-01 01:00:00') + FLOOR(RAND() * 60 * 60 * 24 * 365 * 20))
+FROM dummy_rows_a
+CROSS JOIN dummy_rows_b;
+
