@@ -83,13 +83,19 @@ dummy_rows_b AS (
  SELECT 1
   FROM information_schema.columns
   LIMIT 1
+),
+dummy_rows_c AS (
+ SELECT 1
+  FROM information_schema.columns
+  LIMIT 1
 )
 SELECT
 FLOOR(RANDOM() * 1000000), 
 SUBSTRING(md5(random()::text), 1, 20), 
 '2000-01-01'::date + trunc(random() * 365 * 20)::int
 FROM dummy_rows_a
-CROSS JOIN dummy_rows_b;
+CROSS JOIN dummy_rows_b
+CROSS JOIN dummy_rows_c;
 
 /* SQL 07 */
 SELECT generate_series(1,10);
