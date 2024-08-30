@@ -95,11 +95,11 @@ Try SELECT TOP with an inbuilt table
 
 --SQL 06
 WITH dummy_rows_a AS (
-  SELECT TOP 1000 object_id
+  SELECT TOP 10 object_id
   FROM sys.all_columns
 ),
 dummy_rows_b AS (
-  SELECT TOP 1000 object_id
+  SELECT TOP 1 object_id
   FROM sys.all_columns
 )
 INSERT INTO test_data (test_num, test_text, test_datetime)
