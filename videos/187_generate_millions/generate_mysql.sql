@@ -96,12 +96,12 @@ INSERT INTO test_data (test_num, test_text, test_datetime)
 WITH dummy_rows_a  AS (
   SELECT 1
   FROM information_schema.columns
-  LIMIT 1000
+  LIMIT 10
 ),
 dummy_rows_b AS (
  SELECT 1
   FROM information_schema.columns
-  LIMIT 1000
+  LIMIT 1
 )
 SELECT
 FLOOR(RAND() * 1000000),
@@ -109,4 +109,30 @@ substring(MD5(RAND()),1,20),
 DATE_ADD('2000-01-01 00:00:00', INTERVAL 1 +  FLOOR(RAND() * 365 * 20) DAY)
 FROM dummy_rows_a
 CROSS JOIN dummy_rows_b;
+
+
+
+INSERT INTO test_data (test_num, test_text, test_datetime)
+WITH dummy_rows_a  AS (
+  SELECT 1
+  FROM information_schema.columns
+  LIMIT 1000
+),
+dummy_rows_b AS (
+ SELECT 1
+  FROM information_schema.columns
+  LIMIT 1000
+),
+dummy_rows_c AS (
+ SELECT 1
+  FROM information_schema.columns
+  LIMIT 10
+)
+SELECT
+FLOOR(RAND() * 1000000),
+substring(MD5(RAND()),1,20),
+DATE_ADD('2000-01-01 00:00:00', INTERVAL 1 +  FLOOR(RAND() * 365 * 20) DAY)
+FROM dummy_rows_a
+CROSS JOIN dummy_rows_b
+CROSS JOIN dummy_rows_c;
 
