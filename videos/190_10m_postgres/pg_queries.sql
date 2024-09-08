@@ -299,4 +299,16 @@ This feels like I could have just used an MV from the start and made it run fast
 Is there another query I can use that looks at this data but doesn't just use the MV?
 */
 
+/*
+ * Reset table
+ */
 
+
+DROP INDEX idx_trip_totalamt;
+DROP INDEX idx_trip_tripdist;
+DROP INDEX idx_trip_pickupdate;
+
+ALTER TABLE yellow_tripdata 
+DROP COLUMN trip_pickup_date;
+
+DROP MATERIALIZED VIEW mv_avg_per_day;
