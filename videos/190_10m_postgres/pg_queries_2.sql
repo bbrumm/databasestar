@@ -365,7 +365,7 @@ LIMIT 100;
  * No change to cost
  */
 
-CREATE INDEX idx_tip_distamt ON yellow_tripdata (trip_distance, total_amount);
+CREATE INDEX idx_trip_distamt ON yellow_tripdata (trip_distance, total_amount);
 
 /* SQL 11
  * Alter the base table to add the reason
@@ -487,9 +487,18 @@ CREATE INDEX idx_trip_orderby ON yellow_tripdata (tpep_pickup_datetime);
  */
 
 /*
- * REVIEW:
- * 
- */
+REVIEW:
+Original query: 25 s
+With indexes on WHERE clause: 21 s
+Union to Union All: 20 s
+Case instead of Union: 10 s
+Case with WHERE: 5.4 s
+Compound index: 5.4 s
+Populate and select reason column: 11 s
+Filter on reason: 4.8 s
+Index on reason: 4.2 s
+Index on order by: 0.1 s
+*/
 
 
 /*
@@ -577,11 +586,12 @@ ALTER TABLE yellow_tripdata
 DROP COLUMN reason;
 
 DROP INDEX idx_trip_reason;
-DROP INDEX idx_tip_distamt;
+DROP INDEX idx_trip_distamt;
 DROP INDEX idx_trip_dist;
 DROP INDEX idx_trip_totalamt;
 DROP INDEX idx_trip_tipamt;
 DROP INDEX idx_trip_orderby;
+DROP INDEX idx_trip_pass;
 
 
 
