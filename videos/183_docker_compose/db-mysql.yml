@@ -1,0 +1,9 @@
+services:
+  db:
+    container_name: mysql_container
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_DATABASE: new_db
+    ports:
+      - "3306:3306"
