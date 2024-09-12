@@ -994,3 +994,836 @@ Q5
 
 /* SQL 33 */
 
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+)
+SELECT
+season,
+team_name,
+wins,
+losses,
+ROUND(wins / (wins + losses), 3) AS win_pct
+FROM season_record
+ORDER BY team_name ASC, season ASC;
+
+
+/* SQL 34 */
+
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+)
+SELECT
+season,
+team_name,
+wins,
+losses,
+ROUND(wins / (wins + losses), 3) AS win_pct,
+LAG(wins, 1) OVER (
+    PARTITION BY team_name
+    ORDER BY season ASC
+) AS wins_prev_season
+FROM season_record
+ORDER BY team_name ASC, season ASC;
+
+
+/* SQL 35 */
+
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season
+FROM season_with_prev
+ORDER BY team_name ASC, season ASC;
+
+
+/* SQL 36 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+ORDER BY team_name ASC, season ASC;
+
+/* SQL 37 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+ORDER BY wins_increase DESC;
+
+/* SQL 38 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+WHERE wins_prev_season IS NOT NULL
+ORDER BY wins_increase DESC;
+
+
+/* SQL 39 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+WHERE team_name = 'New Orleans Hornets'
+ORDER BY season ASC;
+
+/* SQL 40 */
+
+SELECT
+MIN(SUBSTR(season_id, 2, 4)) AS min_season,
+MAX(SUBSTR(season_id, 2, 4)) AS max_season
+FROM game;
+
+/* SQL 41 */
+
+SELECT
+LEVEL
+FROM dual
+CONNECT BY LEVEL <= 10;
+
+/* SQL 42 */
+
+SELECT
+LEVEL + 1945 AS season
+FROM dual
+CONNECT BY LEVEL <= 2022 - 1946 + 1;
+
+/* SQL 43 */
+
+
+WITH season_list AS (
+    SELECT
+    LEVEL + 1945 AS season
+    FROM dual
+    CONNECT BY LEVEL <= 2022 - 1946 + 1
+), season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+s.season,
+p.team_name,
+p.wins,
+p.wins_prev_season,
+p.wins - p.wins_prev_season AS wins_increase
+FROM season_list s
+LEFT JOIN season_with_prev p ON s.season = p.season
+WHERE p.team_name = 'New Orleans Hornets'
+ORDER BY s.season ASC;
+
+/* SQL 44 */
+
+WITH season_list AS (
+    SELECT
+    LEVEL + 1945 AS season
+    FROM dual
+    CONNECT BY LEVEL <= 2022 - 1946 + 1
+), season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+s.season,
+p.team_name,
+p.wins,
+p.wins_prev_season,
+p.wins - p.wins_prev_season AS wins_increase
+FROM season_list s
+LEFT JOIN season_with_prev p ON s.season = p.season
+ORDER BY p.team_name ASC, s.season ASC;
+
+/* SQL 45 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+WHERE team_name = 'New Orleans Hornets'
+ORDER BY season ASC;
+
+/* SQL 46 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        SUBSTR(season_id, 2, 4) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        SUBSTR(season_id, 2, 4),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season,
+    SUM(wins) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+        RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING
+    ) AS wins_prev_season_sum
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase,
+wins_prev_season_sum
+FROM season_with_prev
+WHERE team_name = 'New Orleans Hornets'
+ORDER BY season ASC;
+
+/* SQL 47 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    LAG(wins, 1) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+    ) AS wins_prev_season,
+    SUM(wins) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+        RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING
+    ) AS wins_prev_season_sum
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase,
+wins_prev_season_sum
+FROM season_with_prev
+WHERE team_name = 'New Orleans Hornets'
+ORDER BY season ASC;
+
+
+/* SQL 48 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    SUM(wins) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+        RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+WHERE team_name = 'New Orleans Hornets'
+ORDER BY season ASC;
+
+
+/* SQL 49 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    SUM(wins) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+        RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+ORDER BY wins_increase DESC;
+
+
+/* SQL 50 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    SUM(wins) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+        RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+WHERE wins_prev_season IS NOT NULL
+ORDER BY wins_increase DESC;
+
+
+/* SQL 51 */
+
+WITH season_record AS (
+    SELECT
+    season,
+    team_name,
+    SUM(wins) AS wins,
+    SUM(losses) AS losses
+    FROM (
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)) AS season,
+        team_name_home AS team_name,
+        SUM(CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_home
+        UNION ALL
+        SELECT
+        TO_NUMBER(SUBSTR(season_id, 2, 4)),
+        team_name_away,
+        SUM(CASE WHEN wl_away = 'W' THEN 1 ELSE 0 END) AS wins,
+        SUM(CASE WHEN wl_away = 'L' THEN 1 ELSE 0 END) AS losses
+        FROM game
+        WHERE season_type = 'Regular Season'
+        GROUP BY season_id, team_name_away
+    )
+    GROUP BY season, team_name
+),
+season_with_prev AS (
+    SELECT
+    season,
+    team_name,
+    wins,
+    SUM(wins) OVER (
+        PARTITION BY team_name
+        ORDER BY season ASC
+        RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING
+    ) AS wins_prev_season
+    FROM season_record
+)
+SELECT
+season,
+team_name,
+wins,
+wins_prev_season,
+wins - wins_prev_season AS wins_increase
+FROM season_with_prev
+WHERE wins_prev_season IS NOT NULL
+ORDER BY wins_increase ASC;
+

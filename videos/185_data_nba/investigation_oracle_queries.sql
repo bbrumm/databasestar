@@ -775,7 +775,7 @@ season_records_with_prev AS (
       PARTITION BY team_name
       ORDER BY season ASC
     ) AS wins_prev_season,
-    MAX(wins) OVER (
+    SUM(wins) OVER (
       PARTITION BY team_name
       ORDER BY season ASC
       RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING --change this to 1 preceding once it works
@@ -833,7 +833,7 @@ season_records_with_prev AS (
     team_name,
     wins,
     losses,
-    MAX(wins) OVER (
+    SUM(wins) OVER (
       PARTITION BY team_name
       ORDER BY season ASC
       RANGE BETWEEN 1 PRECEDING AND 1 PRECEDING --change this to 1 preceding once it works
