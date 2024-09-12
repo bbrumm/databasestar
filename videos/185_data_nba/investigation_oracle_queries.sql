@@ -42,7 +42,6 @@ ORDER BY wins DESC;
 
 SELECT
 g.team_name_home,
-g.team_name_away,
 CASE WHEN wl_home = 'W' THEN 1 ELSE 0 END AS wins,
 CASE WHEN wl_home = 'L' THEN 1 ELSE 0 END AS losses
 FROM game g;
