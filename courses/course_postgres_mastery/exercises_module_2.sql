@@ -199,3 +199,82 @@ INNER JOIN order_line ol ON ol.book_id = b.book_id
 INNER JOIN cust_order co ON ol.order_id = co.order_id
 ORDER BY b.book_id ASC, co.order_date ASC;
 
+/* 16-01 */
+
+SELECT
+co.order_date::date AS order_date,
+COUNT(*) AS order_count,
+SUM(COUNT(*)) OVER (
+  ORDER BY co.order_date::date ASC
+  RANGE INTERVAL '30' DAY PRECEDING
+) AS orders_rolling_month
+FROM cust_order co 
+GROUP BY co.order_date::date
+ORDER BY co.order_date::date ASC
+
+/* 16-02 */
+
+SELECT
+b.book_id,
+b.title,
+b.publication_date,
+b.num_pages,
+AVG(b.num_pages) OVER (
+  ORDER BY b.publication_date ASC
+  ROWS 9 PRECEDING
+) AS avg_last_10
+FROM book b
+ORDER BY b.publication_date ASC;
+
+/* 17-02 */
+
+SELECT
+co.order_id,
+co.order_date::date AS order_date,
+SUM(ol.price) AS order_amount,
+SUM(SUM(ol.price)) OVER (
+  ORDER BY co.order_date::date ASC
+  RANGE BETWEEN INTERVAL '7' DAY PRECEDING AND INTERVAL '7' DAY FOLLOWING
+) AS avg_order_amount_week
+FROM cust_order co 
+INNER JOIN order_line ol ON co.order_id = ol.order_id 
+GROUP BY co.order_id, co.order_date::date
+ORDER BY co.order_date::date ASC;
+
+/* 18-01 */
+
+SELECT
+co.order_id,
+co.order_date,
+c.first_name,
+c.last_name,
+SUM(ol.price) AS order_amount,
+SUM(SUM(ol.price)) OVER w_cust AS sum_for_customer,
+AVG(SUM(ol.price)) OVER w_cust AS avg_for_customer,
+COUNT(co.order_id) OVER w_cust AS num_orders_for_customer
+FROM cust_order co 
+INNER JOIN order_line ol ON co.order_id = ol.order_id 
+INNER JOIN customer c ON co.customer_id = c.customer_id 
+GROUP BY co.order_id, co.order_date, c.first_name, c.last_name
+WINDOW w_cust AS (
+  PARTITION BY c.first_name, c.last_name
+)
+ORDER BY co.order_date ASC;
+
+/* 18-02 */
+
+/*
+Note: even though the exercise says to use a window clause for this,
+it could also be solved with a group by as shown below.
+*/
+
+SELECT
+c.country_name,
+COUNT(*) count_for_country,
+MAX(co.order_date::date) AS recent_order_date_for_country
+FROM cust_order co 
+INNER JOIN address a ON co.dest_address_id = a.address_id 
+INNER JOIN country c ON a.country_id = c.country_id
+GROUP BY c.country_name 
+ORDER BY c.country_name ASC;
+
