@@ -2,6 +2,8 @@
 Setup
 */
 
+CREATE DATABASE jointest;
+
 CREATE TABLE supplier (
   supplier_id INT,
   supplier_name VARCHAR(200),
@@ -16,7 +18,7 @@ CREATE TABLE product (
   supplier_id INT,
   price INT,
   CONSTRAINT pk_product
-    PRIMARY KEY (product_id)
+    PRIMARY KEY (product_id),
   CONSTRAINT fk_prod_supp
     FOREIGN KEY (supplier_id)
     REFERENCES supplier (supplier_id)
@@ -26,21 +28,21 @@ CREATE TABLE product (
 
 INSERT INTO supplier (supplier_id, supplier_name) VALUES
 (1, 'Quality Goods');
-INSERT INTO supplier (supplier_name, start_date) VALUES
+INSERT INTO supplier (supplier_id, supplier_name) VALUES
 (2, 'ABC Clothing');
 
 
 INSERT INTO product (product_id, product_name, supplier_id, price)
-VALUES (1, 'Shirt', 50, 2);
+VALUES (1, 'Shirt', 2, 50);
 
 INSERT INTO product (product_id, product_name, supplier_id, price)
-VALUES (2, 'Jeans', 200, 1);
+VALUES (2, 'Jeans', 1, 200);
 
 INSERT INTO product (product_id, product_name, supplier_id, price)
-VALUES (3, 'Jumper', 100, 2);
+VALUES (3, 'Jumper', 2, 100);
 
 INSERT INTO product (product_id, product_name, supplier_id, price)
-VALUES (4, 'Brown dress shoes', 180, NULL);
+VALUES (4, 'Brown dress shoes', NULL, 180);
 
 /* SQL 01 */
 
@@ -63,3 +65,5 @@ INNER JOIN supplier USING (supplier_id);
 /* SQL 03 */
 
 ALTER TABLE supplier RENAME supplier_id TO id;
+
+ALTER TABLE supplier RENAME id TO supplier_id;
