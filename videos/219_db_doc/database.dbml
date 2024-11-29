@@ -1,0 +1,20 @@
+Project newstore {
+    database_type: 'PostgreSQL'
+    Note: '''
+      # New Store Database
+      This is the documentation for the **New Store Database**.
+    '''
+}
+Table customer {
+    customer_id int [pk]
+    first_name varchar
+    last_name varchar
+    created_datetime timestamp
+    note: "This table contains information about customers for the store."
+}
+Table cust_order {
+    order_id int [pk]
+    order_date timestamp [note: "The date and time the order was placed. Stored in UTC timezone."]
+    customer_id int
+}
+Ref: cust_order.customer_id > customer.customer_id
