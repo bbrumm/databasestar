@@ -130,6 +130,7 @@ WITH categories (category_id, category_name, parent_category_id, row_level) AS (
 SELECT category_id, category_name, parent_category_id, row_level
 FROM categories;
 
+COMMIT;
 
 
 
