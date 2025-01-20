@@ -30,7 +30,7 @@ fname,
 email,
 company,
 account_status
-FROM company;
+FROM customer;
 
 /* SQL 04 */
 
@@ -45,7 +45,7 @@ fname,
 email,
 company,
 account_status
-FROM company
+FROM customer
 WHERE account_status = 'Active';
 
 /* SQL 06 */
@@ -92,16 +92,16 @@ fname,
 email,
 company,
 account_status
-FROM company;
+FROM customer;
 
 /* SQL 13 */
 
-ALTER TABLE company
+ALTER TABLE customer
 ADD COLUMN status_id INT;
 
 /* SQL 14 */
 
-ALTER TABLE company
+ALTER TABLE customer
 ADD CONSTRAINT fk_comp_accstatus
 FOREIGN KEY (status_id)
 REFERENCES account_status (id);
@@ -115,27 +115,27 @@ email,
 company,
 account_status,
 status_id
-FROM company;
+FROM customer;
 
 /* SQL 16 */
 
-UPDATE company
+UPDATE customer
 SET status_id = 1
 WHERE id IN (1, 3, 6);
 
 /* SQL 17 */
 
-UPDATE company
+UPDATE customer
 SET status_id = 2
 WHERE id IN (7);
 
-UPDATE company
+UPDATE customer
 SET status_id = 3
 WHERE id IN (4, 5);
 
 /* SQL 18 */
 
-ALTER TABLE company
+ALTER TABLE customer
 DROP COLUMN account_status;
 
 /* SQL 19 */
@@ -146,4 +146,4 @@ fname,
 email,
 company,
 status_id
-FROM company;
+FROM customer;
