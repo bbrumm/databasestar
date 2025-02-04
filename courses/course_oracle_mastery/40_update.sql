@@ -31,3 +31,4 @@ SET publisher_details = JSON_MERGEPATCH (
 )
 WHERE publisher_id = 15;
 
+COMMIT;
