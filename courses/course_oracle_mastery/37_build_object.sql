@@ -34,3 +34,4 @@ JSON_OBJECT(
 ) AS row_as_json
 FROM shipping_method;
 
+COMMIT;
