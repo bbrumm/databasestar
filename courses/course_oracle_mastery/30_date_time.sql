@@ -60,6 +60,7 @@ FROM timestamp_test;
 INSERT INTO timestamp_test (id, my_timestamp)
 VALUES (2, TIMESTAMP '2024-09-14 08:45:11 -7:00');
 
+/*
 --SQL 09
 SELECT
 id,
@@ -73,3 +74,4 @@ id,
 my_timestamp,
 my_timestamp AT TIME ZONE 'America/New_York' AS ny_time
 FROM timestamp_test;
+*/
