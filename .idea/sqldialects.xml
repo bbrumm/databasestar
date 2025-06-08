@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$USER_HOME$/My Drive/Database Star/Products/SQL Cheat Sheets/SQL Versions/PostgreSQL Cheat Sheet v1.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/214_joins/queries.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/215_update/update.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/218_flights/video_scripts.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/videos/241_fix_query/scripts.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/create tables.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/drop_tables.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/populate tables.sql" dialect="PostgreSQL" />

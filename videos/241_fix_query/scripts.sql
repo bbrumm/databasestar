@@ -4,7 +4,7 @@ Create tables and add data
 
 CREATE TABLE departments (
     department_id INTEGER,
-    department_name,
+    department_name VARCHAR(100),
     advisor_name VARCHAR(200),
     office_location VARCHAR(20),
     CONSTRAINT pk_departments
@@ -21,7 +21,7 @@ CREATE TABLE students (
         PRIMARY KEY (student_id),
     CONSTRAINT fk_students_dept
         FOREIGN KEY (department)
-        REFERENCES department (department_id)
+        REFERENCES departments (department_id)
 );
 
 CREATE TABLE courses (
@@ -50,15 +50,15 @@ CREATE TABLE enrolments (
     score10 INTEGER,
     attendance INTEGER,
     final_score INTEGER,
-    is_pass CHAR(1)
+    is_pass CHAR(1),
     CONSTRAINT pk_enrolments
         PRIMARY KEY (id),
     CONSTRAINT fk_enrolments_stud
         FOREIGN KEY (student_id)
-        REFERENCES student (student_id),
+        REFERENCES students (student_id),
     CONSTRAINT fk_enrolments_course
         FOREIGN KEY (course_id)
-        REFERENCES course (course_id)
+        REFERENCES courses (course_id)
 );
 
 
@@ -66,23 +66,28 @@ CREATE TABLE enrolments (
 Add rows
 */
 
+DELETE FROM enrolments;
+DELETE FROM courses;
+DELETE FROM students;
+DELETE FROM departments;
+
 INSERT INTO departments (department_id, department_name, advisor_name, office_location) VALUES
 (1, 'Physics', 'Matthew Jones', '10A'),
 (2, 'Computer Science', 'Tony Stark', '14B'),
 (3, 'History', 'Sally Smith', '10C'),
 (4, 'Mathematics', 'Bruce Banner', '12A');
 
-INSERT INTO students (student_id, full_name, department, enrollment_year) VALUES
-(1, 'Michael Smith', 2, 2018),
-(2, 'Mary Jones', 1, 2021),
-(3, 'Peter Parker', 3, 2019),
-(4, 'Natasha Romanov', 4, 2020),
-(5, 'Claire Jameson', 4, 2021),
-(6, 'Paul Johnson', 3, 2022),
-(7, 'Michelle Livingstone', 2, 2023),
-(8, 'Aaron Smith', 1, 2020),
-(9, 'Joanne Taylor', 1, 2019),
-(10, 'Terry Jones', 2, 2022);
+INSERT INTO students (student_id, full_name, department, enrollment_year, status) VALUES
+(1, 'Michael Smith', 2, 2018, 'active'),
+(2, 'Mary Jones', 1, 2021, 'active'),
+(3, 'Peter Parker', 3, 2019, 'active'),
+(4, 'Natasha Romanov', 4, 2020, 'active'),
+(5, 'Claire Jameson', 4, 2021, 'active'),
+(6, 'Paul Johnson', 3, 2022, 'active'),
+(7, 'Michelle Livingstone', 2, 2023, 'active'),
+(8, 'Aaron Smith', 1, 2020, 'active'),
+(9, 'Joanne Taylor', 1, 2019, 'inactive'),
+(10, 'Terry Jones', 2, 2022, 'active');
 
 INSERT INTO courses (course_id, course_code, course_name) VALUES
 (1, 'CS100', 'Introduction to Computer Science'),
@@ -255,7 +260,7 @@ c.course_name, c.course_code, e.semester, e.year,
 FROM
     students s
 LEFT JOIN
-    enrollments e ON s.student_id = e.student_id
+    enrolments e ON s.student_id = e.student_id
 LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
@@ -400,7 +405,7 @@ END AS pass_status
 FROM
     students s
 LEFT JOIN
-    enrollments e ON s.student_id = e.student_id
+    enrolments e ON s.student_id = e.student_id
 LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
@@ -417,10 +422,12 @@ SQL 03
 Move enrolment table to CTE
 */
 
-WITH enrolment_with_grades (
-    SELECT e.student_id,
+WITH enrolment_with_grades AS (
+    SELECT
+    e.student_id,
     e.semester,
     e.year,
+    e.course_id,
     CASE
         WHEN e.score1 >= 90 THEN 'A'
         WHEN e.score1 >= 80 THEN 'B'
@@ -428,7 +435,6 @@ WITH enrolment_with_grades (
         WHEN e.score1 >= 60 THEN 'D'
         ELSE 'F'
     END AS grade_score1,
-
     CASE
         WHEN e.score2 >= 90 THEN 'A'
         WHEN e.score2 >= 80 THEN 'B'
@@ -436,7 +442,6 @@ WITH enrolment_with_grades (
         WHEN e.score2 >= 60 THEN 'D'
         ELSE 'F'
     END AS grade_score2,
-
     CASE
         WHEN e.score3 >= 90 THEN 'A'
         WHEN e.score3 >= 80 THEN 'B'
@@ -520,7 +525,9 @@ WITH enrolment_with_grades (
         WHEN e.is_pass = 'Y' THEN 'Passed'
         ELSE 'Not Passed'
     END AS pass_status
-    FROM enrolment e
+    FROM enrolments e
+    WHERE e.year >= 2020
+    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
 )
 SELECT
 s.student_id,
@@ -570,10 +577,7 @@ LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
     departments d ON s.department = d.department_id
-WHERE
-    e.year >= 2020
-    AND s.status = 'active'
-    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
+WHERE s.status = 'active'
 ORDER BY s.full_name;
 
 
@@ -601,12 +605,12 @@ Lookup a grade table
 */
 
 
-WITH enrolment_with_grades (
+WITH enrolment_with_grades AS (
     SELECT e.student_id,
     e.semester,
     e.year,
-    s1.grade_letter AS grade_score1
-
+    e.course_id,
+    s1.grade_letter AS grade_score1,
     CASE
         WHEN e.score2 >= 90 THEN 'A'
         WHEN e.score2 >= 80 THEN 'B'
@@ -698,8 +702,10 @@ WITH enrolment_with_grades (
         WHEN e.is_pass = 'Y' THEN 'Passed'
         ELSE 'Not Passed'
     END AS pass_status
-    FROM enrolment e
+    FROM enrolments e
     INNER JOIN score_grades s1 ON e.score1 >= s1.lower_limit AND e.score1 < s1.upper_limit
+    WHERE e.year >= 2020
+    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
 )
 SELECT
 s.student_id,
@@ -749,10 +755,7 @@ LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
     departments d ON s.department = d.department_id
-WHERE
-    e.year >= 2020
-    AND s.status = 'active'
-    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
+WHERE s.status = 'active'
 ORDER BY s.full_name;
 
 
@@ -762,11 +765,11 @@ Repeat for all other grade scores
 */
 
 
-
-WITH enrolment_with_grades (
+WITH enrolment_with_grades AS (
     SELECT e.student_id,
     e.semester,
     e.year,
+    e.course_id,
     s1.grade_letter AS grade_score1,
     s2.grade_letter AS grade_score2,
     s3.grade_letter AS grade_score3,
@@ -798,7 +801,7 @@ WITH enrolment_with_grades (
         WHEN e.is_pass = 'Y' THEN 'Passed'
         ELSE 'Not Passed'
     END AS pass_status
-    FROM enrolment e
+    FROM enrolments e
     INNER JOIN score_grades s1 ON e.score1 >= s1.lower_limit AND e.score1 < s1.upper_limit
     INNER JOIN score_grades s2 ON e.score1 >= s2.lower_limit AND e.score1 < s2.upper_limit
     INNER JOIN score_grades s3 ON e.score1 >= s3.lower_limit AND e.score1 < s3.upper_limit
@@ -809,6 +812,8 @@ WITH enrolment_with_grades (
     INNER JOIN score_grades s8 ON e.score1 >= s8.lower_limit AND e.score1 < s8.upper_limit
     INNER JOIN score_grades s9 ON e.score1 >= s9.lower_limit AND e.score1 < s9.upper_limit
     INNER JOIN score_grades s10 ON e.score1 >= s10.lower_limit AND e.score1 < s10.upper_limit
+    WHERE e.year >= 2020
+    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
 )
 SELECT
 s.student_id,
@@ -858,10 +863,7 @@ LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
     departments d ON s.department = d.department_id
-WHERE
-    e.year >= 2020
-    AND s.status = 'active'
-    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
+WHERE s.status = 'active'
 ORDER BY s.full_name;
 
 
@@ -878,35 +880,35 @@ CREATE TABLE enrolment_grades (
 );
 
 INSERT INTO enrolment_grades (enrolment_id, grade_index_number, score)
-SELECT enrolment_id, 1, score1
-FROM enrolment
+SELECT id, 1, score1
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 2, score2
-FROM enrolment
+SELECT id, 2, score2
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 3, score3
-FROM enrolment
+SELECT id, 3, score3
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 4, score4
-FROM enrolment
+SELECT id, 4, score4
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 15, score5
-FROM enrolment
+SELECT id, 15, score5
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 6, score6
-FROM enrolment
+SELECT id, 6, score6
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 7, score7
-FROM enrolment
+SELECT id, 7, score7
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 8, score8
-FROM enrolment
+SELECT id, 8, score8
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 9, score9
-FROM enrolment
+SELECT id, 9, score9
+FROM enrolments
 UNION ALL
-SELECT enrolment_id, 10, score10
-FROM enrolment;
+SELECT id, 10, score10
+FROM enrolments;
 
 /*
 SQL 08
@@ -917,12 +919,13 @@ so we need to fix that
 
 
 
-WITH enrolment_with_grades (
+WITH enrolment_with_grades AS (
     SELECT e.student_id,
     e.semester,
     e.year,
+    e.course_id,
     eg.grade_index_number,
-    s.grade_letter
+    s.grade_letter,
 
     CASE
         WHEN e.attendance >= 95 THEN 'Excellent'
@@ -943,9 +946,11 @@ WITH enrolment_with_grades (
         WHEN e.is_pass = 'Y' THEN 'Passed'
         ELSE 'Not Passed'
     END AS pass_status
-    FROM enrolment e
+    FROM enrolments e
     INNER JOIN enrolment_grades eg ON e.id = eg.enrolment_id
     INNER JOIN score_grades s ON eg.score >= s.lower_limit AND eg.score < s.upper_limit
+    WHERE e.year >= 2020
+    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
 )
 SELECT
 s.student_id,
@@ -987,10 +992,7 @@ LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
     departments d ON s.department = d.department_id
-WHERE
-    e.year >= 2020
-    AND s.status = 'active'
-    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
+WHERE s.status = 'active'
 ORDER BY s.full_name;
 
 
@@ -1002,17 +1004,18 @@ Or maybe correlated SELECTs in the main query - try this as it may be simpler
 
 
 
-WITH enrolment_with_grades (
+WITH enrolment_with_grades AS (
     SELECT e.student_id,
     e.semester,
     e.year,
+    e.course_id,
     (
         SELECT s.grade_letter
-        FROM enrolment en
+        FROM enrolments en
         INNER JOIN enrolment_grades eg ON en.id = eg.enrolment_id
         INNER JOIN score_grades s ON eg.score >= s.lower_limit AND eg.score < s.upper_limit
         WHERE eg.grade_index_number = 1
-        AND en.enrolment_id = e.enrolment_id
+        AND en.id = e.id
     ) AS grade_score1,
 
 
@@ -1035,7 +1038,9 @@ WITH enrolment_with_grades (
         WHEN e.is_pass = 'Y' THEN 'Passed'
         ELSE 'Not Passed'
     END AS pass_status
-    FROM enrolment e
+    FROM enrolments e
+    WHERE e.year >= 2020
+    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
 )
 SELECT
 s.student_id,
@@ -1048,8 +1053,7 @@ c.course_name,
 c.course_code,
 e.semester,
 e.year,
-e.grade_index_number,
-e.grade_letter,
+e.grade_score1,
 e.attendance_rating,
 
 CASE
@@ -1077,10 +1081,7 @@ LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
     departments d ON s.department = d.department_id
-WHERE
-    e.year >= 2020
-    AND s.status = 'active'
-    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
+WHERE s.status = 'active'
 ORDER BY s.full_name;
 
 
@@ -1089,9 +1090,10 @@ Here, the query should work with one grade, but if we keep expanding, it could g
 What else could we try?
 Maybe a function
 */
+DROP FUNCTION calculate_grade_from_score;
 
 CREATE OR REPLACE FUNCTION calculate_grade_from_score (score INT)
-RETURNS INT
+RETURNS CHAR
 AS $$
 DECLARE
   grade_letter CHAR(1);
@@ -1105,9 +1107,19 @@ BEGIN
         ELSE 'F'
     END
     INTO grade_letter;
+
+    RETURN grade_letter;
 END;
 
 $$ LANGUAGE plpgsql;
+
+/*
+ Test the function by calling it
+ */
+
+SELECT calculate_grade_from_score(85);
+SELECT calculate_grade_from_score(62);
+
 
 /*
 Add this function into the main query
@@ -1115,10 +1127,11 @@ Add this function into the main query
 
 
 
-WITH enrolment_with_grades (
+WITH enrolment_with_grades AS (
     SELECT e.student_id,
     e.semester,
     e.year,
+    e.course_id,
     calculate_grade_from_score(e.score1) AS grade_score1,
     calculate_grade_from_score(e.score1) AS grade_score2,
     calculate_grade_from_score(e.score1) AS grade_score3,
@@ -1149,7 +1162,9 @@ WITH enrolment_with_grades (
         WHEN e.is_pass = 'Y' THEN 'Passed'
         ELSE 'Not Passed'
     END AS pass_status
-    FROM enrolment e
+    FROM enrolments e
+    WHERE e.year >= 2020
+    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
 )
 SELECT
 s.student_id,
@@ -1199,16 +1214,9 @@ LEFT JOIN
     courses c ON e.course_id = c.course_id
 LEFT JOIN
     departments d ON s.department = d.department_id
-WHERE
-    e.year >= 2020
-    AND s.status = 'active'
-    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
+WHERE s.status = 'active'
 ORDER BY s.full_name;
 
-/*
-TODO:
-Move the WHERE clause that mentions e.year and all of the e.score values into the first CTE in all queries
-*/
 
 /*
 Next steps:
@@ -1229,7 +1237,8 @@ Assume we can't modify the base tables?
 CREATE TABLE course_category (
     course_code VARCHAR(10),
     category_name VARCHAR(100),
-    CONSTRAINT pk_coursecategory PRIMARY KEY (course_code)
+    CONSTRAINT pk_coursecategory
+        PRIMARY KEY (course_code)
 );
 
 INSERT INTO course_category (course_code, category_name) VALUES
@@ -1248,10 +1257,11 @@ Update main query to use course category table
 */
 
 
-WITH enrolment_with_grades (
+WITH enrolment_with_grades AS (
     SELECT e.student_id,
     e.semester,
     e.year,
+    e.course_id,
     calculate_grade_from_score(e.score1) AS grade_score1,
     calculate_grade_from_score(e.score1) AS grade_score2,
     calculate_grade_from_score(e.score1) AS grade_score3,
@@ -1282,7 +1292,9 @@ WITH enrolment_with_grades (
         WHEN e.is_pass = 'Y' THEN 'Passed'
         ELSE 'Not Passed'
     END AS pass_status
-    FROM enrolment e
+    FROM enrolments e
+    WHERE e.year >= 2020
+    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
 )
 SELECT
 s.student_id,
@@ -1324,8 +1336,5 @@ LEFT JOIN
 LEFT JOIN
     departments d ON s.department = d.department_id
 LEFT JOIN course_category cc ON c.course_code = cc.course_code
-WHERE
-    e.year >= 2020
-    AND s.status = 'active'
-    AND (e.score1 > 50 OR e.score2 > 50 OR e.score3 > 50 OR e.score4 > 50)
+WHERE s.status = 'active'
 ORDER BY s.full_name;
