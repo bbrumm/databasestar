@@ -1,4 +1,12 @@
 /*
+ Reset tables
+ */
+
+DROP TABLE course_category;
+DROP TABLE enrolment_grades;
+DROP TABLE score_grades;
+
+/*
 Create tables and add data
 */
 
@@ -873,7 +881,7 @@ Normalise the grades
 */
 
 CREATE TABLE enrolment_grades (
-    id SERIAL,
+    id SERIAL PRIMARY KEY,
     enrolment_id INTEGER,
     grade_index_number INTEGER,
     score INTEGER
@@ -997,6 +1005,7 @@ ORDER BY s.full_name;
 
 
 /*
+SQL 09
 Translate the grading back to columns
 This may involve a Cross Apply
 Or maybe correlated SELECTs in the main query - try this as it may be simpler
@@ -1086,6 +1095,7 @@ ORDER BY s.full_name;
 
 
 /*
+SQL 10
 Here, the query should work with one grade, but if we keep expanding, it could get messy.
 What else could we try?
 Maybe a function
@@ -1122,6 +1132,7 @@ SELECT calculate_grade_from_score(62);
 
 
 /*
+SQL 11
 Add this function into the main query
 */
 
@@ -1241,6 +1252,12 @@ CREATE TABLE course_category (
         PRIMARY KEY (course_code)
 );
 
+SELECT DISTINCT course_code
+    FROM courses;
+
+/*
+ SQL 12
+ */
 INSERT INTO course_category (course_code, category_name) VALUES
 ('CS100', 'Computer Science'),
 ('CS200', 'Computer Science'),
@@ -1253,6 +1270,7 @@ INSERT INTO course_category (course_code, category_name) VALUES
 
 
 /*
+SQL 13
 Update main query to use course category table
 */
 
