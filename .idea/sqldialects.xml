@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/videos/218_flights/video_scripts.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/videos/241_fix_query/Original Query.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/241_fix_query/scripts.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/videos/243_cte/Sample Queries.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/videos/255_dirty/Cafe Data Queries.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/create tables.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/drop_tables.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/populate tables.sql" dialect="PostgreSQL" />
