@@ -1,4 +1,4 @@
-# Travel Booking SQL Project
+# Flight Booking SQL Project
 
 This project simulates a real-world SQL scenario using a fictional company called **SkyHub Travel**, a fast-growing online flight booking platform.
 
