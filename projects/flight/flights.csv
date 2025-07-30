@@ -1,0 +1,48 @@
+flight_id,airline,origin,destination
+2,JetSet,Chicago,Los Angeles
+3,JetSet,Rome,Berlin
+4,AirOne,Melbourne,Rome
+5,SkyJet,Toronto,Dubai
+7,SkyJet,Toronto,Sydney
+8,CloudFly,Dubai,San Francisco
+9,JetSet,Sydney,London
+10,JetSet,Toronto,Melbourne
+11,AirOne,Melbourne,Rome
+12,AirOne,Los Angeles,Melbourne
+13,SkyJet,Sydney,San Francisco
+14,SkyJet,New York,Melbourne
+15,CloudFly,Rome,Tokyo
+16,AirOne,Delhi,Sydney
+17,JetSet,Singapore,Rome
+18,AirOne,Delhi,San Francisco
+19,SkyJet,Chicago,Delhi
+20,AirOne,Los Angeles,Chicago
+21,JetSet,Sydney,Los Angeles
+22,AirOne,Sydney,Singapore
+23,SkyJet,San Francisco,Melbourne
+24,JetSet,Los Angeles,Tokyo
+25,CloudFly,Melbourne,New York
+26,CloudFly,San Francisco,Dubai
+27,JetSet,Paris,London
+28,JetSet,Singapore,Toronto
+29,JetSet,New York,San Francisco
+30,SkyJet,Paris,San Francisco
+31,JetSet,Tokyo,Chicago
+32,SkyJet,Dubai,Berlin
+33,JetSet,Rome,Toronto
+34,SkyJet,Melbourne,Delhi
+36,AirOne,Melbourne,Sydney
+37,CloudFly,Melbourne,London
+38,JetSet,Singapore,Los Angeles
+39,CloudFly,London,San Francisco
+40,CloudFly,Tokyo,Delhi
+41,AirOne,Chicago,Melbourne
+42,CloudFly,Singapore,London
+43,CloudFly,New York,Singapore
+44,JetSet,Delhi,Paris
+45,SkyJet,Paris,Delhi
+46,JetSet,Sydney,Berlin
+47,JetSet,Melbourne,Chicago
+48,CloudFly,San Francisco,New York
+49,CloudFly,Paris,New York
+50,JetSet,London,Rome
