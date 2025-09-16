@@ -1,5 +1,10 @@
 -- Script to set up tables on Postgres
--- Drop tables if they already exist (for a clean reset)
+-- ==================================
+-- Drop Tables if they already exist
+-- (reverse dependency order)
+-- ==================================
+DROP TABLE IF EXISTS salaries;
+DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS shipping;
 DROP TABLE IF EXISTS payments;
 DROP TABLE IF EXISTS order_items;
@@ -58,6 +63,20 @@ CREATE TABLE shipping (
     status       VARCHAR(50)
 );
 
+CREATE TABLE employees (
+    employee_id  SERIAL PRIMARY KEY,
+    name         VARCHAR(100),
+    hire_date    DATE
+);
+
+CREATE TABLE salaries (
+    salary_id    SERIAL PRIMARY KEY,
+    employee_id  INT REFERENCES employees(employee_id),
+    start_date   DATE NOT NULL,
+    end_date     DATE,
+    salary       NUMERIC(10,2) NOT NULL
+);
+
 -- ========================
 -- Insert Sample Data
 -- ========================
@@ -102,3 +121,17 @@ INSERT INTO payments (order_id, payment_date, amount) VALUES
 INSERT INTO shipping (order_id, shipped_date, status) VALUES
 (1, '2023-07-03', 'Shipped'),
 (3, '2023-07-07', 'Processing');
+
+-- Employees
+INSERT INTO employees (name, hire_date) VALUES
+('David Lee', '2020-01-15'),
+('Emma White', '2021-06-01'),
+('Frank Hall', '2022-03-10');
+
+-- Salaries
+INSERT INTO salaries (employee_id, start_date, end_date, salary) VALUES
+(1, '2020-01-01', '2020-12-31', 50000),   -- David’s first salary
+(1, '2021-01-01', NULL,        55000),   -- David’s current salary
+(2, '2021-06-01', NULL,        60000),   -- Emma’s salary
+(3, '2022-03-01', '2022-12-31', 45000),  -- Frank’s first salary
+(3, '2023-01-01', NULL,        48000);   -- Frank’s updated salary
