@@ -6,6 +6,17 @@ Inserts data into a few order-related tables
 
 
 
+INSERT INTO order_status (id, name) VALUES
+(1, 'Pending'),
+(2, 'Paid'),
+(3, 'Shipped'),
+(4, 'Delivered'),
+(5, 'Cancelled'),
+(6, 'Returned');
+
+
+
+
 INSERT INTO cust_order
 (id, customer_id, order_status_id, order_date, subtotal_amount, discount_amount, shipping_amount, tax_amount, total_amount, shipping_address_id, notes, created_at, updated_at)
 VALUES
@@ -64,15 +75,6 @@ VALUES
 (48, 10, 3, '2025-06-22 10:30:00', 49.99, 0.00, 4.99, 5.00, 59.98, 29, NULL, '2025-06-22 10:30:00', '2025-06-23 09:00:00'),
 (49, 14, 4, '2025-07-09 18:05:00', 299.00, 20.00, 0.00, 27.90, 306.90, 33, NULL, '2025-07-09 18:05:00', '2025-07-11 11:00:00'),
 (50, 21, 2, '2025-08-14 12:55:00', 69.99, 0.00, 3.99, 7.00, 80.98, 11, NULL, '2025-08-14 12:55:00', '2025-08-14 12:55:00');
-
-
-INSERT INTO order_status (id, name) VALUES
-(1, 'Pending'),
-(2, 'Paid'),
-(3, 'Shipped'),
-(4, 'Delivered'),
-(5, 'Cancelled'),
-(6, 'Returned');
 
 
 
