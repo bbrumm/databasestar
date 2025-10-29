@@ -30,7 +30,7 @@ CREATE TABLE products (
 );
 
 CREATE TABLE shipping_method (
-    shipping_id  SERIAL PRIMARY KEY,
+    shipping_method_id  SERIAL PRIMARY KEY,
     method_name  TEXT
 );
 
@@ -63,7 +63,9 @@ CREATE TABLE payments (
 CREATE TABLE employees (
     employee_id  SERIAL PRIMARY KEY,
     name         VARCHAR(100),
-    hire_date    DATE
+    hire_date    DATE,
+    manager_id   INT,
+    CONSTRAINT fk_emp_manager FOREIGN KEY (manager_id) REFERENCES employees(employee_id)
 );
 
 CREATE TABLE salaries (
@@ -102,22 +104,22 @@ INSERT INTO shipping_method (shipping_method_id, method_name) VALUES
 
 -- Orders
 INSERT INTO orders (order_id, customer_id, method_id, order_date) VALUES
-(1, 2, 1, '2025-07-01'),  
-(2, 1, 2, '2025-07-02'), 
-(3, 1, 1, '2025-07-05'),
+(1, 2, 1, '2025-07-01'),
+(2, 1, 2, '2025-07-02'),
+(3, NULL, 1, '2025-07-05'),
 (4, 2, 3, '2025-07-05'),
 (5, 3, 3, '2025-07-06'),
 (6, 2, 3, '2025-07-06'),
-(7, 2, 3, '2025-07-06'),
+(7, NULL, 3, '2025-07-06'),
 (8, 1, 3, '2025-07-07'),
 (9, 1, 3, '2025-07-07'),
 (10, 3, 3, '2025-07-08');
 
 -- Order Items
 INSERT INTO order_items (order_id, product_id, quantity) VALUES
-(1, 1, 2), 
-(1, 2, 1),  
-(2, 3, 1),  
+(1, 1, 2),
+(1, 2, 1),
+(2, 3, 1),
 (3, 4, 2),
 (4, 1, 1),
 (5, 2, 8),
@@ -145,15 +147,16 @@ INSERT INTO payments (order_id, payment_date, amount) VALUES
 
 
 -- Employees
-INSERT INTO employees (name, hire_date) VALUES
-('David Lee', '2020-01-15'),
-('Emma White', '2021-06-01'),
-('Frank Hall', '2022-03-10');
+INSERT INTO employees (id, name, hire_date, manager_id) VALUES
+(1, 'David', '2020-01-15', 2),
+(2, 'Emma', '2021-06-01', NULL),
+(3, 'Frank', '2022-03-10', 2),
+(4, 'Sarah', '2022-04-01', 1);
 
 -- Salaries
 INSERT INTO salaries (employee_id, start_date, end_date, salary) VALUES
-(1, '2020-01-01', '2020-12-31', 50000), 
-(1, '2021-01-01', NULL,        55000),  
-(2, '2021-06-01', NULL,        60000),  
-(3, '2022-03-01', '2022-12-31', 45000), 
-(3, '2023-01-01', NULL,        48000);  
+(1, '2020-01-01', '2020-12-31', 50000),
+(1, '2021-01-01', NULL,        55000),
+(2, '2021-06-01', NULL,        60000),
+(3, '2022-03-01', '2022-12-31', 45000),
+(3, '2023-01-01', NULL,        48000);
