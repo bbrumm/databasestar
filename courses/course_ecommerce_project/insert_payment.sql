@@ -92,6 +92,27 @@ VALUES
 
 
 
+INSERT INTO shipment_status (id, name)
+VALUES
+(1, 'In Transit'),
+(2, 'Delivered'),
+(3, 'Out for Delivery'),
+(4, 'Pending Pickup'),
+(5, 'Returned'),
+(6, 'Cancelled');
+
+
+INSERT INTO carrier (id, name)
+VALUES
+(1, 'UPS'),
+(2, 'FedEx'),
+(3, 'DHL'),
+(4, 'USPS'),
+(5, 'Local Courier'),
+(6, 'Royal Mail'),
+(7, 'Canada Post');
+
+
 INSERT INTO shipment (id, order_id, status_id, carrier_id, tracking_number, shipped_at, delivered_at)
 VALUES
 -- 2023 Orders (Delivered or Shipped)
@@ -136,25 +157,6 @@ VALUES
 (35, 50, 2, 4, 'US20250814050', '2025-08-14 13:00:00', '2025-08-16 09:00:00');
 
 
-INSERT INTO shipment_status (id, name)
-VALUES
-(1, 'In Transit'),
-(2, 'Delivered'),
-(3, 'Out for Delivery'),
-(4, 'Pending Pickup'),
-(5, 'Returned'),
-(6, 'Cancelled');
-
-
-INSERT INTO carrier (id, name)
-VALUES
-(1, 'UPS'),
-(2, 'FedEx'),
-(3, 'DHL'),
-(4, 'USPS'),
-(5, 'Local Courier'),
-(6, 'Royal Mail'),
-(7, 'Canada Post');
 
 
 INSERT INTO shipment_package (id, shipment_id, package_number, weight_kg, dimensions_cm)
