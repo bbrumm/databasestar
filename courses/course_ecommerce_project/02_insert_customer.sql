@@ -4,6 +4,12 @@ Customer Data Insert
 Inserts data into a few customer-related tables
 */
 
+DELETE FROM customer_address;
+DELETE FROM country;
+DELETE FROM customer_phone_number;
+DELETE FROM customer;
+
+
 INSERT INTO customer (id, first_name, last_name, email, created_at, updated_at) VALUES
 (1, 'Olivia', 'Turner', 'olivia.turner@example.com', '2023-01-12 09:42:11', '2023-04-03 16:12:32'),
 (2, 'Ethan', 'Walker', 'ethan.walker@example.com', '2023-01-28 13:05:22', '2023-03-01 09:14:17'),
@@ -139,97 +145,6 @@ INSERT INTO customer_phone_number (id, customer_id, phone_number, is_default, cr
 (78, 40, '+1-312-555-0124', false, '2024-08-16 13:59:11'),
 (79, 42, '+61 410 555 111', false, '2024-09-17 14:54:39'),
 (80, 45, '+44 7878 555981', false, '2024-11-12 11:28:35');
-
-
-
-INSERT INTO customer_address
-(id, customer_id, address_line1, address_line2, city, state_region, postal_code, country_id, is_default, valid_from, valid_to, created_at)
-VALUES
--- Single-address customers (active, default)
-(1, 1, '145 Maple Street', NULL, 'Boston', 'MA', '02118', 1, true, '2023-01-12 09:42:11', NULL, '2023-01-12 09:42:11'),
-(2, 2, '22 Baker Street', 'Apt 4B', 'London', NULL, 'W1U 3BW', 2, true, '2023-01-28 13:05:22', NULL, '2023-01-28 13:05:22'),
-(3, 4, '7 King Street', NULL, 'Sydney', 'NSW', '2000', 3, true, '2023-02-18 19:21:44', NULL, '2023-02-18 19:21:44'),
-(4, 6, 'B-23 Green Park', NULL, 'New Delhi', 'DL', '110016', 4, true, '2023-03-15 11:47:29', NULL, '2023-03-15 11:47:29'),
-(5, 7, '11 Regent Street', NULL, 'Manchester', NULL, 'M2 5BA', 2, true, '2023-04-05 09:11:06', NULL, '2023-04-05 09:11:06'),
-(6, 9, '501 Lexington Ave', 'Apt 6C', 'New York', 'NY', '10017', 1, true, '2023-05-03 07:44:10', NULL, '2023-05-03 07:44:10'),
-(7, 11, '22 George Street', NULL, 'Melbourne', 'VIC', '3000', 3, true, '2023-06-08 12:04:55', NULL, '2023-06-08 12:04:55'),
-(8, 13, '902 F Street NW', NULL, 'Washington', 'DC', '20004', 1, true, '2023-07-03 09:33:27', NULL, '2023-07-03 09:33:27'),
-(9, 15, '85 Pitt Street', NULL, 'Sydney', 'NSW', '2000', 3, true, '2023-07-28 11:10:14', NULL, '2023-07-28 11:10:14'),
-(10, 17, '9 Elm Street', NULL, 'Glasgow', NULL, 'G1 2AB', 2, true, '2023-08-23 08:33:59', NULL, '2023-08-23 08:33:59'),
-(11, 21, '14 Kensington Gardens', NULL, 'London', NULL, 'SW7 4QP', 2, true, '2023-10-10 11:09:26', NULL, '2023-10-10 11:09:26'),
-(12, 23, '45 Little Collins Street', NULL, 'Melbourne', 'VIC', '3000', 3, true, '2023-11-12 09:13:57', NULL, '2023-11-12 09:13:57'),
-(13, 26, '19 Queen Street', NULL, 'Edinburgh', NULL, 'EH2 1JX', 2, true, '2023-12-01 14:41:00', NULL, '2023-12-01 14:41:00'),
-(14, 28, '607 8th Avenue', NULL, 'Seattle', 'WA', '98104', 1, true, '2024-01-03 13:17:09', NULL, '2024-01-03 13:17:09'),
-(15, 33, '9 Downing Street', NULL, 'London', NULL, 'SW1A 2AA', 2, true, '2024-04-19 13:06:12', NULL, '2024-04-19 13:06:12'),
-(16, 35, '14 Bridge Street', NULL, 'Perth', 'WA', '6000', 3, true, '2024-05-25 11:45:09', NULL, '2024-05-25 11:45:09'),
-(17, 39, '4 Queen Street', NULL, 'Liverpool', NULL, 'L1 1RH', 2, true, '2024-07-30 17:28:56', NULL, '2024-07-30 17:28:56'),
-(18, 40, '251 Michigan Ave', NULL, 'Chicago', 'IL', '60611', 1, true, '2024-08-15 13:55:11', NULL, '2024-08-15 13:55:11'),
-(19, 42, '59 Kent Street', NULL, 'Sydney', 'NSW', '2000', 3, true, '2024-09-16 14:44:39', NULL, '2024-09-16 14:44:39'),
-(20, 43, '87 Albert Road', NULL, 'London', NULL, 'SW19 8BU', 2, true, '2024-10-05 10:09:28', NULL, '2024-10-05 10:09:28'),
-(21, 45, 'E-101 South City', NULL, 'Gurgaon', 'HR', '122001', 4, true, '2024-11-10 11:18:35', NULL, '2024-11-10 11:18:35'),
-(22, 48, '27 Little Bourke Street', NULL, 'Melbourne', 'VIC', '3000', 3, true, '2025-02-04 08:22:29', NULL, '2025-02-04 08:22:29'),
-(23, 50, '412 5th Street SE', NULL, 'Washington', 'DC', '20003', 1, true, '2025-04-30 15:20:09', NULL, '2025-04-30 15:20:09'),
-
--- Two-address customers (first = old, not default, has valid_to; second = current, default)
-(24, 3, '3012 Mission Street', NULL, 'San Francisco', 'CA', '94110', 1, false, '2023-02-07 10:58:19', '2024-02-10 09:11:00', '2023-02-07 10:58:19'),
-(25, 3, '812 Castro Street', NULL, 'San Francisco', 'CA', '94114', 1, true, '2024-02-10 09:11:00', NULL, '2024-02-10 09:11:00'),
-
-(26, 5, '240 N Michigan Ave', 'Suite 300', 'Chicago', 'IL', '60601', 1, false, '2023-03-04 15:33:07', '2023-12-01 09:00:00', '2023-03-04 15:33:07'),
-(27, 5, '930 W Randolph Street', NULL, 'Chicago', 'IL', '60607', 1, true, '2023-12-01 09:00:00', NULL, '2023-12-01 09:00:00'),
-
-(28, 10, '410 W 8th Street', NULL, 'Los Angeles', 'CA', '90014', 1, false, '2023-05-21 17:29:58', '2024-06-15 11:00:00', '2023-05-21 17:29:58'),
-(29, 10, '1325 Sunset Blvd', NULL, 'Los Angeles', 'CA', '90026', 1, true, '2024-06-15 11:00:00', NULL, '2024-06-15 11:00:00'),
-
-(30, 12, '99 MG Road', NULL, 'Bengaluru', 'KA', '560001', 4, false, '2023-09-01 09:00:00', '2024-06-01 09:00:00', '2023-09-01 09:00:00'),
-(31, 12, '18 Residency Road', 'Block D', 'Bengaluru', 'KA', '560025', 4, true, '2024-06-01 09:00:00', NULL, '2024-06-01 09:00:00'),
-
-(32, 14, '15 Park Avenue', NULL, 'London', NULL, 'N1 2PW', 2, false, '2023-07-16 16:50:42', '2024-07-10 10:00:00', '2023-07-16 16:50:42'),
-(33, 14, '102 Camden High Street', NULL, 'London', NULL, 'NW1 7JN', 2, true, '2024-07-10 10:00:00', NULL, '2024-07-10 10:00:00'),
-
-(34, 16, '215 9th Avenue', 'Unit 11', 'New York', 'NY', '10011', 1, false, '2023-08-09 13:02:40', '2024-05-20 09:00:00', '2023-08-09 13:02:40'),
-(35, 16, '455 W 34th Street', 'Apt 7C', 'New York', 'NY', '10001', 1, true, '2024-05-20 09:00:00', NULL, '2024-05-20 09:00:00'),
-
-(36, 18, 'C-22 Sector 50', NULL, 'Noida', 'UP', '201301', 4, false, '2024-01-01 09:00:00', '2024-07-01 09:00:00', '2024-01-01 09:00:00'),
-(37, 18, 'A-45 Sector 22', NULL, 'Chandigarh', NULL, '160022', 4, true, '2024-07-01 09:00:00', NULL, '2024-07-01 09:00:00'),
-
-(38, 20, '50 Wall Street', NULL, 'New York', 'NY', '10005', 1, false, '2023-10-01 09:00:00', '2024-06-01 09:00:00', '2023-10-01 09:00:00'),
-(39, 20, '1123 Broadway', NULL, 'New York', 'NY', '10010', 1, true, '2024-06-01 09:00:00', NULL, '2024-06-01 09:00:00'),
-
-(40, 22, '990 Market Street', NULL, 'San Francisco', 'CA', '94102', 1, false, '2023-10-25 15:55:33', '2024-05-01 08:00:00', '2023-10-25 15:55:33'),
-(41, 22, '1885 Mission Street', NULL, 'San Francisco', 'CA', '94103', 1, true, '2024-05-01 08:00:00', NULL, '2024-05-01 08:00:00'),
-
-(42, 24, '90 Long Acre', NULL, 'London', NULL, 'WC2E 9RZ', 2, false, '2024-02-01 09:00:00', '2024-10-01 09:00:00', '2024-02-01 09:00:00'),
-(43, 24, '14 Kensington Gardens', NULL, 'London', NULL, 'SW7 4QP', 2, true, '2024-10-01 09:00:00', NULL, '2024-10-01 09:00:00'),
-
-(44, 25, '425 Broadway', 'Apt 8A', 'New York', 'NY', '10013', 1, false, '2023-12-16 20:58:04', '2024-08-15 09:00:00', '2023-12-16 20:58:04'),
-(45, 25, '100 Main Street', 'Suite 220', 'New York', 'NY', '10001', 1, true, '2024-08-15 09:00:00', NULL, '2024-08-15 09:00:00'),
-
-(46, 29, '33 York Street', NULL, 'Sydney', 'NSW', '2000', 3, false, '2024-01-18 09:59:33', '2024-11-20 09:00:00', '2024-01-18 09:59:33'),
-(47, 29, '12 Clarence Street', 'Unit 5', 'Sydney', 'NSW', '2000', 3, true, '2024-11-20 09:00:00', NULL, '2024-11-20 09:00:00'),
-
-(48, 30, '45 High Street', NULL, 'Birmingham', NULL, 'B4 7SL', 2, false, '2024-03-03 18:15:27', '2024-09-01 09:00:00', '2024-03-03 18:15:27'),
-(49, 30, '11 Colmore Row', 'Apt 2D', 'Birmingham', NULL, 'B3 2BJ', 2, true, '2024-09-01 09:00:00', NULL, '2024-09-01 09:00:00'),
-
-(50, 32, '1509 Lombard Street', NULL, 'San Francisco', 'CA', '94123', 1, false, '2024-04-02 17:52:38', '2024-12-05 09:00:00', '2024-04-02 17:52:38'),
-(51, 32, '45 Powell Street', NULL, 'San Francisco', 'CA', '94102', 1, true, '2024-12-05 09:00:00', NULL, '2024-12-05 09:00:00'),
-
-(52, 34, '380 Bedford Ave', NULL, 'Brooklyn', 'NY', '11211', 1, false, '2024-05-08 10:22:43', '2024-12-10 09:00:00', '2024-05-08 10:22:43'),
-(53, 34, '290 Flatbush Ave', NULL, 'Brooklyn', 'NY', '11217', 1, true, '2024-12-10 09:00:00', NULL, '2024-12-10 09:00:00'),
-
-(54, 36, '21 Oxford Street', NULL, 'London', NULL, 'W1D 2LT', 2, false, '2024-06-10 08:03:34', '2025-02-01 09:00:00', '2024-06-10 08:03:34'),
-(55, 36, '220 Bishopsgate', 'Apt 14', 'London', NULL, 'EC2M 4QW', 2, true, '2025-02-01 09:00:00', NULL, '2025-02-01 09:00:00'),
-
-(56, 37, '88 King Street West', 'Apt 1102', 'Toronto', 'ON', 'M5H 1J8', 5, false, '2024-06-27 15:12:07', '2025-01-10 09:00:00', '2024-06-27 15:12:07'),
-(57, 37, '12 Yonge Street', 'Suite 903', 'Toronto', 'ON', 'M5E 1Z9', 5, true, '2025-01-10 09:00:00', NULL, '2025-01-10 09:00:00'),
-
-(58, 38, 'A-12 Andheri East', NULL, 'Mumbai', 'MH', '400069', 4, false, '2024-07-14 09:44:29', '2025-03-01 09:00:00', '2024-07-14 09:44:29'),
-(59, 38, 'B-77 Bandra West', NULL, 'Mumbai', 'MH', '400050', 4, true, '2025-03-01 09:00:00', NULL, '2025-03-01 09:00:00'),
-
-(60, 44, '39 Bourke Street', NULL, 'Melbourne', 'VIC', '3000', 3, false, '2024-10-25 08:20:47', '2025-02-20 09:00:00', '2024-10-25 08:20:47'),
-(61, 44, '1 Collins Street', 'Level 10', 'Melbourne', 'VIC', '3000', 3, true, '2025-02-20 09:00:00', NULL, '2025-02-20 09:00:00'),
-
-(62, 46, '76 Hudson Street', 'Apt 7B', 'New York', 'NY', '10013', 1, false, '2024-12-01 10:44:56', '2025-01-20 09:00:00', '2024-12-01 10:44:56'),
-(63, 46, '412 Greenwich Street', 'Apt 3F', 'New York', 'NY', '10013', 1, true, '2025-01-20 09:00:00', NULL, '2025-01-20 09:00:00');
 
 
 
@@ -429,3 +344,96 @@ INSERT INTO country (id, country_name) VALUES
 (193, 'Yemen'),
 (194, 'Zambia'),
 (195, 'Zimbabwe');
+
+
+
+INSERT INTO customer_address
+(id, customer_id, address_line1, address_line2, city, state_region, postal_code, country_id, is_default, valid_from, valid_to, created_at)
+VALUES
+-- Single-address customers (active, default)
+(1, 1, '145 Maple Street', NULL, 'Boston', 'MA', '02118', 1, true, '2023-01-12 09:42:11', NULL, '2023-01-12 09:42:11'),
+(2, 2, '22 Baker Street', 'Apt 4B', 'London', NULL, 'W1U 3BW', 2, true, '2023-01-28 13:05:22', NULL, '2023-01-28 13:05:22'),
+(3, 4, '7 King Street', NULL, 'Sydney', 'NSW', '2000', 3, true, '2023-02-18 19:21:44', NULL, '2023-02-18 19:21:44'),
+(4, 6, 'B-23 Green Park', NULL, 'New Delhi', 'DL', '110016', 4, true, '2023-03-15 11:47:29', NULL, '2023-03-15 11:47:29'),
+(5, 7, '11 Regent Street', NULL, 'Manchester', NULL, 'M2 5BA', 2, true, '2023-04-05 09:11:06', NULL, '2023-04-05 09:11:06'),
+(6, 9, '501 Lexington Ave', 'Apt 6C', 'New York', 'NY', '10017', 1, true, '2023-05-03 07:44:10', NULL, '2023-05-03 07:44:10'),
+(7, 11, '22 George Street', NULL, 'Melbourne', 'VIC', '3000', 3, true, '2023-06-08 12:04:55', NULL, '2023-06-08 12:04:55'),
+(8, 13, '902 F Street NW', NULL, 'Washington', 'DC', '20004', 1, true, '2023-07-03 09:33:27', NULL, '2023-07-03 09:33:27'),
+(9, 15, '85 Pitt Street', NULL, 'Sydney', 'NSW', '2000', 3, true, '2023-07-28 11:10:14', NULL, '2023-07-28 11:10:14'),
+(10, 17, '9 Elm Street', NULL, 'Glasgow', NULL, 'G1 2AB', 2, true, '2023-08-23 08:33:59', NULL, '2023-08-23 08:33:59'),
+(11, 21, '14 Kensington Gardens', NULL, 'London', NULL, 'SW7 4QP', 2, true, '2023-10-10 11:09:26', NULL, '2023-10-10 11:09:26'),
+(12, 23, '45 Little Collins Street', NULL, 'Melbourne', 'VIC', '3000', 3, true, '2023-11-12 09:13:57', NULL, '2023-11-12 09:13:57'),
+(13, 26, '19 Queen Street', NULL, 'Edinburgh', NULL, 'EH2 1JX', 2, true, '2023-12-01 14:41:00', NULL, '2023-12-01 14:41:00'),
+(14, 28, '607 8th Avenue', NULL, 'Seattle', 'WA', '98104', 1, true, '2024-01-03 13:17:09', NULL, '2024-01-03 13:17:09'),
+(15, 33, '9 Downing Street', NULL, 'London', NULL, 'SW1A 2AA', 2, true, '2024-04-19 13:06:12', NULL, '2024-04-19 13:06:12'),
+(16, 35, '14 Bridge Street', NULL, 'Perth', 'WA', '6000', 3, true, '2024-05-25 11:45:09', NULL, '2024-05-25 11:45:09'),
+(17, 39, '4 Queen Street', NULL, 'Liverpool', NULL, 'L1 1RH', 2, true, '2024-07-30 17:28:56', NULL, '2024-07-30 17:28:56'),
+(18, 40, '251 Michigan Ave', NULL, 'Chicago', 'IL', '60611', 1, true, '2024-08-15 13:55:11', NULL, '2024-08-15 13:55:11'),
+(19, 42, '59 Kent Street', NULL, 'Sydney', 'NSW', '2000', 3, true, '2024-09-16 14:44:39', NULL, '2024-09-16 14:44:39'),
+(20, 43, '87 Albert Road', NULL, 'London', NULL, 'SW19 8BU', 2, true, '2024-10-05 10:09:28', NULL, '2024-10-05 10:09:28'),
+(21, 45, 'E-101 South City', NULL, 'Gurgaon', 'HR', '122001', 4, true, '2024-11-10 11:18:35', NULL, '2024-11-10 11:18:35'),
+(22, 48, '27 Little Bourke Street', NULL, 'Melbourne', 'VIC', '3000', 3, true, '2025-02-04 08:22:29', NULL, '2025-02-04 08:22:29'),
+(23, 50, '412 5th Street SE', NULL, 'Washington', 'DC', '20003', 1, true, '2025-04-30 15:20:09', NULL, '2025-04-30 15:20:09'),
+
+-- Two-address customers (first = old, not default, has valid_to; second = current, default)
+(24, 3, '3012 Mission Street', NULL, 'San Francisco', 'CA', '94110', 1, false, '2023-02-07 10:58:19', '2024-02-10 09:11:00', '2023-02-07 10:58:19'),
+(25, 3, '812 Castro Street', NULL, 'San Francisco', 'CA', '94114', 1, true, '2024-02-10 09:11:00', NULL, '2024-02-10 09:11:00'),
+
+(26, 5, '240 N Michigan Ave', 'Suite 300', 'Chicago', 'IL', '60601', 1, false, '2023-03-04 15:33:07', '2023-12-01 09:00:00', '2023-03-04 15:33:07'),
+(27, 5, '930 W Randolph Street', NULL, 'Chicago', 'IL', '60607', 1, true, '2023-12-01 09:00:00', NULL, '2023-12-01 09:00:00'),
+
+(28, 10, '410 W 8th Street', NULL, 'Los Angeles', 'CA', '90014', 1, false, '2023-05-21 17:29:58', '2024-06-15 11:00:00', '2023-05-21 17:29:58'),
+(29, 10, '1325 Sunset Blvd', NULL, 'Los Angeles', 'CA', '90026', 1, true, '2024-06-15 11:00:00', NULL, '2024-06-15 11:00:00'),
+
+(30, 12, '99 MG Road', NULL, 'Bengaluru', 'KA', '560001', 4, false, '2023-09-01 09:00:00', '2024-06-01 09:00:00', '2023-09-01 09:00:00'),
+(31, 12, '18 Residency Road', 'Block D', 'Bengaluru', 'KA', '560025', 4, true, '2024-06-01 09:00:00', NULL, '2024-06-01 09:00:00'),
+
+(32, 14, '15 Park Avenue', NULL, 'London', NULL, 'N1 2PW', 2, false, '2023-07-16 16:50:42', '2024-07-10 10:00:00', '2023-07-16 16:50:42'),
+(33, 14, '102 Camden High Street', NULL, 'London', NULL, 'NW1 7JN', 2, true, '2024-07-10 10:00:00', NULL, '2024-07-10 10:00:00'),
+
+(34, 16, '215 9th Avenue', 'Unit 11', 'New York', 'NY', '10011', 1, false, '2023-08-09 13:02:40', '2024-05-20 09:00:00', '2023-08-09 13:02:40'),
+(35, 16, '455 W 34th Street', 'Apt 7C', 'New York', 'NY', '10001', 1, true, '2024-05-20 09:00:00', NULL, '2024-05-20 09:00:00'),
+
+(36, 18, 'C-22 Sector 50', NULL, 'Noida', 'UP', '201301', 4, false, '2024-01-01 09:00:00', '2024-07-01 09:00:00', '2024-01-01 09:00:00'),
+(37, 18, 'A-45 Sector 22', NULL, 'Chandigarh', NULL, '160022', 4, true, '2024-07-01 09:00:00', NULL, '2024-07-01 09:00:00'),
+
+(38, 20, '50 Wall Street', NULL, 'New York', 'NY', '10005', 1, false, '2023-10-01 09:00:00', '2024-06-01 09:00:00', '2023-10-01 09:00:00'),
+(39, 20, '1123 Broadway', NULL, 'New York', 'NY', '10010', 1, true, '2024-06-01 09:00:00', NULL, '2024-06-01 09:00:00'),
+
+(40, 22, '990 Market Street', NULL, 'San Francisco', 'CA', '94102', 1, false, '2023-10-25 15:55:33', '2024-05-01 08:00:00', '2023-10-25 15:55:33'),
+(41, 22, '1885 Mission Street', NULL, 'San Francisco', 'CA', '94103', 1, true, '2024-05-01 08:00:00', NULL, '2024-05-01 08:00:00'),
+
+(42, 24, '90 Long Acre', NULL, 'London', NULL, 'WC2E 9RZ', 2, false, '2024-02-01 09:00:00', '2024-10-01 09:00:00', '2024-02-01 09:00:00'),
+(43, 24, '14 Kensington Gardens', NULL, 'London', NULL, 'SW7 4QP', 2, true, '2024-10-01 09:00:00', NULL, '2024-10-01 09:00:00'),
+
+(44, 25, '425 Broadway', 'Apt 8A', 'New York', 'NY', '10013', 1, false, '2023-12-16 20:58:04', '2024-08-15 09:00:00', '2023-12-16 20:58:04'),
+(45, 25, '100 Main Street', 'Suite 220', 'New York', 'NY', '10001', 1, true, '2024-08-15 09:00:00', NULL, '2024-08-15 09:00:00'),
+
+(46, 29, '33 York Street', NULL, 'Sydney', 'NSW', '2000', 3, false, '2024-01-18 09:59:33', '2024-11-20 09:00:00', '2024-01-18 09:59:33'),
+(47, 29, '12 Clarence Street', 'Unit 5', 'Sydney', 'NSW', '2000', 3, true, '2024-11-20 09:00:00', NULL, '2024-11-20 09:00:00'),
+
+(48, 30, '45 High Street', NULL, 'Birmingham', NULL, 'B4 7SL', 2, false, '2024-03-03 18:15:27', '2024-09-01 09:00:00', '2024-03-03 18:15:27'),
+(49, 30, '11 Colmore Row', 'Apt 2D', 'Birmingham', NULL, 'B3 2BJ', 2, true, '2024-09-01 09:00:00', NULL, '2024-09-01 09:00:00'),
+
+(50, 32, '1509 Lombard Street', NULL, 'San Francisco', 'CA', '94123', 1, false, '2024-04-02 17:52:38', '2024-12-05 09:00:00', '2024-04-02 17:52:38'),
+(51, 32, '45 Powell Street', NULL, 'San Francisco', 'CA', '94102', 1, true, '2024-12-05 09:00:00', NULL, '2024-12-05 09:00:00'),
+
+(52, 34, '380 Bedford Ave', NULL, 'Brooklyn', 'NY', '11211', 1, false, '2024-05-08 10:22:43', '2024-12-10 09:00:00', '2024-05-08 10:22:43'),
+(53, 34, '290 Flatbush Ave', NULL, 'Brooklyn', 'NY', '11217', 1, true, '2024-12-10 09:00:00', NULL, '2024-12-10 09:00:00'),
+
+(54, 36, '21 Oxford Street', NULL, 'London', NULL, 'W1D 2LT', 2, false, '2024-06-10 08:03:34', '2025-02-01 09:00:00', '2024-06-10 08:03:34'),
+(55, 36, '220 Bishopsgate', 'Apt 14', 'London', NULL, 'EC2M 4QW', 2, true, '2025-02-01 09:00:00', NULL, '2025-02-01 09:00:00'),
+
+(56, 37, '88 King Street West', 'Apt 1102', 'Toronto', 'ON', 'M5H 1J8', 5, false, '2024-06-27 15:12:07', '2025-01-10 09:00:00', '2024-06-27 15:12:07'),
+(57, 37, '12 Yonge Street', 'Suite 903', 'Toronto', 'ON', 'M5E 1Z9', 5, true, '2025-01-10 09:00:00', NULL, '2025-01-10 09:00:00'),
+
+(58, 38, 'A-12 Andheri East', NULL, 'Mumbai', 'MH', '400069', 4, false, '2024-07-14 09:44:29', '2025-03-01 09:00:00', '2024-07-14 09:44:29'),
+(59, 38, 'B-77 Bandra West', NULL, 'Mumbai', 'MH', '400050', 4, true, '2025-03-01 09:00:00', NULL, '2025-03-01 09:00:00'),
+
+(60, 44, '39 Bourke Street', NULL, 'Melbourne', 'VIC', '3000', 3, false, '2024-10-25 08:20:47', '2025-02-20 09:00:00', '2024-10-25 08:20:47'),
+(61, 44, '1 Collins Street', 'Level 10', 'Melbourne', 'VIC', '3000', 3, true, '2025-02-20 09:00:00', NULL, '2025-02-20 09:00:00'),
+
+(62, 46, '76 Hudson Street', 'Apt 7B', 'New York', 'NY', '10013', 1, false, '2024-12-01 10:44:56', '2025-01-20 09:00:00', '2024-12-01 10:44:56'),
+(63, 46, '412 Greenwich Street', 'Apt 3F', 'New York', 'NY', '10013', 1, true, '2025-01-20 09:00:00', NULL, '2025-01-20 09:00:00');
+
+
