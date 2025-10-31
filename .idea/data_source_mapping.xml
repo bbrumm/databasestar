@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_16.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_17.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_20.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_21.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/create_tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+  </component>
+</project>
