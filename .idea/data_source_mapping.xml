@@ -5,7 +5,9 @@
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_17.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_20.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_21.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
-    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/create_tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
-    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/insert_customer.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/03_insert_product.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/04_insert_order.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/05_insert_payment.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/06_insert_return.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
   </component>
 </project>

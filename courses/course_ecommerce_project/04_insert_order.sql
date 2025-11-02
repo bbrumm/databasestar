@@ -4,6 +4,12 @@ Order Data Insert
 Inserts data into a few order-related tables
 */
 
+DELETE FROM order_discount;
+DELETE FROM discount;
+DELETE FROM discount_type;
+DELETE FROM order_item;
+DELETE FROM cust_order;
+DELETE FROM order_status;
 
 
 INSERT INTO order_status (id, name) VALUES
@@ -186,7 +192,7 @@ INSERT INTO discount_type (id, discount) VALUES
 (2, 'Fixed');
 
 
-INSERT INTO discount (id, code, type, value, starts_at, expires_at, is_active)
+INSERT INTO discount (id, code, type_id, value, starts_at, expires_at, is_active)
 VALUES
 -- Percent Discounts (type = 1)
 (1, 'WELCOME10', 1, 10.00, '2024-01-01 00:00:00', '2026-12-31 23:59:59', true),

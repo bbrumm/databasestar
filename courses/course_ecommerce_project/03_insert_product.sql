@@ -4,6 +4,16 @@ Product Data Insert
 Inserts data into a few product-related tables
 */
 
+DELETE FROM product_attribute;
+DELETE FROM attribute_option;
+DELETE FROM attribute;
+DELETE FROM value_type;
+DELETE FROM product_category;
+DELETE FROM product_item;
+DELETE FROM product;
+DELETE FROM category;
+
+
 INSERT INTO category (id, name, parent_id) VALUES
 -- Level 1: Top-level categories
 (1, 'Electronics', NULL),
@@ -35,9 +45,9 @@ INSERT INTO category (id, name, parent_id) VALUES
 (23, 'Action Cameras', 14),
 
 -- Level 2: Clothing subcategories
-(24, 'Men\'s Clothing', 2),
-(25, 'Women\'s Clothing', 2),
-(26, 'Kids\' Clothing', 2),
+(24, 'Men''s Clothing', 2),
+(25, 'Women''s Clothing', 2),
+(26, 'Kids'' Clothing', 2),
 
 -- Level 3: Clothing deeper subcategories
 (27, 'T-Shirts', 24),
@@ -81,16 +91,16 @@ INSERT INTO product (id, name, description, is_active, created_at, updated_at) V
 (9, 'Apple Watch Series 9', 'Advanced smartwatch with heart rate, fitness tracking, and Siri integration.', true, '2023-09-22 08:55:11', '2025-01-25 14:12:45'),
 (10, 'HP Envy 6055e Printer', 'All-in-one inkjet printer ideal for home and small office use with wireless printing.', true, '2023-10-05 14:40:02', '2024-10-05 14:40:02'),
 
-(11, 'Men\'s Cotton Crew Neck T-Shirt', 'Classic short-sleeve cotton T-shirt made from soft, breathable fabric. Available in multiple colors.', true, '2023-02-10 12:00:00', '2024-07-20 09:40:00'),
-(12, 'Levi\'s 511 Slim Fit Jeans', 'Iconic slim-fit jeans made from durable stretch denim for all-day comfort.', true, '2023-04-18 10:45:00', '2024-08-10 12:00:00'),
-(13, 'Women\'s Activewear Leggings', 'High-waisted stretch leggings designed for yoga, running, and everyday comfort.', true, '2023-05-22 09:00:00', '2024-05-22 09:00:00'),
+(11, 'Men''s Cotton Crew Neck T-Shirt', 'Classic short-sleeve cotton T-shirt made from soft, breathable fabric. Available in multiple colors.', true, '2023-02-10 12:00:00', '2024-07-20 09:40:00'),
+(12, 'Levi''s 511 Slim Fit Jeans', 'Iconic slim-fit jeans made from durable stretch denim for all-day comfort.', true, '2023-04-18 10:45:00', '2024-08-10 12:00:00'),
+(13, 'Women''s Activewear Leggings', 'High-waisted stretch leggings designed for yoga, running, and everyday comfort.', true, '2023-05-22 09:00:00', '2024-05-22 09:00:00'),
 (14, 'Nike Air Zoom Pegasus 40', 'Lightweight running shoes with responsive cushioning for daily training.', true, '2023-06-01 10:15:00', '2024-10-10 10:00:00'),
 (15, 'Adidas Ultraboost 23', 'Performance running shoes with Boost cushioning and knit upper for superior comfort.', true, '2023-06-10 11:22:33', '2024-06-15 11:22:33'),
-(16, 'Women\'s Floral Summer Dress', 'Lightweight sleeveless dress made from breathable fabric, perfect for warm weather.', true, '2023-07-15 08:10:00', '2024-07-15 08:10:00'),
-(17, 'Men\'s Waterproof Jacket', 'Versatile outdoor jacket with waterproof membrane and breathable mesh lining.', true, '2023-09-01 09:45:00', '2024-09-01 09:45:00'),
-(18, 'Children\'s Cotton Pajama Set', 'Two-piece soft cotton pajama set with fun printed patterns.', true, '2023-09-20 12:00:00', '2024-09-20 12:00:00'),
-(19, 'Women\'s Wool Coat', 'Elegant long coat crafted from premium wool blend with button closure.', true, '2023-11-10 10:30:00', '2024-12-20 14:00:00'),
-(20, 'Men\'s Leather Belt', 'Genuine leather belt with classic silver buckle — ideal for formal or casual wear.', true, '2023-12-05 08:22:00', '2024-12-05 08:22:00'),
+(16, 'Women''s Floral Summer Dress', 'Lightweight sleeveless dress made from breathable fabric, perfect for warm weather.', true, '2023-07-15 08:10:00', '2024-07-15 08:10:00'),
+(17, 'Men''s Waterproof Jacket', 'Versatile outdoor jacket with waterproof membrane and breathable mesh lining.', true, '2023-09-01 09:45:00', '2024-09-01 09:45:00'),
+(18, 'Children''s Cotton Pajama Set', 'Two-piece soft cotton pajama set with fun printed patterns.', true, '2023-09-20 12:00:00', '2024-09-20 12:00:00'),
+(19, 'Women''s Wool Coat', 'Elegant long coat crafted from premium wool blend with button closure.', true, '2023-11-10 10:30:00', '2024-12-20 14:00:00'),
+(20, 'Men''s Leather Belt', 'Genuine leather belt with classic silver buckle — ideal for formal or casual wear.', true, '2023-12-05 08:22:00', '2024-12-05 08:22:00'),
 
 (21, 'IKEA Hemnes Sofa', 'Three-seater wooden sofa with washable fabric cushions and modern Scandinavian design.', true, '2023-03-05 09:11:00', '2024-06-05 09:11:00'),
 (22, 'Dyson V15 Detect Vacuum Cleaner', 'Cordless vacuum cleaner with laser detection for hidden dust and intelligent suction control.', true, '2023-04-01 13:33:00', '2024-09-01 13:33:00'),
@@ -116,7 +126,7 @@ INSERT INTO product (id, name, description, is_active, created_at, updated_at) V
 
 (41, 'The Pragmatic Programmer', 'Classic programming book with tips on writing better, maintainable software.', true, '2023-03-03 09:30:00', '2024-09-03 09:30:00'),
 (42, 'Atomic Habits', 'Bestselling self-improvement book by James Clear on building better habits.', true, '2023-04-01 10:00:00', '2024-04-01 10:00:00'),
-(43, 'Harry Potter and the Philosopher\'s Stone', 'First book in the Harry Potter series by J.K. Rowling.', true, '2023-05-10 12:00:00', '2024-09-01 12:00:00'),
+(43, 'Harry Potter and the Philosopher''s Stone', 'First book in the Harry Potter series by J.K. Rowling.', true, '2023-05-10 12:00:00', '2024-09-01 12:00:00'),
 (44, 'Clean Code', 'Essential software engineering book on writing clean, readable, and maintainable code.', true, '2023-06-02 11:00:00', '2024-09-15 11:00:00'),
 (45, 'Project Hail Mary', 'Science fiction novel by Andy Weir, author of The Martian.', true, '2023-07-01 10:00:00', '2024-07-01 10:00:00'),
 (46, 'CeraVe Hydrating Facial Cleanser', 'Gentle, non-foaming cleanser with ceramides and hyaluronic acid.', true, '2023-08-01 10:00:00', '2024-08-01 10:00:00'),
