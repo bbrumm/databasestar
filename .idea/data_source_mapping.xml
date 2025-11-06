@@ -5,9 +5,16 @@
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_17.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_20.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_21.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_22.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_23.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_24.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_25.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/01_create_tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/02_insert_customer.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/03_insert_product.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/04_insert_order.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/05_insert_payment.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/06_insert_return.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/../dbs_private/videos/289_chinook_analysis_1/289_scripts.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
   </component>
 </project>
