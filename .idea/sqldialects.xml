@@ -17,6 +17,8 @@
     <file url="file://$PROJECT_DIR$/videos/245_pgfeatures/setup.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/255_dirty/Cafe Data Queries.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/280_pg_schema/setup_tables.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/videos/301_senior_tune/postgres_example.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/videos/314_chinook_slow/Add More Data to Chinook Postgres.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/projects/flight/answers.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/create tables.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/drop_tables.sql" dialect="PostgreSQL" />
