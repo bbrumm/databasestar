@@ -16,6 +16,7 @@
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_30.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_31.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_32.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_33.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/01_create_tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/02_insert_customer.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/03_insert_product.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
@@ -23,6 +24,8 @@
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/05_insert_payment.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/06_insert_return.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/301_senior_tune/postgres_example.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/videos/314_chinook_slow/314 Slow Query - Used in Video.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/videos/314_chinook_slow/314 Slow Query.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/314_chinook_slow/Add More Data to Chinook Postgres.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/289_chinook_analysis_1/289_scripts.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
   </component>

@@ -126,20 +126,17 @@ BEGIN
   (
     invoice_id, track_id, unit_price, quantity
   )
-  SELECT
-    i.invoice_id,
-    t.track_id,
+SELECT
+    sub.invoice_id,
+    sub.random_track_id AS track_id,
     t.unit_price,
-    (1 + (random()*2)::int) AS quantity
-  FROM tmp_new_invoices i
-  CROSS JOIN generate_series(1, v_lines_per_invoice) ln
-  -- Pick a random track by offset: fast enough for demos; for very large Track use other strategies
-  JOIN LATERAL (
-    SELECT track_id, unit_price
-    FROM track
-    OFFSET (random() * (v_track_count - 1))::int
-    LIMIT 1
-  ) t ON true;
+    sub.quantity
+FROM (SELECT i.invoice_id,
+             (random() * (v_track_count - 1))::int AS random_track_id,
+             (1 + (random() * 2)::int)    AS quantity
+      FROM invoice i
+               CROSS JOIN generate_series(1, 5) ln) sub
+INNER JOIN track t ON sub.random_track_id = t.track_id;
 
   -- ---------------------------------------------------------
   -- 4) Update Invoice totals based on its InvoiceLines
