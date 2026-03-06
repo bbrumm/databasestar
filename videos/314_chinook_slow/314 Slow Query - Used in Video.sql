@@ -114,7 +114,7 @@ Runs in about 1.6s
   SELECT i.invoice_id
   FROM invoice i
   JOIN customer c ON c.customer_id = i.customer_id
-  WHERE c.city = 'Paris'
+  WHERE c.city = 'London'
     AND i.invoice_date >= DATE '2024-01-01'
 )
 SELECT
