@@ -86,6 +86,9 @@ ORDER BY
 On my laptop, this took 27 seconds and has 90k rows
 I could add more rows to the table, but it may not work as I may run out of space on the laptop.
 Let's go with this query.
+
+
+
 */
 
 /*
@@ -344,7 +347,7 @@ Runs in 27 seconds, 90,427 rows rows.
 
 
 /*
-Step 5: Change the avg, max, min to a join
+Step 6: Change the avg, max, min to a join
 */
 
 
@@ -383,7 +386,7 @@ Query runs in 13 seconds, 90,427 rows
 */
 
 /*
-Step 6: Add index
+Step 7: Add index
 */
 
 
@@ -392,7 +395,7 @@ ON Sales.SalesOrderHeader (OrderDate, TotalDue)
 INCLUDE (CustomerID, SalesOrderID);
 
 --Code to drop index if needed
-DROP INDEX IX_SOH_OrderDate_TotalDue;
+DROP INDEX Sales.SalesOrderHeader.IX_SOH_OrderDate_TotalDue;
 
 
 /*
@@ -401,7 +404,7 @@ Runs in 12 seconds, 90,427 rows
 */
 
 /*
-Step 7: Add a covering index
+Step 8: Add a covering index
 */
 
 CREATE NONCLUSTERED INDEX IX_SalesOrderDetail_Agg
@@ -409,7 +412,7 @@ ON Sales.SalesOrderDetail (SalesOrderID)
 INCLUDE (OrderQty, UnitPrice);
 
 --Code to drop index if needed
-DROP INDEX IX_SalesOrderDetail_Agg;
+DROP INDEX Sales.SalesOrderDetail.IX_SalesOrderDetail_Agg;
 
 
 /*
