@@ -1,12 +1,12 @@
 --Original query for Video 313
 --SQL Server
 SELECT
-    c.FirstName + ' ' + c.LastName                          AS CustomerName,
+    c.FirstName + ' ' + c.LastName AS CustomerName,
     a.City,
     a.StateProvinceID,
-    COUNT(soh.SalesOrderID)                                 AS TotalOrders,
-    SUM(sod.OrderQty * sod.UnitPrice)                       AS TotalRevenue,
-    AVG(sod.OrderQty * sod.UnitPrice)                       AS AvgLineRevenue
+    COUNT(soh.SalesOrderID) AS TotalOrders,
+    SUM(sod.OrderQty * sod.UnitPrice) AS TotalRevenue,
+    AVG(sod.OrderQty * sod.UnitPrice) AS AvgLineRevenue
 FROM Sales.SalesOrderHeader soh
 JOIN Sales.SalesOrderDetail sod
     ON soh.SalesOrderID = sod.SalesOrderID
