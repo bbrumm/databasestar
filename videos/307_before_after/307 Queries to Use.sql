@@ -122,7 +122,17 @@ pairs AS (
     SUM(
       CASE
         WHEN pc2.unit_price = pc1.unit_price
-          THEN pc1.count_price * (pc1.count_price - 1) / 2         -- combinations within same price
+          /*
+            * For the same price, we need to count combinations of lines at that price.
+            * The number of pairs from n items is n*(n-1)/2.
+            This is a mathematical formula for combinations of 2 items from n items, 
+            which is more efficient than joining the table with itself 
+            for the same price and counting pairs.
+            We do this to avoid pairing a row with itself, 
+            and to avoid double counting pairs (A,B) and (B,A).
+            */
+          */
+          THEN pc1.count_price * (pc1.count_price - 1) / 2  -- combinations within same price
         ELSE pc1.count_price * pc2.count_price                      -- cross-price pairs
       END
     ) AS near_price_pair_count
