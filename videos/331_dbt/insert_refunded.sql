@@ -1,0 +1,1 @@
+INSERT INTO raw_data.orders VALUES (1011, 209, TIMESTAMP '2024-01-18 10:00:00', 'refunded', 60);
