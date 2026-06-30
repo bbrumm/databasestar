@@ -7,3 +7,7 @@ CREATE TABLE sensor_readings (
 );
 
 CREATE INDEX ON sensor_readings (recorded_at);
+
+DROP INDEX sensor_readings_recorded_at_idx
+
+TRUNCATE sensor_readings;

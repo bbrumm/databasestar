@@ -1,6 +1,6 @@
 SELECT COUNT(*) FROM sensor_readings;
 
-
+EXPLAIN ANALYZE
 SELECT
     device_id,
     AVG(temperature) AS avg_temp,
