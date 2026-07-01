@@ -9,7 +9,7 @@ CREATE TABLE movies.movie_genres (
 
 
 
-INSERT INTO movie_genres VALUES
+INSERT INTO movies.movie_genres VALUES
 (5,35),
 (5,80),
 (11,12),
