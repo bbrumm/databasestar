@@ -58,3 +58,25 @@ VALUES
   (nextval('order_id_seq'),19,  '2024-02-23 17:40:00', 178.80),
   (nextval('order_id_seq'), 8,  '2024-02-26 11:55:00',  24.50),
   (nextval('order_id_seq'),26,  '2024-02-29 14:10:00', 139.25);
+
+
+-- Queries from video
+
+
+SELECT id, order_date, total_amount
+FROM cust_order
+WHERE order_date > '2024-01-30'
+  AND order_date < '2024-02-01'
+ORDER BY order_date;
+
+
+SELECT id, order_date, total_amount
+FROM cust_order
+WHERE order_date >= '2024-01-01'
+  AND order_date <= '2024-01-31';
+
+
+SELECT id, order_date, total_amount
+FROM cust_order
+WHERE order_date >= '2024-01-01'
+  AND order_date < '2024-02-01';

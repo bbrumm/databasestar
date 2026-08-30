@@ -36,6 +36,7 @@
     <file url="file://$PROJECT_DIR$/videos/340_saas_data/sample_data.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/341_eav_normalised/Create EAV Tabkes.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/videos/341_eav_normalised/Create Normalised Tables.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/videos/343_date_bound/Queries from Video.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/projects/flight/answers.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/create tables.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/217_imdb/drop_tables.sql" dialect="PostgreSQL" />
