@@ -38,6 +38,9 @@
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_48.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_49.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_50.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_51.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_52.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_53.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6eba093-222e-4cc3-968e-76f37a9bfd29/console.sql" value="f6eba093-222e-4cc3-968e-76f37a9bfd29" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6eba093-222e-4cc3-968e-76f37a9bfd29/console_1.sql" value="f6eba093-222e-4cc3-968e-76f37a9bfd29" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6eba093-222e-4cc3-968e-76f37a9bfd29/console_2.sql" value="f6eba093-222e-4cc3-968e-76f37a9bfd29" />
@@ -59,6 +62,7 @@
     <file url="file://$PROJECT_DIR$/videos/314_chinook_slow/314 Slow Query - Used in Video.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/314_chinook_slow/314 Slow Query.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/314_chinook_slow/Add More Data to Chinook Postgres.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/videos/320_indexes/Set Up Sample Data.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/321_select/create_tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/321_select/populate_tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/334_timescale/Create sensor_readings table.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
