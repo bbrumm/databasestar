@@ -41,11 +41,15 @@
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_51.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_52.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_53.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_54.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_55.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_56.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_57.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/efb5237a-a051-4e17-88ff-a01b98ec206f/console_58.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6eba093-222e-4cc3-968e-76f37a9bfd29/console.sql" value="f6eba093-222e-4cc3-968e-76f37a9bfd29" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6eba093-222e-4cc3-968e-76f37a9bfd29/console_1.sql" value="f6eba093-222e-4cc3-968e-76f37a9bfd29" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6eba093-222e-4cc3-968e-76f37a9bfd29/console_2.sql" value="f6eba093-222e-4cc3-968e-76f37a9bfd29" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6eba093-222e-4cc3-968e-76f37a9bfd29/console_3.sql" value="f6eba093-222e-4cc3-968e-76f37a9bfd29" />
-    <file url="file://$PROJECT_DIR$/../cowork/Products &amp; Funnels/Query Plan Decoded/setup_postgresql.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/01_create_tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/02_insert_customer.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/courses/course_ecommerce_project/03_insert_product.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
@@ -74,6 +78,7 @@
     <file url="file://$PROJECT_DIR$/videos/341_eav_normalised/Create Normalised Tables.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/343_date_bound/Queries from Video.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/videos/346_fitness/Video 346 - Sample Data.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
+    <file url="file://$PROJECT_DIR$/videos/348_large_db/Video 348 - Build Original Database.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
     <file url="file://$PROJECT_DIR$/../dbs_private/videos/289_chinook_analysis_1/289_scripts.sql" value="efb5237a-a051-4e17-88ff-a01b98ec206f" />
   </component>
 </project>
