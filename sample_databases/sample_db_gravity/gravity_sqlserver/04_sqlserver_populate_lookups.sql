@@ -1,4 +1,4 @@
-INSERT INTO book_language (language_code, language_id, language_name) VALUES
+INSERT INTO gravity_books.book_language (language_code, language_id, language_name) VALUES
 ('eng', 1, 'English'),
 ('en-US', 2, 'United States English'),
 ('fre', 3, 'French'),
@@ -27,17 +27,17 @@ INSERT INTO book_language (language_code, language_id, language_name) VALUES
 ('gla', 26, 'Gaelic'),
 ('ale', 27, 'Aleut');
 
-INSERT INTO shipping_method (method_id, method_name, cost) VALUES
+INSERT INTO gravity_books.shipping_method (method_id, method_name, cost) VALUES
 (1, 'Standard', 5.9),
 (2, 'Priority', 8.9),
 (3, 'Express', 11.9),
 (4, 'International', 24.5);
 
-INSERT INTO address_status (status_id, address_status) VALUES
+INSERT INTO gravity_books.address_status (status_id, address_status) VALUES
 (1, 'Active'),
 (2, 'Inactive');
 
-INSERT INTO order_status (status_id, status_value) VALUES
+INSERT INTO gravity_books.order_status (status_id, status_value) VALUES
 (1, 'Order Received'),
 (2, 'Pending Delivery'),
 (3, 'Delivery In Progress'),

@@ -1,4 +1,4 @@
-INSERT INTO customer (customer_id, first_name, last_name, email) VALUES
+INSERT INTO gravity_books.customer (customer_id, first_name, last_name, email) VALUES
 (1, 'Ursola', 'Purdy', 'upurdy0@cdbaby.com'),
 (2, 'Ruthanne', 'Vatini', 'rvatini1@fema.gov'),
 (3, 'Reidar', 'Turbitt', 'rturbitt2@geocities.jp'),
@@ -1000,7 +1000,7 @@ INSERT INTO customer (customer_id, first_name, last_name, email) VALUES
 (999, 'Gus', 'Willavoys', 'gwillavoysrq@deliciousdays.com'),
 (1000, 'Fanechka', 'Bartomeu', 'fbartomeurr@washington.edu');
 
-INSERT INTO customer (customer_id, first_name, last_name, email) VALUES
+INSERT INTO gravity_books.customer (customer_id, first_name, last_name, email) VALUES
 (1001, 'Ricky', 'Lafranconi', 'rlafranconi0@rakuten.co.jp'),
 (1002, 'Elva', 'Shearme', 'eshearme1@unblog.fr'),
 (1003, 'Dorothy', 'Agutter', 'dagutter2@irs.gov'),

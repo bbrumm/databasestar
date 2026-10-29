@@ -1,4 +1,4 @@
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('A. Bartlett Giamatti', 1),
 ('A. Elizabeth Delany', 2),
 ('A. Merritt', 3),
@@ -989,7 +989,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('Burt Reynolds', 988);
 
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('Burton G. Malkiel', 989),
 ('Burton Pike', 990),
 ('Burton Raffel', 991),
@@ -1953,7 +1953,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('Denise Grollmus', 1949),
 ('Denise Hamilton', 1950);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('Denise J. Wedel', 1951),
 ('Denise Levertov', 1952),
 ('Denise Little', 1953),
@@ -2953,7 +2953,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('George Reavy', 2947),
 ('George Ritzer', 2948);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('George S. Clason', 2949),
 ('George Saintsbury', 2950),
 ('George Saunders', 2951),
@@ -3952,7 +3952,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('Jean-Michel Basquiat', 3944),
 ('Jean-Noël Schifano', 3945);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('Jean-Paul Marat', 3946),
 ('Jean-Paul Orpinas', 3947),
 ('Jean-Paul Sartre', 3948),
@@ -4949,7 +4949,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('Kevin Henkes', 4939),
 ('Kevin J. Anderson', 4940);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('Kevin Miller', 4941),
 ('Kevin O''Malley', 4942),
 ('Kevin Pariseau', 4943),
@@ -5945,7 +5945,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('Mavis Applewater', 5933),
 ('Max Allan Collins', 5934);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('Max Barry', 5935),
 ('Max Beerbohm', 5936),
 ('Max Brod', 5937),
@@ -6941,7 +6941,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('Peter Watson', 6927),
 ('Peter Woit', 6928);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('Peter Woodthorpe', 6929),
 ('Petrina Tinslay', 6930),
 ('Phaedra M. Weldon', 6931),
@@ -7938,7 +7938,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('Sarah Susanka', 7922),
 ('Sarah Vowell', 7923);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('Sarah Webb', 7924),
 ('Sarvepalli Radhakrishnan', 7925),
 ('Sashiko Sato', 7926),
@@ -8917,7 +8917,7 @@ INSERT INTO author (author_name, author_id) VALUES
 ('W. Chan Kim', 8899),
 ('W. Frederick Zimmerman', 8900);
 
-INSERT INTO author (author_name, author_id) VALUES
+INSERT INTO gravity_books.author (author_name, author_id) VALUES
 ('W. Haden Blackman', 8901),
 ('W. Heath Robinson', 8902),
 ('W. Jason Gilmore', 8903),

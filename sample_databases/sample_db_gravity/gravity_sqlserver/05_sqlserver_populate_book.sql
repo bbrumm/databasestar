@@ -1,4 +1,4 @@
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('The World''s First Love: Mary  Mother of God', 1, '8987059752', 2, 276, '1996-09-01', 1010),
 ('The Illuminati', 2, '20049130001', 1, 352, '2004-10-04', 1967),
 ('The Servant Leader', 3, '23755004321', 1, 128, '2003-03-11', 1967),
@@ -972,7 +972,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('Bruno''s Dream', 971, '9780140031768', 1, 320, '1976-11-18', 1476),
 ('The Pearl/The Red Pony', 972, '9780140042320', 1, 181, '1976-09-30', 1476);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Montaillou: Cathars and Catholics in a French Village  1294-1324', 973, '9780140054712', 5, 400, '1980-05-29', 1488),
 ('My Uncle Oswald', 974, '9780140055771', 1, 208, '1986-05-01', 1472),
 ('John Hammond on Record: An Autobiography', 975, '9780140057058', 1, 432, '1981-02-26', 1476),
@@ -1929,7 +1929,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('Six Easy Pieces: Essentials of Physics Explained by Its Most Brilliant Teacher (Helix)', 1926, '9780201408256', 2, 176, '1996-04-10', 214),
 ('Refactoring: Improving the Design of Existing Code', 1927, '9780201485677', 1, 431, '1999-07-08', 34);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Data Structures and Algorithm Analysis in C', 1928, '9780201498400', 1, 528, '1996-09-19', 1462),
 ('The Feynman Lectures on Physics  3 Vols', 1929, '9780201500646', 2, 3, '1989-01-01', 33),
 ('The Pragmatic Programmer: From Journeyman to Master', 1930, '9780201616224', 1, 321, '1999-10-30', 34),
@@ -2924,7 +2924,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('Long Gone Lonesome Blues (The Texas Brands  #4)', 2919, '9780373078547', 1, 251, '1998-04-01', 1816),
 ('Stranger from the Past', 2920, '9780373115990', 1, 224, '1993-09-24', 857);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('A Matter of Trust', 2921, '9780373117192', 1, 224, '1994-12-23', 857),
 ('Flirting With Danger', 2922, '9780373118182', 1, 188, '1996-06-01', 851),
 ('The Sultan''s Bought Bride  (Princess Brides  #1)', 2923, '9780373124183', 1, 192, '2004-08-25', 857),
@@ -3923,7 +3923,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('All Tomorrow''s Parties (Bridge  #3)', 3916, '9780425190449', 1, 339, '2003-02-04', 243),
 ('Idoru (Bridge #2)', 3917, '9780425190456', 1, 308, '2003-01-07', 252);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Sea of Fire (Tom Clancy''s Op-Center  #10)', 3918, '9780425190913', 1, 400, '2003-06-24', 243),
 ('McNally''s Alibi (Archy McNally Novels)', 3919, '9780425191194', 1, 304, '2003-08-05', 242),
 ('Lightning', 3920, '9780425192030', 1, 384, '2003-09-02', 242),
@@ -4912,7 +4912,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('The Burgess Bird Book for Children', 4903, '9780486428406', 1, 260, '2003-04-23', 582),
 ('Great Russian Short Stories', 4904, '9780486429922', 1, 208, '2003-07-29', 582);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Babbitt', 4905, '9780486431673', 2, 320, '2003-09-22', 582),
 ('Hunger', 4906, '9780486431680', 1, 134, '2003-11-17', 582),
 ('The Jew of Malta', 4907, '9780486431840', 2, 80, '2003-08-05', 582),
@@ -5909,7 +5909,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('Second Ring of Power', 5898, '9780671732479', 2, 328, '1991-04-01', 2171),
 ('Power of Silence', 5899, '9780671732486', 1, 288, '1991-06-01', 2171);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Fire from Within', 5900, '9780671732509', 2, 304, '1991-01-01', 2171),
 ('Tales of Power', 5901, '9780671732523', 2, 304, '1991-01-01', 2171),
 ('Memory''s Embrace (Corbins  #3)', 5902, '9780671737696', 1, 320, '1991-06-01', 1564),
@@ -6909,7 +6909,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('Castlevania: Curse of Darkness Official Strategy Guide', 6896, '9780744006452', 1, 176, '2005-10-28', 313),
 ('Sir Gawain and the Green Knight', 6897, '9780744520057', 1, 29, '1991-06-27', 2159);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Sir Gawain And The Green Knight', 6898, '9780744586466', 1, 120, '2004-11-01', 2156),
 ('Dracula', 6899, '9780744586534', 1, 336, '2004-10-04', 2159),
 ('The Philosophy of Antonio Negri  Volume One: Resistance in Practice', 6900, '9780745323374', 1, 265, '2005-07-20', 1562),
@@ -7900,7 +7900,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('Borges and The Eternal Orangutans', 7885, '9780811215923', 1, 135, '2005-05-17', 1329),
 ('A Streetcar Named Desire', 7886, '9780811216029', 2, 192, '2004-09-17', 1329);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('October Light', 7887, '9780811216371', 1, 399, '2005-10-17', 1329),
 ('Journey to the End of the Night', 7888, '9780811216548', 1, 453, '2006-05-17', 1329),
 ('Laughter in the Dark', 7889, '9780811216746', 1, 292, '2006-09-17', 1329),
@@ -8899,7 +8899,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('V for Vendetta', 8882, '9781401207922', 1, 296, '2005-11-01', 2096),
 ('Seven Soldiers of Victory  Volume 1', 8883, '9781401209254', 1, 224, '2006-01-04', 506);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Kid Eternity', 8884, '9781401209339', 1, 144, '2006-02-01', 2096),
 ('Challengers of the Unknown: Stolen Moments  Borrowed Time', 8885, '9781401209414', 1, 144, '2006-03-29', 506),
 ('Superman: Up  Up  and Away!', 8886, '9781401209544', 1, 192, '2006-09-27', 506),
@@ -9850,7 +9850,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('Tomie 1  富江', 9831, '9781588990846', 1, 248, '2005-04-04', 433),
 ('Tomie 2  富江 Part 2', 9832, '9781588990853', 1, 247, '2005-04-04', 433);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Category: Freaks  Vol. 1 (Category: Freaks  #1)', 9833, '9781588993007', 1, 184, '2005-07-01', 587),
 ('Louisa May Alcott''s Christmas Treasury', 9834, '9781589199507', 1, 282, '2002-06-01', 495),
 ('The Lighthouse at the End of the World', 9835, '9781589630949', 1, 260, '2001-03-20', 739),
@@ -10835,7 +10835,7 @@ INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_da
 ('April  May und June', 10814, '9783458334224', 10, 88, '1995-04-01', 1024),
 ('Homo faber: Ein Bericht.', 10815, '9783458340447', 10, 298, '1995-01-01', 1023);
 
-INSERT INTO book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
+INSERT INTO gravity_books.book (title, book_id, isbn13, language_id, num_pages, publication_date, publisher_id) VALUES
 ('Chronik eines angekündigten Todes', 10816, '9783462031959', 10, 119, '2002-08-01', 1079),
 ('Alles ist erleuchtet', 10817, '9783462032178', 10, 384, '2003-02-20', 1079),
 ('Der Fänger im Roggen', 10818, '9783462032185', 10, 270, '2003-02-20', 1079),

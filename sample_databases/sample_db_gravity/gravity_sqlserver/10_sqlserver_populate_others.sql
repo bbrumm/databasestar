@@ -1,11 +1,11 @@
 WITH customer_rows AS (
     SELECT c.customer_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.customer c),
+    FROM gravity_books.customer c),
 address_rows AS (
     SELECT address_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.address
+    FROM gravity_books.address
      )
 SELECT
 c.customer_id,
@@ -19,13 +19,13 @@ ON a.rn = c.rn;
 WITH customer_rows AS (
     SELECT c.customer_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.customer c),
+    FROM gravity_books.customer c),
 address_rows AS (
     SELECT address_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.address
+    FROM gravity_books.address
      )
-INSERT INTO dbo.customer_address (customer_id, address_id, status_id)
+INSERT INTO gravity_books.customer_address (customer_id, address_id, status_id)
 SELECT
 c.customer_id,
 a.address_id,
@@ -39,13 +39,13 @@ ON a.rn = c.rn;
 WITH customer_rows AS (
     SELECT c.customer_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.customer c),
+    FROM gravity_books.customer c),
 address_rows AS (
     SELECT address_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.address
+    FROM gravity_books.address
      )
-INSERT INTO dbo.customer_address (customer_id, address_id, status_id)
+INSERT INTO gravity_books.customer_address (customer_id, address_id, status_id)
 SELECT
 c.customer_id,
 a.address_id,
@@ -55,7 +55,7 @@ INNER JOIN address_rows a
 ON a.rn = c.rn
 WHERE NOT EXISTS (
     SELECT 1
-    FROM dbo.customer_address ca
+    FROM gravity_books.customer_address ca
     WHERE ca.customer_id = c.customer_id
     AND ca.address_id = a.address_id
     );
@@ -69,13 +69,13 @@ WHERE NOT EXISTS (
 WITH customer_rows AS (
     SELECT c.customer_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.customer c),
+    FROM gravity_books.customer c),
 address_rows AS (
     SELECT address_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.address
+    FROM gravity_books.address
      )
-INSERT INTO dbo.customer_address (customer_id, address_id, status_id)
+INSERT INTO gravity_books.customer_address (customer_id, address_id, status_id)
 SELECT TOP 750
 c.customer_id,
 a.address_id,
@@ -85,7 +85,7 @@ INNER JOIN address_rows a
 ON a.rn = c.rn
 WHERE NOT EXISTS (
     SELECT 1
-    FROM dbo.customer_address ca
+    FROM gravity_books.customer_address ca
     WHERE ca.customer_id = c.customer_id
     AND ca.address_id = a.address_id
     );
@@ -96,13 +96,13 @@ WHERE NOT EXISTS (
 WITH customer_rows AS (
     SELECT c.customer_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.customer c),
+    FROM gravity_books.customer c),
 address_rows AS (
     SELECT address_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.address
+    FROM gravity_books.address
      )
-INSERT INTO dbo.customer_address (customer_id, address_id, status_id)
+INSERT INTO gravity_books.customer_address (customer_id, address_id, status_id)
 SELECT TOP 400
 c.customer_id,
 a.address_id,
@@ -112,7 +112,7 @@ INNER JOIN address_rows a
 ON a.rn = c.rn
 WHERE NOT EXISTS (
     SELECT 1
-    FROM dbo.customer_address ca
+    FROM gravity_books.customer_address ca
     WHERE ca.customer_id = c.customer_id
     AND ca.address_id = a.address_id
     );
@@ -129,7 +129,7 @@ address_rows AS (
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
     FROM dbo.address
      )
-INSERT INTO dbo.customer_address (customer_id, address_id, status_id)
+INSERT INTO gravity_books.customer_address (customer_id, address_id, status_id)
 SELECT TOP 200
 c.customer_id,
 a.address_id,
@@ -139,7 +139,7 @@ INNER JOIN address_rows a
 ON a.rn = c.rn
 WHERE NOT EXISTS (
     SELECT 1
-    FROM dbo.customer_address ca
+    FROM gravity_books.customer_address ca
     WHERE ca.customer_id = c.customer_id
     AND ca.address_id = a.address_id
     );

@@ -1,4 +1,4 @@
-INSERT INTO address (address_id, street_number, street_name, city, country_id) VALUES
+INSERT INTO gravity_books.address (address_id, street_number, street_name, city, country_id) VALUES
 (1, '57', 'Glacier Hill Avenue', 'Torbat-e Jām', 95),
 (2, '86', 'Dottie Junction', 'Beaumont', 37),
 (3, '292', 'Ramsey Avenue', 'Cayambe', 60),

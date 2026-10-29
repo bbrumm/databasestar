@@ -1,4 +1,4 @@
-INSERT INTO country (country_id, country_name) VALUES
+INSERT INTO gravity_books.country (country_id, country_name) VALUES
 (1, 'Afghanistan'),
 (2, 'Netherlands Antilles'),
 (3, 'Albania'),

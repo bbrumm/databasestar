@@ -1,4 +1,4 @@
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (1570, 2823),
 (10539, 6439),
 (8323, 7011),
@@ -998,7 +998,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (8537, 5878),
 (8543, 6432);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (8545, 7011),
 (8550, 874),
 (8556, 3296),
@@ -1996,7 +1996,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (3249, 5333),
 (3252, 7683);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (3259, 7388),
 (3261, 664),
 (3262, 6582),
@@ -2997,7 +2997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (7770, 3879),
 (7771, 6572);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (7774, 4464),
 (7775, 6572),
 (7779, 8105),
@@ -3997,7 +3997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (115, 2555),
 (120, 6949);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (124, 143),
 (127, 148),
 (128, 7270),
@@ -4997,7 +4997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (2214, 5469),
 (2215, 4896);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (2219, 7269),
 (2220, 4639),
 (2221, 7261),
@@ -5997,7 +5997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (3722, 8085),
 (3724, 494);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (3725, 4336),
 (3726, 7145),
 (3727, 7145),
@@ -6997,7 +6997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (5400, 4587),
 (5401, 7875);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (5402, 7875),
 (5403, 7875),
 (5404, 7875),
@@ -7997,7 +7997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (7056, 8461),
 (7057, 8461);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (7058, 1018),
 (7059, 1018),
 (7060, 1018),
@@ -8997,7 +8997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (9122, 7761),
 (9129, 8669);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (9130, 7761),
 (9131, 5880),
 (9135, 8669),
@@ -9997,7 +9997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (9973, 5889),
 (10442, 8026);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (1577, 1829),
 (7911, 1849),
 (8276, 3758),
@@ -10997,7 +10997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (8255, 7312),
 (8262, 6513);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (8272, 4799),
 (8291, 2406),
 (8293, 7985),
@@ -11997,7 +11997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (2560, 5053),
 (2561, 5053);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (2562, 8383),
 (1795, 336),
 (2571, 8557),
@@ -12997,7 +12997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (6967, 5471),
 (6986, 4835);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (6999, 434),
 (7026, 3663),
 (7027, 3517),
@@ -13997,7 +13997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (10486, 4176),
 (10489, 7039);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (10491, 1596),
 (5099, 1227),
 (1907, 4909),
@@ -14997,7 +14997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (3890, 8292),
 (3891, 8292);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (3894, 8292),
 (3901, 8292),
 (3906, 8292),
@@ -15997,7 +15997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (6439, 1737),
 (6460, 4588);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (6569, 1551),
 (6588, 834),
 (6727, 1025),
@@ -16997,7 +16997,7 @@ INSERT INTO book_author (book_id, author_id) VALUES
 (7968, 1830),
 (8351, 4307);
 
-INSERT INTO book_author (book_id, author_id) VALUES
+INSERT INTO gravity_books.book_author (book_id, author_id) VALUES
 (9361, 3192),
 (9364, 8681),
 (9477, 9105),

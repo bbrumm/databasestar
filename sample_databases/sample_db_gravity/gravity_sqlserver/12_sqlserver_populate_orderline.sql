@@ -2,12 +2,12 @@
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
 SELECT top 200
 o.order_id,
@@ -22,14 +22,14 @@ ORDER BY NEWID();
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
-INSERT INTO dbo.order_line (order_id, book_id, price)
+INSERT INTO gravity_books.order_line (order_id, book_id, price)
 SELECT
 o.order_id,
 b.book_id,
@@ -43,14 +43,14 @@ INNER JOIN book_rows b ON o.rn = b.rn;
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
-INSERT INTO dbo.order_line (order_id, book_id, price)
+INSERT INTO gravity_books.order_line (order_id, book_id, price)
 SELECT TOP 4000
 o.order_id,
 b.book_id,
@@ -71,14 +71,14 @@ ORDER BY NEWID();
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
-INSERT INTO dbo.order_line (order_id, book_id, price)
+INSERT INTO gravity_books.order_line (order_id, book_id, price)
 SELECT TOP 2000
 o.order_id,
 b.book_id,
@@ -90,14 +90,14 @@ ORDER BY NEWID();
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
-INSERT INTO dbo.order_line (order_id, book_id, price)
+INSERT INTO gravity_books.order_line (order_id, book_id, price)
 SELECT TOP 1000
 o.order_id,
 b.book_id,
@@ -109,14 +109,14 @@ ORDER BY NEWID();
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
-INSERT INTO dbo.order_line (order_id, book_id, price)
+INSERT INTO gravity_books.order_line (order_id, book_id, price)
 SELECT TOP 300
 o.order_id,
 b.book_id,
@@ -128,14 +128,14 @@ ORDER BY NEWID();
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
-INSERT INTO dbo.order_line (order_id, book_id, price)
+INSERT INTO gravity_books.order_line (order_id, book_id, price)
 SELECT TOP 500
 o.order_id,
 b.book_id,
@@ -147,14 +147,14 @@ ORDER BY NEWID();
 WITH book_rows AS (
     SELECT book_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.book
+    FROM gravity_books.book
 ),
 order_rows AS (
     SELECT order_id,
     ROW_NUMBER() OVER (ORDER BY NEWID()) AS rn
-    FROM dbo.cust_order
+    FROM gravity_books.cust_order
 )
-INSERT INTO dbo.order_line (order_id, book_id, price)
+INSERT INTO gravity_books.order_line (order_id, book_id, price)
 SELECT TOP 50
 o.order_id,
 b.book_id,

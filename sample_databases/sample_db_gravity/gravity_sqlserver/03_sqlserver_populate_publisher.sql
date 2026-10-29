@@ -1,4 +1,4 @@
-INSERT INTO publisher (publisher_name, publisher_id) VALUES
+INSERT INTO gravity_books.publisher (publisher_name, publisher_id) VALUES
 ('10/18', 1),
 ('1st Book Library', 2),
 ('1st World Library', 3),
@@ -990,7 +990,7 @@ INSERT INTO publisher (publisher_name, publisher_id) VALUES
 ('Houghton Mifflin/Seymour Lawrence', 989),
 ('House of Anansi Press', 990);
 
-INSERT INTO publisher (publisher_name, publisher_id) VALUES
+INSERT INTO gravity_books.publisher (publisher_name, publisher_id) VALUES
 ('House of Stratus', 991),
 ('Hovel Audio', 992),
 ('Howard Books', 993),
@@ -1974,7 +1974,7 @@ INSERT INTO publisher (publisher_name, publisher_id) VALUES
 ('Thorndike Press', 1971),
 ('Thorndike Press Large Print', 1972);
 
-INSERT INTO publisher (publisher_name, publisher_id) VALUES
+INSERT INTO gravity_books.publisher (publisher_name, publisher_id) VALUES
 ('Three Rivers Press', 1973),
 ('Three Rivers Press (CA)', 1974),
 ('Thunder''s Mouth Press Books', 1975),
